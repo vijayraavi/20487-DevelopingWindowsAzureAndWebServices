@@ -32,7 +32,7 @@ namespace Lab01
             services.AddMvc();
 
             // Add Entity Framework Services
-            var connection = @"Server=.\SQLExpress;Database=Module02Lab01;Trusted_Connection=True;";
+            var connection = @"Server=.\SQLExpress;Database=Module04Lab01;Trusted_Connection=True;";
 
             services.AddEntityFramework()
                 .AddSqlServer()
