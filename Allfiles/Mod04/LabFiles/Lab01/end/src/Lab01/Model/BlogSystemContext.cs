@@ -15,8 +15,9 @@ namespace Lab01.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Post>().HasKey(p => p.Id);
             modelBuilder.Entity<Post>().ToTable("BlogPosts");
-            modelBuilder.Entity<Post>().Property(s => s.Title).IsRequired();
+            modelBuilder.Entity<Post>().Property(p => p.Title).IsRequired();
         }
     }
 }
