@@ -28,15 +28,15 @@ namespace Lab01
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc();        
 
-            // Add Entity Framework Services
-            var connection = @"Server=.\SQLExpress;Database=Module04Lab01;Trusted_Connection=True;";
+            var EFServiceBuilder = services.AddEntityFramework()
+                .AddSqlServer();
 
-            services.AddEntityFramework()
-                .AddSqlServer()
-                .AddDbContext<BlogSystemContext>(options => options.UseSqlServer(connection));
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=Module04Lab01;Trusted_Connection=True;MultipleActiveResultSets=true";
+            EFServiceBuilder.AddDbContext<BlogSystemContext>(options => options.UseSqlServer(connection));
 
             // Add a custom database initializer
             services.AddTransient<DatabaseInitializer>();
