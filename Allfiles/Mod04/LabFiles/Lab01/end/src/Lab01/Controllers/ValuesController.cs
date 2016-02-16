@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
 using Lab01.Model;
-using Microsoft.Data.Entity; // Must add manually
+using Microsoft.Data.Entity;
 
 namespace Lab01.Controllers
 {
@@ -39,6 +39,6 @@ namespace Lab01.Controllers
                         select b;
 
             return query.Single();
-        }            
+        }
     }
 }
