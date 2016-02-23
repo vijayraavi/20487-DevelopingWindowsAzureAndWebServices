@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
-using Microsoft.Extensions.Logging;
 using Lab01.Model;
 using Microsoft.Data.Entity;
 
@@ -12,11 +11,9 @@ namespace Lab01.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        ILogger<ValuesController> _logger;
         BlogSystemContext _context;
-        public ValuesController(BlogSystemContext context, ILogger<ValuesController> logger)
+        public ValuesController(BlogSystemContext context)
         {
-            _logger = logger;
             _context = context;
         }
 
