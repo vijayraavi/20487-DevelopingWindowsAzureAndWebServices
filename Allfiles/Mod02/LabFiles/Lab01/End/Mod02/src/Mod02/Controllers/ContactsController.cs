@@ -45,7 +45,7 @@ namespace Mod02.Controllers
             return CreatedAtRoute("GetContacts", new { Controller = "Contacts", id = item.MobilePhone }, item);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}", Name = "GetContacts")]
         public void Delete(string id)
         {
             ContactsRepo.Remove(id);
