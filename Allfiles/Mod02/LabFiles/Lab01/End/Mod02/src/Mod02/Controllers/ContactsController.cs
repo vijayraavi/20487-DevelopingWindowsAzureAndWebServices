@@ -63,6 +63,20 @@ namespace Mod02.Controllers
             {
                 return HttpNotFound();
             }
+
+            item.MobilePhone = id;
+            if (null == item.FirstName)
+                item.FirstName = contactObj.FirstName;
+
+            if (null == item.LastName)
+                item.LastName = contactObj.LastName;
+
+            if (null == item.Email)
+                item.Email = contactObj.Email;
+
+            if (null == item.Company)
+                item.Company = contactObj.Company;
+
             ContactsRepo.Update(item);
             return new NoContentResult();
         }
