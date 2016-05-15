@@ -9,10 +9,10 @@ using Microsoft.Data.Entity;
 namespace Lab01.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class BlogsController : Controller
     {
         BlogSystemContext _context;
-        public ValuesController(BlogSystemContext context)
+        public BlogsController(BlogSystemContext context)
         {
             _context = context;
         }
