@@ -33,18 +33,15 @@ For this lab, you will use the available virtual machine environment. Before you
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in using the following credentials:
 
-
  - User name: **Administrator**
  - Password: **Pa$$w0rd**
-
 
 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the **Actions** pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in using the following credentials:
 
-- User name: **Admin**
-- Password: **Pa$$w0rd**
-
+ - User name: **Admin**
+ - Password: **Pa$$w0rd**
 
 9. Verify that you received credentials to sign in to the Azure portal from your training provider, these credentials and the Azure account will be used throughout the labs of this course.
 
@@ -90,13 +87,13 @@ The main tasks for this exercise are as follows:
 8. Create an action method to handle **PUT** requests.
 
 
-- The method receives a **string** parameter called **id** and a **Traveler** parameter called **traveler**. The method returns an **HttpResponseMessage** object.
+ - The method receives a **string** parameter called **id** and a **Traveler** parameter called **traveler**. The method returns an **HttpResponseMessage** object.
  - If the traveler does not exist in the database, use the **Request.CreateResponse** method to return an HTTP response message with the **HttpStatusCode.NotFound** status.
 
 >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
-- If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repositoryto update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
+ - If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repositoryto update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
 
 >**Note:** The **HTTP PUT** method can also be used to create resources. Checking if the resources exist is performed here for simplicity.
 
@@ -104,13 +101,13 @@ The main tasks for this exercise are as follows:
 10. Create an action method to handle **DELETE** requests.
 
 
-- The method receives a **string** parameter called **id**.
-- If the traveler does not exist in the database, use the **Request.CreateResponse** method to return an HTTP response message with the **HttpStatusCode.NotFound** status.
+ - The method receives a **string** parameter called **id**.
+ - If the traveler does not exist in the database, use the **Request.CreateResponse** method to return an HTTP response message with the **HttpStatusCode.NotFound** status.
 
 >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
-- If the traveler exists, call the **Delete** and then the **Save** methods of the **Travelers** repository, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
+ - If the traveler exists, call the **Delete** and then the **Save** methods of the **Travelers** repository, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
 
 >**Results** : After completing this exercise, you should have run the project from Visual Studio 2012 and access the travelers&#39; service.
 
