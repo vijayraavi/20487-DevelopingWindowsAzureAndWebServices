@@ -90,13 +90,13 @@ The main tasks for this exercise are as follows:
  - The method receives a **string** parameter called **id** and a **Traveler** parameter called **traveler**. The method returns an **HttpResponseMessage** object.
  - If the traveler does not exist in the database, use the **Request.CreateResponse** method to return an HTTP response message with the **HttpStatusCode.NotFound** status.
 
->**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
+  >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
    - If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repositoryto update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
 
 
->**Note:** The **HTTP PUT** method can also be used to create resources. Checking if the resources exist is performed here for simplicity.
+  >**Note:** The **HTTP PUT** method can also be used to create resources. Checking if the resources exist is performed here for simplicity.
 
 
 9. Insert a breakpoint at the beginning of the **Put** method.
@@ -106,13 +106,13 @@ The main tasks for this exercise are as follows:
  - The method receives a **string** parameter called **id**.
  - If the traveler does not exist in the database, use the **Request.CreateResponse** method to return an HTTP response message with the **HttpStatusCode.NotFound** status.
 
->**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
+  >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
   - If the traveler exists, call the **Delete** and then the **Save** methods of the **Travelers** repository, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
   
 
->**Results** : After completing this exercise, you should have run the project from Visual Studio 2012 and access the travelers&#39; service.
+  >**Results** : After completing this exercise, you should have run the project from Visual Studio 2012 and access the travelers&#39; service.
 
 ### Exercise 2: Consuming an ASP.NET Web API Service
 
