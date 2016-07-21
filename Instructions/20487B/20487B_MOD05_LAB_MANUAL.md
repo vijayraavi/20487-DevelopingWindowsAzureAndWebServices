@@ -87,12 +87,12 @@ The main tasks for this exercise are as follows:
    a. Set the access modifier of the class to **public** and decorate it with the **[DataContract]** attribute.  
    b. Add the following properties to the class.
 
-      | **Name** | **Type** |
-      | --- | --- |
-      | TravelerId | int |
-      | ReservationDate | DateTime |
-      | DepartureFlight | TripDto |
-      | ReturnFlight | TripDto |
+  | **Name** | **Type** |
+  | --- | --- |
+  | TravelerId | int |
+  | ReservationDate | DateTime |
+  | DepartureFlight | TripDto |
+  | ReturnFlight | TripDto |
 
    c. Decorate each of the new properties with the **[DataMember]** attribute.
 
@@ -126,10 +126,10 @@ The main tasks for this exercise are as follows:
    a. If the **request.DepartureFlight** property is **null** , throw a **FaultException** of type **ReservationCreationFault**.
    b. In the **FaultException** constructor, create a new instance of **ReservationCreationFault** with the following property values.
 
-      | **Property** | **Value** |
-      | --- | --- |
-      | Description | Reservation must include a departure flight |
-      | ReservationDate | request.ReservationDate |
+ | **Property** | **Value** |
+ | --- | --- |
+ | Description | Reservation must include a departure flight |
+  ReservationDate | request.ReservationDate |
 
    c. In the **FaultException** constructor, set the second constructor parameter to the reason string **&quot;Invalid flight info&quot;**.
 
