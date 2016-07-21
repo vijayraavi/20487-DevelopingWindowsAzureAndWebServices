@@ -34,8 +34,8 @@ For this lab, you will use the available virtual machine environment. Before you
 5. Sign in using the following credentials:
 
 
-- User name: **Administrator**
-- Password: **Pa$$w0rd**
+ - User name: **Administrator**
+ - Password: **Pa$$w0rd**
 
 
 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the **Actions** pane, click **Start**.
