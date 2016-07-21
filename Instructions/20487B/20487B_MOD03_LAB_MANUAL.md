@@ -93,7 +93,7 @@ The main tasks for this exercise are as follows:
 >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
- - If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repositoryto update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
+  - If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repositoryto update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
 
 >**Note:** The **HTTP PUT** method can also be used to create resources. Checking if the resources exist is performed here for simplicity.
 
