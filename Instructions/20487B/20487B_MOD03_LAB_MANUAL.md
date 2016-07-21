@@ -33,6 +33,7 @@ For this lab, you will use the available virtual machine environment. Before you
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in using the following credentials:
 
+
 - User name: **Administrator**
 - Password: **Pa$$w0rd**
 
