@@ -72,11 +72,11 @@ The main tasks for this exercise are as follows:
    a. Set the access modifier of the class to **public** and decorate it with the **[DataContract]** attribute.  
    b. Add the following properties to the class.
 
-      | **Name** | **Type** |
-      | --- | --- |
-      | FlightScheduleId | int |
-      | Status | FlightStatus |
-      | Class | SeatClass |
+  | **Name** | **Type** |
+  | --- | --- |
+  | FlightScheduleId | int |
+  | Status | FlightStatus |
+  | Class | SeatClass |
   
    c. Decorate each of the new properties with the **[DataMember]** attribute.
 
