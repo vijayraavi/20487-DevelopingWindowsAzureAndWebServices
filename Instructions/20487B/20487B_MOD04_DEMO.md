@@ -256,7 +256,7 @@
 14. In Solution Explorer, under the **ODataService****.Client **project, right-click the** references **node and select** Add Service Reference**.
 15. In the **Address** text box, type **http://localhost:57371/OData** and click the **Go**
 
->**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
+  >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
 
 16. In the **Namespace** text box, type **OData** and click **OK**.
 17. In Solution Explorer, under the **ODataService****.Client **project, double-click the** Program.cs** file.
@@ -264,7 +264,7 @@
 
         var container = new OData.Container(new Uri(&quot;http://localhost:57371/OData&quot;));
 
->**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
+  >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
 
 19. Use a LINQ query to select the WCF course from the container&#39;s **Courses** property by using the following code.
 
@@ -295,11 +295,11 @@
 5. In Solution Explorer, under the **WebAPISecurity** project, double-click **AuthenticationMessageHandler.cs**.
 6. Locate the **SendAsync** method, and show its code to the students. Explain that first the method checks if the request contains _Basic_ authentication information by checking the **HttpRequestMessage.Headers.Authorization.Scheme** property. If the request does not contain the _Authorization_ header, it is sent to the next handler without checking.
 
->**Note** : The authentication handler does not require all the requests to contain the authentication information. This is because some actions in this demonstration need to be accessible to anonymous users.
+  >**Note** : The authentication handler does not require all the requests to contain the authentication information. This is because some actions in this demonstration need to be accessible to anonymous users.
 
 7. Show the code in the first **if** statement. Explain that if the request contains _Basic_ authentication information, then the code retrieves the identity from the HTTP _Authorization_ header, parses it into the username and password, and then sends the identity to be verified in the **AuthenticateUser** method. Explain that if the authentication fails, an _Unauthorized_ response is send back to the client.
 
->**Note** : In _Basic_ authentication, the username and password are encoded to a single Base64 string.
+  >**Note** : In _Basic_ authentication, the username and password are encoded to a single Base64 string.
 
 8. Show the code in the last **if** statement in the **SendAsync** method. Explain that an action can return an unauthorized response if it requires authentication and the user did not supply it, or if it requires the user to have a specific role, which the user does not have. If an unauthorized response is returned from the action, the code will add the _Basic_ authentication type to notify the client of the expected authentication type.
 9. Locate the **AuthenticateUser** method, and show its code. Explain to the students that after the identity is authenticated, the code creates **GenericIdentity** and **GenericPrincipal** objects to identify the user and its roles. The principal is then attached to the **Thread.CurrentPrincipal** property to have it available for the authorization process.
@@ -312,14 +312,14 @@
 16. Remove **/1** from the address in the address bar and then press Enter.
 17. In the **Windows Security** dialog box, type the following information:
 
-- User name: **Admin**
-- Password: **Admin1**
+  - User name: **Admin**
+  - Password: **Admin1**
 
 18. Click **OK**. Verify that the dialog box reappears.
 19. Type the following information in the **Windows Security** dialog box:
 
-- User name: **Admin**
-- Password: **Admin**
+  - User name: **Admin**
+  - Password: **Admin**
 
 20. Click **OK**. Verify that you can see an XML reply with the response of the action.
 21. Close the browser.
