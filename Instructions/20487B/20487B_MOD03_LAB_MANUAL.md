@@ -28,20 +28,22 @@ For this lab, you will use the available virtual machine environment. Before you
 
 1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
 
-1. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
-2. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
-3. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
-4. Sign in using the following credentials:
+2. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
+4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+5. Sign in using the following credentials:
 
 - User name: **Administrator**
 - Password: **Pa$$w0rd**
+
 
 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the **Actions** pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in using the following credentials:
 
-  - User name: **Admin**
-  - Password: **Pa$$w0rd**
+- User name: **Admin**
+- Password: **Pa$$w0rd**
+
 
 9. Verify that you received credentials to sign in to the Azure portal from your training provider, these credentials and the Azure account will be used throughout the labs of this course.
 
