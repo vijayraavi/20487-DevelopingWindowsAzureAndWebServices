@@ -76,7 +76,7 @@ The main tasks for this exercise are as follows:
 6. Copy the **FlightScheduleDatabaseInitializer.cs** file from the booking service self-host project to the new web application project.
 7. Add a **Global.asax** file to the new web application, and in the **Application\_Start** method, add the required database initialization code.
 
-    a. Initialize the database by using the database initializer you copied from the self-host project.  
+    a. Initialize the database by using the database initializer you copied from the self-host project.    
     b. Refer to the database initialization code in the **Program.cs** file that is in the **BlueYonder.Server.Booking.Host** project.
 
 #### Task 2: Configure the web application project to use IIS
@@ -85,7 +85,7 @@ The main tasks for this exercise are as follows:
 
 2. Within the **&lt;system.serviceModel&gt;** section group, add a **&lt;serviceHostingEnvironment&gt;** element with service activation configuration for the Booking service, and use the relative address **Booking.svc**.
 
-    a. Declare a **&lt;serviceActivations&gt;** section inside the **&lt;serviceHostingEnvironment&gt;** section.  
+    a. Declare a **&lt;serviceActivations&gt;** section inside the **&lt;serviceHostingEnvironment&gt;** section.    
     b. Inside the **&lt;serviceActivations&gt;** section, add an **&lt;add&gt;** tag with the following parameters.
 
    | Attribute | Value |
@@ -99,12 +99,13 @@ The main tasks for this exercise are as follows:
 
     a. In the **&lt;compilation&gt;** element, set the debug attribute to **true** and the **targetFramework** attribute to **4.5**.  
     b. In the **&lt;httpRuntime&gt;** element, set the **targetFramework** attribute to **4.5**.
+    
 
   >**Note:**.NET 4 and 4.5 use the same .NET Framework version for the IIS application pool. If you do not specify the target framework of your Web application in the **Web.config** file, the default version will be .NET 4.
 
 4. Remove the addresses used in the service metadata behavior and the service endpoint.
 
-    a. Remove the **httpGetUrl** attribute from the **&lt;serviceMetadata&gt;** element.  
+    a. Remove the **httpGetUrl** attribute from the **&lt;serviceMetadata&gt;** element.    
     b. Remove the **address** attribute from the **&lt;endpoint&gt;** element.
 
   >**Note:** IIS uses the address of the web application to create the service metadata address and the service endpoint address.
@@ -123,9 +124,9 @@ The main tasks for this exercise are as follows:
 
 3. Connect to the WCF service through the WCF Test Client application, and verify if the application is able to retrieve metadata from both services.
 
-    a. Open the WCF Test Client application from **D:\AllFiles**.  
-    b. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**  
-    c. Wait until you see the service and endpoints tree in the pane to the left.
+    a. Open the WCF Test Client application from **D:\AllFiles**.    
+    b. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**    
+    c. Wait until you see the service and endpoints tree in the pane to the left.  
 
 >**Results** : You will be able to run the WCF Test Client application and verify if the services are running properly in IIS.
 
@@ -170,7 +171,7 @@ The main tasks for this exercise are as follows:
 4. Create a new Azure Cloud Servicenamed **BlueYonderCompanion**** YourInitials** (_YourInitials_ contains your initials). Choose a region closest to your location for the new cloud service.
 5. Upload the **CloudApp** certificate from the **D:\AllFiles\certs** folder to thenew cloud service.
 
-    a. Open the new cloud service configuration and then open the **CERTIFICATES** tab.
+    a. Open the new cloud service configuration and then open the **CERTIFICATES** tab.  
     b. Use the password **1** to open the certificate file.
 
   >**Note:** In this lab, the ASP.NET Web API services are accessible through HTTP and HTTPS. To use HTTPS, you need to upload a certificate to the Azure cloud service.
@@ -178,7 +179,7 @@ The main tasks for this exercise are as follows:
 6. Open the **Companion.sln** solution file from the **D:\AllFiles\Mod06\LabFiles\begin\BlueYonder.Server** folder in a new Visual Studio 2012 instance.
 7. In the **BlueYonder.Companion.Host** project, edit the connection string within the **Web.config** file, and update the SQL Database server name.
 
-    a. Locate the two **{ServerName}** placeholders in the **connectionString** attribute
+    a. Locate the two **{ServerName}** placeholders in the **connectionString** attribute  
     b. Replace the placeholders with the SQL database server name from the portal.
 
 8. Locate the client endpoint configuration for the Booking service, and change its address to point to the web-hosted service. Use the address: **net.tcp://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**.
@@ -187,8 +188,9 @@ The main tasks for this exercise are as follows:
 
 1. Add a new cloud service project with an Azure web role for the **Companion.Host** project:
 
-    a. Right-click the **BlueYonder.Companion.Host** projectand select **Add Windows Azure Cloud Service Project**.
+    a. Right-click the **BlueYonder.Companion.Host** projectand select **Add Windows Azure Cloud Service Project**.  
     b. Verify that the cloud project contains a web role named **BlueYonder.Companion.Host.Azure**.
+    
 
   >**Note:** You can achieve the same result by adding a new Azure Cloud Service project, to the solution, and then manually adding a Web Role Project from an existing project.
 
@@ -222,6 +224,7 @@ The main tasks for this exercise are as follows:
 5. Run the ASP.NET Web API project with the Azure compute emulator.
 
    - After the two web browsers open, verify they use the addresses http://127.0.0.1:81 and https://127.0.0.1:444.
+   
 
   >**Note:** The endpoint configuration of the role uses ports 80 and 443 for the HTTP and HTTPS endpoint. However, the local IIS Web server already uses those ports, so the emulator needs to uses different ports.
 
@@ -241,6 +244,7 @@ The main tasks for this exercise are as follows:
 
    - **UpdateReservationOnBackendSystem**
    - **CreateReservationOnBackendSystem**
+   
 
   >**Note:** Prior to the deployment of the cloud project to Azure, all the on-premises WCF calls were disabled.  
   These include calls from the Reservation Controller class and the Trips Controller class.  
@@ -248,14 +252,14 @@ The main tasks for this exercise are as follows:
 
 3. Use Visual Studio 2012 to publish the **BlueYonder.Companion.Host.Azure** project to the cloud service you created.
 
-    a. Open the **Publish Windows Azure Application** dialog box for the cloud project.
-    b. Click the **Sign in to download credentials** link.
-    c. Save the publish settings file and return to Visual Studio 2012
+    a. Open the **Publish Windows Azure Application** dialog box for the cloud project.  
+    b. Click the **Sign in to download credentials** link.  
+    c. Save the publish settings file and return to Visual Studio 2012  
     d. Click **Import** , select the publish settings file you saved, and move to the next step of the publish wizard.
 
 4. Select the **BlueYonderCompanion**** YourInitials** (_YourInitials_ contains your name&#39;s initials)Azure Cloud Service
 
-    a. If required, create a new Azure Storage account named **bycl**** yourinitials** (_yourinitials_ contains your name&#39;s initials, in lower-case) in a region closest to your location.
+    a. If required, create a new Azure Storage account named **bycl**** yourinitials** (_yourinitials_ contains your name&#39;s initials, in lower-case) in a region closest to your location.  
     b. On the **Advanced Settings** tab, set the name of the new deployment to **Lab6** , and ensure that the **Append current date and time** check box is not selected.
 
   >**Note:** The abbreviation **bycl** stands for Blue Yonder Companion Labs. An abbreviation is used because storage account names are limited to 24 characters. The abbreviation is in lower-case because storage account names are in lower-case. Windows Azure Storage is covered in depth in Module 9, &quot;Windows Azure Storage&quot; in Course 20487.
@@ -267,7 +271,7 @@ The main tasks for this exercise are as follows:
 1. Go back to the **20487B-SEA-DEV-C** virtual machine.
 2. Replace the address used to communicate with the server:
 
-    a. In the **BlueYonder.Companion.Shared** project, open the **Addresses** class and in the **BaseUri** property, replace the address of the emulator with the cloud service address you created earlier.
+    a. In the **BlueYonder.Companion.Shared** project, open the **Addresses** class and in the **BaseUri** property, replace the address of the emulator with the cloud service address you created earlier.  
     b. Use the form **https://blueyondercompanion**** YourInitials. ****cloudapp.net/** (replace _YourInitials_ with your initials).
 
 3. Run the client app and search for flights to New York. Verify the client application is able to connect to the ASP.NET Web API Web application hosted in Windows Azure and retrieve the list of flights.
@@ -292,8 +296,8 @@ The main tasks for this exercise are as follows:
 
 2. Create a new Web App named: **BlueYonderCompanion**** YourInitials** (_YourInitials_ contains your initials).
 
-    a. Use **NEW** and then **QUICK CREATE** button.
-    b. Create a new **APP SERVICE PLAN** and select a **Region** that is closest to your location.
+    a. Use **NEW** and then **QUICK CREATE** button.  
+    b. Create a new **APP SERVICE PLAN** and select a **Region** that is closest to your location.  
     c. Click **CREATE WEB APP** to create the web site.
 
 3. Open the new Web App&#39;s **Dashboard** page, and download the publish profile file.
