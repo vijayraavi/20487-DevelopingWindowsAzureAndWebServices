@@ -16,11 +16,12 @@
 8. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Extensions** folder and double-click **TraceHandler.cs**.
 9. Add the following by using directives at the top of the **TraceHandler.cs** file.
 
+   ```cs
         using System.Diagnostics;
         using System.Net.Http;
         using System.Threading;
         using System.Threading.Tasks;
-
+```
 10. To derive from the **DelegatingHandler** base class, change the class declaration of the **TraceHandler** class by using the following code.
 
         public class TraceHandler : DelegatingHandler
