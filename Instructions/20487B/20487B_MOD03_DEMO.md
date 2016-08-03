@@ -22,6 +22,10 @@
 14. Return to Visual Studio 2012.
 15. In the **ValuesController** class, locate the parameterless **Get** action method, and change its code to the following.
 
+	```cs
+var EFServiceBuilder = services.AddEntityFramework().AddSqlServer();
+```
+
         ```cs
         [ActionName(&quot;List&quot;)]  
         public IEnumerable&lt;string&gt; Get()  
