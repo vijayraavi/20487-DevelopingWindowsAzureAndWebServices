@@ -210,11 +210,12 @@ The main tasks for this exercise are as follows:
 
 5. In the **config** file, add a connection string to the local SQL Express.
 
+   ```cs
         <connectionStrings>
            <add name="BlueYonderServer" connectionString="Data Source=.\SQLEXPRESS;Database=BlueYonder.Server.Lab5;Integrated    Security=SSPI" 
         providerName="System.Data.SqlClient" />
         </connectionStrings>
-
+```
   >**Note:** You can copy the connection string from the ASP.NET Web API services configuration file in **D:\Allfiles\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.Companion.Host\Web.config**. Make sure you change the database parameter to **BlueYonder.Server.Lab5**.
 
 #### Task 2: Create the service hosting code
@@ -226,9 +227,10 @@ The main tasks for this exercise are as follows:
 
 2. In the **Main** method, addthe following code to initialize the database.
 
+   ```cs
         var dbInitializer = new FlightScheduleDatabaseInitializer();
         dbInitializer.InitializeDatabase(new TravelCompanionContext(Implementation.BookingService.ConnectionName));
-
+```
 3. In the **Main** method, add code to host the **BookingService** service class.
 
    a. Create a new instance of the **ServiceHost** class for the **BookingService** service class.  
@@ -302,12 +304,13 @@ The main tasks for this exercise are as follows:
 
 5. Change the first **catch** block from
 
+   ```cs
         catch (HttpException fault)
 
    to
 
         catch**(**FaultException&lt;ReservationCreationFault&gt; fault)
-
+```
    a. Inside the **catch** block, throw an **HttpResponseException** with an **HttpResponseMessage** object.  
    b. Create the **HttpResponseMessage** by using the **Request.CreateResponse** method. Set the status code to **BadRequest** (HTTP 400), and the content of the message to the description of the fault.  
    c. Abort the connection in case of Exception, by calling the **Abort** method on the proxy object.
