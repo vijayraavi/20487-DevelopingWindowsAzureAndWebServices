@@ -307,7 +307,7 @@ The main tasks for this exercise are as follows:
    ```cs
         catch (HttpException fault)
 
-   to
+     to
 
         catch**(**FaultException&lt;ReservationCreationFault&gt; fault)
 ```
