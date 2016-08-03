@@ -34,11 +34,13 @@
 17. In Solution Explorer, double-click **cs** under **App\_Start** folder.
 18. Add the following code to the beginning of the **Register** method.
 
+```cs
         config.Routes.MapHttpRoute(  
              name: &quot;ActionApi&quot;,  
              routeTemplate: &quot;api/{controller}/{action}/{id}&quot;,  
              defaults: new { id = RouteParameter.Optional }  
         );
+```
 
 19. Press Ctrl+S to save the changes.
 20. To start debugging the application, press **F5**.
