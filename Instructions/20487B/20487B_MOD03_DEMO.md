@@ -23,14 +23,6 @@
 15. In the **ValuesController** class, locate the parameterless **Get** action method, and change its code to the following.
 
 	```cs
-	[ActionName(&quot;List&quot;)]  
-        public IEnumerable&lt;string&gt; Get()  
-        {  
-              return new string[] { &quot;value1&quot;, &quot;value2&quot; };  
-        } 
-```
-
-	```cs
         [ActionName(&quot;List&quot;)]  
         public IEnumerable&lt;string&gt; Get()  
         {  
