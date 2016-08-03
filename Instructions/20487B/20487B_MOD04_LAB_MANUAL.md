@@ -138,10 +138,10 @@ Therefore, you are required to use the Package Manager Console to install the su
    - Replace the current query string with the **$filter** option by using the expression **substringof(tolower(&#39;{0}&#39;),tolower(City))**.  
   
     The resulting code should resemble the following code.
-  
-
-       GetLocationsUri + &quot;?$filter=substringof(tolower(&#39;{0}&#39;),tolower(City))&quot;;
-
+   
+    ```cs  
+            GetLocationsUri + &quot;?$filter=substringof(tolower(&#39;{0}&#39;),tolower(City))&quot;;
+```
 >**Results** : Your web application exposes the OData protocol that supports the **Get** request of the locations data.
 
 ### Exercise 3: Applying Validation Rules in the Booking Service
