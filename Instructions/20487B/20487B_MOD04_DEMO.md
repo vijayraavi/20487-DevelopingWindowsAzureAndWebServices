@@ -24,10 +24,12 @@
 ```
 10. To derive from the **DelegatingHandler** base class, change the class declaration of the **TraceHandler** class by using the following code.
 
+   ```cs
         public class TraceHandler : DelegatingHandler
-
+```
 11. Override the **SendAsync** method by using the following code.
 
+   ```cs
         protected override async Task&lt;HttpResponseMessage&gt; SendAsync(HttpRequestMessage request,
 
         CancellationToken cancellationToken)
@@ -35,9 +37,10 @@
         {
 
         }
-
+```
 12. Implement the **SendAsync** method by using the following code.
 
+   ```cs
         Trace.WriteLine(&quot;Trace Handler start&quot;);
         Trace.WriteLine(request);
 
@@ -47,19 +50,21 @@
         Trace.WriteLine(&quot;Trace Handler end&quot;);
 
         return response;
-
+```
 13. Explain to the students that the **System.Debug.Trace** class is used to write the **HttpRequestMessage** before calling the **base.SendAsync** method, which calls the next  handler in the message handlers stack, and that the **System.Debug.Trace** class is also used write the **HttpResponseMessage** after the **base.SendAsync** method completes.
 14. In the **SendAsync** method, right-click the first line of code, point to **Breakpoint** , and then click **Insert Breakpoint**.
 15. Press CTRL+S to save the file.
 16. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **App\_Start** folder. Double-click the **WebApiConfig.cs** file.
 17. Add the following by using the directive at the top of the **WebApiConfig.cs** file.
 
+   ```cs
         using RequestResponseFlow.Web.Extensions;
-
+```
 18. In the **Register** method, add a new instance of the **TraceHandler** class to the **config.MessageHandlers** property by using the following code.
 
+   ```cs
         config.MessageHandlers.Add(new TraceHandler());
-
+```
 19. Explain to the students that ASP.NET Web API will add the new trace handler to the host handlers stack, affecting every service call.
 20. Press CTRL+S to save the file.
 21. In Solution Explorer, under the **RequestResponseFlow.Web** project, right-click the **Extensions** Point to **Add** and click **New Item**.
@@ -68,6 +73,7 @@
 24. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Extensions** Double-click the **TraceFilterAttribute.cs** file.
 25. Add the following by using the directives at the top of the **TraceFilterAttribute.cs** file.
 
+   ```cs
         using System.Diagnostics;
         using System.Net.Http;
         using System.Threading;
@@ -75,13 +81,15 @@
         using System.Web;
         using System.Web.Http.Controllers;
         using System.Web.Http.Filters;
-
+```
 26. Change the class declaration of the **TraceFilterAttribute** class to derive from the **Attribute** base class and implement the **IActionFilter** interface by using the following code.
 
+   ```cs
         public class TraceFilterAttribute : Attribute, IActionFilter
-
+```
 27. Declare the **ExecuteActionFilterAsync** method by using the following code.
 
+   ```cs
         public async
         Task&lt;HttpResponseMessage&gt;
         ExecuteActionFilterAsync(HttpActionContext actionContext,
@@ -92,9 +100,10 @@
         Func&lt;Task&lt;HttpResponseMessage&gt;&gt; continuation)
         {
         }
-
+```
 28. Implement the **ExecuteActionFilterAsync** method by using the following code.
 
+   ```cs
         Trace.WriteLine(&quot;Trace filter start&quot;);
 
         foreach (var item in actionContext.ActionArguments.Keys)
@@ -104,28 +113,31 @@
 
         Trace.WriteLine(string.Format(&quot;Trace filter response: {0}&quot;, response));
         return response;
-
+```
 29. Explain to the students that the **System.Debug.Trace** class is used to write the action arguments from the **actionContext.ActionArguments** propertybefore calling the **continuation** delegate, and to write the **HttpResponseMessage** after the **continuation** delegate returns a response.
 30. Explain that the **AllowMultiple** property needs to be implemented too. Explain that this indicates if the attribute can be applied multiple times on the same action or controller.
 31. Implement the **AllowMultiple** property by adding the following code to the class.
 
+   ```cs
         public bool AllowMultiple
         {
         get { return true; }
         }
-
+```
 32. Press CTRL+S to save the file.
 33. Place the cursor on the first line of the **ExecuteActionFilterAsync** method and press F9 to set a breakpoint.
 34. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Controllers** folder and double-click the **ValuesController.cs**.
 35. Add the following by using the directive at the top of the **ValuesController.cs** file.
 
+   ```cs
         using RequestResponseFlow.Web.Extensions;
-
+```
 36. Change the **ValuesController** class declaration. Decorate **ValuesController** with the **TraceFilter** attribute by using the following code.
 
+   ```cs
         [TraceFilter]
         public class ValuesController : ApiController
-
+```
 37. Explain that applying this attribute on a class indicates to **ApiController** that the **TraceFilterAttribute** action filter needs to be executed for every action in the **ValuesController** class.
 38. Press CTRL+S to save the file.
 39. Press F5 to start debugging the application.
@@ -149,36 +161,44 @@
 6. Explain that the **GetCountries** method synchronously retrieves a list of countries from another web service. Explain that to better utilize the thread pool, the **Get** method and the **GetCountries** method should both run asynchronously.
 7. Locate the **GetCountries** method and change its declaration to the following code.
 
+   ```cs
         private async Task&lt;XDocument&gt; GetCountries()
-
+```
 8. Replace the first line of code in the **GetCountries** method with the following code.
 
+   ```cs
         var client = new HttpClient();
-
+```
 9. Add the following **using** directive to the beginning of the file.
 
+   ```cs
         using System.Net.Http.Headers;
-
+```
 10. Replace the second line of code in the **GetCountries** method with the following code.
 
+   ```cs
         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(&quot;application/xml&quot;));
-
+```
 11. Replace the third line of code in the **GetCountries** method with the following code.
 
+   ```cs
         var response = await client.GetAsync(&quot;http://localhost:8371/api/countries&quot;);
-
+```
 12. Replace the fourth line of code in the **GetCountries** method with the following code.
 
+   ```cs
         var document = XDocument.Load(await response.Content.ReadAsStreamAsync());
-
+```
 13. In the **Get** method, add the **await** keyword before calling the **GetCountries** method. The resultant code should resemble the following.
 
+   ```cs
         var result = await GetCountries();
-
+```
 14. Change the declaration of the **Get** method to the following code.
 
+   ```cs
         public async Task&lt;IEnumerable&lt;string&gt;&gt; Get()
-
+```
 15. Press Ctrl+S to save the changes.
 16. In Solution Explorer, right-click the root solution node, and then click **Properties**.
 17. In the **Solution &#39;AsynchronousActions&#39; Property Pages** dialog box, select the **Multiple startup projects** option.
@@ -263,21 +283,24 @@
 17. In Solution Explorer, under the **ODataService****.Client **project, double-click the** Program.cs** file.
 18. In the **Main** method, create a new instance of the **OData.Container** class by using the following code.
 
+  ```cs
         var container = new OData.Container(new Uri(&quot;http://localhost:57371/OData&quot;));
-
+```
   >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
 
 19. Use a LINQ query to select the WCF course from the container&#39;s **Courses** property by using the following code.
 
+   ```cs
         var course = (from c in container.Courses
                where c.Name == &quot;WCF&quot;
                select c).FirstOrDefault();
-
+```
 20. Print the name and ID of the course by using the following code.
 
+   ```cs
         Console.WriteLine(&quot;the course {0} has the Id: {1}&quot;, course.Name, course.Id);
         Console.ReadKey();
-
+```
 21. Press Ctrl+S to save the changes.
 22. In Solution Explorer, right-click the **ODataService****.Client **project, point to** Debug **and click** Start New Instance** to run the client application.
 23. Show the students that the query returns data about the WCF course.
