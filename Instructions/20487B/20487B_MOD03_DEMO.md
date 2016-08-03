@@ -62,13 +62,13 @@
 5. Locate the **Get** method call and explain how **HttpResponseMessage** is used to control errors.
 6. Change the signature of the **Get** method to the following signature.
 
-```cs
+	```cs
         public Destination Get(int id)
 ```        
     
 7. Remove the if-else statement and return the **destination** variable. When you are finished, the **Get** method should look like this.
  
-```cs
+	```cs
         public Destination Get(int id)  
         {  
            var destination = \_destinations.Where(d=&gt;d.Id == id).FirstOrDefault();  
@@ -79,7 +79,7 @@
 8. Discuss what should be the result of such a call (404 not found status). Show the students that the string **null** is being returned instead (with 200 OK status).
 9. Change the **Get** method to validate the existence of a destination before sending a response. When you are finished, the **Get** method should look like this.
 
-```cs
+	```cs
         public Destination Get(int id)  
         {  
            var destination = \_destinations.Where(d=&gt;d.Id == id).FirstOrDefault();    
@@ -110,7 +110,7 @@
 5. Locate the script section and explain jQuery retrieves the data from the server and how this method of work enables AJAX.
 6. In the beginning of the script section, add jQuery code to register to the submit event of the **deleteLocation** form. The registration code should look as follows.
 
-```cs
+	```cs
         $(&quot;#deleteLocation&quot;).submit(function (event) {  
               // this prevents the form from submitting  
             event.preventDefault();  
@@ -119,7 +119,7 @@
 
 7. Add code retrieving the value of the **LocationId** input, and then create a delete call to the destination resource by using the jQuery **AJAX** function. The registration code should look as follows.
 
-```cs
+	```cs
         $(&quot;#deleteLocation&quot;).submit(function (event) {  
                // this prevents the form from submitting  
             event.preventDefault();    
@@ -155,7 +155,7 @@
 9. In **Solution Explorer** , under the **Client** project, double-click **cs.**
 10. Locate the **CallServer** method and code to send a GET request for the destinations resource and print the responses content as string. As soon as you are finished, the **CallServer** method should look as follows.
 
-```cs
+	```cs
         static async Task CallServer()  
         {  
              var client = new HttpClient  
@@ -170,7 +170,7 @@
 
 11. Add code to deserialize the request content into a **List&lt;Destinations&gt;** by using the **ReadAsAsync&lt;T&gt;** method. As soon as you are finished, the **CallServer** method should look like this.
 
-```cs
+	```cs
         static async Task CallServer()  
         {  
               var client = new HttpClient  
