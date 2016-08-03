@@ -20,8 +20,9 @@
 12. In Solution Explorer, double-click **IHotelBookingService.cs**.
 13. Add the following **using** directive.
 
+   ```cs
         using System.ServiceModel;
-
+```
 14. Add the **[ServiceContract]** attribute above the **IHotelBookingService** interface declaration.
 15. Add the **[OperationContract]** attribute above the **BookHotel** method declaration.
 16. Explain that these attributes mark the interface as a WCF service contract and expose the interface methods as service operations.
@@ -48,8 +49,6 @@
 33. Close the WCF Test Client application.
 34. Close Visual Studio 2012.
 
-
-
 # Lesson 3: Configuring and Hosting WCF Services
 
 ### Demonstration: Configuring Endpoints in Code and in Configuration
@@ -63,19 +62,21 @@
 5. Locate the **&lt;system.serviceModel&gt;** section group. Explain that in this section of the file, you define the base address, endpoints, and behaviors of the service.
 6. To the **&lt;serviceBehaviors&gt;** element, add the following configuration:
 
+   ```cs
         <behavior>
           <serviceMetadata httpGetEnabled="True"/>
         </behavior>
-
+```
 7. Explain that the service cannot be tested unless the service behavior has the **serviceMetadata** behavior.
 8. To add base addresses, add the following configuration to the **&lt;service&gt;** element.
 
+   ```cs
         <host>
            <baseAddresses>
                <add baseAddress="http://localhost:8733/" />
            </baseAddresses>
         </host>
-
+```
 9. To save the file, press Ctrl+S.
 10. In Solution Explorer, right-click **App.config** and click **Edit WCF Configuration**.
 11. In the Service Configuration Editor window, expand the **HotelBooking.HotelBookingService** node in the **Configuration** pane, right-click the **Endpoints** node, and click **New Service Endpoint.**
@@ -92,8 +93,9 @@
 17. In Solution Explorer, under the **ServiceHost** project, click **cs**.
 18. After the initialization of the **ServiceHost** , add the following line of code to the **Main** method.
 
+   ```cs
         host.AddServiceEndpoint(typeof(IHotelBookingService), new NetTcpBinding(), "booking");
-
+```
 19. Explain that you added an endpoint that uses **NetTcpBinding** , with a relative address ( **booking** ).
 20. To save the file, press Ctrl+S.
 21. In Solution Explorer, right-click the **ServiceHost** project and click **Set as StartUp Project**.
@@ -102,8 +104,9 @@
 24. On the Start screen, click the **Developer Command Prompt for VS2012** tile.
 25. In the command prompt, type the following command and press Enter.
 
+   ```cs
         WcfTestClient  http://localhost:8733/
-
+```
 26. After the **WCF Test Client** tool opens, show the service and its endpoint. Show that the service has two endpoints.
 27. Under the TCP binding endpoint, double-click the method **BookHotel**.
 28. In the parameter **HotelName** (under the **Value** column), enter the value **HotelA**.
@@ -164,18 +167,20 @@
 11. In Solution Explorer, expand the **ServiceClient** project and double-click **Program.cs**.
 12. To the **using** section at the top of the file, add the following **using** directives.
 
+   ```cs
         using HotelBooking;
         using System.ServiceModel;
-
+```
 13. At the beginning of the **Main** method, add the following lines of code before the commented code.
 
+   ```cs
         ChannelFactory&lt;IHotelBookingService&gt; serviceFactory =
             new ChannelFactory<IHotelBookingService>
                 (new BasicHttpBinding(),
                 "http://localhost:8733/HotelBooking/HotelBookingHttp");
                 
         IHotelBookingService proxy = serviceFactory.CreateChannel();
-
+```
 14. Explain that the service contract interface is passed as a generic type parameter to the **ChannelFactory&lt;T&gt;** generic class.
 15. Select the code that appears in comments, click the **Edit** menu, point to **Advanced** , and then click **Uncomment Selection**.
 16. To save the file, press Ctrl+S.
