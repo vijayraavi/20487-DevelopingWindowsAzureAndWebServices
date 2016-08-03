@@ -22,11 +22,13 @@
 14. Return to Visual Studio 2012.
 15. In the **ValuesController** class, locate the parameterless **Get** action method, and change its code to the following.
 
+        '''cs
         [ActionName(&quot;List&quot;)]  
         public IEnumerable&lt;string&gt; Get()  
         {  
               return new string[] { &quot;value1&quot;, &quot;value2&quot; };  
-        }  
+        } 
+        '''
 
 16. Press Ctrl+S to save the changes.
 17. In Solution Explorer, double-click **cs** under **App\_Start** folder.
