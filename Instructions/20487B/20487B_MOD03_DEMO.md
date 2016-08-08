@@ -20,7 +20,7 @@
 12. In the address bar of the browser, append the **api/values** tothe end of the address, and then press Enter.
 13. When prompted by the browser, click **Open,** click **Try an app on this PC** , and then click **Notepad** to open the **json** file in Notepad.
 14. Return to Visual Studio 2012.
-15. In the **ValuesController** class, locate the parameterless **Get** action method, and change its code to the following.
+15. In the <**ValuesController**> class, locate the parameterless **Get** action method, and change its code to the following.
 
 	```cs
         [ActionName("List")]  
