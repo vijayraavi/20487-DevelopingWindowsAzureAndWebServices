@@ -23,10 +23,10 @@
 15. In the **ValuesController** class, locate the parameterless **Get** action method, and change its code to the following.
 
 	```cs
-        [ActionName(&quot;List&quot;)]  
-        public IEnumerable&lt;string&gt; Get()  
+        [ActionName("List")]  
+        public IEnumerable<string> Get()  
         {  
-              return new string[] { &quot;value1&quot;, &quot;value2&quot; };  
+              return new string[] { "value1", "value2" };  
         } 
 ```
 
@@ -36,8 +36,8 @@
 
 	```cs
         config.Routes.MapHttpRoute(  
-             name: &quot;ActionApi&quot;,  
-             routeTemplate: &quot;api/{controller}/{action}/{id}&quot;,  
+             name: "ActionApi",  
+             routeTemplate: "api/{controller}/{action}/{id}",  
              defaults: new { id = RouteParameter.Optional }  
         );
 ```
@@ -71,7 +71,7 @@
 	```cs
         public Destination Get(int id)  
         {  
-           var destination = \_destinations.Where(d=&gt;d.Id == id).FirstOrDefault();  
+           var destination = _destinations.Where(d=>d.Id == id).FirstOrDefault();  
            return destination;  
         }
 ```
@@ -82,7 +82,7 @@
 	```cs
         public Destination Get(int id)  
         {  
-           var destination = \_destinations.Where(d=&gt;d.Id == id).FirstOrDefault();    
+           var destination = _destinations.Where(d=>d.Id == id).FirstOrDefault();    
        
            if (destination == null)    
               throw new HttpResponseException(    
@@ -111,7 +111,7 @@
 6. In the beginning of the script section, add jQuery code to register to the submit event of the **deleteLocation** form. The registration code should look as follows.
 
 	```cs
-        $(&quot;#deleteLocation&quot;).submit(function (event) {  
+        $("#deleteLocation").submit(function (event) {  
               // this prevents the form from submitting  
             event.preventDefault();  
         });  
@@ -120,15 +120,15 @@
 7. Add code retrieving the value of the **LocationId** input, and then create a delete call to the destination resource by using the jQuery **AJAX** function. The registration code should look as follows.
 
 	```cs
-        $(&quot;#deleteLocation&quot;).submit(function (event) {  
+        $("#deleteLocation").submit(function (event) {  
                // this prevents the form from submitting  
             event.preventDefault();    
             
-            var desId = $(this).find(&#39;input[name=&quot;LocationId&quot;]&#39;).val();  
+            var desId = $(this).find('input[name="LocationId"]').val();  
        
             $.ajax({  
-                type: &#39;DELETE&#39;,  
-                url: &#39;destinations/&#39; + desId  
+                type: 'DELETE',  
+                url: 'destinations/' + desId  
             });  
         });  
 ``` 
@@ -160,9 +160,9 @@
         {  
              var client = new HttpClient  
              {  
-                  BaseAddress = new Uri(&quot;http://localhost:12534/&quot;)  
+                  BaseAddress = new Uri("http://localhost:12534/")  
              };  
-             HttpResponseMessage message = await client.GetAsync(&quot;api/Destinations&quot;);  
+             HttpResponseMessage message = await client.GetAsync("api/Destinations");  
              var res = await message.Content.ReadAsStringAsync();  
              Console.WriteLine(res);  
         }  
@@ -175,14 +175,14 @@
         {  
               var client = new HttpClient  
               {  
-                     BaseAddress = new Uri(&quot;http://localhost:12534/&quot;)  
+                     BaseAddress = new Uri("http://localhost:12534/";)  
               };  
               
-              HttpResponseMessage message = await client.GetAsync(&quot;api/Destinations&quot;);  
+              HttpResponseMessage message = await client.GetAsync("api/Destinations");  
               var res = await message.Content.ReadAsStringAsync();  
               Console.WriteLine(res);  
               
-              var destinations = await message.Content.ReadAsAsync&lt;List&lt;Destination&gt;&gt;();  
+              var destinations = await message.Content.ReadAsAsync<List<Destination>>();  
               Console.WriteLine(destinations.Count);  
         }
 ```
