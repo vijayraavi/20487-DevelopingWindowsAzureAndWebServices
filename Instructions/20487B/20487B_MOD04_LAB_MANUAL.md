@@ -140,7 +140,7 @@ Therefore, you are required to use the Package Manager Console to install the su
     The resulting code should resemble the following code.
    
     ```cs  
-            GetLocationsUri + &quot;?$filter=substringof(tolower(&#39;{0}&#39;),tolower(City))&quot;;
+            GetLocationsUri + "?$filter=substringof(tolower('{0}'),tolower(City))";
 ```
 >**Results** : Your web application exposes the OData protocol that supports the **Get** request of the locations data.
 
