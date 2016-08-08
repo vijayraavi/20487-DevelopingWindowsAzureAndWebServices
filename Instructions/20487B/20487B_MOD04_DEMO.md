@@ -121,7 +121,7 @@
    ```cs
         public bool AllowMultiple
         {
-        get { return true; }
+            get { return true; }
         }
 ```
 32. Press CTRL+S to save the file.
@@ -292,7 +292,7 @@
 
    ```cs
         var course = (from c in container.Courses
-               where c.Name == "WCF";
+               where c.Name == "WCF"
                select c).FirstOrDefault();
 ```
 20. Print the name and ID of the course by using the following code.
