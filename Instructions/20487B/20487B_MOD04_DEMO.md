@@ -30,7 +30,7 @@
 11. Override the **SendAsync** method by using the following code.
 
    ```cs
-        protected override async Task&lt;HttpResponseMessage&gt; SendAsync(HttpRequestMessage request,
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
 
         CancellationToken cancellationToken)
 
@@ -41,13 +41,13 @@
 12. Implement the **SendAsync** method by using the following code.
 
    ```cs
-        Trace.WriteLine(&quot;Trace Handler start&quot;);
+        Trace.WriteLine("Trace Handler start");
         Trace.WriteLine(request);
 
         var response = await base.SendAsync(request, cancellationToken);
 
         Trace.WriteLine(response);
-        Trace.WriteLine(&quot;Trace Handler end&quot;);
+        Trace.WriteLine("Trace Handler end");
 
         return response;
 ```
@@ -91,27 +91,27 @@
 
    ```cs
         public async
-        Task&lt;HttpResponseMessage&gt;
+        Task<HttpResponseMessage>
         ExecuteActionFilterAsync(HttpActionContext actionContext,
 
         CancellationToken
         cancellationToken,
 
-        Func&lt;Task&lt;HttpResponseMessage&gt;&gt; continuation)
+        Func<Task<HttpResponseMessage>> continuation)
         {
         }
 ```
 28. Implement the **ExecuteActionFilterAsync** method by using the following code.
 
    ```cs
-        Trace.WriteLine(&quot;Trace filter start&quot;);
+        Trace.WriteLine("Trace filter start");
 
         foreach (var item in actionContext.ActionArguments.Keys)
-                Trace.WriteLine(string.Format(&quot;{0}: {1}&quot;, item, actionContext.ActionArguments[item]))
+                Trace.WriteLine(string.Format("{0}: {1}", item, actionContext.ActionArguments[item]))
         
         var response = await continuation();
 
-        Trace.WriteLine(string.Format(&quot;Trace filter response: {0}&quot;, response));
+        Trace.WriteLine(string.Format("Trace filter response: {0}", response));
         return response;
 ```
 29. Explain to the students that the **System.Debug.Trace** class is used to write the action arguments from the **actionContext.ActionArguments** propertybefore calling the **continuation** delegate, and to write the **HttpResponseMessage** after the **continuation** delegate returns a response.
@@ -162,7 +162,7 @@
 7. Locate the **GetCountries** method and change its declaration to the following code.
 
    ```cs
-        private async Task&lt;XDocument&gt; GetCountries()
+        private async Task<XDocument> GetCountries()
 ```
 8. Replace the first line of code in the **GetCountries** method with the following code.
 
@@ -177,12 +177,12 @@
 10. Replace the second line of code in the **GetCountries** method with the following code.
 
    ```cs
-        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(&quot;application/xml&quot;));
+        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
 ```
 11. Replace the third line of code in the **GetCountries** method with the following code.
 
    ```cs
-        var response = await client.GetAsync(&quot;http://localhost:8371/api/countries&quot;);
+        var response = await client.GetAsync("http://localhost:8371/api/countries");
 ```
 12. Replace the fourth line of code in the **GetCountries** method with the following code.
 
@@ -197,7 +197,7 @@
 14. Change the declaration of the **Get** method to the following code.
 
    ```cs
-        public async Task&lt;IEnumerable&lt;string&gt;&gt; Get()
+        public async Task<IEnumerable<string>> Get()
 ```
 15. Press Ctrl+S to save the changes.
 16. In Solution Explorer, right-click the root solution node, and then click **Properties**.
@@ -284,7 +284,7 @@
 18. In the **Main** method, create a new instance of the **OData.Container** class by using the following code.
 
   ```cs
-        var container = new OData.Container(new Uri(&quot;http://localhost:57371/OData&quot;));
+        var container = new OData.Container(new Uri("http://localhost:57371/OData"));
 ```
   >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
 
@@ -292,13 +292,13 @@
 
    ```cs
         var course = (from c in container.Courses
-               where c.Name == &quot;WCF&quot;
+               where c.Name == "WCF";
                select c).FirstOrDefault();
 ```
 20. Print the name and ID of the course by using the following code.
 
    ```cs
-        Console.WriteLine(&quot;the course {0} has the Id: {1}&quot;, course.Name, course.Id);
+        Console.WriteLine("the course {0} has the Id: {1}", course.Name, course.Id);
         Console.ReadKey();
 ```
 21. Press Ctrl+S to save the changes.
