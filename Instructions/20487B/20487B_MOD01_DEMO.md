@@ -14,14 +14,14 @@
 
 4. Review the items in the pane on the left side of the screen and explain the different services that you can manage with the Azure portal.
 5. Click **NEW** on the lower-left corner of the portal. Click **COMPUTE** , click **CLOUD SERVICE** , and then click **QUICK CREATE**. The **URL** and **REGION** text boxes display on the right side of the screen.
-6. In the **URL** text box, type the following cloud service name: **CloudServiceDemo YourInitials** (Replace **YourInitials** with your initials).
+6. In the **URL** text box, type the following cloud service name: **CloudServiceDemoYourInitials** (Replace **YourInitials** with your initials).
 7. Explain that the cloud service name you typed is going to be part of the URL that you will use when connecting to the roles running in the cloud service.
 8. In the **REGION** drop-down list, select the region that is closest to your location.  
 Explain that by selecting the region, you are actually selecting the datacenter where the VMs will be created.
 
 9. Click **CREATE CLOUD SERVICE** at the lower-right corner of the portal. Wait until the cloud service is created.
 10. Click **CLOUD SERVICES** in the navigation pane.
-11. Click the cloud service that you created in the previous step (the one that is named **CloudServiceDemo YourInitials**.
+11. Click the cloud service that you created in the previous step (the one that is named **CloudServiceDemoYourInitials**.
 12. Explain that currently the cloud service is empty and has no roles; therefore, the tabs do not have any content. Explain that in module 06, &quot;Hosting Services&quot;, you will show how to deploy new roles to the cloud service, and how to configure the roles.
 13. Go over the different tabs and explain their purpose:  
   a. **DASHBOARD**. Provides an overview for the state and configuration of the cloud service and its roles.  
@@ -77,7 +77,7 @@ Explain that by selecting the region, you are actually selecting the datacenter 
 32. Click the current trip from Seattle to New York.
 33. On the **Current Trip** page, right-click or swipe from the bottom of the screen to display the app bar, and then click **Media**.
 34. On the **Media** page, right-click or swipe from the bottom of the screen to display the app bar.
-35. Show students the availablebuttons, and explain that you can upload images and videos to Azure Storage, and share them with other clients.
+35. Show students the available buttons, and explain that you can upload images and videos to Azure Storage, and share them with other clients.
 36. Inform the students that they will implement the upload and download features in the upcoming labs.
 
    >**Note** : Do not click the upload buttons, because you have not created any Azure Storage accounts yet. If you click any of the upload buttons, the app will fail and close.
