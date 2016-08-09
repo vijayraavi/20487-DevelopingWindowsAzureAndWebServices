@@ -22,22 +22,22 @@ Estimated Time: **75 minutes**
 
 Virtual Machine: **20487B-SEA-DEV-A** and **20487B-SEA-DEV-C**
 
-User name: **Administrator** , **Admin**
+User name: **Administrator**, **Admin**
 
-Password: **Pa$$w0rd** , **Pa$$w0rd**
+Password: **Pa$$w0rd**, **Pa$$w0rd**
 
 For this lab, you will use the available virtual machine environment. Before you begin this lab, you must complete the following steps:
 
-1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Actions** pane, click **Start**.
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in by using the following credentials:
 
   - User name: **Administrator**
   - Password: **Pa$$w0rd**
 
-6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the **Actions** pane, click **Start**.
+6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and in the **Actions** pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in by using the following credentials:
 
@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Register the dependency resolver class with HttpConfiguration
 
-1. Open the **WebApiConfig.cs** file, located under the **App\_Start** folder in the **BlueYonder.Companion.Host** project, and set **BlueYonderResolver** as the new dependency resolver.
+1. Open the **WebApiConfig.cs** file, located under the **App\_Start** folder in the **BlueYonder.Companion.Host** project, and set  **BlueYonderResolver** as the new dependency resolver.
 
    - Use the **DependencyResolver** property of the **config** object to set the dependency resolver.
 
@@ -120,22 +120,22 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a Queryable action to the flight schedule service
 
-1. Use the Package Manager Console window to install the **4.0.30506** version of the **Microsoft.AspNet.WebApi.OData** NuGet package in the **BlueYonder.Companion.Controllers**
+1. Use the Package Manager Console window to install the **4.0.30506** version of the **Microsoft.AspNet.WebApi.OData** NuGet package in the **BlueYonder.Companion.Controllers** project.
 
   >**Note:** The current version of the **Microsoft.AspNet.WebApi.OData** NuGet package has some incompatibilities with the version that was used while developing this course.  
-Therefore, you are required to use the Package Manager Console to install the supported version of this package. ** **
+Therefore, you are required to use the Package Manager Console to install the supported version of this package. 
 
-2. In the **BlueYonder.Companion.Controllers** project, open the **LocationsController** class, and decorate the **Get** method verload, which has three parameters, with the **[Queryable]** attribute.
-3. Change the method implementation to use the repository&#39;s **GetAll** method and return **IQueryable** instead of **IEnumerable**.
+2. In the **BlueYonder.Companion.Controllers** project, open the **LocationsController** class, and decorate the **Get** method overload, which has three parameters, with the **[Queryable]** attribute.
+3. Change the method implementation to use the repository&#39;s **GetAll** method and return **IQueryable** instead of  **IEnumerable**.
 4. Remove the parameters from the method declaration. You will not need them anymore because the OData infrastructure will take care of the query filtering.
 
 #### Task 2: Handle the search event in the client application and query the flight schedule service by using OData filters
 
 1. Log on to the virtual machine **20487B-SEA-DEV-C** as **Admin** with the password **Pa$$w0rd**.
 2. Open the BlueYonder.Companion.Client solution from the D:\AllFiles\Mod04\LabFiles\begin\BlueYonder.Companion.Client folder.
-3. Open the **Addresses.cs** file from the **BlueYonder.Companion.Shared** project and change the **GetLocationsWithQueryUri** property to use OData querying instead of the standard query string.
+3. Open the **Addresses.cs** file from the **BlueYonder.Companion.Shared** project and change the **GetLocationsWithQueryUri**  property to use OData querying instead of the standard query string.
 
-   - Replace the current query string with the **$filter** option by using the expression **substringof(tolower(&#39;{0}&#39;),tolower(City))**.  
+   - Replace the current query string with the **$filter** option by using the expression  **substringof(tolower(&#39;{0}&#39;),tolower(City))**.  
   
     The resulting code should resemble the following code.
    
@@ -164,7 +164,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add Data Annotations to the Traveler Class
 
-1. Return to the **BlueYonder.Companion** solution in the **20487B-SEA-DEV-A** virtual machine. In the **BlueYonder.Entities** project, use data annotation attributes to validate the **Traveler** class&#39; properties by using the following rules:
+1. Return to the **BlueYonder.Companion** solution in the **20487B-SEA-DEV-A** virtual machine. In the **BlueYonder.Entities**  project, use data annotation attributes to validate the **Traveler** class&#39; properties by using the following rules:
 
 
    - **FirstName** , **LastName** , and **HomeAddress** should use the **[Required]** validation attribute.
@@ -179,10 +179,10 @@ The main tasks for this exercise are as follows:
    a. Check if the model state is valid by using the **actionContext.ModelState.IsValid** property.  
    b. If the model state is not valid, call **actionContext.Request.CreateErrorResponse** to create an error response message.
 
-    >**Note:** The **CreateErrorResponse** method is an extension method. To use it, add a **using** directive for the **System.Net.Http** namespace.
+    >**Note:** The **CreateErrorResponse** method is an extension method. To use it, add a **using** directive for the  **System.Net.Http** namespace.
 
    c. For the error response, use the overload that expects an **HttpStatusCode** enum and an **HttpError** object.    
-   d. Use **HttpStatusCode.BadRequest** , and initialize the **HttpError** object with **actionContext.ModelState** and the **true** Boolean value for the second constructor parameter.
+   d. Use **HttpStatusCode.BadRequest** , and initialize the **HttpError** object with **actionContext.ModelState** and the **true**  Boolean value for the second constructor parameter.
 
 #### Task 3: Apply the custom attribute to the PUT and POST actions in the booking service
 
@@ -228,7 +228,7 @@ The main tasks for this exercise are as follows:
   
 2. Browse the web application by using HTTP to get the location data.
 
-    a. Return to IIS Manager, refresh the **Default Web Site** , and then select the **BlueYonder.Companion.Host** application.  
+    a. Return to IIS Manager, refresh the **Default Web Site**, and then select the **BlueYonder.Companion.Host** application.  
     b. Click the **Browse \*:80** link to browse the web application.  
     c. Append the string **locations** to the text in the address bar to get the list of locations.  
     d. Explore the contents of the file. It contains the **Location** database content in the JSON format.
