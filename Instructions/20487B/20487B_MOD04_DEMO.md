@@ -6,14 +6,14 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual**** Studio 2012** tile.
+1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\**** RequestResponseFlow\begin\RequestResponseFlow**.
-4. Select the file **RequestResponseFlow****.sln **, and then click** Open**.
-5. In Solution Explorer, under the **RequestResponseFlow.Web** project, right-click the **Extensions** Point to **Add** , and click **New Item**.
+3. Browse to **D:\Allfiles\Mod04\DemoFiles\RequestResponseFlow\begin\RequestResponseFlow**.
+4. Select the file **RequestResponseFlow.sln **, and then click **Open**.
+5. In Solution Explorer, under the **RequestResponseFlow.Web** project, right-click the **Extensions** folder. Point to **Add** , and click **New Item**.
 6. In the **Add New Item** dialog box, in the pane on the left side, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
 7. In the **Name** box, type **TraceHandler.cs** , and then click **Add**
-8. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Extensions** folder and double-click **TraceHandler.cs**.
+8. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Extensions** folder and double-click  **TraceHandler.cs**.
 9. Add the following by using directives at the top of the **TraceHandler.cs** file.
 
    ```cs
@@ -51,10 +51,10 @@
 
         return response;
 ```
-13. Explain to the students that the **System.Debug.Trace** class is used to write the **HttpRequestMessage** before calling the **base.SendAsync** method, which calls the next  handler in the message handlers stack, and that the **System.Debug.Trace** class is also used write the **HttpResponseMessage** after the **base.SendAsync** method completes.
+13. Explain to the students that the **System.Debug.Trace** class is used to write the **HttpRequestMessage** before calling the  **base.SendAsync** method, which calls the next  handler in the message handlers stack, and that the **System.Debug.Trace** class is also used write the **HttpResponseMessage** after the **base.SendAsync** method completes.
 14. In the **SendAsync** method, right-click the first line of code, point to **Breakpoint** , and then click **Insert Breakpoint**.
 15. Press CTRL+S to save the file.
-16. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **App\_Start** folder. Double-click the **WebApiConfig.cs** file.
+16. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **App\_Start** folder. Double-click the  **WebApiConfig.cs** file.
 17. Add the following by using the directive at the top of the **WebApiConfig.cs** file.
 
    ```cs
@@ -67,10 +67,10 @@
 ```
 19. Explain to the students that ASP.NET Web API will add the new trace handler to the host handlers stack, affecting every service call.
 20. Press CTRL+S to save the file.
-21. In Solution Explorer, under the **RequestResponseFlow.Web** project, right-click the **Extensions** Point to **Add** and click **New Item**.
+21. In Solution Explorer, under the **RequestResponseFlow.Web** project, right-click the **Extensions** folder. Point to **Add** and click **New Item**.
 22. In the **Add New Item** dialog box, in the pane on the left side, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
 23. In the **Name** box, type **TraceFilterAttribute.cs** , and then click **Add**.
-24. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Extensions** Double-click the **TraceFilterAttribute.cs** file.
+24. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Extensions** folder. Double-click the  **TraceFilterAttribute.cs** file.
 25. Add the following by using the directives at the top of the **TraceFilterAttribute.cs** file.
 
    ```cs
@@ -82,7 +82,7 @@
         using System.Web.Http.Controllers;
         using System.Web.Http.Filters;
 ```
-26. Change the class declaration of the **TraceFilterAttribute** class to derive from the **Attribute** base class and implement the **IActionFilter** interface by using the following code.
+26. Change the class declaration of the **TraceFilterAttribute** class to derive from the **Attribute** base class and implement the  **IActionFilter** interface by using the following code.
 
    ```cs
         public class TraceFilterAttribute : Attribute, IActionFilter
@@ -107,14 +107,14 @@
         Trace.WriteLine("Trace filter start");
 
         foreach (var item in actionContext.ActionArguments.Keys)
-                Trace.WriteLine(string.Format("{0}: {1}", item, actionContext.ActionArguments[item]))
+                Trace.WriteLine(string.Format("{0}: {1}", item, actionContext.ActionArguments[item]));
         
         var response = await continuation();
 
         Trace.WriteLine(string.Format("Trace filter response: {0}", response));
         return response;
 ```
-29. Explain to the students that the **System.Debug.Trace** class is used to write the action arguments from the **actionContext.ActionArguments** propertybefore calling the **continuation** delegate, and to write the **HttpResponseMessage** after the **continuation** delegate returns a response.
+29. Explain to the students that the **System.Debug.Trace** class is used to write the action arguments from the  **actionContext.ActionArguments** property before calling the **continuation** delegate, and to write the **HttpResponseMessage** after the **continuation** delegate returns a response.
 30. Explain that the **AllowMultiple** property needs to be implemented too. Explain that this indicates if the attribute can be applied multiple times on the same action or controller.
 31. Implement the **AllowMultiple** property by adding the following code to the class.
 
@@ -126,7 +126,7 @@
 ```
 32. Press CTRL+S to save the file.
 33. Place the cursor on the first line of the **ExecuteActionFilterAsync** method and press F9 to set a breakpoint.
-34. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Controllers** folder and double-click the **ValuesController.cs**.
+34. In Solution Explorer, under the **RequestResponseFlow.Web** project, expand the **Controllers** folder and double-click the  **ValuesController.cs**.
 35. Add the following by using the directive at the top of the **ValuesController.cs** file.
 
    ```cs
@@ -145,7 +145,7 @@
 41. Return to Visual Studio 2012.
 42. On the **Debug** menu, point to **Windows** , and then click **Call Stack**.
 43. Right-click the **Call Stack** pane, and make sure that the **Show External Code** option is selected.
-44. Show the students the lines in the **Call Stack** that show the calls of the **HttpControllerHandler** , **HttpServer** , and **DelegatingHandler**.
+44. Show the students the lines in the **Call Stack** that show the calls of the **HttpControllerHandler** , **HttpServer** , and  **DelegatingHandler**.
 45. Press F5 to continue debugging. When the debugger breaks inside **TraceFilterAttribute** , show the students the lines executed by the **ApiController** class.
 46. Press Shift+F5 to stop the debugger.
 
@@ -155,9 +155,9 @@
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\**** AsynchronousActions\begin\AsynchronousActions**.
+3. Browse to **D:\Allfiles\Mod04\DemoFiles\AsynchronousActions\begin\AsynchronousActions**.
 4. Select the file **AsynchronousActions.sln** and then click **Open**.
-5. In Solution Explorer, expand the **AsynchronousActions.Web** project, then expand **Controllers** , and then double-click **CountriesController.cs**.
+5. In Solution Explorer, expand the **AsynchronousActions.Web** project, then expand **Controllers** , and then double-click  **CountriesController.cs**.
 6. Explain that the **GetCountries** method synchronously retrieves a list of countries from another web service. Explain that to better utilize the thread pool, the **Get** method and the **GetCountries** method should both run asynchronously.
 7. Locate the **GetCountries** method and change its declaration to the following code.
 
@@ -203,7 +203,7 @@
 16. In Solution Explorer, right-click the root solution node, and then click **Properties**.
 17. In the **Solution &#39;AsynchronousActions&#39; Property Pages** dialog box, select the **Multiple startup projects** option.
 18. In the projects list, click the **Action** cell of every project, and select **Start**.
-19. Click the **DataServices** project line, and then click the up arrow button to start the project before the **AsynchronousActions.Web** project.
+19. Click the **DataServices** project line, and then click the up arrow button to start the project before the  **AsynchronousActions.Web** project.
 20. Click **OK**.
 21. Press Ctrl+F5 to start both the projects without debugging.
 22. In the browser, show the XML containing the list of countries.
@@ -219,12 +219,12 @@
 4. Select the file **ImagesWithMediaTypeFormatter.sln** and then click **Open**.
 5. In Solution Explorer, expand the **ImagesWithMediaTypeFormatter.Host** project, then expand the **Controllers** folder, and then double-click **ValuesController.cs**.
 6. Show the content of the **ValuesController** class. The controller handles **Value** objects.
-7. Show the **Value** class. Explain that the **[IgnoreDataMember]** attribute prevents the serialization of the **Thumbnail** property.
+7. Show the **Value** class. Explain that the **[IgnoreDataMember]** attribute prevents the serialization of the **Thumbnail**  property.
 8. In Solution Explorer, under the **ImagesWithMediaTypeFormatter.Host** project, expand the **Formatters** folder, and then double-click **ImageFormatter.cs**.
 9. Locate the **ImageFormatter** constructor. The **SupportedMediaTypes** collection contains the mime types supported by the media type formatter.
 10. Locate the **CanWriteType** method. The method controls when the formatter is used to change the output. Explain that the method will return true when the response contains a **Value** object.
 11. Locate the **WriteToStream** method. The method uses the **Thumbnail** property of the **Value** object to locate the image file and return it instead of the object returned by the controller&#39;s action.
-12. In Solution Explorer, under the **ImagesWithMediaTypeFormatter.Host** project, under the **Formatters** folder, double-click **UriFormatHandler.cs**.
+12. In Solution Explorer, under the **ImagesWithMediaTypeFormatter.Host** project, under the **Formatters** folder, double-click  **UriFormatHandler.cs**.
 13. Show the code of the **SendAsync** method. The method checks the request&#39;s URL. If the extension in the URL matches one of the image types, the extension is removed from the URL, a matching mime type is added to the request, and the request is sent to the next component in the pipeline.
 14. Press Ctrl+F5 to start the web application without debugging.
 15. In the browser, press F12 to open the developer tools window.
@@ -232,7 +232,7 @@
 17. On the **Network** tab, click **Start capturing**.
 18. On the web page, type **2** in the text box, and then click **Get default**.
 19. On the **Network** tab, click **Go to detailed view**.
-20. On the **Request headers** tab, show the students that the **Accept** header is set to **\*/\***.
+20. On the **Request headers** tab, show the students that the **Accept** header is set to ***/***.
 21. Click the **Response headers** tab and show that the **Content-Type** is set to **application/json; charset=utf-8**. Explain that the default content type of ASP.NET Web API is JSON.
 22. Click **Clear**.
 23. Click **Get JSON**.
@@ -263,8 +263,8 @@
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\**** ODataService\begin\ConsumingODataService**.
-4. Select the file **ConsumingODataService****.sln **, and then click** Open**.
+3. Browse to **D:\Allfiles\Mod04\DemoFiles\ODataService\begin\ConsumingODataService**.
+4. Select the file **ConsumingODataService.sln **, and then click **Open**.
 5. In Solution Explorer, under the **ConsumingODataService.Host** project, expand the **Controllers** folder node, and double-click the **CoursesController.cs** file.
 6. Show the students the **Get** action, which returns **IQueryable&lt;Course&gt;** and is also decorated with the **[Queryable]** attribute.
 7. Explain that this is done to enable OData queries.
@@ -274,13 +274,13 @@
 11. In Solution Explorer, right-click the **ConsumingODataService.Host** project and click **Set as StartUp Project**.
 12. Press Ctrl+F5 to start the project without debugging.
 13. Return to Visual Studio 2012.
-14. In Solution Explorer, under the **ODataService****.Client **project, right-click the** references **node and select** Add Service Reference**.
-15. In the **Address** text box, type **http://localhost:57371/OData** and click the **Go**
+14. In Solution Explorer, under the **ODataService.Client** project, right-click the **references** node and select **Add Service Reference**.
+15. In the **Address** text box, type **http://localhost:57371/OData** and click the **Go** button.
 
   >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
 
 16. In the **Namespace** text box, type **OData** and click **OK**.
-17. In Solution Explorer, under the **ODataService****.Client **project, double-click the** Program.cs** file.
+17. In Solution Explorer, under the **ODataService.Client** project, double-click the **Program.cs** file.
 18. In the **Main** method, create a new instance of the **OData.Container** class by using the following code.
 
   ```cs
@@ -302,7 +302,7 @@
         Console.ReadKey();
 ```
 21. Press Ctrl+S to save the changes.
-22. In Solution Explorer, right-click the **ODataService****.Client **project, point to** Debug **and click** Start New Instance** to run the client application.
+22. In Solution Explorer, right-click the **ODataService.Client** project, point to **Debug** and click **Start New Instance** to run the client application.
 23. Show the students that the query returns data about the WCF course.
 24. Explain to the students that the application transforms the LINQ query to an OData service call to the server. The server then uses OData querying in CoursesController to query the database.
 
@@ -314,7 +314,7 @@
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\**** WebAPISecurity**.
+3. Browse to **D:\Allfiles\Mod04\DemoFiles\WebAPISecurity**.
 4. Select the file **WebAPISecurity.sln** and then click **Open**.
 5. In Solution Explorer, under the **WebAPISecurity** project, double-click **AuthenticationMessageHandler.cs**.
 6. Locate the **SendAsync** method, and show its code to the students. Explain that first the method checks if the request contains _Basic_ authentication information by checking the **HttpRequestMessage.Headers.Authorization.Scheme** property. If the request does not contain the _Authorization_ header, it is sent to the next handler without checking.
@@ -357,13 +357,13 @@
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
 3. Browse to **D:\Allfiles\Mod04\DemoFiles\DependencyResolver**.
-4. Select the file **DependencyResolver****.sln **and then click** Open**.
-5. In Solution Explorer, under the **DependencyResolver** project, expand **Controllers** , and then double-click **CoursesController.cs**.
-6. Show the students the **Get** method. Explain that the method uses the **\_context** private member, which is initialized in the constructor.
-7. Show the students the **CoursesController** Explain that the constructor receives the context as an **ISchoolContext** interface to decouple the controller from a specific implementation of the interface.
-8. In Solution Explorer, under the **DependencyResolver** project, expand **Infrastracture** , and then double-click **ManualDependencyResolver.cs.**
-9. Show the students the **GetService** method. Explain that the method returns an instance of a specific service based on the **serviceType** parameter.
-10. In Solution Explorer, under the **DependencyResolver** project, expand **App\_Start** , and then double-click **WebApiConfig.cs**.
+4. Select the file **DependencyResolver.sln** and then click **Open**.
+5. In Solution Explorer, under the **DependencyResolver** project, expand **Controllers** , and then double-click  **CoursesController.cs**.
+6. Show the students the **Get** method. Explain that the method uses the **_context** private member, which is initialized in the constructor.
+7. Show the students the **CoursesController** constructor. Explain that the constructor receives the context as an **ISchoolContext** interface to decouple the controller from a specific implementation of the interface.
+8. In Solution Explorer, under the **DependencyResolver** project, expand **Infrastracture** , and then double-click  **ManualDependencyResolver.cs.**
+9. Show the students the **GetService** method. Explain that the method returns an instance of a specific service based on the  **serviceType** parameter.
+10. In Solution Explorer, under the **DependencyResolver** project, expand **App_Start** , and then double-click **WebApiConfig.cs**.
 11. Show the students the **Register** method. Explain that the dependency resolver that will be used by ASP.NET Web API is the one that is set in the **config.DependencyResolver** property.
 12. Press Ctrl+F5 to start the project without debugging.
-13. In the browser window, append the **api/courses** relative address to the address bar and press Enter to call the **Get** action of the **CoursesController**
+13. In the browser window, append the **api/courses** relative address to the address bar and press Enter to call the **Get** action of the **CoursesController** class.
