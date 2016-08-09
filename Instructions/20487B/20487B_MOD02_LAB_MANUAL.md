@@ -77,17 +77,17 @@ The main tasks for this exercise are as follows:
 1. Open the **Trip** class from the **BlueYonder.Entities** project, set the **FlightInfo** property as **virtual** , and decorate it with the **[ForeignKey]** attribute.
 
    - Declare the **FlightScheduleID** property to be **virtual**.
-   - Adda **[ForeignKey]** attributetothe **FlightInfo** property.
+   - Add a **[ForeignKey]** attribute to the **FlightInfo** property.
    - Set the attribute to use the **FlightScheduleID** property as the foreign key property.
 
    >**Note:** In addition, Entity Framework will detect the virtual property in the **Trip** class and will create a new derived proxy class that implements lazy loading for the **FlightInfo** property.
 
-   >When you load trip entities from the database, the entity object will be of the derived trip proxy type, and not of the **Trip** type.
+   >When you load trip entities from the database, the entity object will be of the derived trip proxy type, and not of the **Trip**  type.
 
 2. Open the **Reservation** class from the **BlueYonder.Entities** project, and make the following changes:
 
-   - Declare the **DepartureFlight** property to be **virtual** , and adda **[ForeignKey]** attributetoit.The attributeshould use the **DepartFlightScheduleID** property for the foreign key.
-   - Declare the **ReturnFlight** property to be **virtual** , and adda **[ForeignKey]** attributetoit.The attribute should use the **ReturnFlightScheduleID** property for the foreign key.
+   - Declare the **DepartureFlight** property to be **virtual** , and add a **[ForeignKey]** attribute to it.The attribute should use the **DepartFlightScheduleID** property for the foreign key.
+   - Declare the **ReturnFlight** property to be **virtual** , and add a **[ForeignKey]** attribute to it.The attribute should use the **ReturnFlightScheduleID** property for the foreign key.
    - Set the **ReturnFlightScheduleID** property as nullable to make it optional.
 
    >**Note:** Setting the **ReturnFlightScheduleID** foreign key property to a nullable int indicates that this relation is not mandatory (0-N relation, meaning a reservation does not require a return flight). The **DepartFlightScheduleID** foreign key property is not nullable and therefore indicates the relation is mandatory (1-N relation, meaning every reservation must have a departing flight)
@@ -161,7 +161,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create queries by using LINQ to Entities
 
-1. In the **BlueYonder.IntegrationTests** project, open the **ReservationQueries** test class, and implement the **GetReservationWithFlightsEagerLoad** test method.
+1. In the **BlueYonder.IntegrationTests** project, open the **ReservationQueries** test class, and implement the  **GetReservationWithFlightsEagerLoad** test method.
 
     - Create a **ReservationRepository** object in a **using** block.
     - Write a LINQ to Entities query that retrieves a **Reservation** entity having confirmation code **1234** , and performs an eager loading of its departure and return flights.
@@ -189,7 +189,7 @@ The main tasks for this exercise are as follows:
 
    - The query retrieves all the **Reservation** entities in descending order of their confirmation code.
    - To create an Entity SQL query, use the **ObjectContext.CreateQuery&lt;T&gt;** generic method.
-   - The **context** variable already contains an inner **ObjectContext** object. To access it, cast the **context** variable to the **IObjectContextAdapter** interface, and then access its **ObjectContext** property.
+   - The **context** variable already contains an inner **ObjectContext** object. To access it, cast the **context** variable to the  **IObjectContextAdapter** interface, and then access its **ObjectContext** property.
 
    >**Note:** Refer to Lesson 3, &quot;Querying Data&quot;, Topic 2, &quot;Query the Database By Using Entity SQL&quot;, for an example of how to write Entity SQL queries and execute them with the **ObjectContext** object.
 
@@ -235,7 +235,7 @@ The main tasks for this exercise are as follows:
 2. Run all the tests in the solution and verify they pass.
 
     - To run all tests, open the **Test Explorer** window from the **Test** menu, and then click **Run All.**
-    - Verify that all 16 methods have passedthe test.
+    - Verify that all 16 methods have passed the test.
 
 3. Open SQL Server Management Studio, connect to the **.\SQLEXPRESS** database server, then locate the **BlueYonder.Companion.Lab02** database in Object Explorer, and browse the tables that were created by Entity Framework.
 
