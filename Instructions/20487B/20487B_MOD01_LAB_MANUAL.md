@@ -62,9 +62,9 @@ The main tasks for this exercise are as follows:
 
    >**Note:** We recommend that you allow only your computer&#39;s IP address, or your organization&#39;s IP address range to access the database server. However, in this course, you will use this database server for the upcoming labs, and your IP address might change in the meanwhile; therefore, you are required to allow access from all IP addresses.
 
-2. Open Microsoft SQL Server Management Studio 2012 and connect to the new server. Use the server name **SQLServerName.database.windows.net**, and the sign-in name and the password that you used in the previous task (Replace**SQLServerName** with the server name that you wrote down in the previous task).
+2. Open Microsoft SQL Server Management Studio 2012 and connect to the new server. Use the server name  **SQLServerName.database.windows.net**, and the sign-in name and the password that you used in the previous task (Replace **SQLServerName** with the server name that you wrote down in the previous task).
 3. In Object Explorer, right-click the **Databases** node, and then click **Import Data Tier Application**.
-4. Import the **BlueYonder.bacpac** file located in the **D:\AllFiles\Mod01\LabFiles\Assets**
+4. Import the **BlueYonder.bacpac** file located in the **D:\AllFiles\Mod01\LabFiles\Assets** folder.
 5. Verify that the **BlueYonder** database is created.
 
    
@@ -86,11 +86,11 @@ The main tasks for this exercise are as follows:
 
 2. Add an ADO.NET Entity Data Model to the project.
 
-3. Connect to the **SQLServerName.database.windows.net** server with the sign-in name and the password that you used in the previous task (replace **SQLServerName** with the server name you have written down in the previous exercise), and then select the **BlueYonder** database.
+    a. Connect to the **SQLServerName.database.windows.net** server with the sign-in name and the password that you used in the previous task (replace **SQLServerName** with the server name you have written down in the previous exercise), and then select the **BlueYonder** database.
 
-4. Make sure to select the option to include the database password in the connection string.
-5. Import the **Locations** and **Travelers** tables.
-6. Save the EDMX file after it opens, and then close it.
+    b. Make sure to select the option to include the database password in the connection string.
+    c. Import the **Locations** and **Travelers** tables.
+    d. Save the EDMX file after it opens, and then close it.
 
    
    >**Results** : After completing this exercise, you should have created Entity Framework wrappers for the **BlueYonder** database.
@@ -149,7 +149,7 @@ The main tasks for this exercise are as follows:
 
 1. Open Azure portal at **https://manage.windowsazure.com**.
 
-2. On the **WEB APPS** page, click **NEW** , and then click **QUICK CREATE** to create an Azure web app. Name the web app **BlueYonderWebSite YourInitials** (Replace **YourInitials** with your initials), create a new App Service plan, and then select the region that is closest to your location.
+2. On the **WEB APPS** page, click **NEW** , and then click **QUICK CREATE** to create an Azure web app. Name the web app **BlueYonderWebSite_YourInitials_** (Replace **_YourInitials_** with your initials), create a new App Service plan, and then select the region that is closest to your location.
 3. After you create the web app, wait until its status changes to **Running**.
 4. On the web app&#39;s **DASHBOARD** page, click the **Download the publish profile** link to download the web app&#39;s publish profile file.
 
