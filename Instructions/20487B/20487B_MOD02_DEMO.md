@@ -11,7 +11,7 @@
 3. In the **New Project** dialog box, using the navigation pane, expand the **Installed** node, expand the **Templates** node, and select the **Visual C#** node. From the list of templates, select **Console Application**.
 4. In the **Name** box, type **MyFirstEF**.
 5. In the **Location** box, type **D:\Allfiles\Mod02\Democode**
-6. Selectthe **Create directory for solution** check box, and then click **OK**.
+6. Select the **Create directory for solution** check box, and then click **OK**.
 7. In Solution Explorer, right-click the **MyFirstEF** project, and then click **Manage NuGet Packages**. 
 8. In the **Manage NuGet Packages** dialog box, select the **Online** node on the left pane.
 9. On the upper right side of the dialog box, click the **Search** box, and type **EntityFramework**.
@@ -108,7 +108,7 @@
 3. Browse to **D:\Allfiles\Mod02\Democode\UsingLINQtoEntities\Begin**.
 4. Click **EF\_CodeFirst.sln** , and then click **Open**.
 5. In Solution Explorer, under the **EF\_CodeFirst** project, double-click **Program.cs**.
-6. Create a new **SchoolContext** object by appending the following code to the **Main** method, after the **InitializeDatabase** method call.
+6. Create a new **SchoolContext** object by appending the following code to the **Main** method, after the **InitializeDatabase**   method call.
 
   ```cs
 		using (var context = new SchoolContext())
@@ -116,7 +116,7 @@
         }
 ```
 7. Explain that you use the **using** statement to control the release of unmanaged resources used by the context, such as a database connection.
-8. To select all courses from the database, add the following LINQ to Entities code in the **using**
+8. To select all courses from the database, add the following LINQ to Entities code in the **using** block
 
   ```cs
 		var courses = from c in context.Courses
