@@ -169,12 +169,12 @@
 
 #### Demonstration Steps
 
-1.  On the Start screen, click the Visual Studio 2012tile.
+1.  On the Start screen, click the Visual Studio 2012 tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
 3. Browse to **D:\Allfiles\Mod02\Democode\CRUD\Begin**.
 4. Click **EF\_CodeFirst.sln** , and then click **Open**.
 5. In Solution Explorer, under the **EF\_CodeFirst** project, double-click **Program.cs**.
-6. Create a new **SchoolContext** object by appending the following code to the **Main** method, after the **InitializeDatabase** method call.
+6. Create a new **SchoolContext** object by appending the following code to the **Main** method, after the **InitializeDatabase**  method call.
 
   ```cs
 		using (var context = new SchoolContext())
