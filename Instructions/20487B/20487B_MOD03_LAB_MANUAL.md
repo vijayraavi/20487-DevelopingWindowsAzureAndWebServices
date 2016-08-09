@@ -26,10 +26,10 @@ Password: **Pa$$w0rd** , **Pa$$w0rd**
 
 For this lab, you will use the available virtual machine environment. Before you begin this lab, you must complete the following steps:
 
-1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
+1. On the host computer, click **Start** , point to **Administrative Tools**, and then click **Hyper-V Manager**.
 
-2. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Actions** pane, click **Start**.
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in using the following credentials:
 
@@ -57,10 +57,10 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a new API Controller for the Traveler Entity
 
-1. In the **20487B-SEA-DEV-A** virtual machine, open the **D:\AllFiles\Mod03\LabFiles\begin\BlueYonder.Companion\BlueYonder.Companion.sln** solution file, and add a new class called **TravelersController** to the **BlueYonder.Companion.Controllers**
+1. In the **20487B-SEA-DEV-A** virtual machine, open the  **D:\AllFiles\Mod03\LabFiles\begin\BlueYonder.Companion\BlueYonder.Companion.sln** solution file, and add a new class called **TravelersController** to the **BlueYonder.Companion.Controllers** project.
 
-1. Change the access modifier of the class to **public** , and derive it from the **ApiController** class.
-2. Create a private property named **Travelers** of type **ITravelerRepository** and initialize it in the constructor.
+2. Change the access modifier of the class to **public** , and derive it from the **ApiController** class.
+3. Create a private property named **Travelers** of type **ITravelerRepository** and initialize it in the constructor.
 
    a. Create a new property named **Travelers** of type **ITravelerRepository**.  
    b. Create a default constructor for the **TravelersController** class.  
@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
 4. Create an action method named **Get** to handle GET requests.
 
-   a. The method receives a **string** parameter named **id** and returns an **HttpResponseMessage** object. Call the **FindBy** method of the **ITravelerRepository** interfaceto search for a traveler using the **id** parameter. The ID of the traveler is stored in the traveler&#39;s   **TravelerUserIdentity** property.  
+   a. The method receives a **string** parameter named **id** and returns an **HttpResponseMessage** object. Call the **FindBy**method of the **ITravelerRepository** interface to search for a traveler using the **id** parameter. The ID of the traveler is stored in the traveler&#39;s   **TravelerUserIdentity** property.  
    b. If the traveler was found, use the **Request.CreateResponse** to return an HTTP response message with the traveler. Set the status code of the response to **OK**.  
    c. If a traveler was not found, use the **Request.CreateResponse** to return an empty message. Set the status code to **NotFound** (HTTP 404).
 
@@ -87,13 +87,13 @@ The main tasks for this exercise are as follows:
 8. Create an action method to handle **PUT** requests.
 
 
- - The method receives a **string** parameter called **id** and a **Traveler** parameter called **traveler**. The method returns an **HttpResponseMessage** object.
+ - The method receives a **string** parameter called **id** and a **Traveler** parameter called **traveler**. The method returns an  **HttpResponseMessage** object.
  - If the traveler does not exist in the database, use the **Request.CreateResponse** method to return an HTTP response message with the **HttpStatusCode.NotFound** status.
 
   >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
-   - If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repositoryto update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
+   - If the traveler exists, call the **Edit** and then the **Save** methods of the **Travelers** repository to update the traveler, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
 
 
   >**Note:** The **HTTP PUT** method can also be used to create resources. Checking if the resources exist is performed here for simplicity.
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
   >**Note:** To check if the traveler exists in the database, use the **FindBy** method as you did in the **Get** method.
 
 
-  - If the traveler exists, call the **Delete** and then the **Save** methods of the **Travelers** repository, and then use the **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
+  - If the traveler exists, call the **Delete** and then the **Save** methods of the **Travelers** repository, and then use the  **Request.CreateResponse** method, to return an HTTP response message with the **HttpStatusCode.OK** status.
   
 
   >**Results** : After completing this exercise, you should have run the project from Visual Studio 2012 and access the travelers&#39; service.
@@ -118,7 +118,7 @@ The main tasks for this exercise are as follows:
 
 #### Scenario
 
-Consume the travelers&#39; service from the client application. Start by implementing the **GetTravelerAsync** method by invoking a **GET** request to retrieve a specific traveler from the server. Continue by implementing the **CreateTravelerAsync** method by invoking a POST request to create a new traveler. And complete the exercise by implementing the **UpdateTravelerAsync** method by invoking a **PUT** request to update an existing traveler.
+Consume the travelers&#39; service from the client application. Start by implementing the **GetTravelerAsync** method by invoking a  **GET** request to retrieve a specific traveler from the server. Continue by implementing the **CreateTravelerAsync** method by invoking a POST request to create a new traveler. And complete the exercise by implementing the **UpdateTravelerAsync** method by invoking a **PUT** request to update an existing traveler.
 
 The main tasks for this exercise are as follows:
 
@@ -130,13 +130,13 @@ The main tasks for this exercise are as follows:
 
 1. In the **20487B-SEA-DEV-C** virtual machine, open the **D:\AllFiles\Mod03\LabFiles\begin\BlueYonder.Companion.Client\BlueYonder.Companion.Client.sln** solution.
 
-2. In the **BlueYonder.Companion.Client** project, open the **DataManager** class from the **Helpers** folder and implement the **GetTravelerAsync** method.
+2. In the **BlueYonder.Companion.Client** project, open the **DataManager** class from the **Helpers** folder and implement the  **GetTravelerAsync** method.
 
    a. Remove the **return null** line of code.  
    b. Build the relative URI using the string format **&quot;{0}travelers/{1}&quot;**. Replace the {0} placeholder with the **BaseUri** property and the {1} placeholder with the **hardwareId** variable.  
    c. Call the **client.GetAsync** method with the relative address you constructed. Use the **await** keyword to call the method asynchronously. Store the response in a variable called **response**.  
    d. Check the value of the **response.IsSuccessStatusCode** property. If the value is **false** , return **null**.  
-   e If the value of the **response.IsSuccessStatusCode** property is **true** , read the response into a string by using the **response.Content.ReadAsStringAsync** method. Use the **await** keyword to call the method asynchronously.  
+   e If the value of the **response.IsSuccessStatusCode** property is **true** , read the response into a string by using the  **response.Content.ReadAsStringAsync** method. Use the **await** keyword to call the method asynchronously.  
    f. Use the **JsonConvert.DeserializeObjectAsync** static method to convert the JSON string to a **Traveler** object. Call the method using the **await** keyword and return the deserialized traveler object.
 
 3. Insert a breakpoint at the beginning of the **GetTravelerAsync** method.
@@ -163,7 +163,7 @@ The main tasks for this exercise are as follows:
 
 6. Go back to the virtual machine **20487B-SEA-DEV-A** and debug the service code.
 
-   a. The breakpoint you have set in the **Post** method solution should be highlighted. Inspect the contents of the **traveler** parameter.  
+   a. The breakpoint you have set in the **Post** method solution should be highlighted. Inspect the contents of the **traveler**  parameter.  
    b. Press F5 to continue running the code.
 
 7. Go back to the virtual machine **20487B-SEA-DEV-C** and use the client app to purchase a flight from _Seattle_ to _New York_.
