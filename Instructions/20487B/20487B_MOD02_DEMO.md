@@ -54,8 +54,8 @@
   ```cs
 		public class MyDbContext : DbContext
         {
-           public DbSet&lt;Product&gt; Products { get; set; }
-           public DbSet&lt;Store&gt; Stores { get; set; }
+           public DbSet<Product> Products { get; set; }
+           public DbSet<Store> Stores { get; set; }
         }
 ```
 24. To save the changes, press Ctrl+S.
