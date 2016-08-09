@@ -23,7 +23,7 @@ Explain that by selecting the region, you are actually selecting the datacenter 
 10. Click **CLOUD SERVICES** in the navigation pane.
 11. Click the cloud service that you created in the previous step (the one that is named **CloudServiceDemo YourInitials**.
 12. Explain that currently the cloud service is empty and has no roles; therefore, the tabs do not have any content. Explain that in module 06, &quot;Hosting Services&quot;, you will show how to deploy new roles to the cloud service, and how to configure the roles.
-13. Go over the different tabs and explain their purpose:
+13. Go over the different tabs and explain their purpose:  
   a. **DASHBOARD**. Provides an overview for the state and configuration of the cloud service and its roles.  
   b. **MONITOR**. Shows performance counter metrics for the roles, such as their CPU and memory usage.  
   c. **CONFIGURE**. Allows you to control settings such as monitoring capabilities, remote access, and selection of the guest operating system.  
