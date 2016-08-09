@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a data contract for the booking request
 
-1. In the **20487B-SEA-DEV-A** virtual machine, open the **BlueYonder.Server.sln** solution file from the **D:\AllFiles\Mod05\LabFiles\begin\BlueYonder.Server** folder.
+1. In the **20487B-SEA-DEV-A** virtual machine, open the **BlueYonder.Server.sln** solution file from the  **D:\AllFiles\Mod05\LabFiles\begin\BlueYonder.Server** folder.
 2. In the **BlueYonder.BookingService.Contracts** project, add the **TripDto** data contract class.
 
    a. Set the access modifier of the class to **public** and decorate it with the **[DataContract]** attribute.  
@@ -106,14 +106,14 @@ The main tasks for this exercise are as follows:
 
   - The method should receive a parameter named **request** of type **ReservationDto** , and return a string.
   - Decorate the method with the **[OperationContract]** attribute.
-  - Decorate the method with the **[FaultContract]** attribute, and set the attribute&#39;s parameter to the type of the **ReservationCreationFault** class.
+  - Decorate the method with the **[FaultContract]** attribute, and set the attribute&#39;s parameter to the type of the  **ReservationCreationFault** class.
 
 #### Task 3: Implement the service contract
 
 1. In the **BlueYonder.BookingService.Implementation** project, implement the **IBookingService** in the **BookingService** class.
 
    a. Change the class declaration, so it will implement the **IBookingService** interface.  
-   b. Decorate the class with the **[ServiceBehavior]** attribute and set the attribute&#39;s **InstanceContextMode** parameter to **InstanceContextMode.PerCall**.
+   b. Decorate the class with the **[ServiceBehavior]** attribute and set the attribute&#39;s **InstanceContextMode** parameter to  **InstanceContextMode.PerCall**.
 
 2. In the service implementation class, implement the service contract.
 
@@ -149,7 +149,7 @@ The main tasks for this exercise are as follows:
       | Status | request.DepartureFlight.Status    |        
       | FlightScheduleID | request.DepartureFlight.FlightScheduleID | 
 
-5. Continue implementing the **CreateReservation** method by checking whether the return flight is not **null**. If **request.ReturnFlight** is not null, add a trip to the reservation object you created.
+5. Continue implementing the **CreateReservation** method by checking whether the return flight is not **null**. If  **request.ReturnFlight** is not null, add a trip to the reservation object you created.
 
    - Initialize the **reservation.ReturnFlight** property with a new **Trip** object, and set its properties according to the following table.
 
@@ -190,12 +190,12 @@ The main tasks for this exercise are as follows:
 
   >**Note:** The starter solution already contains all the project references that are needed for the project. This includes the **BlueYonder.BookingService.Contracts** , **BlueYonder.BookingService.Implementation BlueYonder.DataAccess** ,and **BlueYonder.Entities** projects, and the Entity Framework 5.0 package assembly.
 
-2. Review the **FlightScheduleDatabaseInitializer.cs** file in the **BlueYonder.BookingService.Host** project. Observe how the **Seed** method initializes the database with predefined locations and flights.
+2. Review the **FlightScheduleDatabaseInitializer.cs** file in the **BlueYonder.BookingService.Host** project. Observe how the  **Seed** method initializes the database with predefined locations and flights.
 
 3. In the **BlueYonder.BookingService.Host** project,open the **App.config** file, and add a service configuration section for the Booking WCF service.
 
    a. Add the **&lt;system.serviceModel&gt;** element to the configuration, and in it, add the **&lt;services&gt;** element.  
-   b. In the **&lt;services&gt;** element, add a **&lt;service&gt;** element, and then set its **name** attribute to **BlueYonder.BookingService.Implementation.BookingService**.
+   b. In the **&lt;services&gt;** element, add a **&lt;service&gt;** element, and then set its **name** attribute to  **BlueYonder.BookingService.Implementation.BookingService**.
 
 4. Add an endpoint configuration to the service configuration you added in the previous step.
 
@@ -216,7 +216,7 @@ The main tasks for this exercise are as follows:
         providerName="System.Data.SqlClient" />
         </connectionStrings>
 ```
-  >**Note:** You can copy the connection string from the ASP.NET Web API services configuration file in **D:\Allfiles\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.Companion.Host\Web.config**. Make sure you change the database parameter to **BlueYonder.Server.Lab5**.
+  >**Note:** You can copy the connection string from the ASP.NET Web API services configuration file in  **D:\Allfiles\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.Companion.Host\Web.config**. Make sure you change the database parameter to **BlueYonder.Server.Lab5**.
 
 #### Task 2: Create the service hosting code
 
@@ -225,7 +225,7 @@ The main tasks for this exercise are as follows:
    - Each of the methods receives two parameters: **sender** , of type **object** , and **args** , of type **EventArgs**.
    - In each method, write a short status message to the console window.
 
-2. In the **Main** method, addthe following code to initialize the database.
+2. In the **Main** method, add the following code to initialize the database.
 
    ```cs
         var dbInitializer = new FlightScheduleDatabaseInitializer();
@@ -261,7 +261,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add a reference to the service contract project in the ASP.NET Web API project
 
-1. Open the **D:\AllFiles\Mod05\LabFiles\begin\BlueYonder.Server\BlueYonder.Companion.sln** solution file in a new Visual Studio 2012 instance, and add the **BlueYonder.BookingService.Contracts** project from the **D:\Allfiles\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.BookingService.Contracts** folderto the solution.
+1. Open the **D:\AllFiles\Mod05\LabFiles\begin\BlueYonder.Server\BlueYonder.Companion.sln** solution file in a new Visual Studio 2012 instance, and add the **BlueYonder.BookingService.Contracts** project from the  **D:\Allfiles\Mod05\Labfiles\begin\BlueYonder.Server\BlueYonder.BookingService.Contracts** folder to the solution.
 
 2. In the **BlueYonder.Companion.Controllers** project, add a reference to the **BlueYonder.BookingService.Contracts** project.
 3. In the **BlueYonder.Companion.Host** project, add a reference to the **BlueYonder.BookingService.Contracts** project.
@@ -284,7 +284,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Call the Booking service by using ChannelFactory&lt;T&gt;
 
-1. In the **BlueYonder.Companion.Controllers** project, open the **ReservationsController.cs** In the **ReservationsController** class, create a channel factory object for the **IBookingService** service contract, and store it in a field named **factory**.
+1. In the **BlueYonder.Companion.Controllers** project, open the **ReservationsController.cs** file. In the **ReservationsController** class, create a channel factory object for the **IBookingService** service contract, and store it in a field named **factory**.
 
    - In the channel factory constructor, use the **BookingTcp** endpoint configuration name.
 
@@ -309,7 +309,7 @@ The main tasks for this exercise are as follows:
 
      to
 
-        catch**(**FaultException&lt;ReservationCreationFault&gt; fault)
+        catch**(**FaultException<ReservationCreationFault> fault)
 ```
    a. Inside the **catch** block, throw an **HttpResponseException** with an **HttpResponseMessage** object.  
    b. Create the **HttpResponseMessage** by using the **Request.CreateResponse** method. Set the status code to **BadRequest** (HTTP 400), and the content of the message to the description of the fault.  
@@ -319,7 +319,7 @@ The main tasks for this exercise are as follows:
 
    - Abort the connection by casting the channel object to the **ICommunicationObject** interface, and then calling its **Abort** method.
 
-7. In the **Post** method, before adding the new reservation to the repository, call the Booking WCFservice and set the reservation&#39;s confirmation code.
+7. In the **Post** method, before adding the new reservation to the repository, call the Booking WCF service and set the reservation&#39;s confirmation code.
 
    a. Call the **CreateReservationOnBackendSystem** method with the **newReservation** object.  
    b. Store the returned confirmation code of the reservation in the **newReservation.ConfirmationCode** property.
@@ -333,7 +333,7 @@ The main tasks for this exercise are as follows:
 #### Task 4: Debug the WCF service with the client app
 
 1. Place a breakpoint on the line of code that calls the **CreateReservationOnBackendSystem** method, and start debugging the web application.
-2. In the **20487B-SEA-DEV-C** virtual machine, open the **BlueYonder.Companion.Client** solution from the **D:\AllFiles\**** Mod05\LabFiles\begin** folder, and run it without debugging.
+2. In the **20487B-SEA-DEV-C** virtual machine, open the **BlueYonder.Companion.Client** solution from the **D:\AllFiles\Mod05\LabFiles\begin** folder, and run it without debugging.
 3. Search for **New** and purchase a new trip from _Seattle_ to _New York_.
 4. Go back to the **20487B-SEA-DEV-A** virtual machine, and debug the **BlueYonder.Companion** and **BlueYonder.Server** solutions. Verify that the ASP.NET Web API service is able to call the WCF service. Continue running both solutions and verify that the client is showing the new reservation.
 
