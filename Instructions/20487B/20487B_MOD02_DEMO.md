@@ -193,38 +193,38 @@
 		Student firstStudent = new Student() { Name = "Thomas Anderson" };
         Student secondStudent = new Student() { Name = "Terry Adams" };
 ```
-19 To add the two newly created students to the **WCF** course, append the following code to the **using** block.
+9. To add the two newly created students to the **WCF** course, append the following code to the **using** block.
 
   ```cs
 		WCFCourse.Students.Add(firstStudent);
         WCFCourse.Students.Add(secondStudent);
 ```
-20. To give the teacher of the **WCF** course a $1000 salary raise, append the following code to the **using** block.
+10. To give the teacher of the **WCF** course a $1000 salary raise, append the following code to the **using** block.
 
   ```cs
 		WCFCourse.CourseTeacher.Salary += 1000;
 ```
-21. To select a student named **Student_1** from the **WCF** course, append the following code to the **using** block.
+11. To select a student named **Student_1** from the **WCF** course, append the following code to the **using** block.
 
   ```cs
 		Student studentToRemove = WCFCourse.Students.Where((student) => student.Name == "Student_1").FirstOrDefault();
 ```
-22. To remove the student from the **WCF** course, append the following code to the **using** block.
+12. To remove the student from the **WCF** course, append the following code to the **using** block.
 
   ```cs
 		WCFCourse.Students.Remove(studentToRemove);
 ```
-23. To save the changes and print the result, append the following code to the **using** block.
+13. To save the changes and print the result, append the following code to the **using** block.
 
   ```cs
 		context.SaveChanges();
         Console.WriteLine(WCFCourse);
         Console.ReadLine();
 ```
-24. Press Ctrl+S to save the changes.
-25. In the **Main** method, right-click the _Console.ReadLine()_ method call, point to **Breakpoint** , and then click **Insert Breakpoint**.
-26. To run the application, press F5. After a few seconds, the code execution will break, and the breakpoint will be highlighted in yellow.
-27. Show the list of students in the console window. Show that there are two new students at the bottom of the list, and student 1 is missing from the list. Show that the salary of the teacher is now 101000.
-28. In Visual Studio 2012, n the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
-29. Show the students the SQL update, delete, and insert statements that correspond to the salary update, student deletion, and the addition of the two new students.
-30. To stop the debugger, press Shift+F5.
+14. Press Ctrl+S to save the changes.
+15. In the **Main** method, right-click the _Console.ReadLine()_ method call, point to **Breakpoint** , and then click **Insert Breakpoint**.
+16. To run the application, press F5. After a few seconds, the code execution will break, and the breakpoint will be highlighted in yellow.
+17. Show the list of students in the console window. Show that there are two new students at the bottom of the list, and student 1 is missing from the list. Show that the salary of the teacher is now 101000.
+18. In Visual Studio 2012, n the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
+19. Show the students the SQL update, delete, and insert statements that correspond to the salary update, student deletion, and the addition of the two new students.
+20. To stop the debugger, press Shift+F5.
