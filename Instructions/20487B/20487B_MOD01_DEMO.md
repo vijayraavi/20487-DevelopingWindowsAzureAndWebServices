@@ -1,4 +1,4 @@
-# Module 2: Designing ASP.NET MVC 4 Web Applications
+# Module 1: Designing ASP.NET MVC 4 Web Applications
 
 # Lab: Designing ASP.NET MVC 4 Web Applications
 
