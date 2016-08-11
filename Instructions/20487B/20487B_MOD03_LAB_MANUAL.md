@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
 4. Create an action method named **Get** to handle GET requests.
 
-   a. The method receives a **string** parameter named **id** and returns an **HttpResponseMessage** object. Call the **FindBy**method of the **ITravelerRepository** interface to search for a traveler using the **id** parameter. The ID of the traveler is stored in the traveler&#39;s   **TravelerUserIdentity** property.  
+   a. The method receives a **string** parameter named **id** and returns an **HttpResponseMessage** object. Call the **FindBy** method of the **ITravelerRepository** interface to search for a traveler using the **id** parameter. The ID of the traveler is stored in the traveler&#39;s   **TravelerUserIdentity** property.  
    b. If the traveler was found, use the **Request.CreateResponse** to return an HTTP response message with the traveler. Set the status code of the response to **OK**.  
    c. If a traveler was not found, use the **Request.CreateResponse** to return an empty message. Set the status code to **NotFound** (HTTP 404).
 
