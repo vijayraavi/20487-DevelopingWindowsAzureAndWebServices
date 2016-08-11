@@ -225,6 +225,6 @@
 15. In the **Main** method, right-click the _Console.ReadLine()_ method call, point to **Breakpoint** , and then click **Insert Breakpoint**.
 16. To run the application, press F5. After a few seconds, the code execution will break, and the breakpoint will be highlighted in yellow.
 17. Show the list of students in the console window. Show that there are two new students at the bottom of the list, and student 1 is missing from the list. Show that the salary of the teacher is now 101000.
-18. In Visual Studio 2012, n the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
+18. In Visual Studio 2012, on the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
 19. Show the students the SQL update, delete, and insert statements that correspond to the salary update, student deletion, and the addition of the two new students.
 20. To stop the debugger, press Shift+F5.
