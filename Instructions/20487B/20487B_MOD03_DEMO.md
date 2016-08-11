@@ -8,7 +8,7 @@
 
 1. In the **20487B-SEA-DEV-A** virtual machine, on the Start screen, click the **Visual Studio 2012** tile.
 2. On the File menu, point to **New** , and then click **Project**.
-3. In the **New Project** dialog box in the left-side of the navigation pane, expand the **Installed** node, expand the **Templates** node, expand the **Visual C#** node, click the **Web** node, and then click **NET MVC 4 Web Application** from the list of template.
+3. In the **New Project** dialog box in the left-side of the navigation pane, expand the **Installed** node, expand the **Templates** node, expand the **Visual C#** node, click the **Web** node, and then click **ASP.NET MVC 4 Web Application** from the list of template.
 4. In the **Name** text box, type **MyApp**.
 5. In the **Location** text box, type **D:\Allfiles\Mod03\Democode\FirstWebApiService\Begin** , and then click **OK**.
 6. In the **New ASP.NET MVC 4 Project** dialog box, click **Web API** , and then click **OK**.
@@ -45,7 +45,7 @@
 19. Press Ctrl+S to save the changes.
 20. To start debugging the application, press **F5**.
 21. In the address bar of the browser, append the **api/values/list** to the end of the address, and then press Enter.
-22. When prompted by the browser, click **Open** ,and then click **Notepad** to open the **list.json** file in **Notepad**.
+22. When prompted by the browser, click **Open**, and then click **Notepad** to open the **list.json** file in **Notepad**.
 
 
 
@@ -135,10 +135,11 @@
 
 8. Press Ctrl+S to save the changes.
 9. In **Solution Explorer** , under the **JQueryClient** project, expand the **Controllers** folder and double-click **DestinationsController.cs**.
-10. Locate the **Delete** method, and then click it. Press F9 to put a breakpoint on the **Delete** method.1. Press F5 to debug the application. After the browser opens, show that the page lists the destinations retrieved from the **Get** method of the DestinationsAPI controller.
-11. Type **1** in the **Location id** box, and then click **delete**.
-12. Show that the breakpoint in the **Delete** method is reached.
-13. Press Shift+F5 to stop the debugger.
+10. Locate the **Delete** method, and then click it. Press F9 to put a breakpoint on the **Delete** method.
+11. Press F5 to debug the application. After the browser opens, show that the page lists the destinations retrieved from the **Get** method of the DestinationsAPI controller.
+12. Type **1** in the **Location id** box, and then click **delete**.
+13. Show that the breakpoint in the **Delete** method is reached.
+14. Press Shift+F5 to stop the debugger.
 
 ### Demonstration 2: Consuming Services Using HttpClient
 
