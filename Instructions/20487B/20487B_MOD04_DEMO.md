@@ -9,7 +9,7 @@
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
 3. Browse to **D:\Allfiles\Mod04\DemoFiles\RequestResponseFlow\begin\RequestResponseFlow**.
-4. Select the file **RequestResponseFlow.sln **, and then click **Open**.
+4. Select the file **RequestResponseFlow.sln**, and then click **Open**.
 5. In Solution Explorer, under the **RequestResponseFlow.Web** project, right-click the **Extensions** folder. Point to **Add** , and click **New Item**.
 6. In the **Add New Item** dialog box, in the pane on the left side, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
 7. In the **Name** box, type **TraceHandler.cs** , and then click **Add**
@@ -143,10 +143,10 @@
 39. Press F5 to start debugging the application.
 40. In the browser, wait for the application to load, and then append the suffix **api/values/** to the address bar and press Enter.
 41. Return to Visual Studio 2012.
-42. On the **Debug** menu, point to **Windows** , and then click **Call Stack**.
+42. On the **Debug** menu, point to **Windows**, and then click **Call Stack**.
 43. Right-click the **Call Stack** pane, and make sure that the **Show External Code** option is selected.
-44. Show the students the lines in the **Call Stack** that show the calls of the **HttpControllerHandler** , **HttpServer** , and  **DelegatingHandler**.
-45. Press F5 to continue debugging. When the debugger breaks inside **TraceFilterAttribute** , show the students the lines executed by the **ApiController** class.
+44. Show the students the lines in the **Call Stack** that show the calls of the **HttpControllerHandler**, **HttpServer**, and  **DelegatingHandler**.
+45. Press F5 to continue debugging. When the debugger breaks inside **TraceFilterAttribute**, show the students the lines executed by the **ApiController** class.
 46. Press Shift+F5 to stop the debugger.
 
 ### Demonstration 2: Creating Asynchronous Actions
@@ -215,7 +215,7 @@
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\**** ImagesWithMediaTypeFormatter**.
+3. Browse to **D:\Allfiles\Mod04\DemoFiles\ImagesWithMediaTypeFormatter**.
 4. Select the file **ImagesWithMediaTypeFormatter.sln** and then click **Open**.
 5. In Solution Explorer, expand the **ImagesWithMediaTypeFormatter.Host** project, then expand the **Controllers** folder, and then double-click **ValuesController.cs**.
 6. Show the content of the **ValuesController** class. The controller handles **Value** objects.
@@ -264,7 +264,7 @@
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
 3. Browse to **D:\Allfiles\Mod04\DemoFiles\ODataService\begin\ConsumingODataService**.
-4. Select the file **ConsumingODataService.sln **, and then click **Open**.
+4. Select the file **ConsumingODataService.sln**, and then click **Open**.
 5. In Solution Explorer, under the **ConsumingODataService.Host** project, expand the **Controllers** folder node, and double-click the **CoursesController.cs** file.
 6. Show the students the **Get** action, which returns **IQueryable&lt;Course&gt;** and is also decorated with the **[Queryable]** attribute.
 7. Explain that this is done to enable OData queries.
