@@ -208,7 +208,7 @@ The main tasks for this exercise are as follows:
     | binding | netTcpBinding |
     | contract | BlueYonder.BookingService.Contracts.IBookingService |
 
-5. In the **config** file, add a connection string to the local SQL Express.
+5. In the **App.config** file, add a connection string to the local SQL Express.
 
    ```cs
         <connectionStrings>
@@ -309,7 +309,7 @@ The main tasks for this exercise are as follows:
 
      to
 
-        catch**(**FaultException<ReservationCreationFault> fault)
+        catch(FaultException<ReservationCreationFault> fault)
 ```
    a. Inside the **catch** block, throw an **HttpResponseException** with an **HttpResponseMessage** object.  
    b. Create the **HttpResponseMessage** by using the **Request.CreateResponse** method. Set the status code to **BadRequest** (HTTP 400), and the content of the message to the description of the fault.  
