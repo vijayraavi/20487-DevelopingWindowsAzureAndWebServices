@@ -70,7 +70,7 @@ The main tasks for this exercise are as follows:
    a. Change the **LocationsController** constructor method, so that it receives an **ILocationRepository** object.  
    b. Initialize the **Locations** member with the constructor parameter.
 
-  >**Note:** The same pattern was already applied in the starter solution for the rest of the controller classes ( **TravelersController** , **FlightsController** , **ReservationsController** , and **TripsController** ).  
+  >**Note:** The same pattern was already applied in the starter solution for the rest of the controller classes (**TravelersController** , **FlightsController** , **ReservationsController** , and **TripsController**).  
    Open those classes to review the constructor definition.
 
 #### Task 2: Create a dependency resolver class
