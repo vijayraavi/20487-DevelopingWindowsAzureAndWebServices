@@ -70,14 +70,14 @@ By selecting the region, you are actually selecting the datacenter where the VMs
 25. In the **Home Address** text box, type **423 Main St.**
 26. In the **Email Address** text box, type your email address.
 27. Click **Purchase**.
-28. The app sends the purchase request to the front-end service. The front-end service saves the purchase information and then sends a separate purchase request to the back-end service for additional processing. After the back-end and front-end services complete their task, the client app displays a confirmation message.
+28. Now the app sends the purchase request to the front-end service. The front-end service saves the purchase information and then sends a separate purchase request to the back-end service for additional processing. After the back-end and front-end services complete their task, the client app displays a confirmation message.
 29. You will implement the purchase feature, including the back-end service purchase feature, in the upcoming labs.
 30. Click **Close** to close the confirmation message.
 31. On the **Blue Yonder Companion** page, point to **New York at a Glance** , and notice that the weather forecast is also retrieved from the front-end service. You will implement the weather service in the upcoming labs.
 32. Click the current trip from Seattle to New York.
 33. On the **Current Trip** page, right-click or swipe from the bottom of the screen to display the app bar, and then click **Media**.
 34. On the **Media** page, right-click or swipe from the bottom of the screen to display the app bar.
-35. Review the available buttons, and you can upload images and videos to Azure Storage, and share them with other clients.
+35. Review the available buttons. You can upload images and videos to Azure Storage, and share them with other clients.
 36. You will implement the upload and download features in the upcoming labs.
 
    >**Note** : Do not click the upload buttons, because you have not created any Azure Storage accounts yet. If you click any of the upload buttons, the app will fail and close.
