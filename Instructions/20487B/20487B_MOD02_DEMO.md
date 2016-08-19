@@ -138,7 +138,7 @@
 10. Press Ctrl+S to save the changes.
 11. In the **Main** method, right-click the **Console.ReadLine()** method call, point to **Breakpoint** , and then click **Insert Breakpoint**.
 12. To run the application, press F5. After a few seconds, the code execution will break, and the breakpoint will be highlighted in yellow.
-13. In console window, review the course and student lists printed to the console window.
+13. In the console window, review the course and student lists printed to the console window.
 14. In Visual Studio 2012, on the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
 15. Review the SQL statements executed by Entity Framework. The first set of queries is part of the database initializer code. The next set of queries is a single query to get the list of courses, and another set of queries to get the list of students, one query for each course.
 
