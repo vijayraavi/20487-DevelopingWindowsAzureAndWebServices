@@ -12,18 +12,18 @@
 
    >**Note** : During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to provide your credentials.
 
-4. Review the items in the pane on the left side of the screen and explain the different services that you can manage with the Azure portal.
+4. Review the items in the pane on the left side of the screen and understand the different services that you can manage with the Azure portal.
 5. Click **NEW** on the lower-left corner of the portal. Click **COMPUTE** , click **CLOUD SERVICE** , and then click **QUICK CREATE**. The **URL** and **REGION** text boxes display on the right side of the screen.
 6. In the **URL** text box, type the following cloud service name: **CloudServiceDemoYourInitials** (Replace **YourInitials** with your initials).
-7. Explain that the cloud service name you typed is going to be part of the URL that you will use when connecting to the roles running in the cloud service.
+7. The cloud service name you typed is going to be part of the URL that you will use when connecting to the roles running in the cloud service.
 8. In the **REGION** drop-down list, select the region that is closest to your location.  
-Explain that by selecting the region, you are actually selecting the datacenter where the VMs will be created.
+By selecting the region, you are actually selecting the datacenter where the VMs will be created.
 
 9. Click **CREATE CLOUD SERVICE** at the lower-right corner of the portal. Wait until the cloud service is created.
 10. Click **CLOUD SERVICES** in the navigation pane.
 11. Click the cloud service that you created in the previous step (the one that is named **CloudServiceDemoYourInitials**.
-12. Explain that currently the cloud service is empty and has no roles; therefore, the tabs do not have any content. Explain that in module 06, &quot;Hosting Services&quot;, you will show how to deploy new roles to the cloud service, and how to configure the roles.
-13. Go over the different tabs and explain their purpose:  
+12. Currently the cloud service is empty and has no roles; therefore, the tabs do not have any content. In module 06, &quot;Hosting Services&quot;, you will see how to deploy new roles to the cloud service, and how to configure the roles.
+13. Go over the different tabs and understand their purpose:  
   a. **DASHBOARD**. Provides an overview for the state and configuration of the cloud service and its roles.  
   b. **MONITOR**. Shows performance counter metrics for the roles, such as their CPU and memory usage.  
   c. **CONFIGURE**. Allows you to control settings such as monitoring capabilities, remote access, and selection of the guest operating system.  
