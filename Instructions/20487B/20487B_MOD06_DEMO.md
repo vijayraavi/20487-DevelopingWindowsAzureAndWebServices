@@ -23,7 +23,7 @@
 
 10. In Solution Explorer, click the **MyIISService** project node.
 11. To build and debug the application, press F5. After the application is built, a browser opens.
-12. In the Internet Explorer window, locate the address bar. To the base address of the service, add the absolute path: **Service1.svc?wsdl**, and then press Enter. Examine the shown WSDL file with the students.
+12. In the Internet Explorer window, locate the address bar. To the base address of the service, add the absolute path: **Service1.svc?wsdl**, and then press Enter. Review the WSDL file.
 
   >**Note** : Module 5, &quot;Creating WCF Services&quot; and Lesson 4, &quot;Consuming WCF Services&quot; in Course 20487 explains how to use WSDL to generate service proxies.
 
@@ -40,4 +40,4 @@
 23. In the **Add Application** dialog box, click **OK**.
 24. On the Start screen, click the **Internet Explorer** tile.
 25. In the browser, locate the address bar, type the path: **http://localhost/MyService/Service1.svc?wsdl**, and then press Enter.
-26. Show the students the WCF service WSDL.
+26. Review the WCF service WSDL.
