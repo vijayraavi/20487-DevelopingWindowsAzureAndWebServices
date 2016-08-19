@@ -75,11 +75,11 @@
 29. Locate the **&lt;entityFramework&gt;** element.
 30. Delete the element and its content.
 
-    >**Note** : Explain to the students that this demonstration requires you to use SQL Server Express and not LocalDb, because with LocalDb the newly created database will not show in the SQL Server Management Studio (LocalDb detaches the application&#39;s database after the application stops). The **SqlConnectionFactory** class uses LocalDb, so by deleting the **&lt;entityFramework&gt;** element, the creation of the database will be in the local SQL Server Express instance.
+    >**Note** : This demonstration requires you to use SQL Server Express and not LocalDb, because with LocalDb the newly created database will not show in the SQL Server Management Studio (LocalDb detaches the application&#39;s database after the application stops). The **SqlConnectionFactory** class uses LocalDb, so by deleting the **&lt;entityFramework&gt;** element, the creation of the database will be in the local SQL Server Express instance.
 
 31. To save the changes, press Ctrl+S.
 32. To run the application, press F5.
-33. Explain that the application now creates a new database on the local SQL Express, named **MyFirstEF.MyDbContext.**
+33. The application now creates a new database on the local SQL Express, named **MyFirstEF.MyDbContext.**
 34. On the Start screen, click the **SQL Server Management Studio** tile.
 35. In the **Server Name** box, type **.\SQLEXPRESS**.
 36. In the **Authentication** drop-down menu, verify **Windows Authentication** is selected, and then click **Connect**.
@@ -115,7 +115,7 @@
         {
         }
 ```
-7. Explain that you use the **using** statement to control the release of unmanaged resources used by the context, such as a database connection.
+7. You use the **using** statement to control the release of unmanaged resources used by the context, such as a database connection.
 8. To select all courses from the database, add the following LINQ to Entities code in the **using** block
 
   ```cs
@@ -138,9 +138,9 @@
 10. Press Ctrl+S to save the changes.
 11. In the **Main** method, right-click the **Console.ReadLine()** method call, point to **Breakpoint** , and then click **Insert Breakpoint**.
 12. To run the application, press F5. After a few seconds, the code execution will break, and the breakpoint will be highlighted in yellow.
-13. Show the students the console window and review the course and student lists printed to the console window.
+13. In console window, review the course and student lists printed to the console window.
 14. In Visual Studio 2012, on the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
-15. Show the students the SQL statements executed by Entity Framework. Explain that the first set of queries is part of the database initializer code. Show that the next set of queries is a single query to get the list of courses, and another set of queries to get the list of students, one query for each course.
+15. Review the SQL statements executed by Entity Framework. The first set of queries is part of the database initializer code. The next set of queries is a single query to get the list of courses, and another set of queries to get the list of students, one query for each course.
 
      >**Note** : IntelliTrace will be covered in Module 10, &quot;Monitoring and Diagnostics&quot; in Course 20487.
 
@@ -152,13 +152,13 @@
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod02\Democode\StoredProcedure\Begin**.
+3. Go to **D:\Allfiles\Mod02\Democode\StoredProcedure\Begin**.
 4. Click **EF\_CodeFirst.sln** , and then click **Open**.
 5. In Solution Explorer, expand the **EF\_CodeFirst** project, and double-click the **Program.cs** file.
-6. Navigate to the **Main** method, and explain that a **SchoolContext** instance is created to establish a connection to the database.
-7. Show the students the query that is being assigned to the **averageGradeInCourse** variable and explain that the average grade of the WCF course is calculated, and then printed to the console.
-8. Show to the students the **ExecuteSqlCommand** statement and explain that it calls a stored procedure named **spUpdateGrades** with two parameters, **CourseName** and **GradeChange**.
-9. To run the console application, press Ctrl+F5. Show to the students that the updated average grade is printed to the console before and after the change.
+6. Go to the **Main** method, and notice that a **SchoolContext** instance is created to establish a connection to the database.
+7. Review the query that is being assigned to the **averageGradeInCourse** variable and notice that the average grade of the WCF course is calculated, and then printed to the console.
+8. The **ExecuteSqlCommand** statement calls a stored procedure named **spUpdateGrades** with two parameters, **CourseName** and **GradeChange**.
+9. To run the console application, press Ctrl+F5. Notice that the updated average grade is printed to the console before and after the change.
 
 
 
@@ -224,7 +224,7 @@
 14. Press Ctrl+S to save the changes.
 15. In the **Main** method, right-click the _Console.ReadLine()_ method call, point to **Breakpoint** , and then click **Insert Breakpoint**.
 16. To run the application, press F5. After a few seconds, the code execution will break, and the breakpoint will be highlighted in yellow.
-17. Show the list of students in the console window. Show that there are two new students at the bottom of the list, and student 1 is missing from the list. Show that the salary of the teacher is now 101000.
+17. The list of students appears in the console window. Notice that there are two new students at the bottom of the list, and student 1 is missing from the list. Also notice that the salary of the teacher is now 101000.
 18. In Visual Studio 2012, on the **Debug** menu, point to **IntelliTrace** , and then click **IntelliTrace Events**.
-19. Show the students the SQL update, delete, and insert statements that correspond to the salary update, student deletion, and the addition of the two new students.
+19. Notice the SQL update, delete, and insert statements that correspond to the salary update, student deletion, and the addition of the two new students.
 20. To stop the debugger, press Shift+F5.
