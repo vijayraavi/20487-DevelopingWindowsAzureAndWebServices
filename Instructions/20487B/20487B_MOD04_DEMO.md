@@ -330,7 +330,7 @@
 10. In Solution Explorer, under the **WebAPISecurity** project, expand **Controllers** , and then double-click **ValuesController.cs**.
 11. You need to understand the use of the **[Authorize]** and **[AllowAnonymous]** attributes. The **[Authorize]** attribute, which decorates the controller, verifies that the client was authenticated before invoking the controller&#39;s actions. The **[AllowAnonymous]** attribute decorating the second **Get** method skips the authentication check, allowing anonymous users to invoke the decorated action.
 12. In Solution Explorer, under the **WebAPISecurity** project, expand **App\_Start** , and then double-click **WebApiConfig.cs**.
-13. Locate the **Register** method, and review the students the **MessageHandler.Add** method call. This is how the authentication message handler is attached to the message handling pipeline.
+13. Locate the **Register** method, and review the **MessageHandler.Add** method call. This is how the authentication message handler is attached to the message handling pipeline.
 14. Press Ctrl+F5 to start the application without debugging.
 15. In the browser, append the suffix **api/values/1** to the address bar and press Enter. Verify that you can see an XML reply with the response of the action.
 16. Remove **/1** from the address in the address bar and then press Enter.
