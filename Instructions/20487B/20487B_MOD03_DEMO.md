@@ -13,9 +13,9 @@
 5. In the **Location** text box, type **D:\Allfiles\Mod03\Democode\FirstWebApiService\Begin** , and then click **OK**.
 6. In the **New ASP.NET MVC 4 Project** dialog box, click **Web API** , and then click **OK**.
 7. In **Solution Explorer** , under the **MyApp** project, expand the **App\_Start** folder, and then double-click **WebApiConfig.cs**.
-8. Locate the **MapHttpRoute** method call and explain the different parameters that are used in the method call.
+8. Locate the **MapHttpRoute** method call and notice the different parameters that are used in the method call.
 9. In **Solution Explorer** , under the **MyApp** project, expand the **Controllers** folder, and then double-click **ValuesController.cs**.
-10. Locate the parameterless **Get** action method, and discuss with the student how this method can be invoked by using HTTP (for example, using the _/api/values_ relative URI).
+10. Locate the parameterless **Get** action method, and notice how this method can be invoked by using HTTP (for example, using the _/api/values_ relative URI).
 11. To start the application without debugging, press Ctrl+F5. The Internet Explorer 10 browser will open.
 12. In the address bar of the browser, append the **api/values** to the end of the address, and then press Enter.
 13. When prompted by the browser, click **Open,** click **Try an app on this PC** , and then click **Notepad** to open the **values.json** file in Notepad.
@@ -59,7 +59,7 @@
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
 3. In the **File Name** text box, type **D:\Allfiles\Mod03\Democode\ThrowHttpResponseException\Begin\start.sln** , and then click **Open**.
 4. In **Solution Explorer** , under the **Start** project, expand the **Controllers** folder, and double-click **DestinationsController.cs**.
-5. Locate the **Get** method call and explain how **HttpResponseMessage** is used to control errors.
+5. Locate the **Get** method call and notice how **HttpResponseMessage** is used to control errors.
 6. Change the signature of the **Get** method to the following signature.
 
 	```cs
@@ -76,7 +76,7 @@
         }
 ```
 
-8. Discuss what should be the result of such a call (404 not found status). Show the students that the string **null** is being returned instead (with 200 OK status).
+8. Discuss what should be the result of such a call (404 not found status). Notice that the string **null** is being returned instead (with 200 OK status).
 9. Change the **Get** method to validate the existence of a destination before sending a response. When you are finished, the **Get** method should look like this.
 
 	```cs
@@ -107,7 +107,7 @@
 2. On the File menu, point to **Open** , and then click **Project/Solution**.
 3. In the **File Name** box, type **D:\Allfiles\Mod03\Democode\ConsumingFromJQuery\Begin\JQueryClient\JQueryClient.sln** , and then click **Open**.
 4. In **Solution Explorer** , under the **JQueryClient** project, expand the **Views** folder, then expand the **Home** folder and double-click **Index.cshtml**.
-5. Locate the script section and explain jQuery retrieves the data from the server and how this method of work enables AJAX.
+5. Locate the script section and notice that jQuery retrieves the data from the server and how this method of work enables AJAX.
 6. In the beginning of the script section, add jQuery code to register to the submit event of the **deleteLocation** form. The registration code should look as follows.
 
 	```cs
