@@ -95,10 +95,8 @@ The main tasks for this exercise are as follows:
 | --- | --- |
 | name | **LocationWeatherApi** |
 | routeTemplate | **locations/{locationId}/weather** |
-| defaults | Create a new anonymous type by using the following code.    
-       New {   controller = &quot;locations&quot;,   action = &quot;GetWeather&quot;    } |
-| constraints | Create a new anonymous type nu using the following code.  
-       new{   httpMethod = new HttpMethodConstraint(HttpMethod.Get)}  |
+| defaults | Create a new anonymous type by using the following code. ```cs New {   controller = &quot;locations&quot;,   action = &quot;GetWeather&quot;```    } |
+| constraints | Create a new anonymous type nu using the following code. ```cs new{   httpMethod = new HttpMethodConstraint(HttpMethod.Get)}```  |
 
 #### Task 2: Deploy the updated project to the staging environment by using the Azure portal
 
