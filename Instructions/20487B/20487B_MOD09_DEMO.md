@@ -14,7 +14,7 @@
 
 4. Click **NEW** on the portal&#39;s taskbar.
 5. Click **DATA SERVICES**, click **STORAGE**, and then click **QUICK CREATE**.
-6. In the **URL** text box, enter **demostorageaccounty**** ourinitials**(_yourinitials_ is your initials in lowercase). This URL will be used to access the blob, queue, and table resources for the account. Note that the storage account URLs are always written in lowercase.
+6. In the **URL** text box, enter **demostorageaccounty ourinitials** (_yourinitials_ is your initials in lowercase). This URL will be used to access the blob, queue, and table resources for the account. Note that the storage account URLs are always written in lowercase.
 7. In the **LOCATION** box, select the region closest to your location. In order to reduce communication latency, it is better to create the storage account in the same region where you deployed your application.
 8. Click **CREATE STORAGE ACCOUNT**  and wait until the storage account is created.
 
@@ -38,12 +38,12 @@
 1. On the **Start** screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Go to **D:\Allfiles\Mod09\DemoFiles\BlobsStorageEmulator**.
-4. Select the file **BlobsStorageEmulator.sln**, andthen click **Open**.
+4. Select the file **BlobsStorageEmulator.sln**, and then click **Open**.
 5. In Solution Explorer, expand the **BlobStorageEmulator** project, expand the **Roles** folder, right-click **BlobStorage.Web**, and then click **Properties**.
 6. In the **Properties** window, click the **Settings** tab.
 7. Note that the **PhotosStorage** connection string points to the storage emulator, which runs on the local computer.
-8. In Solution Explorer, expand the **Web** project, and then double-click **cs**.
-9. Locate the **GetContainer** method. Note how the **Parse** static method is used to create a **CloudStorageAccount** object from the connection string.
+8. In Solution Explorer, expand the **BlobStorage.Web** project, and then double-click **ContainerHelper.cs**.
+9. Locate the **GetContainer** method. Note how the **CloudStorageAccount.Parse** static method is used to create a **CloudStorageAccount** object from the connection string.
 10. Review the use of the **CreateCloudBlobClient** method, and how it is used to create a **CloudBlobClient** object that controls the blob resources in the storage account.
 11. Review the use of the **GetContainerReference** method and how it is used to return a **CloudBlobContainer** object that controls a specific blob container named **files**. Additionally, review how the **CreateIfNotExists** method verifies that the blob container exists and creates it if it does not exist.
 
@@ -53,7 +53,7 @@
 
    >**Note**: The default permission for a container is private, which means the container is not publicly accessible from the Internet, and you can only access it by using the storage account access key.
 
-13. In Solution Explorer, under the **BlobStorage.Web** project, expand the **Controllers** folder, and then double-click **HomeController.cs**.
+13. In Solution Explorer, under the **BlobStorage.Web** project, expand the **Controllers** folder, and then double-click  **HomeController.cs**.
 14. Locate the **Index** method, and note the call to the **ListBlobs** method. Blob containers can be hierarchical, but you can request the return list to be flattened.
 15. Review how the blob type is checked inside the **foreach** loop, because there is a difference among the blob types: Block, Page, and Directory.
 16. Locate the **UploadFile** method. Review how the **GetBlockBlobRefrence** method is used for getting a reference to a block blob within the container. Because the blob is not currently in the container, the method will create a new reference and return it.
@@ -62,18 +62,18 @@
 19. Note that the code that copies the stream to the response stream will stay the same even when working with other sources of data streams.
 20. In Solution Explorer, right-click the **BlobStorageEmulator** project, and then click **Set as StartUp Project**.
 21. Press Ctrl+F5 to run the web application by the Azure Compute and Storage Emulator.
-22. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets** , select the file **EmpireStateBuilding.jpg** , and then click **Open**.
+22. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets**, select the file **EmpireStateBuilding.jpg**, and then click **Open**.
 23. Click **Upload**.
 24. Review the links shown on the page. The **Direct Download** link will try to download the file directly from the blob container by using its HTTP URL. The **Download** link will try to download the file from the blob container by using the storage API.
-25. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets** , select the file **StatueOfLiberty.jpg** , and then click **Open**.
+25. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets**, select the file **StatueOfLiberty.jpg** , and then click **Open**.
 26. Click **Upload**.
 27. Click **Direct Download** in the Empire State building row. Verify that the photo of the Empire State building appears.
-28. Review the URL in the address bar. The Storage Emulator has its own port, and the URL is composed of the name of the storage account, **devstoreaccount1** , the name of the container, **files** , and the name of the blob, **EmpireStateBuilding.jpg**.
+28. Review the URL in the address bar. The Storage Emulator has its own port, and the URL is composed of the name of the storage account, **devstoreaccount1**, the name of the container, **files**, and the name of the blob, **EmpireStateBuilding.jpg**.
 29. Return to the previous tab, click **Download** in the Statue of Liberty row, and verify that the photo of the Statue of Liberty appears.
 30. Close the browser.
 31. Return to Visual Studio 2012. On the **View** menu, click **Server Explorer**.
-32. In Server Explorer, expand **Windows Azure Storage** , right-click **Development** , and then click **Refresh**.
-33. In Server Explorer, expand **Development** , then expand **Blobs** , and then double-click the **files** node.
+32. In Server Explorer, expand **Windows Azure Storage**, right-click **Development**, and then click **Refresh**.
+33. In Server Explorer, expand **Development**, then expand **Blobs**, and then double-click the **files** node.
 34. Review the list of blobs in the **files [Container]** window. These are the same blobs that were displayed in the browser.
 
 
@@ -95,7 +95,7 @@
 6. Click **NEW** on the portal&#39;s taskbar, and then click **QUICK CREATE.**
 7. Enter the following information:
 
-   - URL: **demostorageaccounty**** ourinitials**(_yourinitials_ is your initials in lower-case).
+   - URL: **demostorageaccounty ourinitials** (_yourinitials_ is your initials in lower-case).
    - LOCATION: Select the region closest to your location.
 
 8. Click **CREATE STORAGE ACCOUNT**. Wait until the storage account is created.
@@ -106,23 +106,23 @@
 13. On the **Start** screen, click the **Visual Studio 2012** tile.
 14. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 15. Go to **D:\Allfiles\Mod09\DemoFiles\TableStorage**.
-16. Select the file **TableStorage.sln**, andthen click **Open**.In Solution Explorer, expand the **TableStorage** project, and then double-click **Web.config**.
+16. Select the file **TableStorage.sln**, and then click **Open**.In Solution Explorer, expand the **TableStorage** project, and then double-click **Web.config**.
 17. In Solution Explorer, expand the **TableStorage** project, and then double-click **Web.config**.
 18. In the **&lt;appSettings&gt;** element, locate the application setting named **StorageAccount**.
-19. In the **value** attribute value string, replace the **[AccountName]** placeholder with **demostorageaccounty**** ourinitials**(_yourinitials_ is your initials in lowercase).
+19. In the **value** attribute value string, replace the **[AccountName]** placeholder with **demostorageaccountyourinitials** (_yourinitials_ is your initials in lowercase).
 20. In the **value** attribute value string, select the **[AccountKey]** placeholder and press Ctrl+V to overwrite it with the account key you copied from the Azure portal.
 21. Press Ctrl+S to save the changes.
 22. In Solution Explorer, expand the **TableStorage** project, expand **Models**, and then double-click **Country.cs**.
 23. Review the **Country** class. In order to add an entity to table storage, the entity derives from the **TableServiceEntity** class.
 24. Review the use of the **PartitionKey** and **RowKey** properties:  
-	The **TableServiceEntity** class contains these two properties.  
+    The **TableServiceEntity** class contains these two properties.  
     The **RowKey** is the unique identifier of the entity, and therefore holds the name of the country.  
     The **PartitionKey** is used for partitioning and scalability. For this demonstration, the partition is set according to the continent of the country.
 
 25. In Solution Explorer, under the **TableStorage** project, expand **Controllers** , and then double-click **CountriesController.cs**.
 26. Review the content of the **GetTableContext** method. The **CreateIfNotExists** method verifies if the table exists, and creates it if it does not exist. The method returns a **TableServiceContext** object, which is used for querying and adding entities to the table.
 27. Locate the **Index** method and review its content. The **CreateQuery&lt;T&gt;** generic method is used for creating a query against the table storage. The second query uses a LINQ statement to filter the list of countries according to a specific partition key.
-28. Review the content of the **Add** method. The **AddObject** is used to add the new country to the local context, and then the **SaveChanges** method is called to save the changes to the table storage.
+28. Review the content of the **Add** method. The **AddObject** is used to add the new country to the local context, and then the  **SaveChanges** method is called to save the changes to the table storage.
 29. Press Ctrl+F5 to start the web application without debugging.
 30. Enter the following information in the browser:
 
@@ -145,7 +145,7 @@
 36. On the **View** menu, click **Server Explorer**.
 37. In Server Explorer, right-click **Windows Azure Storage**, and then click **Add New Storage Account**.
 38. In the **Add New Storage Account** dialog box, select the **Manually entered credentials** option.
-39. In the **Account name** box, type **demostorageaccounty ourinitials**(_yourinitials_ is your initials in lowercase).
+39. In the **Account name** box, type **demostorageaccountyourinitials** (_yourinitials_ is your initials in lowercase).
 40. Place the cursor in the **Account key** box and then press Ctrl+V to enter the account key you copied from the Azure portal.
 41. Click **OK**.
 42. In Server Explorer, under **Windows Azure Storage**, expand the added storage account, expand **Tables**, and then double-click the **Countries** node.
@@ -195,7 +195,7 @@
 6. Click **NEW** on the portal&#39;s taskbar, and then click **QUICK CREATE.**
 7. Enter the following information:
 
-   - URL: **demostorageaccounty ourinitials**(_yourinitials_ is your initials in lowercase).
+   - URL: **demostorageaccountyourinitials** (_yourinitials_ is your initials in lowercase).
    - LOCATION: Select the region closest to your location.
 
 8. Click **CREATE STORAGE ACCOUNT**. Wait until the storage account is created.
@@ -206,15 +206,15 @@
 13. On the **Start** screen, click the **Visual Studio 2012** tile.
 14. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 15. Go to **D:\Allfiles\Mod09\DemoFiles\WorkingWithAzureQueues**.
-16. Select the file **WorkingWithAzureQueues.sln**, andthen click **Open**.
+16. Select the file **WorkingWithAzureQueues.sln**, and then click **Open**.
 17. In Solution Explorer, expand the **WorkingWithAzureQueues.Sender** project, and then double-click **App.config**.
 18. In the **&lt;connectionStrings&gt;** element, locate the connection string named **StorageConnectionString**.
-19. In the **value** attribute value string, replace the **[AccountName]** placeholder with **demostorageaccounty**** ourinitials**(_yourinitials_ is your initials in lowercase).
+19. In the **value** attribute value string, replace the **[AccountName]** placeholder with **demostorageaccountyourinitials** (_yourinitials_ is your initials in lowercase).
 20. In the **value** attribute value string, select the **[AccountKey]** placeholder and press Ctrl+V to overwrite it with the account key you copied from the Azure portal.
 21. Press Ctrl+S to save the changes.
 22. In Solution Explorer, expand the **WorkingWithAzureQueues.Receiver** project, and then double-click **App.config**.
 23. In the **&lt;connectionStrings&gt;** element, locate the connection string named **StorageConnectionString**.
-24. In the **value** attribute value string, replace the **[AccountName]** placeholder with **demostorageaccounty**** ourinitials**(_yourinitials_ in your initials, in lower-case).
+24. In the **value** attribute value string, replace the **[AccountName]** placeholder with **demostorageaccountyourinitials** (_yourinitials_ in your initials, in lower-case).
 25. In the **value** attribute value string, select the **[AccountKey]** placeholder and press Ctrl+V to overwrite it with the account key you copied from the Azure portal.
 26. Press Ctrl+S to save the changes.
 27. In Solution Explorer, expand the **WorkingWithAzureQueues.Sender** project, and then double-click **Program.cs**.
@@ -239,7 +239,7 @@
 35. Press Ctrl+F5 to run both projects.
 36. Place both the **Sender** and **Receiver** console windows next to each other.
 37. View the content of both the windows. Each message that is sent to the queue is retrieved from the queue.
-38. Close the **Sender** console window. Wait for the **Receiver** applicationto finish handling the queued messages, and then close the **Receiver** console window.
+38. Close the **Sender** console window. Wait for the **Receiver** application to finish handling the queued messages, and then close the **Receiver** console window.
 
 
 
