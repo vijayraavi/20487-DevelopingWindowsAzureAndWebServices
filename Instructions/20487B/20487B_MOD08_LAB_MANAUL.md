@@ -19,32 +19,32 @@ After you complete this lab, you will be able to:
 
 Estimated Time: **45 minutes**
 
-Virtual Machine: **20487B-SEA-DEV-A** , **20487B-SEA-DEV-B** ,and **20487B-SEA-DEV-C**
+Virtual Machine: **20487B-SEA-DEV-A**, **20487B-SEA-DEV-B**, and **20487B-SEA-DEV-C**
 
-User name: **Administrator** , **Administrator** , and **Admin**
+User name: **Administrator**, **Administrator**, and **Admin**
 
-Password: **Pa$$w0rd** , **Pa$$w0rd** , and **Pa$$w0rd**
+Password: **Pa$$w0rd**, **Pa$$w0rd**, and **Pa$$w0rd**
 
 For this lab, you will use the available virtual machine environment. Before you begin this lab, you must complete the following steps:
 
-1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
 
-2. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Actions** pane, click **Start**.
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in by using the following credentials:
 
    - User name: **Administrator**
    - Password: **Pa$$w0rd**
 
-6. Return to Hyper-V Manager, click **20487B-SEA-DEV-B** , and in the **Actions** pane, click **Start**.
+6. Return to Hyper-V Manager, click **20487B-SEA-DEV-B**, and in the **Actions** pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in by using the following credentials:
 
    - User name: **Administrator**
    - Password: **Pa$$w0rd**
 
-9. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the **Actions** pane, click **Start**.
+9. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and in the **Actions** pane, click **Start**.
 
 Verify that you received the credentials to sign in to the Azure portal from your training provider. These credentials and the Azure account will be used throughout the labs of this course.
 
@@ -82,7 +82,7 @@ The main tasks for this exercise are as follows:
 11. Select the **Deploy even if one or more roles contain a single instance** check box and approve.
 12. In the **INSTANCES** tab, verify that the instance is running.
 13. In the **BlueYonder.Companion.Controllers** project, implement the **GetWeather** method of the **LocationController** class.
-14. Create a new instance of the **WeatherService** class that is part of the **Companion.Controllers**
+14. Create a new instance of the **WeatherService** class that is part of the **BlueYonder.Companion.Controllers** project.
 15. Use the **Locations.GetSingle** method to get the **Location** object according to the **locationId** parameter.
 16. Call the **GetWeather** method of the **WeatherService** class to get the **WeatherForecast** object.
 
@@ -108,7 +108,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Test the client app with the production and staging deployments
 
-1. On the **20487B-SEA-DEV-C** virtual machine, open the client solution from **D:\AllFiles\Mod08\LabFiles\begin\BlueYonder.Companion.Client**.
+1. On the **20487B-SEA-DEV-C** virtual machine, open the client solution from  **D:\AllFiles\Mod08\LabFiles\begin\BlueYonder.Companion.Client**.
 
 2. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the name of the Azure cloud service you wrote down at the beginning of this lab.
 3. Run the client app without debugging, purchase a trip from Seattle to New York, and verify that the weather forecast for the current trip is missing the temperature.
@@ -118,7 +118,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **Addresses** class, duplicate the **BaseUri** property, and set one of the implementations to the staging deployment URL. Place the second implementation in comment, because you will need it in the next task.
 
-   - In the Azure portal, open the configuration of your cloud service, and then copy the staging deployment URL to the **BaseUri** property.
+   - In the Azure portal, open the configuration of your cloud service, and then copy the staging deployment URL to the **BaseUri**  property.
 
 5. Run the client app again, verify that the weather forecast appears for the current trip, and then close the client app.
 
@@ -126,7 +126,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Perform a VIP Swap by using the Azure portal and retest the client app
 
-1. Return to the Azure portal and perform a **VIP Swap** between the staging and production deployments. Return to Visual Studio 2012when the swap completes.
+1. Return to the Azure portal and perform a **VIP Swap** between the staging and production deployments. Return to Visual Studio 2012 when the swap completes.
 
 2. Set the service URL in the **BaseUri** property back to the URL of the production deployment, run the client app without debugging, and verify that the weather forecast appears.
 3. Return to the Azure portal and delete the staging deployment.
@@ -161,15 +161,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Import the deployment package to a second server
 
-1. On the **20487B-SEA-DEV-B** virtual machine, open **IIS Manager** , select the **Default Web Site** , and then open the **Import Application Package** dialog box.
+1. On the **20487B-SEA-DEV-B** virtual machine, open **IIS Manager**, select the **Default Web Site**, and then open the **Import Application Package** dialog box.
 
 2. Import the package from **C:\backup.zip** by using the following settings.
 
    - Physical path of the Booking service: **C:\Services\BlueYonder.Server.Booking.WebHost**
    - Physical path of the Frequent Flyer service: **C:\Services\BlueYonder.Server.FrequentFlyer.WebHost**
 
-3. Close IIS Manager, open the Azure portal(http://manage.windowsazure.com), and verify that there are two listeners for the **booking** relay.
+3. Close IIS Manager, open the Azure portal(http://manage.windowsazure.com), and verify that there are two listeners for the  **booking** relay.
 4. In the Azure portal, locate the Service Bus namespace you wrote down at the beginning of this lab
 5. Open the Service Bus configuration, click the **RELAYS** tab, and verify that there are two listeners for the **booking** relay.
 
-   >**Results** : As soon as both the servers are online, they will listen to the same Service Bus relay and will be load balanced. You will verify that both servers are listening by checking the Service Bus relay listener&#39;s information supplied by Service Bus in the Azure portal.
+   >**Results**: As soon as both the servers are online, they will listen to the same Service Bus relay and will be load balanced. You will verify that both servers are listening by checking the Service Bus relay listener&#39;s information supplied by Service Bus in the Azure portal.
