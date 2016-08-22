@@ -22,23 +22,23 @@ Estimated Time: **60 minutes**
 
 Virtual Machine: **20487B-SEA-DEV-A** and **20487B-SEA-DEV-C**
 
-User name: **Administrator** , **Admin**
+User name: **Administrator**, **Admin**
 
-Password: **Pa$$w0rd** , **Pa$$w0rd**
+Password: **Pa$$w0rd**, **Pa$$w0rd**
 
 For this lab, you will use the available virtual machine environment. Before you begin this lab, you must complete the following steps:
 
-1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
 
-2. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Actions** pane, click **Start**.
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in by using the following credentials:
 
    - User name: **Administrator**
    - Password: **Pa$$w0rd**
 
-6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the **Actions** pane, click **Start**.
+6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and in the **Actions** pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in by using the following credentials:
 
@@ -67,12 +67,12 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a storage account
 
-1. Sign in to the virtual machine **20487B-SEA-DEV-A** as **Administrator** with the password **Pa$$w0rd** and run the **Setup.cmd** script from the **D:\AllFiles\Mod09\LabFiles\Setup** folder. When you are prompted for information, provide it according to the instructions. Write down the name of the cloud service that is shown in the script. You will use it later during the lab.
+1. Sign in to the virtual machine **20487B-SEA-DEV-A** as **Administrator** with the password **Pa$$w0rd** and run the **Setup.cmd**  script from the **D:\AllFiles\Mod09\LabFiles\Setup** folder. When you are prompted for information, provide it according to the instructions. Write down the name of the cloud service that is shown in the script. You will use it later during the lab.
 
    >**Note:** You might see warnings in yellow indicating a mismatch in the versions and obsolete settings. These warnings might appear if there are newer versions of Azure PowerShell cmdlets. If these warnings are followed by a red error message, please inform the instructor, otherwise you can ignore them.
 
 2. Open the Microsoft Azure portal ( **http://manage.windowsazure.com** ).
-3. Create a new Azure storage account named **blueyonderlab09**** yourinitials** (_yourinitials_ is your initials in lowercase). Select the region closest to your location, and wait until the storage account is created.
+3. Create a new Azure storage account named **blueyonderlab09yourinitials** (_yourinitials_ is your initials in lowercase). Select the region closest to your location, and wait until the storage account is created.
 
    >**Note:** If you get a message saying the storage account creation failed because you reached your storage account limit, delete one of your existing storage accounts and retry the step. If you do not know how to delete a storage account, consult the instructor. 
 
@@ -139,15 +139,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Write the files metadata to the Table storage
 
-1. In the **BlueYonder.Companion.Storage** project, open the **FileEntity** class and derive the class from the **TableServiceEntity** abstract class.
+1. In the **BlueYonder.Companion.Storage** project, open the **FileEntity** class and derive the class from the **TableServiceEntity**  abstract class.
 
-2. In the **BlueYonder.Companion.Storage** project, open the **AsyncStorageManager** class, and implement the **GetTableContext** method.
+2. In the **BlueYonder.Companion.Storage** project, open the **AsyncStorageManager** class, and implement the **GetTableContext**  method.
 3. Use the **CreateCloudTableClient** method of the \_ **account** member to create a **CloudTableClient** object.
 4. Use the table client object to retrieve the table by calling the **GetTableReference** method. Use the table name stored in the **MetadataTable** static field of the class.
 5. Create the table if it does not exist by using the **CreateIfNotExists** method of the **CloudTable** class.
-6. Use the **CloudTableClient.**** GetTableServiceContext** method to return a new table service context.
+6. Use the **CloudTableClient.GetTableServiceContext** method to return a new table service context.
 
-   >**Note:** You should make sure the table exists before you return a context for it, otherwise the code will fail when running queries on the table. If you have already created the table, you can skip calling the **GetTableReference** and **CreateIfNotExists** methods.
+   >**Note:** You should make sure the table exists before you return a context for it, otherwise the code will fail when running queries on the table. If you have already created the table, you can skip calling the **GetTableReference** and  **CreateIfNotExists** methods.
 
 7. Add the **FileEntity** object to the table&#39;s context in the **SaveMetadataAsync** method.
 8. Use the **TableServiceContext.AddObject** method and provide it with the target table name and object to add. Use the table name stored in the **MetadataTable** static field of the class.
@@ -165,7 +165,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Query the Table storage
 
-1. In the **BlueYonder.Companion.Storage** project, open the **AsyncStorageManager** class, and implement the **GetLocationMetadata** method.
+1. In the **BlueYonder.Companion.Storage** project, open the **AsyncStorageManager** class, and implement the **GetLocationMetadata**  method.
 2. Get the table service context by using the **GetTableContext** method you implemented in the previous task.
 
 3. Use the context&#39;s **CreateQuery&lt;T&gt;** generic method to create a data source for a LINQ query. Use the table name stored in the **MetadataTable** static field of the class.
@@ -177,14 +177,14 @@ The main tasks for this exercise are as follows:
 
    >**Note:** The method queries the table for each row key and returns the matching **FileEntity** object by using the **yield return** statement
 
-6. In the **BlueYonder.Companion.Controllers** project, open the **FilesController** class, and review the implementation of the **LocationMetadata** method.
+6. In the **BlueYonder.Companion.Controllers** project, open the **FilesController** class, and review the implementation of the  **LocationMetadata** method.
 
-   >**Note:** The method calls the **GetLocationMetadata** method from the **AsyncStorageManager** class, and converts the **FileEntity** objects that are marked as public to **FileDto** objects. The client app calls this service action to get a list of all public files related to a specific location.
+   >**Note:** The method calls the **GetLocationMetadata** method from the **AsyncStorageManager** class, and converts the  **FileEntity** objects that are marked as public to **FileDto** objects. The client app calls this service action to get a list of all public files related to a specific location.
 
 7. In the **ToFileDto** method, uncomment the initialization of the **LocationId** property.
 8. In the **FilesController** class, explore the code in the **TripMetadata** method.
 
-   >**Note:** The method retrieves the list of files in the trip&#39;s public blob container, and then uses the **GetFilesMetadata** method of the **AsyncStorageManager** class to get the **FileEntity** object for each of the files. The client app calls this service action to get a list of all the files related to a specific trip. Currently, the code retrieves only public files. In the next exercise, you will add the code to retrieve both public and private files.
+   >**Note:** The method retrieves the list of files in the trip&#39;s public blob container, and then uses the **GetFilesMetadata**  method of the **AsyncStorageManager** class to get the **FileEntity** object for each of the files. The client app calls this service action to get a list of all the files related to a specific trip. Currently, the code retrieves only public files. In the next exercise, you will add the code to retrieve both public and private files.
 
   
    >**Results** : After you complete the exercise, your code will support storing information about uploaded photos in Table storage. You will be able to test your changes at the end of the lab.
@@ -207,13 +207,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Change the public photos query to return private photos
 
-1. In the **BlueYonder.Companion.Storage** project, open the **AsyncStorageManager** class, and start implementing the **CreateSharedAccessSignature** method by creating a new **SharecAccessBlobPolicy** object.
+1. In the **BlueYonder.Companion.Storage** project, open the **AsyncStorageManager** class, and start implementing the  **CreateSharedAccessSignature** method by creating a new **SharecAccessBlobPolicy** object.
 
     - Set the policy&#39;s permission to **Read** and the expiration time to one hour from the current time. To calculate future time, use the **DateTime.UtcNow.AddHours** method.
 
-2. In the **CreateSharedAccessSignature** method, add code tocreate a new **BlobContainerPermissions** object, add the policy to it, and apply the permissions to the blob container.
-3. Add the policy to the **SharedAccessPolicies** collection of the **BlobContainerPermissions** object. Name the policy **blueyonder**.
-4. Get the container by calling the **GetContainer** method, and apply the policy to the container by calling the container&#39;s **SetPermission** method.
+2. In the **CreateSharedAccessSignature** method, add code to create a new **BlobContainerPermissions** object, add the policy to it, and apply the permissions to the blob container.
+3. Add the policy to the **SharedAccessPolicies** collection of the **BlobContainerPermissions** object. Name the policy  **blueyonder**.
+4. Get the container by calling the **GetContainer** method, and apply the policy to the container by calling the container&#39;s  **SetPermission** method.
 5. Use the container&#39;s **GetSharedAccessSignature** to return a shared access signature string for the new policy. Pass the policy you created earlier to the method as a parameter.
 
    >**Note:** The shared access key signature is a URL query string that you append to blob URLs. Without the query string, you cannot access private blobs.
@@ -235,7 +235,7 @@ The main tasks for this exercise are as follows:
 3. In the **Addresses** class of the **BlueYonder.Companion.Shared** project, set the **BaseUri** property to the Azure cloud service name you wrote down at the beginning of this lab.
 4. Run the client app, search for **New** , and purchase a flight from **Seattle** to **New York** _._
 5. Select the current trip from **Seattle** to **New York** , and then select **Media** on the app bar.
-6. On the **Media** page, use the app bar to add the **StatueOfLiberty.jpg** file from the **D:\Allfiles\Mod09\LabFiles\Assets** Use the app bar to upload the file to the public storage.
+6. On the **Media** page, use the app bar to add the **StatueOfLiberty.jpg** file from the **D:\Allfiles\Mod09\LabFiles\Assets** folder. Use the app bar to upload the file to the public storage.
 7. On the **Media** page, use the app bar to add the **EmpireStateBuilding.jpg** file from the **D:\Allfiles\Mod09\LabFiles\Assets** Use the app bar to upload the file to the private storage.
 8. Return to the **Current Trip** page and then go to the **Media** page again. Wait for a few seconds until the photos are downloaded from Azure storage, and verify that both the private and public photos appear.
 9. Return to the **Blue Yonder Companion** page (the main page). Under **New York at a Glance** , verify that the photo of the Statue of Liberty, which you uploaded to the public container, appears.
