@@ -32,10 +32,10 @@
 21. At the bottom of the page, click **CREATE**.
 22. In the **CREATE A NAMESPACE** dialog box, provide the following information:
 
-    - NAMESPACE NAME: **ServiceBusDemo07**** YourInitials** (Replace _YourInitials_ with your initials).
-    - TYPE: **MESSAGING**
-    - MESSAGING TIER: **STANDARD**
-    - REGION: Select the region closest to your location.
+    a. NAMESPACE NAME: **ServiceBusDemo07**** YourInitials** (Replace _YourInitials_ with your initials).
+    b. TYPE: **MESSAGING**
+    c. MESSAGING TIER: **STANDARD**
+    d. REGION: Select the region closest to your location.
 
 23. To create the namespace,at the bottom of the dialog box, click the **V** icon, and then wait until the namespace is active.
 24. Click the name of the newly created namespace.
