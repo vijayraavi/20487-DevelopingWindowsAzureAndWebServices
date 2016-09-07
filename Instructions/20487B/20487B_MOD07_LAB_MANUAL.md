@@ -202,9 +202,9 @@ The main tasks for this exercise are as follows:
 
 1. Open the Microsoft Azure portal (**http://manage.windowsazure.com**)
 
-    - Open the Service Bus you created in the previous exercise.
-    - Click **CONNECTION INFORMATION** to open the **ACCESS CONNECTION INFORMATION** dialog box.
-    - Copy the value of the **CONNECTION STRING** text box.
+    a. Open the Service Bus you created in the previous exercise.    
+    b. Click **CONNECTION INFORMATION** to open the **ACCESS CONNECTION INFORMATION** dialog box.    
+    c. Copy the value of the **CONNECTION STRING** text box.
 
 2. Return to the **BlueYonder.Companion** solution in Visual Studio 2012, and then add a string setting to the web role to store the Service Bus connection string.
 
@@ -212,11 +212,11 @@ The main tasks for this exercise are as follows:
 
 3. Open the **ServiceBusQueueHelper** class located in the **BlueYonder.Companion.Controllers** project, and then implement the **ConnectToQueue** method.
 
-    - Create a Service Bus namespace manager object by using the connection string of the Service Bus.
-    - Use the **CloudConfigurationManager.GetSetting** to retrieve the connection string.
-    - To create the namespace manager object, use the **CreateFromConnectionString** method of the **NamespaceManager** class.
-    - Check if the Queue exists and create it by using the **CreateQueue** API if necessary.
-    - Return a new **QueueClient** object for the queue by using the **CreateFromConnectionString** method of the **QueueClient** class.
+    a. Create a Service Bus namespace manager object by using the connection string of the Service Bus.    
+    b. Use the **CloudConfigurationManager.GetSetting** to retrieve the connection string.    
+    c. To create the namespace manager object, use the **CreateFromConnectionString** method of the **NamespaceManager** class.    
+    d. Check if the Queue exists and create it by using the **CreateQueue** API if necessary.    
+    e. Return a new **QueueClient** object for the queue by using the **CreateFromConnectionString** method of the **QueueClient** class.
 
    >**Note:** The Queue name is stored in a static variable named **QueueName**, and has the value of **FlightUpdatesQueue**
 
