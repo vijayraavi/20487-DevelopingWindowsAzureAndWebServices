@@ -30,16 +30,16 @@ Password: **Pa$$w0rd**, **Pa$$w0rd**
 
 For this lab, you will use the available virtual machine environment. Before you begin this lab, you must complete the following steps:
 
-1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1** , and then in the **Actions** pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and then in the **Actions** pane, click **Start**.
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and then in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in using the following credentials:
 
     - User name: **Administrator**
     - Password: **Pa$$w0rd**
 
-6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and then in the **Actions** pane, click **Start**.
+6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and then in the **Actions** pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in using the following credentials:
 
@@ -66,33 +66,33 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create the Service Bus namespace by using the Azure Portal
 
-1. In the **20487B-SEA-DEV-A** virtual machine, run the **Setup.cmd** file from **D:\AllFiles\Mod07\LabFiles\Setup** , and then note the name of the cloud service created by the script.
+1. In the **20487B-SEA-DEV-A** virtual machine, run the **Setup.cmd** file from **D:\AllFiles\Mod07\LabFiles\Setup**, and then note the name of the cloud service created by the script.
 
-   >**Note:** You might see warnings in yellow indicating a mismatch in the versions and setting deprecations. These warnings may appear if there is a newer version of the Azure PowerShell cmdlets. If this message is followed by a red error message, please inform the instructor, otherwise you can ignore the warnings. ** **
+   >**Note:** You might see warnings in yellow indicating a mismatch in the versions and setting deprecations. These warnings may appear if there is a newer version of the Azure PowerShell cmdlets. If this message is followed by a red error message, please inform the instructor, otherwise you can ignore the warnings.
 
-2. Open the Microsoft Azure portal ( **http://manage.windowsazure.com** )
-3. Create a new Azure Service Busnamespace named **BlueYonderServerLab07**** YourInitials** (Replace _YourInitials_ with your initials).
+2. Open the Microsoft Azure portal (**http://manage.windowsazure.com**)
+3. Create a new Azure Service Busnamespace named **BlueYonderServerLab07YourInitials** (Replace _YourInitials_ with your initials).
 
     - Select a region closest to your location.
-    - Select the newly created Service Bus namespace, click **CONFIGURE** , and then copy the primary key for the **RootManageSharedAccessKey** policy to the clipboard
+    - Select the newly created Service Bus namespace, click **CONFIGURE**, and then copy the primary key for the **RootManageSharedAccessKey** policy to the clipboard
 
 #### Task 2: Add a new WCF Endpoint with a relay binding
 
 1. Open the **BlueYonder.Server** solution file from the **D:\AllFiles\Mod07\LabFiles\begin\BlueYonder.Server** folder.
-2. Use the Package Manager Console window to install the **3.1.1** version of the **WindowsAzure.ServiceBus** NuGet package in the **BlueYonder.Server.Booking.WebHost**
+2. Use the Package Manager Console window to install the **3.1.1** version of the **WindowsAzure.ServiceBus** NuGet package in the **BlueYonder.Server.Booking.WebHost** project.
 
    >**Note:** Other projects in the solution already reference a specific version of the **WindowsAzure.ServiceBus** NuGet package. Therefore, you are required to use the **Package Manager Console** to install the same version of the NuGet package.
 
 3. In the **BlueYonder.Server.Booking.WebHost** project, change the endpoint configuration of the booking service:
 
     - Open the **Web.config** file
-    - Locate the endpoint of the service named **BookingTcp** , and then change its **binding** attribute to **netTcpRelayBinding**.
-    - Add an address attribute with the following value: **sb://BlueYonderServerLab07**** YourInitials. ****servicebus.windows.net/booking** (Replace _YourInitials_ with your initials).
+    - Locate the endpoint of the service named **BookingTcp**, and then change its **binding** attribute to **netTcpRelayBinding**.
+    - Add an address attribute with the following value: **sb://BlueYonderServerLab07YourInitials.servicebus.windows.net/booking** (Replace _YourInitials_ with your initials).
 
 4. Add a new endpoint behavior named **sbTokenProvider** to the endpoint behaviors configuration.
 
     - Add a new **&lt;endpointBehaviors&gt;** element to the **&lt;behaviors&gt;** element that is under the **&lt;system.serviceModel&gt;** section.
-    - In the new **&lt;endpointBehaviors&gt;** element, adda new **&lt;behavior&gt;** element, and set its **name** attribute to **sbTokenProvider**.
+    - In the new **&lt;endpointBehaviors&gt;** element, add a new **&lt;behavior&gt;** element, and set its **name** attribute to **sbTokenProvider**.
     - In the new **&lt;behavior&gt;** element, add a **&lt;transportClientEndpointBehavior&gt;** behavior element to the configuration.
     - In the behavior element add a **&lt;tokenProvider&gt;** element, and in it, add a **&lt;sharedAccessSignature&gt;** element with the **keyName** attribute set to **RootManageSharedAccessKey** and the **key** attribute set to the access key of the new Service Bus you created.
 
@@ -135,21 +135,21 @@ The main tasks for this exercise are as follows:
 
     - In the **Web.config** file, locate the **&lt;client&gt;** section within the **&lt;system.serviceModel&gt;** section group.
     - Change the client endpoint configuration to use the **netTcpRelayBinding**
-    - Set the value of the **address** attribute to the value **sb://BlueYonderServerLab07**** YourInitials. ****servicebus.windows.net/booking** (Replace _YourInitials_ with your initials).
+    - Set the value of the **address** attribute to the value **sb://BlueYonderServerLab07YourInitials.servicebus.windows.net/booking** (Replace _YourInitials_ with your initials).
 
 4. Add a new endpoint behavior to the endpoint behaviors configuration.
 
     - Add a new **&lt;behaviors&gt;** element to the **&lt;system.serviceModel&gt;** section.
     - Add a new **&lt;endpointBehaviors&gt;** element to the **&lt;behaviors&gt;** element.
-    - In the new **&lt;endpointBehaviors&gt;** , element adda new **&lt;behavior&gt;** element, and in it, add a **&lt;transportClientEndpointBehavior&gt;** behavior element.
+    - In the new **&lt;endpointBehaviors&gt;**, element add a new **&lt;behavior&gt;** element, and in it, add a **&lt;transportClientEndpointBehavior&gt;** behavior element.
     - In the behavior element add a **&lt;tokenProvider&gt;** element, and in it, add a **&lt;sharedAccessSignate&gt;** element with the **keyName** attribute set to **RootManageSharedAccessKey** and the **key** attribute set to the access key of the new Service Bus you created.
 
-   >**Note:** Visual Studio Intellisense uses built-in schemas to perform validations. Therefore, it will not recognize **transportClientEndpointBehavior** behavior extension, and will display a warning. Disregard this warning. ** **
+   >**Note:** Visual Studio Intellisense uses built-in schemas to perform validations. Therefore, it will not recognize **transportClientEndpointBehavior** behavior extension, and will display a warning. Disregard this warning.
 
 #### Task 4: Test the WCF service
 
-1. Open the Azure portal ( **http://manage.windowsazure.com** )
-2. Locate the **BlueYonderServerLab07**** YourInitials**(Replace _YourInitials_ with your initials) Service Bus namespace, and then verify that it contains the**booking** relay.
+1. Open the Azure portal (**http://manage.windowsazure.com**)
+2. Locate the **BlueYonderServerLab07YourInitials** (Replace _YourInitials_ with your initials) Service Bus namespace, and then verify that it contains the **booking** relay.
 3. In the **BlueYonder.Companion** solution, bring back the call to the WCF service from the reservation controller.
 
     - In the **BlueYonder.Companion.Controllers** project, open **ReservationControll.cs** , and then locate the following comment.
@@ -180,7 +180,7 @@ The main tasks for this exercise are as follows:
     - Continue running the application and verify that the client displays the new reservation.
     - Stop the WCF application debugging.
 
->**Results** : After completing this exercise, you should have successfully run the client app to book a flight, and have the ASP.NET Web API services, running in the Azure Web Role, communicate with the on-premises WCF services by using Azure Service Bus Relays.
+>**Results**: After completing this exercise, you should have successfully run the client app to book a flight, and have the ASP.NET Web API services, running in the Azure Web Role, communicate with the on-premises WCF services by using Azure Service Bus Relays.
 
 ### Exercise 2: Publishing Flight Updates to Clients by using Azure Service Bus Queues
 
@@ -200,7 +200,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Send flight update messages to the Service Bus Queue
 
-1. Open the Microsoft Azure portal ( **http://manage.windowsazure.com** )
+1. Open the Microsoft Azure portal (**http://manage.windowsazure.com**)
 
     - Open the Service Bus you created in the previous exercise.
     - Click **CONNECTION INFORMATION** to open the **ACCESS CONNECTION INFORMATION** dialog box.
@@ -208,7 +208,7 @@ The main tasks for this exercise are as follows:
 
 2. Return to the **BlueYonder.Companion** solution in Visual Studio 2012, and then add a string setting to the web role to store the Service Bus connection string.
 
-    - Name the new setting **Microsoft.ServiceBus.ConnectionString** , and then set its value to the connection string you noted in the previous step.
+    - Name the new setting **Microsoft.ServiceBus.ConnectionString**, and then set its value to the connection string you noted in the previous step.
 
 3. Open the **ServiceBusQueueHelper** class located in the **BlueYonder.Companion.Controllers** project, and then implement the **ConnectToQueue** method.
 
@@ -218,7 +218,7 @@ The main tasks for this exercise are as follows:
     - Check if the Queue exists and create it by using the **CreateQueue** API if necessary.
     - Return a new **QueueClient** object for the queue by using the **CreateFromConnectionString** method of the **QueueClient** class.
 
-   >**Note:** The Queue name is stored in a static variable named **QueueName** , and has the value of **FlightUpdatesQueue**
+   >**Note:** The Queue name is stored in a static variable named **QueueName**, and has the value of **FlightUpdatesQueue**
 
 4. In the **FlightsController** class, add a static field for the **QueueClient** object.
 
@@ -226,7 +226,7 @@ The main tasks for this exercise are as follows:
 
 5. In the **Put** method, after saving the changes made to the flight schedule, set the **FlightId** property of the **updatedSchedule** variable to the **id** parameter containing the updated flight id.
 
-    - Create a new **BrokeredMessage** object with the updated schedule as the message body, set the **ContentType** property of the message to **UpdatedSchedule** , and then send the message to the queue.
+    - Create a new **BrokeredMessage** object with the updated schedule as the message body, set the **ContentType** property of the message to **UpdatedSchedule**, and then send the message to the queue.
 
 6. Review the **Register** method of the **NotificationsController** class. It follows the same pattern of creating a **QueueClient** object in the static constructor, and then sending the update messages by using the **BrokeredMessage** is applied to this controller.
 
@@ -242,7 +242,7 @@ The main tasks for this exercise are as follows:
 
    >**Note:** The **BlueYonder.Companion.WNS.WorkerRole** role already contains the **Microsoft.ServiceBus.ConnectionString** setting. You only need to copy the connection string value from the **BlueYonder.Companion.Host** web role.
 
-Task 3: Handle the subscription and update messages
+#### Task 3: Handle the subscription and update messages
 
 1. Add the **BlueYonder.Companion.WNS** project from the **D:\Allfiles\Mod07\LabFiles\begin\BlueYonder.Server\BlueYonder.Companion.WNS** folder to the solution.
 
@@ -250,7 +250,7 @@ Task 3: Handle the subscription and update messages
 
 2. Copy the database connection string from the **BlueYonder.Companion.Host** to the **BlueYonder.Companion.WNS.WorkerRole** project:
 
-    - Open the **Web.config** of the **BlueYonder.Companion.Host** project, and then copy the entire **&lt;connectionStrings&gt;**
+    - Open the **Web.config** of the **BlueYonder.Companion.Host** project, and then copy the entire **&lt;connectionStrings&gt;** element.
     - Place the copied text in the **App.Config** file of the **BlueYonder.Companion.WNS.WorkerRole** project, under the **&lt;configuration&gt;** section.
 
 3. In the **BlueYonder.Companion.WNS.WorkerRole** project, add the following application settings elements to the **App.config** file.
@@ -286,12 +286,12 @@ Task 3: Handle the subscription and update messages
 #### Task 4: Test the Service Bus Queue with flight update messages
 
 1. Place the two virtual machine windows such that you work in the virtual machine **20487B-SEA-DEV-A** and see the right-hand side of **20487B-SEA-DEV-C**.
-2. Run the client app in the **20487B**** -SEA-DEV-C **virtual machine. The trip you purchased in the previous exercise will show in the** Current Trip** list. Note the date of the trip.
+2. Run the client app in the **20487B-SEA-DEV-C** virtual machine. The trip you purchased in the previous exercise will show in the **Current Trip** list. Note the date of the trip.
 3. Leave the client app running and return to the **20487B-SEA-DEV-A** virtual machine.
-4. Open the **Companion.FlightsManager** solution file from the **D:\AllFiles\Mod07\LabFiles\begin\BlueYonder.Server** folder in a new Visual Studio 2012 instance.
+4. Open the **BlueYonder.Companion.FlightsManager** solution file from the **D:\AllFiles\Mod07\LabFiles\begin\BlueYonder.Server** folder in a new Visual Studio 2012 instance.
 5. Open the **web.config** file from the **BlueYonder.FlightsManager** project, in the **&lt;appSettings&gt;** section, locate the **webapi:BlueYonderCompanionService** key, and then update the **{CloudService}** string to the Azure Cloud Service name you noted at the beginning of the lab.
 6. Run the **BlueYonder.FlightsManager** web application, find the flights from Seattle to New York, and change the departure time of your purchased trip to **9:00 AM**.
 
     - Verify that you see a toast notification in the client app in the **20487B-SEA-DEV-C** virtual machine (it might take the notification a few seconds to appear).
 
->**Results** : After completing this exercise, you should have run the Flight Manager Web application, updated the flight departure time of a flight you booked in advance in your client app, and received Windows push notifications directly to your computer.
+>**Results**: After completing this exercise, you should have run the Flight Manager Web application, updated the flight departure time of a flight you booked in advance in your client app, and received Windows push notifications directly to your computer.
