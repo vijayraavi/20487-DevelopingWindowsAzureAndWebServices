@@ -34,7 +34,7 @@
 
     a. NAMESPACE NAME: **ServiceBusDemo07**** YourInitials** (Replace _YourInitials_ with your initials).  
     b. TYPE: **MESSAGING**
-    c. MESSAGING TIER: **STANDARD**
+    c. MESSAGING TIER: **STANDARD**  
     d. REGION: Select the region closest to your location.
 
 23. To create the namespace,at the bottom of the dialog box, click the **V** icon, and then wait until the namespace is active.
