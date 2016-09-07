@@ -32,7 +32,7 @@
 21. At the bottom of the page, click **CREATE**.
 22. In the **CREATE A NAMESPACE** dialog box, provide the following information:
 
-    a. NAMESPACE NAME: **ServiceBusDemo07**** YourInitials** (Replace _YourInitials_ with your initials).
+    a. NAMESPACE NAME: **ServiceBusDemo07**** YourInitials** (Replace _YourInitials_ with your initials).  
     b. TYPE: **MESSAGING**
     c. MESSAGING TIER: **STANDARD**
     d. REGION: Select the region closest to your location.
