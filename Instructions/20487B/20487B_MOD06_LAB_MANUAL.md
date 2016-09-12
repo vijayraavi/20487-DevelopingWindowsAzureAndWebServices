@@ -62,9 +62,9 @@ The main tasks for this exercise are as follows:
 
 2. Open the **BlueYonder.Server** solution file from the **D:\AllFiles\Mod06\LabFiles\begin\BlueYonder.Server** folder.
 3. To the **BlueYonder.Server** solution, add a new **ASP.NET Empty Web Application** project named  **BlueYonder.Server.Booking.WebHost**.
-4. Use the **Package Manager Console** window to install version **5.0.0** of the **EntityFramework** NuGet package, in the  **BlueYonder.Server.Booking.WebHost** project.
+4. Use the **Package Manager Console** window to install version **6.1.3** of the **EntityFramework** NuGet package, in the  **BlueYonder.Server.Booking.WebHost** project.
 
-  >**Note:** Other projects in this solution use version 5.0.0 of the EntityFramework NuGet package. To prevent assembly load failures, you are required to use the **Package Manager Console** , to install that specific package version. 
+  >**Note:** Other projects in this solution use version 6.1.3 of the EntityFramework NuGet package. To prevent assembly load failures, you are required to use the **Package Manager Console** , to install that specific package version. 
 
 5. In the **BlueYonder.Server.Booking.WebHost** project, add references to the **System.ServiceModel** assembly and to the following projects:
 
@@ -157,7 +157,7 @@ The main tasks for this exercise are as follows:
     a. On the **SQL DATABASES** page, in the **SERVERS** tab, click **ADD**.  
     b. Use the sign in name **BlueYonderAdmin** and the password **Pa$$w0rd**.  
     c. Select a **Region** that is closest to your location and create the SQL Database Server.  
-    d. Ensure that the **ENABLE LATEST SQL DATABASE UPDATE (V12)** option is not selected.  
+    d. Ensure that the **ENABLE LATEST SQL DATABASE UPDATE (V12)** option is selected.  
     e. Note the name of the new SQL Database Server.
 
 3. Configure the SQL Database server to allow access from any IP address by creating a rule with the following settings:
