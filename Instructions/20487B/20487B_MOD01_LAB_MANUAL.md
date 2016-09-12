@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 #### Task 1: Create a new Azure SQL Database server
 
 1. Open Internet Explorer and go to the Azure portal at **https://manage.windowsazure.com**.
-2. On the **SQL DATABASES** page, from the **SERVERS** tab, add an Azure SQL Database server. Use the sign-in name **SQLAdmin** and password **Pa$$w0rd**, select a region that is closest to you, clear the V12 update support selection, and then click **Complete**. Wait till the server appears in the list of servers and its status changes to **Ready**. Write down the name of the newly created server.
+2. On the **SQL DATABASES** page, from the **SERVERS** tab, add an Azure SQL Database server. Use the sign-in name **SQLAdmin** and password **Pa$$w0rd**, select a region that is closest to you, and then click **Complete**. Wait till the server appears in the list of servers and its status changes to **Ready**. Write down the name of the newly created server.
 
 #### Task 2: Manage the Azure SQL Database server from SQL Server Management Studio
 
