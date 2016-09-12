@@ -26,8 +26,7 @@
 18. Click **Close** and then close the WCF Test Client window.
 19. On the Start screen, click the **Computer** tile, and go to **D:\Allfiles\Mod10\DemoFiles\TracingWCFServices\CalcService\CalcService**.
 20. Double-click **web\_tracelog.svclog**. This will open the Microsoft Service Trace Viewer application.
-21. On the **File** menu, click **Add**.
-
+21. On the **File** menu, click **Add**.  
 In the **Open** dialog box, go to **D:\Allfiles\Mod10\DemoFiles\TracingWCFServices\CalcService\CalcService** , click **web\_messages.svclog** , and then click **Open**.
 
 22. Click the **Activity** tab to view the trace logs.
