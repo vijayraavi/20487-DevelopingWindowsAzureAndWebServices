@@ -17,24 +17,24 @@ After completing this lab, you will be able to:
 
 Estimated Time: **45 minutes**
 
-Virtual machine: **20487B-SEA-DEV-A** , **20487B-SEA-DEV-C**
+Virtual machine: **20487B-SEA-DEV-A**, **20487B-SEA-DEV-C**
 
-User name: **Administrator** , **Admin**
+User name: **Administrator**, **Admin**
 
-Password: **Pa$$w0rd** , **Pa$$w0rd**
+Password: **Pa$$w0rd**, **Pa$$w0rd**
 
 For this lab, you will use the available virtual machine environment. Before you begin this lab, you must complete the following steps:
 
-1. On the host computer, click **Start** , point to **Administrative Tools** , and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1** , and in the **Actions** pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A** , and in the **Actions** pane, click **Start**.
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Actions** pane, click **Start**.
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 5. Sign in using the following credentials:
 
     - User name: **Administrator**
     - Password: **Pa$$w0rd**
 
-6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C** , and in the Action pane, click **Start**.
+6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and in the Action pane, click **Start**.
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
 8. Sign in using the following credentials:
 
@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
    >**Note:** You might see warnings in yellow indicating a mismatch in the versions and the obsolete settings. These warnings might appear if there are newer versions of Azure PowerShell cmdlets. If these warnings are followed by a red error message, please inform the instructor, otherwise you can ignore them.
 
 2. Open the **BlueYonder.Server.sln** solution from the **D:\AllFiles\Mod10\LabFiles\begin\BlueYonder.Server** folder **.**
-3. Open the **Web.config** file from the **BlueYonder.Server.Booking.WebHost** project with the **WCF Configuration Editor**. When prompted that the **Microsoft.ServiceBus** assembly could not be found, click **Yes** , select the **Microsoft.ServiceBus.dll** assembly from web project&#39;s **bin** folder, and approve the warning message that appears next.
+3. Open the **Web.config** file from the **BlueYonder.Server.Booking.WebHost** project with the **WCF Configuration Editor**. When prompted that the **Microsoft.ServiceBus** assembly could not be found, click **Yes**, select the **Microsoft.ServiceBus.dll** assembly from web project&#39;s **bin** folder, and approve the warning message that appears next.
 
    >**Note:** To open the **WCF Configuration Editor** , in Solution Explorer, right-click the **Web.config** file, and then click **Edit WCF Configuration**.
 
@@ -72,7 +72,7 @@ The main tasks for this exercise are as follows:
 2. Expand the **Diagnostics** configuration node, and in the **Message Logging** configuration, set **LogEntireMessage** and **LogMessageAtServiceLevel** to **True** , and **LogMessageAtTransportLevel** to **False**.
 3. Save the changes to the configuration and close the Service Configuration Editor window.
 
->**Results** : You can test your changes at the end of the lab.
+>**Results**: You can test your changes at the end of the lab.
 
 ### Exercise 2: Configuring Azure Diagnostics
 
@@ -94,7 +94,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add trace messages to the ASP.NET Web API service
 
-1. Open the **BlueYonder.**** Companion ****.sln** solution from the **D:\AllFiles\Mod10\LabFiles\begin\BlueYonder.Server** folder in a new instance of Visual Studio 2012.
+1. Open the **BlueYonder.Companion.sln** solution from the **D:\AllFiles\Mod10\LabFiles\begin\BlueYonder.Server** folder in a new instance of Visual Studio 2012.
 2. Open the **TraceWriter.cs** file from the **BlueYonder.Companion.Host** project and implement the **Trace** method. Use .NET Diagnostics tracing to write the trace messages.
 
    >**Note:** You can see an example for implementing the **ITraceWriter** interface in lesson 2, &quot;Configuring Service Diagnostics&quot;.
@@ -105,7 +105,7 @@ The main tasks for this exercise are as follows:
 
 4. In the **BlueYonder.Companion.Controllers** project, open the **ReservationsController.cs** file, locate the **Post** method, and after the call to the **Save** method, add code to trace an information message.
 
-    - Add a using directive for the **System.Web.Http.Tracing**, to get the tracingextension methods
+    - Add a using directive for the **System.Web.Http.Tracing**, to get the tracing extension methods
     - Use the **Configuration.Services.GetTraceWriter** method to get an instance of the trace writer.
     - Use the **Info** extension method to write the trace message. Set the category to **ReservationController**, and include the reservation&#39;s confirmation code in the trace message.
 
@@ -119,7 +119,7 @@ The main tasks for this exercise are as follows:
     - Click **Edit** to open the diagnostics configuration.
 
 2. On the **Application logs** tab, change the **Log level** from **Error** to **Verbose**.
-3. On the **Log directories** tab, set the **Transfer period** to **1 minute** , the **Buffer size** to **1024MB** , and set the **IIS logs** to a **1024MB** quota.
+3. On the **Log directories** tab, set the **Transfer period** to **1 minute** , the **Buffer size** to **1024MB**, and set the **IIS logs** to a **1024MB** quota.
 4. Click **OK** to close the dialog box, and save the changes to the role&#39;s properties.
 
 #### Task 3: Deploy the ASP.NET Web API Application to Windows Azure
@@ -139,7 +139,7 @@ The main tasks for this exercise are as follows:
 
     - Replace the **{CloudService}** string with the cloud service name.
 
-4. Run the client app, search for **New** , and purchase a flight from _Seattle_ to _New-York_. Close the app after you purchase the trip.
+4. Run the client app, search for **New**, and purchase a flight from _Seattle_ to _New-York_. Close the app after you purchase the trip.
 
 #### Task 5: View the collected diagnostics data
 
@@ -157,4 +157,4 @@ The main tasks for this exercise are as follows:
 
    >**Note:** You can view the messages by clicking the **Message** tab in the left pane, selecting the message to view (either the **http://blueyonder.server.interfaces/IBookingService/CreateReservation** or **http://blueyonder.server.interfaces/IBookingService/CreateReservationResponse** message), and then clicking the **Message** tab in the bottom-right pane.
 
->**Results** : After you complete the exercise, you will be able to use the client App to purchase a trip, and then view the created log files, for both the Azure deployment and the on-premises WCF service.
+>**Results**: After you complete the exercise, you will be able to use the client App to purchase a trip, and then view the created log files, for both the Azure deployment and the on-premises WCF service.
