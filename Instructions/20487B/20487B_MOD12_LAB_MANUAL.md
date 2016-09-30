@@ -56,9 +56,9 @@ In this lab, you will install NuGet packages. It is possible that some NuGet pac
 
 The following table details the compatible versions of the packages used in the lab:
 
-   | Package name | Package version |
-   | --- | --- |
-   | Microsoft.WindowsAzure.Caching | 2.0.0.0 |
+   | Package name | Package version |  
+   | --- | --- |  
+   | Microsoft.WindowsAzure.Caching | 2.0.0.0 |  
 
 ### Exercise 1: Use Microsoft Azure Caching
 
