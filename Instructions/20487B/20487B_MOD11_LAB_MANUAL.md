@@ -146,7 +146,7 @@ The main tasks for this exercise are as follows:
 
 1. In the **BlueYonder.Companion.Host.Azure** project, open the properties of the **BlueYonder.Companion.Host** web role, and add a string setting to store the issuer (STS) name of the token.
 
-    - Name the new setting **ACS.IssuerName**, and set its value to **https://BlueYonderCompanion_YourInitials_.accesscontrol.windows.net/** (_YourInitials_ will contain your initials).
+    - Name the new setting **ACS.IssuerName**, and set its value to **https://BlueYonderCompanion****_YourInitials_****.accesscontrol.windows.net/** (_YourInitials_ will contain your initials).
     - Make sure there are no spaces at the end of the string.
 
 2. Add another string setting to the web role to store the realm of the relying party.
