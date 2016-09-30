@@ -21,7 +21,7 @@
 10. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 11. Go to **D:\AllFiles\Mod12\DemoFiles\ScalingWebApplications**.
 12. Select the file **ScalingWebApplications.sln**, and then click **Open**.
-13. In Visual Studio 2012, In the **Solution Explorer** pane, right-click the **WebApplication.Azure** project, and then click **Publish**.
+13. In Visual Studio 2012, In the **Solution Explorer** pane, right-click the **WebApplication.Azure** project, and then click  **Publish**.
 14. If you already added your Azure subscription information to Visual Studio 2012, select your subscription from the drop down list and skip to step 20.
 15. In the **Publish Windows Azure Application** dialog box, click the **Sign in to download credentials** hyperlink.
 16. If a page appears, asking for your email address, provide your email address, and then click **Continue**. Wait for the **Sign In** page to appear, type your email address and password, and then click **Sign In.**
@@ -41,7 +41,7 @@
 
 25. While the web application is being deployed, in the **Solution Explorer** pane, expand the **WebApplication.Azure** project, expand **Roles**, right-click **WebApplication**, and then click **Properties**.
 26. In the **Properties** window, under **Instances**, verify that the **Instance count** value is set to **3**.
-27. In the **Solution Explorer** pane, expand the **WebApplication** project, expand **Controllers**, and then double-click **HomeController.cs**.
+27. In the **Solution Explorer** pane, expand the **WebApplication** project, expand **Controllers**, and then double-click  **HomeController.cs**.
 28. Locate the **Index** method and examine how the **ViewBag.Message** property is set. The **RoleEnvironment.CurrentRoleInstance.Id** property returns the role identifier which contains the instance number. By printing the instance number, you know which instance responded to the browser&#39;s request.
 29. Wait for the publish process to complete and then, on the Start screen, click the **Internet Explorer** tile.
 30. Go to **http://BlueYonderDemo12YourInitials.cloudapp.net** (_YourInitials_ contains your initials).
@@ -116,6 +116,6 @@
 28. Press F5 to continue running the application and display the browser. Verify you see the XML of the location entity.
 29. Press F5 to refresh the page. Visual Studio 2012 opens and stops on the breakpoint.
 30. Press F10 several times, until you reach the **if** statement.
-31. Hover over the **location** object, and then show students that its value isset to a location entity.
+31. Hover over the **location** object, and then show students that its value is set to a location entity.
 32. Press F5 to continue running the application and display the browser. Verify you see the XML of the location entity.
 33. Close the browser.
