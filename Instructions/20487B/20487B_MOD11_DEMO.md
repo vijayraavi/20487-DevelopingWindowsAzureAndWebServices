@@ -8,7 +8,7 @@
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
 2. On the **File** menu, point to **New**, and then click **Project**. A **New Project** dialog box will open.
-3. In the **New Project **dialog box, in the navigation pane, expand the **Installed** node, expand the **Templates** node, expand the **Visual C#** node, and then click the **Web**
+3. In the **New Project** dialog box, in the navigation pane, expand the **Installed** node, expand the **Templates** node, expand the **Visual C#** node, and then click the **Web** node.
 4. In the **Name** text box, type **ClaimsApp**.
 5. In the **Location** text box, type **D:\Allfiles\Mod11\DemoFiles\ClaimsApp**.
 6. In the project templates list, click **ASP.NET MVC 4 Web Application**, and then click **OK**.
@@ -85,7 +85,7 @@
     - Name: **BlueYonderServerDemo**
     - Realm: **http://localhost/WebApplication/**
     - Return URL: **http://localhost/WebApplication/**
-    - Verify that the **Create new rule group** checkbox is selected.
+    - Verify that the **Create new rule group** check box is selected.
 
 15. At the bottom of the page, click **Save**.
 16. In the Access Control Service portal, in the pane on the left, click the **Rule groups** link under the **Trust relationships** section.
@@ -150,7 +150,7 @@
 19. In the Access Control Service portal, in the pane on the left side, click the **Service identities** link under the **Service settings** section.
 20. On the **Service Identities** page, click **Add**.
 21. On the **Add Service Identity** page, type **QueueClient** in the **Name** text box.
-22. Verify that **Symmetric Key** isselected in the **Type** drop down list.
+22. Verify that **Symmetric Key** is selected in the **Type** drop down list.
 23. Click **Generate** next to the **Key** text box.
 24. Select the content of the **Key** text box, and then press Ctrl+C to copy the password to the clipboard.
 25. Click **Save** at the bottom of the page. The **Edit Service Identity** page opens.
