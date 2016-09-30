@@ -14,7 +14,7 @@
 
 4. If the **Windows Azure Tour** dialog appears, close it.
 5. Click **NEW** in the status bar, click **COMPUTE**, click **CLOUD SERVICE**, and then click **QUICK CREATE**.
-6. In the **URL** text box, type **BlueYonderDemo12YourInitials** (_YourInitials_ contains your initials).
+6. In the **URL** text box, type **BlueYonderDemo12****_YourInitials_** (_YourInitials_ contains your initials).
 7. In the **REGION** text box, select the region closest to your location.
 8. Click **CREATE CLOUD SERVICE** and wait until the cloud service is created.
 9. On the Start screen, click the **Visual Studio 2012** tile.
@@ -33,8 +33,8 @@
 19. Return to the **Publish Windows Azure Application** dialog box in Visual Studio 2012.
 20. Click **Import**, type **D:\AllFiles\Mod12\DemoFiles\ScalingWebApplications**, and then press Enter.
 21. Select the file that you downloaded in the previous step, and then click **Open**. Make sure that your subscription is selected under **Choose your subscription** section, and then click **Next**.
-22. If the **Create Windows Azure Service** dialog box opens, type **blueyonderdemo12yourinitials** (_yourinitials_ contains your initials, in lowercase) in the **Name** text box, select the region closest to your location from the **Location** drop down list, and then click **OK**.
-23. On the **Common Settings** tab, click the **Cloud Service** drop-down, and then select **BlueYonderDemo12YourInitials** (_YourInitials_ contains your initials).
+22. If the **Create Windows Azure Service** dialog box opens, type **blueyonderdemo12****_yourinitials_** (_yourinitials_ contains your initials, in lowercase) in the **Name** text box, select the region closest to your location from the **Location** drop down list, and then click **OK**.
+23. On the **Common Settings** tab, click the **Cloud Service** drop-down, and then select **BlueYonderDemo12****_YourInitials_** (_YourInitials_ contains your initials).
 24. Click **Publish** to start the publishing process.
 
    >**Note:** Consider running the previous steps before showing this demo, to reduce the waiting time while the web application is being deployed.
@@ -44,14 +44,14 @@
 27. In the **Solution Explorer** pane, expand the **WebApplication** project, expand **Controllers**, and then double-click  **HomeController.cs**.
 28. Locate the **Index** method and examine how the **ViewBag.Message** property is set. The **RoleEnvironment.CurrentRoleInstance.Id** property returns the role identifier which contains the instance number. By printing the instance number, you know which instance responded to the browser&#39;s request.
 29. Wait for the publish process to complete and then, on the Start screen, click the **Internet Explorer** tile.
-30. Go to **http://BlueYonderDemo12YourInitials.cloudapp.net** (_YourInitials_ contains your initials).
+30. Go to **http://BlueYonderDemo12****_YourInitials_****.cloudapp.net** (_YourInitials_ contains your initials).
 31. Verify that you see the title **Role instance is WebApplication_IN_ X** where _X_is replaced by the role instance (0, 1, or 2).
 32. Press F5 to refresh the page, and verify the role instance number changes. If it does not show a new instance number, try pressing F5 again. You can press F5 several more times to show all instances (0, 1, and 2).
 33. Go to **http://manage.windowsazure.com**.
 
   >**Note:** The browser should automatically sign you in to the portal. If you are redirected to a sign in page, type your email address and password, and then click **Sign in**.
 
-34. Click **CLOUD SERVICES**, and then in the cloud services list click the name of your cloud service – **BlueYonderDemo12YourInitials** (_YourInitials_ contains your initials).
+34. Click **CLOUD SERVICES**, and then in the cloud services list click the name of your cloud service – **BlueYonderDemo12****_YourInitials_** (_YourInitials_ contains your initials).
 35. On the **DASHBOARD** page, click **DELETE** in the taskbar, and then click **Delete the production deployment** (_YourInitials_ contains your initials).
 36. When asked if you are sure you want to delete the production deployment, click **YES**.
 
