@@ -96,7 +96,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **BlueYonderCloud**
     - Realm: **urn:blueyonder.cloud**
-    - Return URL: **https://_CloudServiceName_.cloudapp.net/federationcallback** (_CloudServiceName_ is the name of the cloud service you wrote down in the beginning of the lab while running the setup script)
+    - Return URL: **https://CloudServiceName.cloudapp.net/federationcallback** (_CloudServiceName_ is the name of the cloud service you wrote down in the beginning of the lab while running the setup script)
     - Token format: **SWT**
     - Token signing key: Generate a new token.
 
