@@ -170,7 +170,7 @@ The main tasks for this exercise are as follows:
 
 7. Insert a breakpoint at the beginning of the **CreateReservation** method.
 
->**Results** : You will be able to test your results only at the end of the second exercise.
+>**Results**: You will be able to test your results only at the end of the second exercise.
 
 ### Exercise 2: Configuring and Hosting the WCF Service
 
@@ -241,7 +241,7 @@ The main tasks for this exercise are as follows:
 
 4. Run the **BlueYonder.BookingService.Host** project in the debug mode and verify it opens without throwing exceptions. Keep the console window open, because you will need to use it later in the lab.
 
->**Results** : You will be able to start the console application and open the service host.
+>**Results**: You will be able to start the console application and open the service host.
 
 ### Exercise 3: Consuming the WCF Service from the ASP.NET Web API Booking Service
 
@@ -337,4 +337,11 @@ The main tasks for this exercise are as follows:
 3. Search for **New** and purchase a new trip from _Seattle_ to _New York_.
 4. Go back to the **20487B-SEA-DEV-A** virtual machine, and debug the **BlueYonder.Companion** and **BlueYonder.Server** solutions. Verify that the ASP.NET Web API service is able to call the WCF service. Continue running both solutions and verify that the client is showing the new reservation.
 
->**Results** : After you complete this exercise, you will be able to run the Blue Yonder Companion client application and purchase a trip.
+>**Results**: After you complete this exercise, you will be able to run the Blue Yonder Companion client application and purchase a trip.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
