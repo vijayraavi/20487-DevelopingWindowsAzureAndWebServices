@@ -129,4 +129,11 @@ The main tasks for this exercise are as follows:
 
 5. Close the client app, re-open it without debugging, search again for a destination that contains the letter **N**, and verify the Flights controller retrieves data from the cache.
 
-  >**Results** : After completing this exercise, you should have successfully added a caching worker role to the Cloud project, and implemented other Microsoft Azure caching features.
+  >**Results**: After completing this exercise, you should have successfully added a caching worker role to the Cloud project, and implemented other Microsoft Azure caching features.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
