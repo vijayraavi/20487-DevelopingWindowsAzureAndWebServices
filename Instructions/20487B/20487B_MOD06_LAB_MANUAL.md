@@ -128,7 +128,7 @@ The main tasks for this exercise are as follows:
     b. Connect to the address **http://localhost/BlueYonder.Server.Booking.WebHost/Booking.svc**    
     c. Wait until you see the service and endpoints tree in the pane to the left.  
 
->**Results** : You will be able to run the WCF Test Client application and verify if the services are running properly in IIS.
+>**Results**: You will be able to run the WCF Test Client application and verify if the services are running properly in IIS.
 
 ### Exercise 2: Hosting the ASP.NET Web API Services in an Azure Web Role
 
@@ -276,7 +276,7 @@ The main tasks for this exercise are as follows:
 
 3. Run the client app and search for flights to New York. Verify the client application is able to connect to the ASP.NET Web API Web application hosted in Windows Azure and retrieve the list of flights.
 
->**Results** : You will verify the application works locally in the Azure compute emulator, and then deploy it to Azure and verify it works there too.
+>**Results**: You will verify the application works locally in the Azure compute emulator, and then deploy it to Azure and verify it works there too.
 
 ### Exercise 3: Hosting the Flights Management Web Application in an Azure Web App
 
@@ -316,4 +316,11 @@ The main tasks for this exercise are as follows:
 
 4. Verify that you can see flight schedules from **Paris** to **Rome** , indicating that the application was able to retrieve information from the web role.
 
->**Results** : After you publish the flights manager web application, you will open the web application in a browser and verify if it is working properly and is able to communicate with the web role you deployed in the previous exercise.
+>**Results**: After you publish the flights manager web application, you will open the web application in a browser and verify if it is working properly and is able to communicate with the web role you deployed in the previous exercise.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
