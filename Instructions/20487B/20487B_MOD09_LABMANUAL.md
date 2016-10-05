@@ -123,7 +123,7 @@ The main tasks for this exercise are as follows:
    >**Note:** The client app calls these service actions to upload files as either public or private files. Public files can be viewed by any user, whereas private files can only be viewed by the user who uploaded them.
 
   
-   >**Results** : After you complete the exercise, your code will support storing files in a blob storage, either in a private container or a public container. You will be able to test your changes at the end of the lab.
+   >**Results**: After you complete the exercise, your code will support storing files in a blob storage, either in a private container or a public container. You will be able to test your changes at the end of the lab.
 
 ### Exercise 2: Storing Content in Azure Table Storage
 
@@ -187,7 +187,7 @@ The main tasks for this exercise are as follows:
    >**Note:** The method retrieves the list of files in the trip&#39;s public blob container, and then uses the **GetFilesMetadata**  method of the **AsyncStorageManager** class to get the **FileEntity** object for each of the files. The client app calls this service action to get a list of all the files related to a specific trip. Currently, the code retrieves only public files. In the next exercise, you will add the code to retrieve both public and private files.
 
   
-   >**Results** : After you complete the exercise, your code will support storing information about uploaded photos in Table storage. You will be able to test your changes at the end of the lab.
+   >**Results**: After you complete the exercise, your code will support storing information about uploaded photos in Table storage. You will be able to test your changes at the end of the lab.
 
 ### Exercise 3: Creating Shared Access Signatures for Blobs
 
@@ -256,4 +256,11 @@ The main tasks for this exercise are as follows:
 
 5. In Server Explorer, open the contents of the **FilesMetadata** table. The table contains metadata for both public and private photos.
 
-   >**Results** : After you complete the exercise, you will be able to use the client app to upload photos to the private and public blob containers. You will also be able to view the content of Blob storage and Table storage by using Visual Studio 2012.
+   >**Results**: After you complete the exercise, you will be able to use the client app to upload photos to the private and public blob containers. You will also be able to view the content of Blob storage and Table storage by using Visual Studio 2012.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
