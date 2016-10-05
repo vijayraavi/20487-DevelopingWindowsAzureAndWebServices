@@ -158,3 +158,10 @@ The main tasks for this exercise are as follows:
    >**Note:** You can view the messages by clicking the **Message** tab in the left pane, selecting the message to view (either the **http://blueyonder.server.interfaces/IBookingService/CreateReservation** or **http://blueyonder.server.interfaces/IBookingService/CreateReservationResponse** message), and then clicking the **Message** tab in the bottom-right pane.
 
 >**Results**: After you complete the exercise, you will be able to use the client App to purchase a trip, and then view the created log files, for both the Azure deployment and the on-premises WCF service.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
