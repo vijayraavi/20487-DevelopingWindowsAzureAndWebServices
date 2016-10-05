@@ -102,7 +102,7 @@ The main tasks for this exercise are as follows:
 
    - On the **Test** menu, point to **Run** , and the click **All Tests**.
 
->**Results** : You will be able to inject data repositories to the controllers instead of creating them explicitly inside the controllers. This will decouple the controllers from the implementation of the repositories.
+>**Results**: You will be able to inject data repositories to the controllers instead of creating them explicitly inside the controllers. This will decouple the controllers from the implementation of the repositories.
 
 ### Exercise 2: Adding OData Capabilities to the Flight Schedule Service
 
