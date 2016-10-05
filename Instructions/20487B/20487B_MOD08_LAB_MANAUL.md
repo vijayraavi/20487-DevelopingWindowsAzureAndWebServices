@@ -133,7 +133,7 @@ The main tasks for this exercise are as follows:
 
    >**Note:** After you ensure that the production deployment is running successfully, we recommend that you delete the staging deployment to reduce the compute-hour charges.
 
-   >**Results** : After you complete this exercise, the client app will retrieve weather forecast information from the production deployment in Azure.
+   >**Results**: After you complete this exercise, the client app will retrieve weather forecast information from the production deployment in Azure.
 
 ### Exercise 2: Exporting and Importing an IIS Deployment Package
 
@@ -173,3 +173,10 @@ The main tasks for this exercise are as follows:
 5. Open the Service Bus configuration, click the **RELAYS** tab, and verify that there are two listeners for the **booking** relay.
 
    >**Results**: As soon as both the servers are online, they will listen to the same Service Bus relay and will be load balanced. You will verify that both servers are listening by checking the Service Bus relay listener&#39;s information supplied by Service Bus in the Azure portal.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
