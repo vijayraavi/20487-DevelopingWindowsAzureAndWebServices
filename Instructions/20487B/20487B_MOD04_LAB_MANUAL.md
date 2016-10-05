@@ -142,7 +142,7 @@ Therefore, you are required to use the Package Manager Console to install the su
     ```cs  
             GetLocationsUri + "?$filter=substringof(tolower('{0}'),tolower(City))";
 ```
->**Results** : Your web application exposes the OData protocol that supports the **Get** request of the locations data.
+>**Results**: Your web application exposes the OData protocol that supports the **Get** request of the locations data.
 
 ### Exercise 3: Applying Validation Rules in the Booking Service
 
@@ -189,7 +189,7 @@ The main tasks for this exercise are as follows:
 1. In the **BlueYonder.Companion.Controllers** project, open the **TravelersController** class, and decorate the **Put** and **Post** methods with the **[ModelValidation]** attribute.
 2. Build the solution.
 
->**Results** : Your web application will verify that the minimum necessary information is sent by the client before trying to handle it.
+>**Results**: Your web application will verify that the minimum necessary information is sent by the client before trying to handle it.
 
 ### Exercise 4: Securing the Communication between the Client and the Server
 
@@ -254,4 +254,11 @@ The main tasks for this exercise are as follows:
 
 3. Correct the email address and purchase the trip. Verify that the trip was purchased successfully, and then close the client app.
 
->**Results** : The communication with your web application will be secured by using a certificate.
+>**Results**: The communication with your web application will be secured by using a certificate.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
