@@ -311,3 +311,10 @@ The main tasks for this exercise are as follows:
 6. Display the app bar, sign out from the client app, and then close the app.
 
 >**Results**: After completing this exercise, you should be able to successfully run the client app, and sign in by using your Microsoft Account credentials.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
