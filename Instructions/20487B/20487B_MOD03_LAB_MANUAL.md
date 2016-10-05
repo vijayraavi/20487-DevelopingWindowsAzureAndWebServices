@@ -191,3 +191,10 @@ The main tasks for this exercise are as follows:
 10. Go back to the virtual machine **20487B-SEA-DEV-A** and stop the debugging in Visual Studio 2012.
 
 >**Results** : After completing this exercise, you should have run the BlueYonder Companion client application and created a traveler when purchasing a trip. You also should have retrieved an existing traveler and updated its details.
+
+Perform the following steps to apply the **StartingImage** snapshot:
+
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the **Snapshots** pane, right-click **StartingImage**, and then click **Apply**.
+3. In the **Apply Snapshot** dialog box, click **Apply**.
+4. Repeat Step 2 for all the virtual machines that you used in this lab. (excluding **MSL-TMG1**).
