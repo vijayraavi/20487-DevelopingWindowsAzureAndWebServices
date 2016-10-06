@@ -16,7 +16,7 @@ The files are available in a GitHub repo at https://github.com/MicrosoftLearning
 - It will be recommended that for every delivery of 20487C, trainers check GitHub for any changes that may have been made to support the latest Azure services, and get the latest files for their delivery.
 
 ##How do I contribute?
-- Any MCTs can submit a pull request to the code or content in the GitHub repro, Microsoft and the course author will triage and include changes as needed.  
+- Any MCTs can submit a pull request to the code or content in the GitHub repo, Microsoft and the course author will triage and include changes as needed.  
 - You can submit bugs, changes, improvements, ideas.  Find a new Azure feature before we have?  Submit a new demo!
 
 ##What about changes to the student handbook?
