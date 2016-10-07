@@ -89,6 +89,7 @@ By selecting the region, you are actually selecting the datacenter where the VMs
 
    >**Note** : The **CleanIIS.cmd** script reverses the changes made to IIS by using the **SetupIIS.cmd** script that you executed at the beginning of this demonstration.
 
+
 ©2016 Microsoft Corporation. All rights reserved.
 
 The text in this document is available under the  [Creative Commons Attribution 3.0 License](https://creativecommons.org/licenses/by/3.0/legalcode), additional terms may apply. All other content contained in this document (including, without limitation, trademarks, logos, images, etc.) are  **not**  included within the Creative Commons license grant. This document does not provide you with any legal rights to any intellectual property in any Microsoft product. You may copy and use this document for your internal, reference purposes.
