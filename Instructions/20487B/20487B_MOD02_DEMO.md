@@ -6,12 +6,12 @@
 
 #### Preparation Steps
 
-For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
-1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
-4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
-5. Logon using the following credentials:
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:  
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.  
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.  
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.  
+5. Logon using the following credentials:  
    - User name: **Administrator**
    - Password: **Pa$$w0rd**
 
@@ -114,12 +114,12 @@ For this demo, you will use the available virtual machine environment. Before yo
 
 #### Preparation Steps
 
-For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
-1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
-4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
-5. Logon using the following credentials:
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:  
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.  
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.  
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.  
+5. Logon using the following credentials:  
    - User name: **Administrator**
    - Password: **Pa$$w0rd**
 
@@ -172,12 +172,12 @@ For this demo, you will use the available virtual machine environment. Before yo
 
 #### Preparation Steps
 
-For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
-1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
-4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
-5. Logon using the following credentials:
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:  
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.  
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.  
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.  
+5. Logon using the following credentials:  
    - User name: **Administrator**
    - Password: **Pa$$w0rd**
 
@@ -202,13 +202,13 @@ For this demo, you will use the available virtual machine environment. Before yo
 
 #### Preparation Steps
 
-For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
-1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
-2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
-3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
-4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
-5. Logon using the following credentials:
-   - User name: **Administrator**
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:  
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.  
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.  
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.  
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.  
+5. Logon using the following credentials:  
+   - User name: **Administrator**  
    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
