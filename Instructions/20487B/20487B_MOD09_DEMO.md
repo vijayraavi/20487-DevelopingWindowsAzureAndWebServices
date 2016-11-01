@@ -4,6 +4,17 @@
 
 ### Demonstration: Creating a Microsoft Azure Storage Account
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the **Start** screen, click the **Internet Explorer** tile.
@@ -32,6 +43,17 @@
 # Lesson 2: Windows Azure Blob Storage
 
 ### Demonstration: Uploading and Downloading Blobs from the Storage Emulator
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
@@ -81,6 +103,17 @@
 # Lesson 3: Windows Azure Table Storage
 
 ### Demonstration: Working with Tables and Reshaping Entities
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
@@ -182,6 +215,17 @@
 
 ### Demonstration: Working with Queues
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the **Start** screen, click the **Internet Explorer** tile.
@@ -243,9 +287,20 @@
 
 
 
-# Lesson 4: Restricting Access to Windows Azure Storage
+# Lesson 5: Restricting Access to Windows Azure Storage
 
 ### Demonstration: Configuring Shared Access Signature for a Blob Container
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
