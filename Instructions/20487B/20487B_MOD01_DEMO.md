@@ -12,8 +12,8 @@ For this demonstration, you will use the available virtual machine environment. 
 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.  
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.  
 5. Sign in by using the following credentials:  
-  - User name: **Administrator**  
-  - Password: **Pa$$w0rd**
+   - User name: **Administrator**  
+   - Password: **Pa$$w0rd**
   
   >**Note**: This demonstration requires an Azure account. Make sure you have a valid account before starting the demonstration.
 
@@ -58,13 +58,14 @@ For this demonstration, you will use the available virtual machine environment. 
 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.  
 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.  
 5. Sign in by using the following credentials:  
-  - User name: **Administrator**  
-  - Password: **Pa$$w0rd**  
+   - User name: **Administrator**  
+   - Password: **Pa$$w0rd**  
+
 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and then in the **Actions** pane, click **Start**.  
 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.  
 8. Sign in by using the following credentials:  
-  - User name: **Admin**  
-  - Password: **Pa$$w0rd**  
+   - User name: **Admin**  
+   - Password: **Pa$$w0rd**  
 
 #### Demonstration Steps
 
