@@ -4,6 +4,17 @@
 
 ### Demonstration: Creating Classes and Database By Using Code-first
 
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
+5. Logon using the following credentials:
+   - User name: **Administrator**
+   - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -101,6 +112,17 @@
 
 ### Demonstration 1: Using LINQ to Entities
 
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
+5. Logon using the following credentials:
+   - User name: **Administrator**
+   - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -148,6 +170,17 @@
 
 ### Demonstration 2: Running Stored Procedures with Entity Framework
 
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
+5. Logon using the following credentials:
+   - User name: **Administrator**
+   - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -166,6 +199,17 @@
 # Lesson 4: Manipulating Data
 
 ### Demonstration: CRUD Operations in Entity Framework
+
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+4. In the Action pane, click **Connect**. Wait until the virtual machine starts.
+5. Logon using the following credentials:
+   - User name: **Administrator**
+   - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
