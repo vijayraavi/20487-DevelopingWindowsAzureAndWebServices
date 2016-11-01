@@ -12,8 +12,8 @@ For this demo, you will use the available virtual machine environment. Before yo
  3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.  
  4. In the Action pane, click **Connect**. Wait until the virtual machine starts.  
  5. Logon using the following credentials:  
-    - User name: **Administrator**
-    - Password: **Pa$$w0rd**
+   - User name: **Administrator**
+   - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
