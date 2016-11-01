@@ -4,6 +4,17 @@
 
 ### Demonstration: Scaling out Web Applications in Microsoft Azure
 
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Internet Explorer** tile.
@@ -58,6 +69,17 @@
 ## Lesson 4: Windows Azure Caching
 
 ### Demonstration: Using Microsoft Azure Caching
+
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
