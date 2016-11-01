@@ -4,6 +4,23 @@
 
 ### Demonstration: Using claims in an ASP.NET Website
 
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+ 1.	On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2.	In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+ 3.	In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+ 4.	In the **Action** pane, click **Connect**. Wait until the virtual machine starts.
+ 5.	Sign in using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+ 
+ 6.	On the Start screen, click the **Visual Studio 2012** tile. 
+ 7.	In Visual Studio 2012, on the **Tools** menu, click **Extensions and Updates**. 
+ 8.	In the **Extensions and Updates** dialog box, on the navigation pane, expand the **Online** node, and then click the **Visual Studio Gallery** node. 
+ 9.	Press Ctrl+E, and then type **Identity**. In the center pane, click the **Identity and Access Tool** extension, and then click **Download**. 
+ 10.	When the **Download and Install** dialog box appears, click **Install. Wait for installation completion, click Close, and then close Visual Studio 2012.
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -57,6 +74,18 @@
 # Lesson 2: Using the Windows Azure Access Control Service
 
 ### Demonstration: Configuring ACS Using the Azure portal
+
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before starting this demo, you need to install the Identity and Access Tool extension in Visual Studio 2012:
+ 1.	On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2.	In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+ 3.	In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+ 4.	In the **Action** pane, click **Connect**. Wait until the virtual machine starts.
+ 5.	Sign in using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+ 6.	In this demonstration you will need to use the **Identity and Access Tool** extension you installed in Visual Studio 2012 in Demo 1, "Using claims in an ASP.NET Website", of Lesson 1, "Claims-based Identity Concepts". If you have not installed this extension, please follow the preparation steps in that demo.
 
 #### Demonstration Steps
 
@@ -112,6 +141,17 @@
 # Lesson 3: Configuring Services to Use Federated Identities
 
 ### Demonstration: Configuring ACS for Service Bus Endpoints
+
+#### Preparation Steps
+
+For this demo, you will use the available virtual machine environment. Before you begin this demo, you must complete the following steps:
+ 1.	On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2.	In Hyper-V Manager, click **MSL-TMG1**, and in the Action pane, click **Start**.
+ 3.	In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Action pane, click **Start**.
+ 4.	In the **Action** pane, click **Connect**. Wait until the virtual machine starts.
+ 5.	Sign in using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
