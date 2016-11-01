@@ -7,11 +7,11 @@
 #### Preparation Steps
 
 For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
-1.	On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
-2.	In Hyper-V Manager, click **MSL-TMG1**, and then in the **Actions** pane, click **Start**.
-3.	In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.
-4.	In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
-5.	Sign in by using the following credentials:
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and then in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.
+4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+5. Sign in by using the following credentials:
   - User name: **Administrator**
   - Password: **Pa$$w0rd**
   
@@ -53,16 +53,16 @@ By selecting the region, you are actually selecting the datacenter where the VMs
 #### Preparation Steps
 
 For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
-1.	On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
-2.	In Hyper-V Manager, click **MSL-TMG1**, and then in the **Actions** pane, click **Start**.
-3.	In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.
-4.	In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
-5.	Sign in by using the following credentials:
+1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+2. In Hyper-V Manager, click **MSL-TMG1**, and then in the **Actions** pane, click **Start**.
+3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and then in the **Actions** pane, click **Start**.
+4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+5. Sign in by using the following credentials:
   - User name: **Administrator**
   - Password: **Pa$$w0rd**
-6.	Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and then in the **Actions** pane, click **Start**.
-7.	In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
-8.	Sign in by using the following credentials:
+6. Return to Hyper-V Manager, click **20487B-SEA-DEV-C**, and then in the **Actions** pane, click **Start**.
+7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+8. Sign in by using the following credentials:
   - User name: **Admin**
   - Password: **Pa$$w0rd**
 
