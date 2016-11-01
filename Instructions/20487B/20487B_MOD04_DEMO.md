@@ -4,6 +4,17 @@
 
 ### Demonstration 1: The Flow of Requests and Responses Through the Pipeline
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -151,6 +162,17 @@
 
 ### Demonstration 2: Creating Asynchronous Actions
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -211,6 +233,17 @@
 
 ### Demonstration 3: Returning Images by Using Media Type Formatters
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -258,6 +291,17 @@
 # Lesson 2: Creating OData Services
 
 ### Demonstration: Creating and Consuming an OData Services
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
@@ -310,6 +354,17 @@
 
 ### Demonstration: Creating Secured ASP.NET Web API Services
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the Start screen, click the **Visual Studio 2012** tile.
@@ -351,6 +406,17 @@
 # Lesson 4: Injecting Dependencies into Controllers
 
 ### Demonstration: Creating a Dependency Resolver
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
