@@ -4,6 +4,23 @@
 
 ### Demonstration: Deploying a Web Application by Using Visual Studio
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
+ 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-B**, and in the **Actions** pane, click **Start**.
+ 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 8. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the **Start** screen, click the **Visual Studio 2012** tile.
@@ -46,6 +63,26 @@
 
 ### Demonstration: Exporting and Importing Web Deploy Packages by Using IIS Manager
 
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
+ 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-B**, and in the **Actions pane**, click **Start**.
+ 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 8. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+ 
+ 9. Make sure that the MyApp web application is deployed to the 20487B-SEA-DEV-B server.
+
+
 #### Demonstration Steps
 
 1. On the **20487B-SEA-DEV-B** virtual machine, on the **Start** screen, click the **Internet Information Services (IIS)** tile.
@@ -83,6 +120,23 @@
 
 ### Demonstration: Using Windows PowerShell Cmdlets
 
+#### Preparation Steps
+
+This demonstration uses the output of the demonstration in Lesson 2, **Creating and Deploying Web Application Packages**. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
+ 6. Return to Hyper-V Manager, click **20487B-SEA-DEV-B**, and in the **Actions** pane, click **Start**.
+ 7. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 8. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+
 #### Demonstration Steps
 
 1. On the **20487B-SEA-DEV-A** virtual machine, on the desktop, click the **Windows PowerShell** icon on the taskbar.
@@ -119,6 +173,19 @@
 # Lesson 5: Continuous Delivery with TFS and Git
 
 ### Demonstration: Continuous Delivery with Visual Studio Team Services
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
+  
+To present this demonstration, you must have a Microsoft Account. If you have not created a Microsoft Account before, create one before you start the demonstration.
 
 #### Demonstration Steps
 
@@ -203,6 +270,17 @@
 # Lesson 6: Best Practices for Production Deployment
 
 ### Demonstration: Transforming Web.config Files
+
+#### Preparation Steps
+
+For this demonstration, you will use the available virtual machine environment. Before you begin this demonstration, you must complete the following steps:
+ 1. On the host computer, click **Start**, point to **Administrative Tools**, and then click **Hyper-V Manager**.
+ 2. In Hyper-V Manager, click **MSL-TMG1**, and in the Actions pane, click **Start**.
+ 3. In Hyper-V Manager, click **20487B-SEA-DEV-A**, and in the Actions pane, click **Start**.
+ 4. In the **Actions** pane, click **Connect**. Wait until the virtual machine starts.
+ 5. Sign in by using the following credentials:
+    - User name: **Administrator**
+    - Password: **Pa$$w0rd**
 
 #### Demonstration Steps
 
