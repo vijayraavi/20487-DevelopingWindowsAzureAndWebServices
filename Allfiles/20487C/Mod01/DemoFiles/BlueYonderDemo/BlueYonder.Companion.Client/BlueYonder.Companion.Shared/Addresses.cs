@@ -4,7 +4,7 @@
     {
         public static string BaseUri
         {
-            get { return "http://localhost/BlueYonder.Companion.Host/api/"; }
+            get { return "http://localhost:49698/api/"; }
         }
 
         public static string GetLocationsUri

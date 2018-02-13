@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace BlueYonder.Server.FrequentFlyerServiceWebHost
+namespace BlueYonder.Server.Booking.WebHost
 {
     public class Global : System.Web.HttpApplication
     {

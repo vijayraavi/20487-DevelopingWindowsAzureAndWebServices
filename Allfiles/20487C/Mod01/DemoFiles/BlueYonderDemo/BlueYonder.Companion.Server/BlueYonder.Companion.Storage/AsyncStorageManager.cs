@@ -48,39 +48,33 @@ namespace BlueYonder.Companion.Storage
 
         public async Task SaveMetadataAsync(FileEntity fileData)
         {
-            TableServiceContext tableContext = GetTableContext();
+            CloudTable table = GetCloudTable();
 
             // TODO: Exercise 1: Task 5c: use a TableServiceContext to add the object
-            tableContext.AddObject(MetadataTable, fileData);
-
-            await Task.Factory.FromAsync<DataServiceResponse>(tableContext.BeginSaveChanges,
-                                                              tableContext.EndSaveChanges,
-                                                              null,
-                                                              TaskCreationOptions.None);
+            TableOperation insertOp = TableOperation.Insert(fileData);
+            await table.ExecuteAsync(insertOp);
         }
 
-        private TableServiceContext GetTableContext()
+        private CloudTable GetCloudTable()
         {
             // TODO: Exercise 1: Task 5b: Use the _account member to get a new CloudTableClient,
             // verify that the table exists, and then return a TableServiceContext instance
             CloudTableClient tableClient = _account.CreateCloudTableClient();
             CloudTable table = tableClient.GetTableReference(MetadataTable);
             table.CreateIfNotExists();
-            TableServiceContext tableContext = tableClient.GetTableServiceContext();
-            return tableContext;
+            return table;
         }
 
         public IEnumerable<FileEntity> GetLocationMetadata(string locationId)
         {
             // TODO: Exercise 2: Task 2a: Get the table context and then use it 
             // to query the table for a specific partition according to the location
-            TableServiceContext tableContext = GetTableContext();
+            CloudTable table = GetCloudTable();
 
-            var query = from file in tableContext.CreateQuery<FileEntity>(MetadataTable)
-                        where file.PartitionKey == locationId
-                        select file;
+            TableQuery<FileEntity> query = new TableQuery<FileEntity>().Where(TableQuery.GenerateFilterCondition("ParitionKey", QueryComparisons.Equal, locationId));
 
-            return query.ToList();
+            return table.ExecuteQuery(query);
+
         }
 
         public IEnumerable<FileEntity> GetFilesMetadata(IEnumerable<string> rowKeys)
@@ -89,15 +83,24 @@ namespace BlueYonder.Companion.Storage
             // to query the table for each row key. Use yield return to 
             // return each file entity you find in the table
 
-            TableServiceContext tableContext = GetTableContext();
-            foreach (var rowKey in rowKeys)
+            CloudTable table = GetCloudTable();
+            string queryFilter = null;
+            foreach (string rowKey in rowKeys)
             {
-                var fileEntity = (from file in tableContext.CreateQuery<FileEntity>(MetadataTable)
-                                  where file.RowKey == rowKey
-                                  select file).Single();
-
-                yield return fileEntity;
+                string filter = TableQuery.GenerateFilterCondition("RowKey", QueryComparisons.Equal, rowKey);
+                if (queryFilter == null)
+                {
+                    queryFilter = filter;
+                }
+                else
+                {
+                    queryFilter = TableQuery.CombineFilters(queryFilter, TableOperators.Or, filter);
+                }
+                
             }
+            TableQuery<FileEntity> query = new TableQuery<FileEntity>().Where(queryFilter);
+
+            return table.ExecuteQuery(query);
         }
 
         public string CreateSharedAccessSignature(string containerName)
