@@ -1,5 +1,5 @@
 ﻿using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Table.DataServices;
+using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BlueYonder.Companion.Storage.TableEntities
 {
     // TODO: Exercise 1: Task 3a: Derive from TableServiceEntity
-    public class FileEntity : TableServiceEntity
+    public class FileEntity : TableEntity
     {
         public Uri Uri { get; set; }
 

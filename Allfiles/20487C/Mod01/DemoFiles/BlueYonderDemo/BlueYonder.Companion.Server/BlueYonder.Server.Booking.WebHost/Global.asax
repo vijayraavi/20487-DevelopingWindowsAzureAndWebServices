@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="BlueYonder.Server.FrequentFlyerServiceWebHost.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="BlueYonder.Server.Booking.WebHost.Global" Language="C#" %>
