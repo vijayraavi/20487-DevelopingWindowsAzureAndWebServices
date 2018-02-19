@@ -15,21 +15,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Tasks", "BlueYonder.Companion.Tasks\BlueYonder.Companion.Tasks.csproj", "{468A1F4F-EF34-4689-9091-F2CAE374A0F2}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://vstf-us-wa-11.partners.extranet.microsoft.com:8443/tfs/mslearning
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = BlueYonder.Companion.Client\\BlueYonder.Companion.Client.csproj
-		SccProjectName1 = BlueYonder.Companion.Client
-		SccLocalPath1 = BlueYonder.Companion.Client
-		SccProjectUniqueName2 = BlueYonder.Companion.Shared\\BlueYonder.Companion.Shared.csproj
-		SccProjectName2 = BlueYonder.Companion.Shared
-		SccLocalPath2 = BlueYonder.Companion.Shared
-		SccProjectUniqueName3 = BlueYonder.Companion.Tasks\\BlueYonder.Companion.Tasks.csproj
-		SccProjectName3 = BlueYonder.Companion.Tasks
-		SccLocalPath3 = BlueYonder.Companion.Tasks
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM = Debug|ARM
