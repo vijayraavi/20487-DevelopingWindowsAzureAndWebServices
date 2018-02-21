@@ -8,7 +8,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using System.Web;
 
-namespace ImagesWithMediaTypeFormatter.Host.Fromatters
+namespace ImagesWithMediaTypeFormatter.Host.Formatters
 {
     public class ImageFormatter : BufferedMediaTypeFormatter
     {

@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace ImagesWithMediaTypeFormatter.Host.Fromatters
+namespace ImagesWithMediaTypeFormatter.Host.Formatters
 {
     public class UriFormatHandler : DelegatingHandler
     {
