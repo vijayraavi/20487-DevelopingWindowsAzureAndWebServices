@@ -128,8 +128,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="Fromatters\ImageFormatter.cs" />
-    <Compile Include="Fromatters\UriFormatHandler.cs" />
+    <Compile Include="Formatters\ImageFormatter.cs" />
+    <Compile Include="Formatters\UriFormatHandler.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
