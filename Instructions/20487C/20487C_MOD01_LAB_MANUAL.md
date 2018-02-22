@@ -37,7 +37,7 @@ The main tasks for this exercise are as follows:
   - Server admin login: **SQLAdmin**
   - Password: **Pa$$w0rd**
   - Confirm Password: **Pa$$w0rd**
-  - Resource Group: Select **Create new**.
+  - Resource Group: Select **Create new** and enter **MyFirstDB**
   - Location: Select the location closest to you.
 5. Click **Create** and wait until the server is created.
 You can track its progress by hovering over the bell icon on the top bar.
@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Entity Framework Model
 
-1. Open Visual Studio 2017 and create a new **Class Library** project. Name the project **BlueYonder.Model**.
+1. Open Visual Studio 2017 and create a new **Class Library (.NET Framework)** project. Name the project **BlueYonder.Model**. 
 
 2. Add an ADO.NET Entity Data Model to the project.
 
