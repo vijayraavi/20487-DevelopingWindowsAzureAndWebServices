@@ -89,13 +89,13 @@ The main tasks for this exercise are as follows:
 
 1. Create an ASP.NET Web API Project
 
-2. Add a Web API Controller with CRUD Actions by using the Add Controller Wizard
+2. Add a Web API Controller with CRUD Actions by using the Add Scaffold Wizard
 
 #### Task 1: Create an ASP.NET Web API Project
 
 - Add a new **ASP.NET Web Application (.NET Framework)** project named **BlueYonder.MVC** using the Web API template.
 
-#### Task 2: Add a Web API Controller with CRUD Actions by using the Add Controller Wizard
+#### Task 2: Add a Web API Controller with CRUD Actions by using the Add Scaffold Wizard
 
 1. In the **BlueYonder.MVC** project, add a reference to the **BlueYonder.Model** project.
 
