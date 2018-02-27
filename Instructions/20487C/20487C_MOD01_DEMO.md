@@ -83,41 +83,42 @@ Follow these steps to set up the demo:
 3. Go to **[repository root]\AllFiles\20487C\Mod01\DemoFiles\BlueYonderDemo\BlueYonder.Companion.Client**, select the **BlueYonder.Companion.Client.sln** file, and then click **Open**.
 4. If the **Settings** window appears, select **Developer mode**.
 5. If the **Use developer features** dialog box appears, click **Yes**.
-6. In Solution Explorer, right-click the **BlueYonder.Companion.Client** project, and then click **Set as StartUp Project**.
-7. To start the client app without debugging, press Ctrl+F5.
-8. If you are prompted to allow the app to run in the background, click **Allow**.  
+6. In the **Review Solution Actions** dialog box, click **OK**.
+7. In Solution Explorer, right-click the **BlueYonder.Companion.Client** project, and then click **Set as StartUp Project**.
+8. To start the client app without debugging, press **Ctrl+F5**.
+9. If you are prompted to allow the app to run in the background, click **Yes**.  
  
     Understand the purpose and features of the Blue Yonder Companion app; it is a travel reservation and management app. It can help you search and book flights, manage your trip schedule, store and manage pictures and videos from trips, and provide weather information for your trip destinations.
  
-9. After the client app starts, right-click or swipe from the bottom of the screen to open the app bar.
-10. Click **Search**, and then in the **Search** text box, type **New**.
-11. If you are prompted to allow the app to share your location, click **Allow**. 
-12. Select any destination from the list of search results, and then click the **Purchase this trip** link.
+10. After the client app starts, right-click or swipe from the bottom of the screen to open the app bar.
+11. Click **Search**, and then in the **Search** text box, type **New**.
+12. If you are prompted to allow the app to share your location, click **Allow**. 
+13. Select any destination from the list of search results, and then click the **Purchase this trip** link.
     The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
-13. In the **First Name** text box, enter your first name.
-14. In the **Last Name** text box, enter your last name.
-15. In the **Passport** text box, type **Aa1234567**.
-16. In the **Mobile Phone** text box, type **555-5555555**.
-17. In the **Home Address** text box, type **423 Main St.**
-18. In the **Email Address** text box, enter your email address.
-19. Click **Purchase**.
+14. In the **First Name** text box, enter your first name.
+15. In the **Last Name** text box, enter your last name.
+16. In the **Passport** text box, type **Aa1234567**.
+17. In the **Mobile Phone** text box, type **555-5555555**.
+18. In the **Home Address** text box, type **423 Main St.**
+19. In the **Email Address** text box, enter your email address.
+20. Click **Purchase**.
 
     Now the app sends the purchase request to the front-end service. The front-end service saves the purchase information, and then sends a separate purchase request to the back-end service for additional processing. After the back-end and front-end services complete their task, the client app displays a confirmation message.
  
     You will implement the purchase feature, including the back-end service purchase feature, in the upcoming labs.  
     
-20. To close the confirmation message click **Close**.
-21. On the **Blue Yonder Companion** page, point to **New York at a Glance**, and notice that the weather forecast is also retrieved from the front-end service. You will implement the weather service in the upcoming labs.
-22. Click the current trip from Seattle to New York.
-23. On the **Current Trip** page, right-click or swipe from the bottom of the screen to display the app bar, and then click **Media**.
-24. On the **Media** page, right-click or swipe from the bottom of the screen to display the app bar.
-25. Review the available buttons. You can upload images and videos to Azure Storage, and share them with other clients.
+21. To close the confirmation message click **Close**.
+22. On the **Blue Yonder Companion** page, point to **New York at a Glance**, and notice that the weather forecast is also retrieved from the front-end service. You will implement the weather service in the upcoming labs.
+23. Click the current trip from Seattle to New York.
+24. On the **Current Trip** page, right-click or swipe from the bottom of the screen to display the app bar, and then click **Media**.
+25. On the **Media** page, right-click or swipe from the bottom of the screen to display the app bar.
+26. Review the available buttons. You can upload items to Azure Storage, and share them with other clients.
 
     You will implement the upload and download features in the upcoming labs.
 
     >**Note**: Do not click the upload buttons, because you have not created any Azure Storage accounts yet. If you click any of the upload buttons, the app will fail and close.
 
-26. Close the client app.
+27. Close all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
