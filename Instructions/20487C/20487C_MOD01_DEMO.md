@@ -15,31 +15,32 @@
 
 1. Open Microsoft Edge.
 2. Navigate to **https://portal.azure.com**.
-3. If a page appears prompting for your email address, enter your email address, and then click **Continue**. Wait for the **Sign In** page to appear, enter your email address and password, and then click **Sign In**.
+3. If a page appears prompting for your email address, enter your email address, and then click **Next** and enter your password, and then click **Sign In**.
+4. If the **Stay signed in?** dialog appears, click **Yes**.
 
    >**Note**: During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to provide your credentials.
 
-4. Review the items in the pane on the left side of the screen and understand the different services that you can manage with the Azure portal.
-5. Click **+ New** on the left side of the portal, and then click **Web App**. The **App Name** and **Resource Group** text boxes and **App Service Plan/Location** appear on the right side of the screen.
-6. In the **App Name** text box, type the following web app name: **WebAppDemo**_YourInitials_ (Replace _YourInitials_ with your initials).  
+5. Review the items in the pane on the left side of the screen and understand the different services that you can manage with the Azure portal.
+6. Click **+ Create a resource** on the left side of the portal, and then click **Web App**. The **App Name** and **Resource Group** text boxes and **App Service Plan/Location** appear on the right side of the screen.
+7. In the **App Name** text box, type the following web app name: **WebAppDemo**_YourInitials_ (Replace _YourInitials_ with your initials).  
 
    The app name you typed is going to be part of the URL that you will use when connecting to the web application.
    
-7. In the **Resource Group** text box, select **Create new**.
-8. Click **App Service Plan/Location**,  and then click **Create new**.
-9. In **App Service Plan**, enter **BlueYonder**.
-10. In **Location**, select the location that is closest to you.
-11. Click **Ok.**
-12. Click **Create**, and then wait until the web app is deployed.
-13. In the **All Resources** pane, click the web app that you created in the previous step (the one that is named **WebAppDemo** _YourInitials_).  
+8. In the **Resource Group** text box, select **Create new**.
+9. Click **App Service Plan/Location**,  and then click **Create new**.
+10. In **App Service Plan**, enter **BlueYonder**.
+11. In **Location**, select the location that is closest to you.
+12. Click **Ok.**
+13. Click **Create**, and then wait until the web app is deployed.
+14. In the **All Resources** pane, click the web app that you created in the previous step (the one that is named **WebAppDemo** _YourInitials_).  
 
     Currently the web app has no content. In module 06, &quot;Hosting Services&quot;, you will see how to publish web apps using Visual Studio 2017.
   
-14. Go over the different sections and understand their purpose:  
+15. Go over the different sections and understand their purpose:  
   a. **General** (no section). Provides an overview about the activity of the web app, access control and metadata.  
   b. **Deployment**. Controls how and when the application is deployed.  
   c. **Settings**. Allows you to control settings such as monitoring capabilities, remote access, security tokens, scaling and more.
-15. Close the browser.
+16. Close the browser.
 
 # Lesson 5: Exploring the Blue Yonder Airlines&#39; Travel Companion Application
 
@@ -90,11 +91,9 @@ Follow these steps to set up the demo:
  
 9. After the client app starts, right-click or swipe from the bottom of the screen to open the app bar.
 10. Click **Search**, and then in the **Search** text box, type **New**.
-11. If you are prompted to allow the app to share your location, click **Allow**.
- 
-    The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
- 
+11. If you are prompted to allow the app to share your location, click **Allow**. 
 12. Select any destination from the list of search results, and then click the **Purchase this trip** link.
+    The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
 13. In the **First Name** text box, enter your first name.
 14. In the **Last Name** text box, enter your last name.
 15. In the **Passport** text box, type **Aa1234567**.
