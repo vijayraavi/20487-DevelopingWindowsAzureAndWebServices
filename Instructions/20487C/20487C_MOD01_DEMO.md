@@ -85,13 +85,13 @@ Follow these steps to set up the demo:
 5. If the **Use developer features** dialog box appears, click **Yes**.
 6. In Solution Explorer, right-click the **BlueYonder.Companion.Client** project, and then click **Set as StartUp Project**.
 7. To start the client app without debugging, press **Ctrl+F5**.
-8. If you are prompted to allow the app to run in the background, click **Yes**.  
+8. If you are prompted to allow the app to run in the background, click **Allow**.  
  
     Understand the purpose and features of the Blue Yonder Companion app; it is a travel reservation and management app. It can help you search and book flights, manage your trip schedule, store and manage pictures and videos from trips, and provide weather information for your trip destinations.
  
 9. After the client app starts, right-click or swipe from the bottom of the screen to open the app bar.
 10. Click **Search**, and then in the **Search** text box, type **New**.
-11. If you are prompted to allow the app to share your location, click **Allow**. 
+11. If you are prompted to allow the app to share your location, click **Yes**. 
 12. Select any destination from the list of search results, and then click the **Purchase this trip** link.
     The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
 13. In the **First Name** text box, enter your first name.
