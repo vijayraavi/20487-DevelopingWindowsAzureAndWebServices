@@ -111,7 +111,7 @@ Follow these steps to set up the demo:
 22. Click the current trip from Seattle to New York.
 23. On the **Current Trip** page, right-click or swipe from the bottom of the screen to display the app bar, and then click **Media**.
 24. On the **Media** page, right-click or swipe from the bottom of the screen to display the app bar.
-25. Review the available buttons. You can upload items to Azure Storage, and share them with other clients.
+25. Review the available buttons. You can upload items to Azure Public or Private Storage, and share them with other clients.
 
     You will implement the upload and download features in the upcoming labs.
 
