@@ -91,9 +91,9 @@ Follow these steps to set up the demo:
  
 9. After the client app starts, right-click or swipe from the bottom of the screen to open the app bar.
 10. Click **Search**, and then in the **Search** text box, type **New**.
+    The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
 11. If you are prompted to allow the app to share your location, click **Yes**. 
 12. Select any destination from the list of search results, and then click the **Purchase this trip** link.
-    The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
 13. In the **First Name** text box, enter your first name.
 14. In the **Last Name** text box, enter your last name.
 15. In the **Passport** text box, type **Aa1234567**.
