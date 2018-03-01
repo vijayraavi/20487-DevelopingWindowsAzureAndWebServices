@@ -90,8 +90,8 @@ Follow these steps to set up the demo:
     Understand the purpose and features of the Blue Yonder Companion app; it is a travel reservation and management app. It can help you search and book flights, manage your trip schedule, store and manage pictures and videos from trips, and provide weather information for your trip destinations.
  
 9. After the client app starts, right-click or swipe from the bottom of the screen to open the app bar.
-10. Click **Search**, and then in the **Search** text box, type **New**.
-    The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
+10. Click **Search**, and then in the **Search** text box, type **New**. 
+    >**Note**: The app communicates with the front-end service to retrieve a list of flights to a location whose name begins with _New_; for example, New York.  
 11. If you are prompted to allow the app to share your location, click **Yes**. 
 12. Select any destination from the list of search results, and then click the **Purchase this trip** link.
 13. In the **First Name** text box, enter your first name.
