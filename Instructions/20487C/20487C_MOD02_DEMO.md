@@ -6,7 +6,7 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. In the navigation pane of the **New Project** dialog box, expand the **Installed** node, and then select the **Visual C#** node. From the list of templates, select **Console App (.Net Framework)**.
 4. In the **Name** box, type **MyFirstEF**.
