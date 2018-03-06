@@ -15,7 +15,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 3. In the **New Project** dialog box in the left-side of the navigation pane, expand the **Installed** node, expand the **Visual C#**  node, click the **Web** node, and then click **ASP.NET Web Application (.NET Framework)** from the list of templates.
 4. In the **Name** text box, type **MyApp**.
 5. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod03\Democode\FirstWebApiService\Begin**, and then click **OK**.
-6. In the **New ASP.NET Web Application** dialog box, click **Web API**, and then click **OK**.
+6. In the **New ASP.NET Web Application - MyApp** dialog box, click **Web API**, and then click **OK**.
 7. In **Solution Explorer**, under the **MyApp** project, expand the **App\_Start** folder, and then double-click **WebApiConfig.cs**.
 8. Locate the **MapHttpRoute** method call and notice the different parameters that are used in the method call.
 9. In **Solution Explorer**, under the **MyApp** project, expand the **Controllers** folder, and then double-click **ValuesController.cs**.
@@ -39,7 +39,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 	```
 
 15. To save the changes, press Ctrl+S.
-16. In **Solution Explorer**, under **App\Start folder**, double-click **WebApiConfig.cs**.
+16. In **Solution Explorer**, under **App_Start folder**, double-click **WebApiConfig.cs**.
 17. Add the following code to the beginning of the **Register** method.  
 
 
@@ -54,7 +54,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 18. To save the changes, press Ctrl+S.
 19. To start debugging the application, press **F5**.
 20. In the address bar of the browser, append **api/values/list** to the end of the address, and then press Enter.
-21. You should see the same result as in step 13.
+21. You should see the same result as in step 12.
 
 # Lesson 3: Handling HTTP Requests and Responses
 
@@ -100,7 +100,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
     ```
 
 9. To save the changes, press Ctrl+S.
-10. To start the application without debugging, press Ctrl+F5. Internet Explorer 10 will start.
+10. To start the application without debugging, press Ctrl+F5. Microsoft Explorer 10 will start.
 11. In the address bar of the browser, append **api/destinations/1** to the end of the address, and then press Enter.
 12. When prompted by the browser, click **Open**, and open the file in Notepad. Verify that you see information for Seattle.
 13. Close Notepad and return to the browser. Append **api/destinations/6** to the end of the address, and then press Enter. Verify that you get an HTTP 404 response.
