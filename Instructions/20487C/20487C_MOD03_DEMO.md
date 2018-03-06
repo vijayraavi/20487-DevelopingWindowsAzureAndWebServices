@@ -103,7 +103,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 10. To start the application without debugging, press Ctrl+F5. Microsoft Explorer 10 will start.
 11. In the address bar of the browser, append **api/destinations/1** to the end of the address, and then press Enter.
 12. When prompted by the browser, click **Open**, and open the file in Notepad. Verify that you see information for Seattle.
-13. Close Notepad and return to the browser. Append **api/destinations/6** to the end of the address, and then press Enter. Verify that you get an HTTP 404 response.
+13. Append **api/destinations/6** to the end of the address, and then press Enter. Verify that you get an HTTP 404 response.
 
 # Lesson 4: Hosting and Consuming ASP.NET Web API Services
 
@@ -157,12 +157,13 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 2. On the **File** menu, point to **Open**, and then click **Project/Solution.**
 3. In the **File Name** text box, type **[repository root]\Allfiles\20487C\Mod03\Democode\ConsumingFromHttpClient\Begin\HttpClientApplication\HttpClientApplication.sln**, and then click  **Open**.
 4. In **Solution Explorer**, under the **HttpClientApplication.Client** project, right-click **References**, and then click **Manage NuGet Packages**.
-5. Inside the **NuGet Manager** window, click the **Browse** tab, and in the search box on the upper-left side, type **Microsoft.AspNet.WebApi.Client**.
+5. Inside the **NuGet Package Manager: HttpClientApplication.Client window** window, click the **Browse** tab, and in the search box on the upper-left side, type **Microsoft.AspNet.WebApi.Client**.
 6. In the search results list, locate **Microsoft.AspNet.WebApi.Client**, and then click **Install**.
-7. If a **License Acceptance** dialog box appears, click **I Accept**.
-8. After the installation is complete, to close the **NuGet Manager** window, click **Close**.
-9. In **Solution Explorer**, under the **HttpClientApplication.Client** project, double-click **Program.cs.**
-10. Locate the **CallServer** method and code to send a GET request for the **Destinations** resource and print the **responses** content as string. As soon as you are finished, the **CallServer** method should look as follows.
+7. In the **Preview Changes** window, click **OK**.
+8. If a **License Acceptance** dialog box appears, click **I Accept**.
+9. After the installation is complete, to close the **NuGet Package Manager: HttpClientApplication.Client** window, click **Close**.
+10. In **Solution Explorer**, under the **HttpClientApplication.Client** project, double-click **Program.cs.**
+11. Locate the **CallServer** method and code to send a GET request for the **Destinations** resource and print the **responses** content as string. As soon as you are finished, the **CallServer** method should look as follows.
 
 	```cs
         static async Task CallServer()  
@@ -177,7 +178,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
         }  
 	```
 
-11. To deserialize the request content, add code into **List<Destinations>** by using the **HttpContent.ReadAsAsync<T>** method. When  you are finished, the **CallServer** method should look like this.
+12. To deserialize the request content, add code into **List<Destinations>** by using the **HttpContent.ReadAsAsync<T>** method. When  you are finished, the **CallServer** method should look like this.
 
 	```cs
         static async Task CallServer()  
@@ -196,13 +197,14 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
         } 
 	```
 
-12. To save the changes, press Ctrl+S.
-13. In **Solution Explorer**, right-click the **HttpClientApplication.Host** project, and then click **Set as StartUp Project**.
-14. To start the server application without debugging, press Ctrl+F5.
-15. In **Solution Explorer**, under the **HttpClientApplication.Client** project, double-click **Program.cs**.
-16. In the **Program** class, locate the **client** variable definition at the beginning of the **CallServer** method, and then click it. To put a breakpoint in that line, press F9.
-17. In **Solution Explorer**, right-click the **HttpClientApplication.Client** project, point to **Debug**, click **Start new instance** , and then wait for a program to hit your breakpoint.
-18. To execute the **CallServer** method line-by-line, press F10.
+13. To save the changes, press Ctrl+S.
+14. In **Solution Explorer**, right-click the **HttpClientApplication.Host** project, and then click **Set as StartUp Project**.
+15. To start the server application without debugging, press Ctrl+F5.
+16. In **Solution Explorer**, under the **HttpClientApplication.Client** project, double-click **Program.cs**.
+17. In the **Program** class, locate the **client** variable definition at the beginning of the **CallServer** method, and then click it. To put a breakpoint in that line, press F9.
+18. In **Solution Explorer**, right-click the **HttpClientApplication.Client** project, point to **Debug**, click **Start new instance** , and then wait for a program to hit your breakpoint.
+19. To execute the **CallServer** method line-by-line, press F10.
+20. Close all opened windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
