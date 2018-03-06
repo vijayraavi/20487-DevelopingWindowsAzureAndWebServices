@@ -86,7 +86,6 @@ The main tasks for this exercise are as follows:
 1. Open the **ReservationRepository** class under the **Repositories** folder, in the **BlueYonder.DataAccess** project, and implement the **GetSingle** method. The method retrieves a **Reservation** entity by its primary key.
 
    - Create a LINQ query to retrieve the reservation from the **TravelCompanionContext**. **Reservations** DbSet.
-   - If the entity is not found, return **null**.
 
    >**Note:** The **ReservationRepository** class already contains a **TravelCompanionContext** instance by the name **context.**
 
