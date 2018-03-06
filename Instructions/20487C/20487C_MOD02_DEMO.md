@@ -105,7 +105,7 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Browse to **[repositoryroot]\Allfiles\20487C\Mod02\Democode\UsingLINQtoEntities\Begin**.
 4. Click **EF\_CodeFirst.sln**, and then click **Open**.
@@ -161,7 +161,7 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Go to **[repositoryroot]\Allfiles\20487C\Mod02\Democode\StoredProcedure\Begin**.
 4. Click **EF\_CodeFirst.sln**, and then click **Open**.
@@ -179,9 +179,9 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **[rootrepository]\Allfiles\Mod02\Democode\CRUD\Begin**.
+3. Browse to **[repository root]\Allfiles\20487C\Mod02\Democode\CRUD\Begin**.
 4. Click **EF\_CodeFirst.sln**, and then click **Open**.
 5. In **Solution Explorer**, under the **EF\_CodeFirst** project, double-click **Program.cs**.
 6. Create a new **SchoolContext** object by appending the following code to the **Main** method after the **InitializeDatabase** method call.
