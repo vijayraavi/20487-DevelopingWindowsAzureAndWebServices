@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Explore the existing Entity framework data model project
 
-1. Open the **BlueYonder.Companion** solution file from the **D:\AllFiles\Mod02\LabFiles\begin\BlueYonder.Companion** folder.
+1. Open the **BlueYonder.Companion** solution file from the **[repositoryroot]\Allfiles\20487C\Mod02\LabFiles\begin\BlueYonder.Companion** folder.
 
 2. In the **BlueYonder.Entities** project, locate the **FlightSchedule** class.
 
