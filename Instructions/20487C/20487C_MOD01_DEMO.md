@@ -38,7 +38,7 @@
   
 15. Go over the different sections and understand their purpose:  
   a. **General** (no section). Provides an overview about the activity of the web app, access control and metadata.  
-  b. **Deployment**. Controls how and when the application is deployed.  
+  b. **Deployments**. Controls how and when the application is deployed.  
   c. **Settings**. Allows you to control settings such as monitoring capabilities, remote access, security tokens, scaling and more.
 16. Close the browser.
 
@@ -81,7 +81,7 @@ Follow these steps to set up the demo:
 1. Open **Visual Studio 2017.**
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Go to **[repository root]\AllFiles\20487C\Mod01\DemoFiles\BlueYonderDemo\BlueYonder.Companion.Client**, select the **BlueYonder.Companion.Client.sln** file, and then click **Open**.
-4. If the **Settings** window appears, select **Developer mode**.
+4. If the **Settings** window appears, Change the Setting from **Sideload apps** to **Developer mode**.
 5. If the **Use developer features** dialog box appears, click **Yes**.
 6. In Solution Explorer, right-click the **BlueYonder.Companion.Client** project, and then click **Set as StartUp Project**.
 7. To start the client app without debugging, press **Ctrl+F5**.
