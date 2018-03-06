@@ -1,7 +1,7 @@
 # Module 5: Creating WCF Services
 
 > Wherever you see a path to file starting at [repository root], replace it with the absolute path to the directory in which the 20487 repository resides. 
-> e.g. - you cloned or extracted the 20487 repository to C:\Users\John Doe\Downloads\20487, then the following path: [repository root]\AllFiles\20487C\Mod06 will become C:\Users\John Doe\Downloads\20487\AllFiles\20487C\Mod06
+> e.g. - you cloned or extracted the 20487 repository to C:\Users\John Doe\Downloads\20487, then the following path: [repository root]\AllFiles\20487C\Mod05 will become C:\Users\John Doe\Downloads\20487\AllFiles\20487C\Mod05
 
 # Lesson 2: Creating and Implementing a Contract
 
@@ -172,9 +172,9 @@ The service cannot be tested unless the service behavior has the **serviceMetada
 3. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 4. Go to **[Repository root]\Allfiles\20487C\Mod05\DemoFiles\UsingChannelFactory\begin**.
 5. Select the **UsingChannelFactory.sln** file, and then click **Open**.
-6. In **Solution Explorer**, expand the **ServiceHost** project, and then double-click **App.config**. The **App.config** file contains three service endpoints: one with **BasicHttpBinding**, one with **NetTcpBinding**, and one MEX endpoint.
+6. In **Solution Explorer**, expand the **ServiceHost** project, and then double-click **App.config**. The **App.config** file contains three service endpoints: one with **BasicHttpBinding**, one with **NetTcpBinding**, and one **MEX** endpoint.
 7. In **Solution Explorer**, right-click the **ServiceClient** project, point to **Add**, and then click **Reference**.
-8. In the left pane of the **Reference Manager** dialog box, expand the **Solution** node, and then click **Projects**.
+8. In the left pane of the **Reference Manager - ServiceClient** dialog box, expand the **Solution** node, and then click **Projects**.
 9. In the projects list, point to **Common**, and then select the check box next to the project name.
 10. In the left pane, expand the **Assemblies** node, and then click **Framework**. Scroll down the assemblies list, point to the  **System.ServiceModel** assembly, select the check box next to the assembly name, and then click **OK**.  
 
