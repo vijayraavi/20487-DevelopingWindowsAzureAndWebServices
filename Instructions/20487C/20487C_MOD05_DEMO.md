@@ -72,7 +72,9 @@
         <serviceMetadata httpGetEnabled="True"/>
     </behavior>
 ```  
-   The service cannot be tested unless the service behavior has the **serviceMetadata** behavior.
+
+The service cannot be tested unless the service behavior has the **serviceMetadata** behavior.
+
 8. To add base addresses, add the following configuration to the **&lt;service&gt;** element.
 
 ```cs
@@ -141,9 +143,9 @@
 3. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 4. Go to **[Repository Root]\Allfiles\20487C\Mod05\DemoFiles\AddingServiceReference\begin**.
 5. Select the **AddServiceReference.sln** file, and then click **Open**.
-6. In **Solution Explorer**, expand the **ServiceHost** project and double-click **App.config**. **App.config** contains three service endpoints: one with **BasicHttpBinding**, one with **NetTcpBinding**, and one MEX endpoint. The service must have the **ServiceMetadata** behavior before you can add a service reference with Visual Studio 2012.
+6. In **Solution Explorer**, expand the **ServiceHost** project and double-click **App.config**. **App.config** contains three service endpoints: one with **BasicHttpBinding**, one with **NetTcpBinding**, and one **MEX** endpoint. The service must have the **ServiceMetadata** behavior before you can add a service reference with Visual Studio 2017.
 7. In **Solution Explorer**, right-click the **ServiceHost** project, and then click **Set as StartUp Project**.
-8. To start the service host without debugging, press Ctrl+F5.
+8. To start the service host without debugging, press Ctrl+F5. If the **Windows Security Alert** appears click **OK**.
 9. Wait for the service host console to display the **Service Hosted Successfully!** message.
 10. Return to Visual Studio 2017. In **Solution Explorer**, under the **ServiceClient** project, right-click **Service References**, and then click **Add Service Reference**.
 11. In the **Add Service Reference** dialog box, in the **Address** box, enter **http://localhost:8733/HotelBooking**,  and then click  **Go**.
@@ -161,7 +163,7 @@
     
 18. To close the client console application, press Enter.
 19. Switch to the service console application window, and press Enter to shut down the service.
-20. Close Visual Studio 2017.
+20. Close both console applications and Visual Studio 2017.
 
 ### Demonstration 2: Using Channel Factories
 
