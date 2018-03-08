@@ -82,7 +82,7 @@
 
     The application now creates a new database on the local SQL Express, named **MyFirstEF.MyDbContext.**  
     
-33. On the Start screen, click the **Microsoft SQL Server Management Studio** tile.
+33. On the Start screen, click the **Microsoft SQL Server Management Studio 17** tile.
 34. In the **Server Name** box, type **.\SQLEXPRESS**.
 35. In the **Authentication** drop-down menu, verify that **Windows Authentication** is selected, and then click **Connect**.
 36. In **Object Explorer**, expand the **Databases** node.
@@ -93,7 +93,7 @@
     >**Note**: Database tables are usually named in the plural form, which is why Entity Framework changed the names of the generated tables from Store and Product to Stores and Products. The _dbo_ prefix is the name of the schema in which the tables were created.
 
 40. Expand the **dbo.Products** and **dbo.Stores** tables, and then expand the **Columns** node in each of them to see that both tables have **Id** and **Name** columns, similar to their corresponding class properties.
-41. Close **Microsoft SQL Server Management Studio**.
+41. Close **Microsoft SQL Server Management Studio 17**.
 
 
 
@@ -107,7 +107,7 @@
 
 1. On the Start screen, click the **Visual Studio 2017** tile.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **[repositoryroot]\Allfiles\Mod02\Democode\UsingLINQtoEntities\Begin**.
+3. Browse to **[repositoryroot]\Allfiles\20487C\Mod02\Democode\UsingLINQtoEntities\Begin**.
 4. Click **EF\_CodeFirst.sln**, and then click **Open**.
 5. In **Solution Explorer**, under the **EF\_CodeFirst** project, double-click **Program.cs**.
 6. Create a new **SchoolContext** object by appending the following code to the **Main** method, after the **InitializeDatabase**   method call.
@@ -163,7 +163,7 @@
 
 1. On the Start screen, click the **Visual Studio 2017** tile.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Go to **[repositoryroot]\Allfiles\Mod02\Democode\StoredProcedure\Begin**.
+3. Go to **[repositoryroot]\Allfiles\20487C\Mod02\Democode\StoredProcedure\Begin**.
 4. Click **EF\_CodeFirst.sln**, and then click **Open**.
 5. In **Solution Explorer**, expand the **EF\_CodeFirst** project, and double-click the **Program.cs** file.
 6. Go to the **Main** method, and notice that a **SchoolContext** instance is created to establish a connection to the database.
