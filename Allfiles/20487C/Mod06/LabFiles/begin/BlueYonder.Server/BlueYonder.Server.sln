@@ -1,5 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.DataAccess", "BlueYonder.DataAccess\BlueYonder.DataAccess.csproj", "{93CC0797-9C83-4229-BFAA-3C6E5190CE36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.DataAccess.Interfaces", "BlueYonder.DataAccess.Interfaces\BlueYonder.DataAccess.Interfaces.csproj", "{7E7EF562-AC6D-4F58-9B79-A93B21CF832C}"
@@ -56,5 +58,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5C1EC8F-49F7-4704-B71E-08FFF76BD3D1}
 	EndGlobalSection
 EndGlobal
