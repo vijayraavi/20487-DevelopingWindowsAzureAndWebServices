@@ -37,7 +37,7 @@ $resourceGroupName = "BlueYonder.Lab.09"
 # sign in
 Write-Host "Logging in...";
 try {
-    Get-AzureRmContext
+    Connect-AzureRmAccount # Get-AzureRmContext
 } catch {
     Login-AzureRmAccount;
 }
@@ -58,9 +58,9 @@ if($resourceProviders.length) {
 #Create or check for existing resource group
 $resourceGroup = Get-AzureRmResourceGroup -Name $resourceGroupName -ErrorAction SilentlyContinue
 if(!$resourceGroup)
-{
-    Write-Host "Resource group '$resourceGroupName' does not exist. To create a new resource group, please enter a location.";
-    $resourceGroupLocation = Read-Host "resourceGroupLocation";
+{   
+     Write-Host "Resource group '$resourceGroupName' does not exist. To create a new resource group.";
+    $resourceGroupLocation = "eastus"
     Write-Host "Creating resource group '$resourceGroupName' in location '$resourceGroupLocation'";
     New-AzureRmResourceGroup -Name $resourceGroupName -Location $resourceGroupLocation
 }
@@ -90,7 +90,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Templa
 Write-Host "Starting deployment of Azure Relay...";
 New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile "./relay.json" -nameFromTemplate $serviceBusRelayName -location $resourceGroupLocation;
 
-$hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule DefaultFullSharedAccessSignature -ResourceGroup BlueYonder.Lab.07 -Namespace blueyonder09-nhz -NotificationHub blueyonder09Hub
+$hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule DefaultFullSharedAccessSignature -ResourceGroup $resourceGroupName  -Namespace $hubNamespaceName -NotificationHub $hubName
 $dbConnectionString = "Server=tcp:$serverName.database.windows.net,1433;Initial Catalog=$databaseName;Persist Security Info=False;User ID=BlueYonderAdmin;Password=$password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
 $hubConnectionString = "${hubKeys.PrimaryConnectionString}";
 $relayKeyInfo = Get-AzureRmRelayKey -Namespace $serviceBusRelayName -ResourceGroupName $resourceGroupName -Name RootManageSharedAccessKey
