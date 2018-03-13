@@ -35,7 +35,7 @@ Before you begin this demo, you must complete the following steps:
   - finally select the **Overview** and then the **Get publish profile** tab to download the **profile** of the **Web App** to your computer.
   > **Note:** You will need this **profile** later in order to **publish** the project to the **Web App**.  
 
-### Demonstration: Setting Microsoft Azure Redis Cache
+### Demonstration: Using Microsoft Azure Redis Cache
 
 #### Preparation Steps
 
