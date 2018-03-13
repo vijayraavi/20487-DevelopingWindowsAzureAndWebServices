@@ -4,7 +4,7 @@
     "parameters": {
         "namespaceLocation": {
             "type": "string",
-            "defaultValue": "West Europe"
+            "defaultValue": "eastus"
         },
         "namespaceName": {
             "type": "string"
