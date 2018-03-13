@@ -64,7 +64,7 @@ Before you begin this demo, you must complete the following steps:
  3. Go to **????\ScalableAzureApp**.
  4. Select the file **ScalableAzureApp.sln**, and then click **Open**.
  5. In Visual Studio 2017, In the **Solution Explorer** pane, expand the **ScalableAzureApp** project, and open the **Web.config**.
- 6. In the **Web.config**, search for the **key="ReidsConnectionString"** and replave its value with the connection string you saved while configuring the **Redis Cache**.
+ 6. In the **Web.config**, search for the **key="RedisConnectionString"** and replace its value with the connection string you saved while configuring the **Redis Cache**.
    - this should look something like: 
       <appSettings>
         <add key="ReidsConnectionString" value="*pace the connection string here*" />
