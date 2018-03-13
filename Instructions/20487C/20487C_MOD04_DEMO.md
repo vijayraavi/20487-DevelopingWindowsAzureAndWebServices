@@ -250,59 +250,6 @@
 40. Click **Clear**.
 41. To close the developer tools window, press F12.
 
-# Lesson 2: Creating OData Services
-
-### Demonstration: Creating and Consuming an OData Services
-
-
-#### Demonstration Steps
-
-1. On the Start screen, click the **Visual Studio 2017** tile.
-2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\ODataService\begin\ConsumingODataService**.
-4. Select the **ConsumingODataService.sln** file, and then click **Open**.
-5. In **Solution Explorer**, under the **ConsumingODataService.Host** project, expand the **Controllers** folder node, and then double-click the **CoursesController.cs** file.
-6. Review the **Get** action, which returns **IQueryable&lt;Course&gt;** and is also decorated with the **[Queryable]** attribute.
-   This is done to enable OData queries.  
-   The **CoursesController** class derives from the **ODataController** base class, which handles the formatting.   
-7. In **Solution Explorer**, under the **ConsumingODataService.Host** project, double-click the **Global.asax** file.
-8. Review the content of the **SetupOData** method.  
-   The **ODataConventionModelBuilder** class is used to create an entity data model, which will be used to create the OData metadata. The **MapODataRoute** method is used to create a new route that exposes the OData metadata and the various controllers in the model.
-9. In **Solution Explorer**, right-click the **ConsumingODataService.Host** project, and then click **Set as StartUp Project**.
-10. To start the project without debugging, press Ctrl+F5 .
-11. Return to Visual Studio 2017.
-12. In **Solution Explorer**, under the **ODataService.Client** project, right-click the **references** node and then select **Add Service Reference**.
-13. In the **Address** text box, type **http://localhost:57371/OData**, and then click **Go**.
-
-    >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
-
-14. In the **Namespace** text box, type **OData**, and then click **OK**.
-15. In **Solution Explorer**, under the **ODataService.Client** project, double-click the **Program.cs** file.
-16. Use the following code to in the **Main** method, to create a new instance of the **OData.Container** class.
-
-	```cs
-        var container = new OData.Container(new Uri("http://localhost:57371/OData"));
-	```
-    >**Note** : OData URLs are case-sensitive. Use the casing as shown in the instruction.
-
-17. Use the following code to create a LINQ query to select the WCF course from the container&#39;s **Courses** property.
-
-	```cs
-        var course = (from c in container.Courses
-               where c.Name == "WCF"
-               select c).FirstOrDefault();
-	```
-18. Use the following code to print the name and ID of the course.
-
-	```cs
-        Console.WriteLine("the course {0} has the Id: {1}", course.Name, course.Id);
-        Console.ReadKey();
-	```
-19. To save the changes, press Ctrl+S .
-20. In **Solution Explorer**, right-click the **ODataService.Client** project, point to **Debug**, and then click **Start New Instance** to run the client application.
-21. Notice how the query returns data about the WCF course.  
-
-    The application transforms the LINQ query to an OData service call to the server. The server then uses OData querying in CoursesController to query the database.
 
 # Lesson 3: Implementing Security in ASP.NET Web API Services
 

@@ -76,61 +76,6 @@ The main tasks for this exercise are as follows:
 
 >**Results**: You will be able to inject data repositories to the controllers instead of creating them explicitly inside the controllers. This will decouple the controllers from the implementation of the repositories.
 
-### Exercise 2: Adding OData Capabilities to the Flight Schedule Service
-
-#### Scenario
-
-OData is a data access protocol that provides standard CRUD access of a data source via a website.
-
-To add support for the OData protocol, you will install the NuGet package **Microsoft.AspNet.WebApi.OData** , and then decorate the methods that should support OData with the **[Queryable]** attribute.
-
-The main tasks for this exercise are as follows:
-
-1. Add a Queryable action to the flight schedule service
-
-2. Handle the search event in the client application and query the flight schedule service by using OData filters
-
-#### Task 1: Add a Queryable action to the flight schedule service
-
-1. Use the Package Manager Console window to install the **5.2.3** version of the **Microsoft.AspNet.WebApi.OData** NuGet package in the **BlueYonder.Companion.Controllers** project.
-2. In the **BlueYonder.Companion.Controllers** project, open the **LocationsController** class, and decorate the **Get** method overload, which has three parameters, with the **[EnableQuery]** attribute.
-3. Change the method implementation to use the repository&#39;s **GetAll** method and return **IQueryable** instead of  **IEnumerable**.
-4. Remove the parameters from the method declaration. You will not need them anymore because the OData infrastructure will take care of the query filtering.
-5. In the **BlueYonder.Companion.Host** project, expand the **App_Data** folder and open the **WebApiConfig.cs** file.
-6. In the **Register** method, add the following code:
-```cs
-        ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
-        builder.EntitySet<LocationDTO>("Locations");
-        builder.EntityType<LocationDTO >().Filter("City");
-        config.MapODataServiceRoute(
-                routeName: "ODataRoute",
-                routePrefix: "odata",
-                model: builder.GetEdmModel());
-        config.EnsureInitialized();
-```
-
-#### Task 2: Handle the search event in the client application and query the flight schedule service by using OData filters
-
-With the OData endpoint up and running, you will now need to consume it on the client. The **BlueYonder.Companion.Client** project has a connected service named **LocationService**.
-**LocationService** is an OData connected service that allows you to interact with the OData endpoint using regular C# code.
-You will need to change the current implementation of the client to fetch locations using the OData service instead of using a regular HTTP request.
-
-1. Open the BlueYonder.Companion.Client solution from the **[Repository root]\AllFiles\20487C\Mod04\LabFiles\begin\BlueYonder.Companion.Client** folder.
-2. Open the **Helpers\DataManager.cs** file from the **BlueYonder.Companion.Client** project.
-3. Add the following code to the **using** section:
-	```cs
-		using BlueYonder.Compaion.Entities;
-	```
-3. Locate **GetLocationsAsync** at line 86.
-4. Replace the current implementation with the following code:
-	```cs
-	Container container = new Container(new Uri(Addresses.BaseODataUri));
-    return await container.Locations.AddQueryOption("$filter", $"contains(tolower(City),tolower('{query}'))").ExecuteAsync();
-	```
-
-
->**Results**: Your web application exposes the OData protocol that supports the **Get** request of the locations data.
-
 ### Exercise 3: Applying Validation Rules in the Booking Service
 
 #### Scenario

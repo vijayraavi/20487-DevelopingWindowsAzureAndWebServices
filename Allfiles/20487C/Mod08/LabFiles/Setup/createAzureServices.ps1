@@ -94,9 +94,9 @@ $appServicePlan = New-AzureRmAppServicePlan -Location $resourceGroupLocation -Re
 New-AzureRmWebApp -ResourceGroupName $resourceGroupName -Location $resourceGroupLocation -Name $webappName -AppServicePlan $appServicePlan.Name
 
 # post-creation
-$hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule DefaultFullSharedAccessSignature -ResourceGroup $resourceGroupName -Namespace blueyonder08-nhz -NotificationHub blueyonder08Hub
+$hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule DefaultFullSharedAccessSignature -ResourceGroup $resourceGroupName -Namespace $hubNamespaceName -NotificationHub $hubName
 $dbConnectionString = "Server=tcp:$serverName.database.windows.net,1433;Initial Catalog=$databaseName;Persist Security Info=False;User ID=BlueYonderAdmin;Password=$password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
-$hubConnectionString = "${hubKeys.PrimaryConnectionString}";
+$hubConnectionString = $hubKeys.PrimaryConnectionString;
 $relayKeyInfo = Get-AzureRmRelayKey -Namespace $serviceBusRelayNamespace -ResourceGroupName $resourceGroupName -Name RootManageSharedAccessKey
 
 

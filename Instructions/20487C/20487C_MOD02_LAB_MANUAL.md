@@ -40,7 +40,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Explore the existing Entity framework data model project
 
-1. Open the **BlueYonder.Companion** solution file from the **D:\AllFiles\Mod02\LabFiles\begin\BlueYonder.Companion** folder.
+1. Open the **BlueYonder.Companion** solution file from the **[repositoryroot]\Allfiles\20487C\Mod02\LabFiles\begin\BlueYonder.Companion** folder.
 
 2. In the **BlueYonder.Entities** project, locate the **FlightSchedule** class.
 
@@ -86,7 +86,6 @@ The main tasks for this exercise are as follows:
 1. Open the **ReservationRepository** class under the **Repositories** folder, in the **BlueYonder.DataAccess** project, and implement the **GetSingle** method. The method retrieves a **Reservation** entity by its primary key.
 
    - Create a LINQ query to retrieve the reservation from the **TravelCompanionContext**. **Reservations** DbSet.
-   - If the entity is not found, return **null**.
 
    >**Note:** The **ReservationRepository** class already contains a **TravelCompanionContext** instance by the name **context.**
 
