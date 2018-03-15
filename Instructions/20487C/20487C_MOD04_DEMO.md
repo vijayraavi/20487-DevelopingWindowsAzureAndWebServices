@@ -251,7 +251,7 @@
 41. To close the developer tools window, press F12.
 
 
-# Lesson 3: Implementing Security in ASP.NET Web API Services
+# Lesson 2: Implementing Security in ASP.NET Web API Services
 
 ### Demonstration: Creating Secured ASP.NET Web API Services
 
@@ -296,7 +296,7 @@
 19. Click **OK**. Verify that you can see an XML reply with the response of the action.
 20. Close the browser.
 
-# Lesson 4: Injecting Dependencies into Controllers
+# Lesson 3: Injecting Dependencies into Controllers
 
 ### Demonstration: Creating a Dependency Resolver
 
