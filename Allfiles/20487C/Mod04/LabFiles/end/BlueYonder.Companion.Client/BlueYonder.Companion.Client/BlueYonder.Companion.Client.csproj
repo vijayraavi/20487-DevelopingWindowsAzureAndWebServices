@@ -11,7 +11,7 @@
     <AssemblyName>BlueYonder.Companion.Client</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -89,7 +89,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="Connected Services\LocationService\ConnectedService.json" />
     <None Include="project.json" />
     <PRIResource Include="strings\es\Resources.resw" />
     <PRIResource Include="strings\en\Resources.resw" />
@@ -119,7 +118,6 @@
     <Compile Include="Common\SettingsFlyout.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Common\ViewModel.cs" />
-    <Compile Include="Connected Services\LocationService\LocationService.cs" />
     <Compile Include="Controls\ReservationDetailsControl.cs" />
     <Compile Include="DataModel\File.cs" />
     <Compile Include="DataModel\Flight.cs" />
@@ -135,6 +133,7 @@
     <Compile Include="DataModel\WeatherForecast.cs" />
     <Compile Include="DataTransferObjects\DTOExtensions.cs" />
     <Compile Include="DataTransferObjects\FileDTO.cs" />
+    <Compile Include="DataTransferObjects\LocationDTO.cs" />
     <Compile Include="DataTransferObjects\RegisterNotificationsRequestDTO.cs" />
     <Compile Include="DataTransferObjects\TravelerDTO.cs" />
     <Compile Include="Helpers\BackgroundTaskHelper.cs" />

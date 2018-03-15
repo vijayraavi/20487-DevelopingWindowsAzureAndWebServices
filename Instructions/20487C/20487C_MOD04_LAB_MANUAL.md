@@ -13,7 +13,6 @@ After completing this lab, you will be able to:
 - Secure the service&#39;s communication with HTTPS.
 - Use System.ComponentModel.DataAnnotations and an ActionFilter to validate a model.
 - Create a MediaTypeFormatter to support returning image content.
-- Create an OData queryable service action.
 - Use the dependency resolver to inject repository types.
 
 ### Exercise 1: Creating a Dependency Resolver for Repositories
@@ -76,7 +75,7 @@ The main tasks for this exercise are as follows:
 
 >**Results**: You will be able to inject data repositories to the controllers instead of creating them explicitly inside the controllers. This will decouple the controllers from the implementation of the repositories.
 
-### Exercise 3: Applying Validation Rules in the Booking Service
+### Exercise 2: Applying Validation Rules in the Booking Service
 
 #### Scenario
 

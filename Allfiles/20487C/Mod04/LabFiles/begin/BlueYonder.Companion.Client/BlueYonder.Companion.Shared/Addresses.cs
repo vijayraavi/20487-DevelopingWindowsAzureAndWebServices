@@ -4,7 +4,7 @@
     {
         public static string BaseUri
         {
-            get { return "http://SEA-DEV12-A/BlueYonder.Companion.Host/"; }
+            get { return "http://localhost:10534/api/"; }
         }
 
         public static string GetLocationsUri
@@ -12,14 +12,14 @@
             get { return BaseUri + "Locations"; }
         }
 
-        public static string GetLocationsWithQueryUri
-        {
-            get { return GetLocationsUri + "?city={0}"; }
-        }
-
         public static string GetFlightsUri
         {
             get { return BaseUri + "Flights?source={0}&destination={1}&date={2}"; }
+        }
+
+        public static string GetLocationWithQueryUri
+        {
+            get { return GetLocationsUri + "?source={0}"; }
         }
 
         public static string GetFlightByIdUri

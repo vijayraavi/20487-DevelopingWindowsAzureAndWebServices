@@ -10,11 +10,10 @@ using BlueYonder.Companion.Entities.Mappers;
 using BlueYonder.Companion.Entities;
 using BlueYonder.DataAccess.Repositories;
 using System.Web.Http;
-using System.Web.OData;
 
 namespace BlueYonder.Companion.Controllers
 {
-    public class LocationsController : ODataController
+    public class LocationsController : ApiController
     {
         public ILocationRepository Locations { get; set; }
 
@@ -22,11 +21,15 @@ namespace BlueYonder.Companion.Controllers
         {
             Locations = locations;
         }
-        
-        [EnableQuery]
-        public IQueryable<LocationDTO> Get()
+
+        public IEnumerable<LocationDTO> Get()
         {
-            return Locations.GetAll().ToList().Select(x => x.ToLocationDTO()).AsQueryable();
+            return Locations.GetAll().ToList().Select(x => x.ToLocationDTO()).ToList();
+        }
+
+        public IEnumerable<LocationDTO> Get(string source)
+        {
+            return Locations.GetAll().Where(x => x.City == source).ToList().Select(x => x.ToLocationDTO()).ToList();
         }
 
         public LocationDTO Get(int id)

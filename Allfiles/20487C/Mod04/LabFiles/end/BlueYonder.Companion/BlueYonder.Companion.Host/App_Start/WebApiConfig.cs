@@ -6,8 +6,6 @@ using System.Web.Http;
 using System.Web.Http.Routing;
 using BlueYonder.Companion.Controllers;
 using BlueYonder.Companion.Controllers.Formatters;
-using System.Web.OData.Builder;
-using System.Web.OData.Extensions;
 using BlueYonder.Entities;
 using BlueYonder.Companion.Entities;
 
@@ -37,13 +35,6 @@ namespace BlueYonder.Companion.Host
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            ODataConventionModelBuilder builder = new ODataConventionModelBuilder();
-            builder.EntitySet<LocationDTO>("Locations");
-            builder.EntityType<LocationDTO >().Filter("City");
-            config.MapODataServiceRoute(
-                routeName: "ODataRoute",
-                routePrefix: "odata",
-                model: builder.GetEdmModel());
             config.EnsureInitialized();
         }
     }

@@ -1,8 +1,6 @@
 ﻿{
   "dependencies": {
-    "Microsoft.Data.OData": "5.8.3",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.1",
-    "Microsoft.OData.Client": "6.18.0"
   },
   "frameworks": {
     "uap10.0.10586": {}

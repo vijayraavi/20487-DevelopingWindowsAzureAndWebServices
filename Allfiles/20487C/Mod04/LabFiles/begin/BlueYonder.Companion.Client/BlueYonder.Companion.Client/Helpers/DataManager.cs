@@ -80,21 +80,16 @@ namespace BlueYonder.Companion.Client.Helpers
         /// Get the list of locations from the server
         /// </summary>
         /// <returns></returns>
-        public async Task<IEnumerable<Location>> GetLocationsAsync(string query)
+        public async Task<IEnumerable<LocationDTO>> GetLocationsAsync(string query)
         {
-            string uri;
-            if (query == null)
+            var uri = new Uri(string.Format(Addresses.GetLocationWithQueryUri, query));
+            var response = await GetAsync(uri);
+            List<LocationDTO> locations = null;
+            if (response.Success)
             {
-                uri = Addresses.GetLocationsUri;
+                locations = JsonSerializerHelper.Deserialize<List<LocationDTO>>(response.Content);
             }
-            else
-            {
-                uri = string.Format(Addresses.GetLocationsWithQueryUri, query);
-            }
-            var response = await GetAsync(new Uri(uri));
-            var locationDTOs = JsonSerializerHelper.Deserialize<IEnumerable<LocationDTO>>(response.Content);
-            return locationDTOs.Select(dto => dto.ToObject()).ToArray();
-            // TODO: Module 04, exercise 2, task 2 - replace the implementation of the method to use OData
+            return locations;
         }
 
         /// <summary>

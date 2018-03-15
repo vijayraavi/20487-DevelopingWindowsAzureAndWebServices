@@ -7,24 +7,19 @@
             get { return "http://localhost:10534/api/"; }
         }
 
-        public static string BaseODataUri
-        {
-            get { return "http://localhost:10534/odata/"; }
-        }
-
         public static string GetLocationsUri
         {
-            get { return BaseODataUri + "Locations"; }
-        }
-
-        public static string GetLocationsWithQueryUri
-        {
-            get { return GetLocationsUri + "?contains(tolower(City),tolower('{0}'))"; }
+            get { return BaseUri + "Locations"; }
         }
 
         public static string GetFlightsUri
         {
             get { return BaseUri + "Flights?source={0}&destination={1}&date={2}"; }
+        }
+
+        public static string GetLocationWithQueryUri
+        {
+            get { return GetLocationsUri + "?source={0}"; }
         }
 
         public static string GetFlightByIdUri
