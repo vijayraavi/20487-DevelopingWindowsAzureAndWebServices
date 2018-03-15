@@ -11,9 +11,8 @@ using System.Net.Http;
 using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.OData;
 using File = BlueYonder.Companion.Client.DataModel.File;
-using Default;
+using System.Diagnostics;
 
 namespace BlueYonder.Companion.Client.Helpers
 {
@@ -84,9 +83,14 @@ namespace BlueYonder.Companion.Client.Helpers
         /// <returns></returns>
         public async Task<IEnumerable<LocationDTO>> GetLocationsAsync(string query)
         {
-            // TODO: Module 04, exercise 2, task 2 - replace the implementation of the method to use OData
-            Container container = new Container(new Uri(Addresses.BaseODataUri));
-            return await container.Locations.AddQueryOption("$filter", $"contains(tolower(City),tolower('{query}'))").ExecuteAsync();
+            var uri = new Uri(string.Format(Addresses.GetLocationWithQueryUri, query));
+            var response = await GetAsync(uri);
+            List<LocationDTO> locations = null;
+            if (response.Success)
+            {
+                locations = JsonSerializerHelper.Deserialize<List<LocationDTO>>(response.Content);
+            }
+            return locations;
         }
 
         /// <summary>

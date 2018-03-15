@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlueYonder.Companion.Entities
+namespace BlueYonder.Companion.Client.DataTransferObjects
 {
     public class LocationDTO
     {
-        [Key]
         public int LocationId { get; set; }
 
         public string Country { get; set; }

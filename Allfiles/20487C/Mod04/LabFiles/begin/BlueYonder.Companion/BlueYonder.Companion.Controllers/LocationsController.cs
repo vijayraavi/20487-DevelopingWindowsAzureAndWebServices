@@ -22,28 +22,28 @@ namespace BlueYonder.Companion.Controllers
         {
             Locations = new LocationRepository();
         }
- 
 
-        public IEnumerable<Location> Get(string country = null,
-                         string state = null,
-                         string city = null)
+        public IEnumerable<LocationDTO> Get()
         {
-            var locations = Locations.GetAll();
+            return Locations.GetAll().ToList().Select(x => x.ToLocationDTO()).ToList();
+        }
 
-            var result = from l in locations
-                         where (country == null || l.Country.ToLower().Contains(country.ToLower())) &&
-                               (state == null || l.State.ToLower().Contains(state.ToLower())) &&
-                               (city == null || l.City.ToLower().Contains(city.ToLower()))
-                         select l;
-
-            return result.ToList();
-        }      
+        public IEnumerable<LocationDTO> Get(string source)
+        {
+            return Locations.GetAll().Where(x => x.City == source).ToList().Select(x => x.ToLocationDTO()).ToList();
+        }
 
         public LocationDTO Get(int id)
         {
             var location = Locations.GetSingle(id);
 
             return location.ToLocationDTO();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            Locations.Dispose();
+            base.Dispose(disposing);
         }
     }
 }
