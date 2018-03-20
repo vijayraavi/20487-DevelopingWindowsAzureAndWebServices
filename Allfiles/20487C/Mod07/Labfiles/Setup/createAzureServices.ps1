@@ -71,6 +71,7 @@ $initials = Read-Host "Initials";
 $serverName = "blueyonder07-$initials";
 $databaseName = "BlueYonder.Companion.Lab07";
 $hubNamespaceName = "blueyonder07-$initials";
+$serviceBusRelayNamespace = "blueyonder-relay-$initials";
 $hubName = "blueyonder07Hub";
 $password = 'Pa$$w0rd';
  
@@ -80,10 +81,24 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Templa
 Write-Host "Starting deployment of Azure Notification Hub...";
 New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -TemplateFile "./notificationHub.json" -namespaceName $hubNamespaceName -notificationHubName $hubName;
 $hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule  "DefaultFullSharedAccessSignature" -Namespace $hubNamespaceName -NotificationHub $hubName -ResourceGroup $resourceGroupName
- 
+
 Write-Host $hubKeys;
+$dbConnectionString = "Server=tcp:$serverName.database.windows.net,1433;Initial Catalog=$databaseName;Persist Security Info=False;User ID=BlueYonderAdmin;Password=$password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
+
+
+Write-Host "Generating BlueYonder.Companion web.config...";
+Write-Host "Existing web.config backed up at web.config.backup";
+Get-Content -Path "../begin/BlueYonder.Server/BlueYonder.Companion.Host/web.config" | Set-Content -Path "../begin/BlueYonder.Server/BlueYonder.Companion.Host/web.config.backup"
+$companionConfig = Get-Content "CompanionWeb.config";
+$companionConfig = $companionConfig.replace("{azureDBConnection}", $dbConnectionString);
+$companionConfig = $companionConfig.replace("{relayNamespace}", $serviceBusRelayNamespace);
+Set-Content -Path "../begin/BlueYonder.Server/BlueYonder.Companion.Host/web.config" -Value $companionConfig
+Write-Host "Generating BlueYonder.Server web.config...";
+Write-Host "Existing web.config backed up at web.config.backup";
+Get-Content -Path "../begin/BlueYonder.Server/BlueYonder.Server.Booking.WebHost/web.config" | Set-Content -Path "../begin/BlueYonder.Server/BlueYonder.Server.Booking.WebHost/web.config.backup"
  
 Write-Host "Connection string for database '$databaseName :";
-Write-Host "Server=tcp:$serverName.database.windows.net,1433;Initial Catalog=$databaseName;Persist Security Info=False;User ID=BlueYonderAdmin;Password=$password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
+Write-Host $dbConnectionString
 Write-Host "Connection string for notificiation hub '$hubName' :";
 Write-Host $hubKeys.PrimaryConnectionString;
+
