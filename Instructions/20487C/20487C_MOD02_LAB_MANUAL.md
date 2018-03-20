@@ -57,7 +57,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Prepare the data model classes for Entity Framework
 
-1. Open the **Trip** class from the **BlueYonder.Entities** project, set the **FlightInfo** property as **virtual** , and decorate it with the **[ForeignKey]** attribute.
+1. Open the **Trip** class from the **BlueYonder.Entities** project, add a **System.ComponentModel.DataAnnotations.Schema** as a **using** statement, set the **FlightInfo** property as **virtual** , and decorate it with the **[ForeignKey]** attribute.
 
    - Declare the **FlightScheduleID** property to be **virtual**.
    - Add a **[ForeignKey]** attribute to the **FlightInfo** property.
