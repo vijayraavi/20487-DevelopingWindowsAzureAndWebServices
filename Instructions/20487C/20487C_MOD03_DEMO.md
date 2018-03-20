@@ -20,7 +20,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 8. Locate the **MapHttpRoute** method call and notice the different parameters that are used in the method call.
 9. In **Solution Explorer**, under the **MyApp** project, expand the **Controllers** folder, and then double-click **ValuesController.cs**.
 10. Locate the parameterless **Get** action method, and notice how this method can be invoked by using HTTP (for example, using the _/api/values_ relative URI).
-11. To start the application without debugging, press Ctrl+F5. The default browser will start (For example, Microsoft Edge).
+11. To start the application without debugging, press **Ctrl+F5**. The default browser will start (For example, Microsoft Edge).
 12. In the address bar of the browser, append **api/values** to the end of the address, and then press Enter.  
 
     Depending on the browser, you will see an array with two values, the formatting may change depending on the browser:
@@ -39,7 +39,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 	```
 
 15. To save the changes, press Ctrl+S.
-16. In **Solution Explorer**, under **App_Start folder**, double-click **WebApiConfig.cs**.
+16. In **Solution Explorer**, under **App_Start** folder, double-click **WebApiConfig.cs**.
 17. Add the following code to the beginning of the **Register** method.  
 
 
@@ -100,9 +100,9 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
     ```
 
 9. To save the changes, press Ctrl+S.
-10. To start the application without debugging, press Ctrl+F5. Microsoft Explorer 10 will start.
+10. To start the application without debugging, press **Ctrl+F5**. The default browser will start (For example, Microsoft Edge).
 11. In the address bar of the browser, append **api/destinations/1** to the end of the address, and then press Enter.
-12. When prompted by the browser, click **Open**, and open the file in Notepad. Verify that you see information for Seattle.
+12. When prompted by the browser, click **Open**, the JSON file should be displayed in the browser. Verify that you see information for Seattle.
 13. Append **api/destinations/6** to the end of the address, and then press Enter. Verify that you get an HTTP 404 response.
 
 # Lesson 4: Hosting and Consuming ASP.NET Web API Services
@@ -157,7 +157,7 @@ the following path: **[repository root]\AllFiles\20487C\Mod03** should be change
 2. On the **File** menu, point to **Open**, and then click **Project/Solution.**
 3. In the **File Name** text box, type **[repository root]\Allfiles\20487C\Mod03\Democode\ConsumingFromHttpClient\Begin\HttpClientApplication\HttpClientApplication.sln**, and then click  **Open**.
 4. In **Solution Explorer**, under the **HttpClientApplication.Client** project, right-click **References**, and then click **Manage NuGet Packages**.
-5. Inside the **NuGet Package Manager: HttpClientApplication.Client window** window, click the **Browse** tab, and in the search box on the upper-left side, type **Microsoft.AspNet.WebApi.Client**.
+5. Inside the **NuGet Package Manager: HttpClientApplication.Client** window, click the **Browse** tab, and in the search box on the upper-left side, type **Microsoft.AspNet.WebApi.Client**.
 6. In the search results list, locate **Microsoft.AspNet.WebApi.Client**, and then click **Install**.
 7. In the **Preview Changes** window, click **OK**.
 8. If a **License Acceptance** dialog box appears, click **I Accept**.
