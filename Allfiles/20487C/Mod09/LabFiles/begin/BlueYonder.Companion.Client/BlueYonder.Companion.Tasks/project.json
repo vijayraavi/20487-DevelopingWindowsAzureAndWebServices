@@ -1,8 +1,8 @@
 ﻿{
   "dependencies": {
-    "Microsoft.NETCore.UniversalWindowsPlatform": "5.4.0",
-    "Microsoft.Toolkit.Uwp.Notifications": "2.0.0",
-    "Newtonsoft.Json": "10.0.3"
+    "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+    "Microsoft.Toolkit.Uwp.Notifications": "2.2.0",
+    "Newtonsoft.Json": "11.0.1"
   },
   "frameworks": {
     "uap10.0.10586": {}

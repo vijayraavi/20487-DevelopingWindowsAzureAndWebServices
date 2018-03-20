@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.WindowsAzure.Storage.Table;
 
 namespace BlueYonder.Companion.Storage.TableEntities
 {
-    public class FileEntity
+    public class FileEntity : TableEntity
     {
         public Uri Uri { get; set; }
 

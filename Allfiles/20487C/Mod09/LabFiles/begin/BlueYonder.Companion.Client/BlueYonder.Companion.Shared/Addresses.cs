@@ -4,7 +4,7 @@
     {
         public static string BaseUri
         {
-            get { return "{BlueYonderCompanionURI}"; }
+            get { return "http://blueyondercompanion09slv.azurewebsites.net/"; }
         }
 
         public static string GetLocationsUri

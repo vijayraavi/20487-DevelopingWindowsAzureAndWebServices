@@ -67,6 +67,8 @@ namespace BlueYonder.Companion.Controllers
             };
 
             // TODO: Lab 9, Exercise 2, Task 1.4: Set the entity's partition key and row key
+            entity.RowKey = HttpUtility.UrlEncode(fileData.Uri.ToString());
+            entity.PartitionKey = locationId.ToString();
             return entity;
 
         }
@@ -78,8 +80,10 @@ namespace BlueYonder.Companion.Controllers
             var storageManager = new AsyncStorageManager();
             var publicUris = storageManager.GetFileUris(GetContainer(id, false));
             // TODO: Lab 9, Exercise 3, Task 1.4: get a list of files in the trip's private folder 
+            var privateUris = storageManager.GetFileUris(GetContainer(id, true));
+            var allUris = publicUris.Union(privateUris);
 
-            var allKeys = publicUris.Select(u => HttpUtility.UrlEncode(u.ToString()));
+            var allKeys = allUris.Select(u => HttpUtility.UrlEncode(u.ToString()));
             var result = from f in storageManager.GetFilesMetadata(allKeys)
                          select ToFileDto(storageManager, f);
 
@@ -108,7 +112,7 @@ namespace BlueYonder.Companion.Controllers
                 Description = file.Description,
                 FileName = file.FileName,
 
-                //LocationId = int.Parse(file.PartitionKey),
+                LocationId = int.Parse(file.PartitionKey),
 
                 TripId = file.TripId,
                 Type = (FileType)file.Type,
