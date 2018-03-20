@@ -23,7 +23,7 @@ Controllers use repositories as data providers. In the current implementation, t
 
 In the following exercise, you will decouple the controller and repository by using the dependency injection technique to inject the repository interface as a parameter in the controller constructor.
 
-You will start by creating a dependency resolver class that is responsible for creating the repositories. You will then register the dependency resolver class in the **HttpConfiguration** to automatically create a repository when a controller is used. Finally, you will use Microsoft Fakes and create a stub for a repository, and then use it in a unit test project to test the location controller.
+You will start by creating a dependency resolver class that is responsible for creating the repositories. You will then register the dependency resolver class in the **HttpConfiguration** to automatically create a repository when a controller is used.
 
 The main tasks for this exercise are as follows:
 
@@ -51,29 +51,6 @@ The main tasks for this exercise are as follows:
   - If the **serviceType** parameter is of the type **LocationsController** , create an instance of the **LocationsController** class with the required repository.
 
   >**Note:** The BlueYonderResolver class implements the IDependencyResolver interface.
-
-#### Task 3: Register the dependency resolver class with HttpConfiguration
-
-1. Open the **WebApiConfig.cs** file, located under the **App\_Start** folder in the **BlueYonder.Companion.Host** project, and set  **BlueYonderResolver** as the new dependency resolver.
-
-   - Use the **DependencyResolver** property of the **config** object to set the dependency resolver.
-
-2. Test the application and the **DependencyResolver** injection:
-
-   a. Open the **LocationsController** class from the **BlueYonder.Companion.Controllers** project, and place a breakpoint in the constructor.  
-   b. Run the **BlueYonder.Companion.Host** project in debug mode.  
-   c. Navigate to the address http://localhost:9239/Locations.  
-   d. Return to Visual Studio 2012 and verify that the code breaks on the breakpoint and that the constructor parameter is initialized (not null).
-
-3. Open the **LocationControllerTest** test class from the **BlueYonder.Companion.Controllers.Tests** project, and examine the code in the **Initialize** method. The test initialization process uses the **StubILocationRepository** type,which was auto-generated with the **Fakes** framework. This stub repository mimics the real location repository. You use the fake repository to test the code, instead of using the real repository, which requires using a database for the test. When running unit tests, you should use fake objects to replace external components, in order to reduce the complexity of creating and executing the test.
-
-  >**Note:** For additional information about Fakes, see: [http://go.microsoft.com/fwlink/?LinkID=298770&amp;clcid=0x409](http://go.microsoft.com/fwlink/?LinkID=298770&amp;clcid=0x409)
-
-4. Test the application by using the **Fakes** mock framework and running the test project.
-
-   - On the **Test** menu, point to **Run** , and the click **All Tests**.
-
->**Results**: You will be able to inject data repositories to the controllers instead of creating them explicitly inside the controllers. This will decouple the controllers from the implementation of the repositories.
 
 ### Exercise 2: Applying Validation Rules in the Booking Service
 
