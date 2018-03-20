@@ -67,7 +67,7 @@ The main tasks for this exercise are as follows:
 
    >When you load trip entities from the database, the entity object will be of the derived trip proxy type, and not of the **Trip**  type.
 
-2. Open the **Reservation** class from the **BlueYonder.Entities** project, and make the following changes:
+2. Open the **Reservation** class from the **BlueYonder.Entities** project, add a **System.ComponentModel.DataAnnotations.Schema** as a **using** statement and make the following changes:
 
    - Declare the **DepartureFlight** property to be **virtual** , and add a **[ForeignKey]** attribute to it.The attribute should use the **DepartFlightScheduleID** property for the foreign key.
    - Declare the **ReturnFlight** property to be **virtual** , and add a **[ForeignKey]** attribute to it.The attribute should use the **ReturnFlightScheduleID** property for the foreign key.
