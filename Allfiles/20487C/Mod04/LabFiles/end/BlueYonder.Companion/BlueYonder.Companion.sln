@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Entities", "BlueYonder.Companion.Entities\BlueYonder.Companion.Entities.csproj", "{0002DFA4-DAAA-4B78-A720-BC709CBD0B2F}"
 EndProject
@@ -16,8 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Host", "BlueYonder.Companion.Host\BlueYonder.Companion.Host.csproj", "{A848FFE1-D425-4D92-9077-3A9E548DBA64}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Entities.Mappers", "BlueYonder.Companion.Entities.Mappers\BlueYonder.Companion.Entities.Mappers.csproj", "{F583E8B5-47FE-4495-931D-F73F78C1207D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{56F2BD11-62A9-446C-8CA4-FFB8D634CCED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
