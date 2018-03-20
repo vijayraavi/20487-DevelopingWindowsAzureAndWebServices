@@ -6,12 +6,12 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\RequestResponseFlow\begin\RequestResponseFlow**.
+3. Browse to **[repository root]\AllFiles\20487C\Mod04\DemoFiles\RequestResponseFlow\begin\RequestResponseFlow**.
 4. Select the **RequestResponseFlow.sln** file, and then click **Open**.
 5. In **Solution Explorer**, under the **RequestResponseFlow.Web** project, right-click the **Extensions** folder, point to **Add**, and then click **New Item**.
-6. In the **Add New Item** dialog box, in the pane on the left side, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
+6. In the **Add New Item - RequestResponseFlow.web** dialog box, in the pane on the left side, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
 7. In the **Name** box, type **TraceHandler.cs**, and then click **Add**.
 8. In **Solution Explorer**, under the **RequestResponseFlow.Web** project, expand the **Extensions** folder, and then double-click  **TraceHandler.cs**.
 9. Add the following by using directives at the top of the **TraceHandler.cs** file.
@@ -64,7 +64,7 @@
     ASP.NET Web API will add the new trace handler to the host handlers stack, affecting every service call.
 18. To save the file, press CTRL+S.
 19. In **Solution Explorer**, under the **RequestResponseFlow.Web** project, right-click the **Extensions** folder, point to **Add**, and then click **New Item**.
-20. In the pane on the left side of the **Add New Item** dialog box, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
+20. In the pane on the left side of the **Add New Item - RequestResponseFlow.web** dialog box, expand the **Installed** node, expand the **Visual C#** node, click the **Code** node, and then click **Class** in the list of items.
 21. In the **Name** box, type **TraceFilterAttribute.cs**, and then click **Add**.
 22. In **Solution Explorer**, under the **RequestResponseFlow.Web** project, expand the **Extensions** folder, and then double-click the  **TraceFilterAttribute.cs** file.
 23. Add the following by using the directives at the top of the **TraceFilterAttribute.cs** file.
@@ -74,7 +74,6 @@
         using System.Net.Http;
         using System.Threading;
         using System.Threading.Tasks;
-        using System.Web;
         using System.Web.Http.Controllers;
         using System.Web.Http.Filters;
 	```
@@ -145,9 +144,9 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\AsynchronousActions\begin\AsynchronousActions**.
+3. Browse to **[repository root]\AllFiles\20487C\Mod04\DemoFiles\AsynchronousActions\begin\AsynchronousActions**.
 4. Select the **AsynchronousActions.sln** file and then click **Open**.
 5. In **Solution Explorer**, expand the **AsynchronousActions.Web** project, then expand **Controllers**, and then double-click **CountriesController.cs**.  
 
@@ -208,9 +207,9 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\ImagesWithMediaTypeFormatter**.
+3. Browse to **[repository root]\AllFiles\20487C\Allfiles\Mod04\DemoFiles\ImagesWithMediaTypeFormatter**.
 4. Select the **ImagesWithMediaTypeFormatter.sln** file, and then click **Open**.
 5. In **Solution Explorer**, expand the **ImagesWithMediaTypeFormatter.Host** project, then expand the **Controllers** folder, and then double-click **ValuesController.cs**.
 6. Review the contents of the **ValuesController** class. The controller handles **Value** objects.
@@ -224,31 +223,31 @@
 14. To start the web application without debugging, press Ctrl+F5.
 15. To open the developer tools window, in the browser, press F12.
 16. In the developer tools window, click the **Network** tab.
-17. On the **Network** tab, click **Start capturing**.
+17. On the **Network** tab, click **Start Profiling session**, if it is already running, please continue.
 18. On the web page, type **2** in the text box, and then click **Get default**.
-19. On the **Network** tab, click **Go to detailed view**.
-20. On the **Request headers** tab, notice that the **Accept** header is set to **&ast;/&ast;**.
-21. Click the **Response headers** tab and notice that the **Content-Type** is set to **application/json; charset=utf-8**. The default content type of ASP.NET Web API is JSON.
-22. Click **Clear**.
+19. On the **Network** tab, click the record with **"2"**.
+20. On the **Headers** tab under **Request Headers** node, notice that the **Accept** header is set to \*\\*.
+21. Scroll to **Response Headers** node and notice that the **Content-Type** is set to **application/json; charset=utf-8**. The default content type of ASP.NET Web API is JSON.
+22. Click **Clear session**.
 23. Click **Get JSON**.
-24. On the **Network** tab, click **Go to detailed view**.
-25. On the **Request headers** tab, notice that the **Accept** header contains the string **application/json**.
-26. Click the **Response headers** tab and notice that **Content-Type** is set to **application/json; charset=utf-8**.
-27. Click the **Response body** tab and review the JSON string. The **Thumbnail** property is not present because it was omitted from the serialization.
-28. Click **Clear**.
+24. On the **Network** tab, click the record with **"2"**.
+25. On the **Headers** tab under **Request Headers**, notice that the **Accept** header contains the string **application/json**.
+26. Scroll to **Response Headers** node and notice that **Content-Type** is set to **application/json; charset=utf-8**.
+27. Click the **Body** tab and review the JSON string. The **Thumbnail** property is not present because it was omitted from the serialization.
+28. Click **Clear session**.
 29. Click **Get XML**.
-30. On the **Network** tab, click **Go to detailed view**.
-31. On the **Request headers** tab, notice that the **Accept** header contains the string **application/xml**.
-32. Click the **Response headers** tab and notice that **Content-Type** is set to **application/xml; charset=utf-8**.
-33. Click the **Response body** tab and review the XML string.
-34. Click **Clear**.
+30. On the **Network** tab, click the record with **"2"**.
+31. On the **Headers** tab under the **Request Headers** node, notice that the **Accept** header contains the string **application/xml**.
+32. Scroll to **Response Headers** node and notice that **Content-Type** is set to **application/xml; charset=utf-8**.
+33. Click the **Body** tab and review the XML string.
+34. Click **Clear session**.
 35. Click **Get image**.
-36. On the **Network** tab, click **Go to detailed view**.
-37. On the **Request headers** tab, notice that the **Accept** header contains the string **image/png**.
-38. Click the **Response headers** tab and notice that **Content-Type** is set to **image/png**.
-39. Click the **Response body** tab and review the image with the number two.
-40. Click **Clear**.
-41. To close the developer tools window, press F12.
+36. On the **Network* tab, click the record with **"2"**.
+37. On the **Headers** tab under the **Request Headers** node, notice that the **Accept** header contains the string **image/png**.
+38. Scroll to **Response Headers** node and notice that **Content-Type** is set to **image/png**.
+39. Click the **Body** tab and review the image with the number two.
+40. Click **Clear session**.
+41. To close the developer tools window, press **F12**.
 
 
 # Lesson 2: Implementing Security in ASP.NET Web API Services
@@ -258,10 +257,11 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\WebAPISecurity**.
+3. Browse to **[repository root]\AllFiles\20487C\Mod04\DemoFiles\WebAPISecurity**.
 4. Select the **WebAPISecurity.sln** file, and then click **Open**.
+	a. If an **Install Missing Features** dialog appears, click **Install**
 5. In **Solution Explorer**, under the **WebAPISecurity** project, double-click **AuthenticationMessageHandler.cs**.
 6. Locate the **SendAsync** method, and review its code. First the method checks if the request contains _Basic_ authentication information by checking the **HttpRequestMessage.Headers.Authorization.Scheme** property. If the request does not contain the _Authorization_ header, it is sent to the next handler without checking.
 
@@ -278,7 +278,7 @@
     You need to understand the use of the **[Authorize]** and the **[AllowAnonymous]** attributes. The **[Authorize]** attribute, which decorates the controller, verifies that the client was authenticated before invoking the controller&#39;s actions. The **[AllowAnonymous]** attribute decorating the second **Get** method skips the authentication check, allowing anonymous users to invoke the decorated action.
     
 11. In **Solution Explorer**, under the **WebAPISecurity** project, expand **App_Start**, and then double-click **WebApiConfig.cs**.
-12. Locate the **Register** method, and review the **MessageHandler.Add** method call. This is how the authentication message handler is attached to the message handling pipeline.
+12. Locate the **Register** method, and review the **MessageHandlers.Add** method call. This is how the authentication message handler is attached to the message handling pipeline.
 13. To start the application without debugging, press Ctrl+F5.
 14. In the browser, append the **api/values/1** suffix to the address bar and press Enter. Verify that you can see an XML reply with the response of the action.
 15. Remove **/1** from the address in the address bar and then press Enter.
@@ -303,9 +303,9 @@
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. Browse to **D:\Allfiles\Mod04\DemoFiles\DependencyResolver**.
+3. Browse to **[repository root]\AllFiles\20487C\Mod04\DemoFiles\DependencyResolver**.
 4. Select the **DependencyResolver.sln** file, and then click **Open**.
 5. In **Solution Explorer**, under the **DependencyResolver** project, expand **Controllers**, and then double-click  **CoursesController.cs**.
 6. Review the **Get** method. The method uses the **__context_** private member, which is initialized in the constructor.
@@ -316,6 +316,7 @@
 11. Review the **Register** method. The dependency resolver that will be used by ASP.NET Web API is the one that is set in the **config.DependencyResolver** property.
 12. To start the project without debugging, press Ctrl+F5.
 13. To call the **Get** action of the **CoursesController** class, in the browser window, append the **api/courses** relative address to the address bar, and then press Enter.
+14. Close the browser and all open windows.
 
 ©2018 Microsoft Corporation. All rights reserved.
 
