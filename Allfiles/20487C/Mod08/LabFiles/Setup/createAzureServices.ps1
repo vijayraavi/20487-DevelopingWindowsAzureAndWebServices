@@ -90,7 +90,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $resourceGroupName -Templa
 Write-Host "Starting deployment of Azure Relay...";
 New-AzureRmRelayNamespace -Location $resourceGroupLocation -Name $serviceBusRelayNamespace -ResourceGroupName $resourceGroupName;
 Write-Host "Starting deployment of Azure Web App"
-$appServicePlan = New-AzureRmAppServicePlan -Location $resourceGroupLocation -ResourceGroupName $resourceGroupName -Name $webappName -Tier "Free"
+$appServicePlan = New-AzureRmAppServicePlan -Location $resourceGroupLocation -ResourceGroupName $resourceGroupName -Name $webappName -Tier "Standard"
 New-AzureRmWebApp -ResourceGroupName $resourceGroupName -Location $resourceGroupLocation -Name $webappName -AppServicePlan $appServicePlan.Name
 
 # post-creation
