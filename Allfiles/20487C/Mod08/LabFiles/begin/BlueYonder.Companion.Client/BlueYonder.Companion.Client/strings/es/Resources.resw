@@ -321,13 +321,13 @@
   <data name="City_4" xml:space="preserve">
     <value>New York</value>
   </data>
-  <data name="City_2" xml:space="preserve">
+  <data name="City_1" xml:space="preserve">
     <value>Paris</value>
   </data>
   <data name="City_3" xml:space="preserve">
     <value>Roma</value>
   </data>
-  <data name="City_1" xml:space="preserve">
+  <data name="City_2" xml:space="preserve">
     <value>Seattle</value>
   </data>
   <data name="Currency" xml:space="preserve">
