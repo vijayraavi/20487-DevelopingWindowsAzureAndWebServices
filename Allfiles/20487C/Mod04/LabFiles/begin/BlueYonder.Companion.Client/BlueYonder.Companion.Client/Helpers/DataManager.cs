@@ -114,13 +114,13 @@ namespace BlueYonder.Companion.Client.Helpers
         /// </summary>
         /// <param name="traveler">The Traveler</param>
         /// <returns></returns>
-        public async Task UpdateTravelerAsync(Traveler traveler)
+        public async Task<Response> UpdateTravelerAsync(Traveler traveler)
         {
             var dto = traveler.ToDTO();
             dto.TravelerUserIdentity = GetHardwareId();
             var serializedTraveler = JsonSerializerHelper.Serialize(dto);
             var uri = new Uri(string.Format(Addresses.UpdateTravelerUri, traveler.TravelerId));
-            await PutAsync(uri, serializedTraveler);
+            return await PutAsync(uri, serializedTraveler);
         }
 
         public async Task<Traveler> CreateTravelerAsync()

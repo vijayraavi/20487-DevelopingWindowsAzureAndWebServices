@@ -24,8 +24,7 @@ namespace BlueYonder.Companion.Controllers
             Reservations = reservations;
         }
 
-        
-        public HttpResponseMessage Get(int id)
+        public HttpResponseMessage GetReservation(int id)
         {
             var reservation = Reservations.GetSingle(id);
 
@@ -37,7 +36,6 @@ namespace BlueYonder.Companion.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
         }
 
-        [Route("api/travelers/{travelerId}/reservations")]
         public HttpResponseMessage GetReservations(int travelerId)
         {
             var reservations = Reservations.FindBy(r => r.TravelerId == travelerId);

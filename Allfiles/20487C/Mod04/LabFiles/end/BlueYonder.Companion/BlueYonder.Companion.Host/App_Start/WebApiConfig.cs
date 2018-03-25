@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Routing;
 using BlueYonder.Companion.Controllers;
+using System.Web.Http.Routing;
+using System.Net.Http;
 using BlueYonder.Companion.Controllers.Formatters;
-using BlueYonder.Entities;
-using BlueYonder.Companion.Entities;
 
 namespace BlueYonder.Companion.Host
 {
@@ -15,12 +13,10 @@ namespace BlueYonder.Companion.Host
     {
         public static void Register(HttpConfiguration config)
         {
-            config.MapHttpAttributeRoutes();
-            
             // TODO: Module 4: Exercise 1: Task 3.1: Register the BlueYonder Resolver
             config.DependencyResolver = new BlueYonderResolver();
 
-			config.Formatters.Add(new AtomFormatter()); 
+            config.Formatters.Add(new AtomFormatter()); 
             config.MessageHandlers.Add(new AtomHandler());
 
             config.Routes.MapHttpRoute(
@@ -30,12 +26,34 @@ namespace BlueYonder.Companion.Host
             );
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                name: "TravelerReservationsApi",
+                routeTemplate: "travelers/{travelerId}/reservations",
+                defaults: new
+                {
+                    controller = "reservations",
+                    id = RouteParameter.Optional
+                }
             );
 
-            config.EnsureInitialized();
+            config.Routes.MapHttpRoute(
+               name: "ReservationsApi",
+               routeTemplate: "Reservations/{id}",
+               defaults: new
+               {
+                   controller = "Reservations",
+                   action = "GetReservation"
+               },
+               constraints: new
+               {
+                   httpMethod = new HttpMethodConstraint(HttpMethod.Get)
+               }
+           );
+
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
         }
     }
 }

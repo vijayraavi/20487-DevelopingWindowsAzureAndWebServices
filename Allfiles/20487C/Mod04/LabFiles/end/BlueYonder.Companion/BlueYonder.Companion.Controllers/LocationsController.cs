@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web.Http;
 using BlueYonder.DataAccess.Interfaces;
 using BlueYonder.Entities;
-using System.Linq;
 using BlueYonder.Companion.Controllers.DataTransferObjects;
 using BlueYonder.Companion.Entities.Mappers;
 using BlueYonder.Companion.Entities;
 using BlueYonder.DataAccess.Repositories;
-using System.Web.Http;
 
 namespace BlueYonder.Companion.Controllers
 {
@@ -17,6 +17,7 @@ namespace BlueYonder.Companion.Controllers
     {
         public ILocationRepository Locations { get; set; }
 
+        // TODO: Module 4: Exercise 1: Task 1.2: change the FlightsController Constructor
         public LocationsController(ILocationRepository locations)
         {
             Locations = locations;

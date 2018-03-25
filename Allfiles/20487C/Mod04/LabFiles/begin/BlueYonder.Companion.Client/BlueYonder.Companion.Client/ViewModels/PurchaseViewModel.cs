@@ -133,7 +133,11 @@ namespace BlueYonder.Companion.Client.ViewModels
 
                 if (IsValid())
                 {
-                    this.TravelerInfo.Save(parameter);
+                    if (!await this.TravelerInfo.Save(parameter))
+                    {
+                        return;
+                    }
+
                     var reservation = new Reservation()
                     {
                         TravelerId = UserAuth.Instance.Traveler.TravelerId,
