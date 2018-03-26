@@ -39,7 +39,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 29. Show the message content.
 30. Close the Microsoft Service Trace Viewer window.
 
-# Lesson 2: Monitoring Services Using Windows Azure Diagnostics
+# Lesson 3: Monitoring Services Using Windows Azure Diagnostics
 
 ### Demonstration: Configuring Microsoft Azure Diagnostics
 
