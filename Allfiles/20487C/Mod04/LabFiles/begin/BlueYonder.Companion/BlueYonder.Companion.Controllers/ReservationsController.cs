@@ -36,7 +36,7 @@ namespace BlueYonder.Companion.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage GetReservations(int travelerId)
+        public HttpResponseMessage Get(int travelerId)
         {
             var reservations = Reservations.FindBy(r => r.TravelerId == travelerId);
 

@@ -82,7 +82,12 @@ namespace BlueYonder.Companion.Client.Helpers
         /// <returns></returns>
         public async Task<IEnumerable<LocationDTO>> GetLocationsAsync(string query)
         {
-            var uri = new Uri(string.Format(Addresses.GetLocationWithQueryUri, query));
+            Uri uri;
+            if (string.IsNullOrEmpty(query))
+                uri = new Uri(Addresses.GetLocationsUri);
+            else
+                uri = new Uri(string.Format(Addresses.GetLocationWithQueryUri,query));
+
             var response = await GetAsync(uri);
             List<LocationDTO> locations = null;
             if (response.Success)
@@ -127,7 +132,12 @@ namespace BlueYonder.Companion.Client.Helpers
         {
             var dto = new TravelerDTO()
             {
-                TravelerUserIdentity = GetHardwareId()
+                TravelerUserIdentity = GetHardwareId(),
+                FirstName = "John",
+                LastName = "Doe",
+                Email = "johndoe@outlook.com",
+                MobilePhone = "55555555",
+                HomeAddress = "New York"
             };
             var json = JsonSerializerHelper.Serialize(dto);
             var uri = new Uri(Addresses.CreateTravelerUri);
