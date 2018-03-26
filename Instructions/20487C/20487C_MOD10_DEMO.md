@@ -100,7 +100,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 # Lesson 4: Collecting Windows Azure Metrics
 
-### Demonstration: Viewing Microsoft Azure Web App Metrics
+### Demonstration: Viewing Web App Metrics
 
 #### Demonstration Steps
 
