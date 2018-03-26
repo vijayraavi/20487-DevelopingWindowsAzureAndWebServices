@@ -2,7 +2,7 @@
 
 Wherever  you see a path to a file that starts with *[repository root]*, replace it with the absolute path to the folder in which the 20487 repository resides. For example, if you cloned or extracted the 20487 repository to **C:\Users\John Doe\Downloads\20487**, the following path: **[repository root]\AllFiles\20487C\Mod06** should be changed to **C:\Users\John Doe\Downloads\20487\AllFiles\20487C\Mod06**.
 
-# Lesson 1: Configuring Service Diagnostics
+# Lesson 2: Configuring Service Diagnostics
 
 ### Demonstration: Tracing WCF Services
 
