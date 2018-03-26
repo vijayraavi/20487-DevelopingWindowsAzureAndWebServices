@@ -116,8 +116,8 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 7. Enter the following information:
 
     - App name: **metricsdemo***YourInitials* (Replace *YourInitials* with your initials).
-    - App Service plan/Location: Click it, click **Create new**, and then type in the following details:
-        - App Service plan: **metricsdemoYourInitials**
+    - App Service plan/Location: Click it, click **Create new**, and then provide the following details:
+        - App Service plan: **metricsdemo***YourInitials*
         - Location: The closest place to your location
         - Pricing tier: **S1 Standard**
     - Resource Group: Select **Create new** and then type **demo**.
@@ -128,13 +128,13 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 11. In the **Monitor** blade, click **Metrics (preview)**.
     > Note for future maintainer: when the **Metrics (preview)** has replaced the current non-preview **Metrics** service, remove all **(preview)** annotations.
 12. In the **Metrics (preview)** blade, in the **RESOURCE** dropdown, select the **metricsdemo***YourInitials* app service.
-13. In the **METRIC** dropdown, select **Http 2xx**.
+13. In the **METRIC** drop-down list box, select **Http 2xx**.
 14. Open **Visual Studio 2017**.
 15. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 16. Go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\WebSiteMonitoring\SimpleWebApplication**.
-17. Select the **SimpleWebApplication.sln**file, and then click **Open**.
+17. Select the **SimpleWebApplication.sln** file, and then click **Open**.
 18. In **Solution Explorer**, right click the **SimpleWebApplication** project, and then click **Publish**.
-19. In the **Publish** page, select **Microsoft Azure App Service**, and then select "**Select Existing**".
+19. In the **Publish** page, select **Microsoft Azure App Service**, and then select **Select Existing**.
 20. Click **Publish**.
 21. In the **App Service** modal, expand the **demo** folder, and then select the **metricsdemoYourInitials** app service.
 22. Click **OK** and wait for the publish operation to finish and for a browser to open.
