@@ -98,7 +98,7 @@ New-AzureRmStorageAccount -ResourceGroupName $resourceGroupName -Location $resou
 
 
 # post-creation
-$hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule DefaultFullSharedAccessSignature -ResourceGroup $resourceGroupName -Namespace blueyonder10-nhz -NotificationHub blueyonder10Hub
+$hubKeys = Get-AzureRmNotificationHubListKeys -AuthorizationRule DefaultFullSharedAccessSignature -ResourceGroup $resourceGroupName -Namespace $hubNamespaceName -NotificationHub $hubName
 $dbConnectionString = "Server=tcp:$serverName.database.windows.net,1433;Initial Catalog=$databaseName;Persist Security Info=False;User ID=BlueYonderAdmin;Password=$password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=180;"
 $hubConnectionString = "${hubKeys.PrimaryConnectionString}";
 $relayKeyInfo = Get-AzureRmRelayKey -Namespace $serviceBusRelayNamespace -ResourceGroupName $resourceGroupName -Name RootManageSharedAccessKey

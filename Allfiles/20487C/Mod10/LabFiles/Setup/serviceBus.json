@@ -22,7 +22,7 @@
             },
             "name": "[parameters('serviceBusNamespaceName')]",
             "apiVersion": "2017-04-01",
-            "location": "West Europe",
+            "location": "eastus",
             "tags": {},
             "scale": null,
             "properties": {
@@ -39,7 +39,7 @@
             "type": "Microsoft.ServiceBus/namespaces/AuthorizationRules",
             "name": "[concat(parameters('serviceBusNamespaceName'), '/', parameters('SharedAccessKeyName'))]",
             "apiVersion": "2017-04-01",
-            "location": "West Europe",
+            "location": "eastus",
             "scale": null,
             "properties": {
                 "rights": [
