@@ -15,7 +15,7 @@ namespace BlueYonder.Companion.Host
         {
             // TODO: Module 4: Exercise 1: Task 3.1: Register the BlueYonder Resolver
             config.DependencyResolver = new BlueYonderResolver();
-
+            config.MapHttpAttributeRoutes();
             config.Formatters.Add(new AtomFormatter()); 
             config.MessageHandlers.Add(new AtomHandler());
 
@@ -24,30 +24,7 @@ namespace BlueYonder.Companion.Host
                 routeTemplate: "atom/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            config.Routes.MapHttpRoute(
-                name: "TravelerReservationsApi",
-                routeTemplate: "travelers/{travelerId}/reservations",
-                defaults: new
-                {
-                    controller = "reservations",
-                    id = RouteParameter.Optional
-                }
-            );
-
-            config.Routes.MapHttpRoute(
-               name: "ReservationsApi",
-               routeTemplate: "Reservations/{id}",
-               defaults: new
-               {
-                   controller = "Reservations",
-                   action = "GetReservation"
-               },
-               constraints: new
-               {
-                   httpMethod = new HttpMethodConstraint(HttpMethod.Get)
-               }
-           );
+           
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
