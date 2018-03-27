@@ -52,51 +52,52 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 5. Right click the **DiagnosticsWebRole** project, and then click **Publish**.
 6. Select **Microsoft Azure App Service**, select **Create New** and click **Publish**.
 7. In the **App Name** text box, type **AzureDiagnosticsExample-***yourinitials* (*yourinitials* are your initials, e.g. John Doe -> jd)
-8. Click **Create** and wait for the deployment to finish.
-9. Open a browser and navigate to **http://portal.azure.com**.
-10. If a page appears, prompting you to enter your email address, enter your email address, and then click **Continue**.
-11. Wait for the **Sign In** page to appear, enter your email address and password, and then click **Sign In.**
+8. In the **Resource Group** drop-down list, click **New..** and type **Mod10RC-***yourinitials*. Then click **OK**.
+9. Click **Create** and wait for the deployment to finish.
+10. Open a browser and navigate to **http://portal.azure.com**.
+11. If a page appears, prompting you to enter your email address, enter your email address, and then click **Continue**.
+12. Wait for the **Sign In** page to appear, enter your email address and password, and then click **Sign In.**
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to enter your credentials.
 
-12. If the **Windows Azure Tour** dialog box appears, close it.
-13. On the navigation menu on the left, click **App Services**.
-14. In the **App Services** blade, click **AzureDiagnosticsExample-***yourinitials*.
-15. In the **AzureDiagnosticsExample-***yourinitials* blade, in the menu under **MONITORING**, click **Diagnostics logs**.
-15. In the **Diagnostics logs** blade, turn on **Application Logging (Filesystem)**.
-16. Set **Level** to **Verbose**.
-17. Click **Save**.
-18. In the blade menu, click **Overview**.
-19. To open a new tab and explore the application, click the value in **URL**.
-20. Go back to the portal and in the menu click **Log stream**.
-21. Go back to the tab with the open application.
-22. Write a message in the **Log Text** text box and click **Write to trace provider**.
-23. Go back to the tab with the open portal and you should now see **PID[number] Verbose [your message]**.
-24. Explain to the students that **Application Logging (Filesystem)** must be enabled for the log stream to work.
-25. In the blade menu, click **Diagnostics logs** and turn off **Application Logging (Filesystem)**.
-26. Turn on **Application Loggings (blob)** and change **Level** to **Verbose**.
-27. Click **Storage Settings**.
-28. In the **Storage accounts** blade, click **+ Storage account**.
-29. In the **Name** text box, type **azdiagnostics***yourinitials* (replace *yourinitials* with your initials, e.g. John Doe -> jd), and then click **OK** and wait for the storage account to finish deploying.
-30. In the **Storage accounts** blade, click the **azdiagnostics***yourinitials* account.
-31. In the **Containers** blade, click **+ Container**.
-32. In the **Name** text box, type **diagnostics-logs**.
-33. In **Public access level**, choose **Private**, and then click **OK**.
-34. Click the **diagnostics-logs** container and click **Select**.
-35. In the **Diagnostics logs** blade, click **Save**.
-36. In the menu bar, click **Log stream**, You should now get the following message: **Application logs are switched off. You can turn them on using the 'Diagnostic logs' settings.**
-37. Go back to the tab with the application open.
-38. Enter another message in the **Log Text** text box and click **Write to trace provider**.
-39. Go back to the tab with the portal open.
-40. On the portal menu on the left, click **Storage accounts**.
-41. Click **azdiagnostics***yourinitials*, and then click **Blobs**.
-42. In the **Blob service** blade, click the **diagnostics-logs** container.
-43. In the **diagnostics-logs** blade, click **AzureDiagnosticsExample-***yourinitials*.
-44. Click **[current year]**, click **[current month]** and then click **[current day]**.
-45. Click **[current hour]** and then click the most recently modified blob.
-46. In the **Blob properties** blade, click **Download**.
-47. Open the downloaded file in Excel or notepad.
-48. One of the rows with level **Verbose** should have your message listed in the **message** column.
+13. If the **Windows Azure Tour** dialog box appears, close it.
+14. On the navigation menu on the left, click **App Services**.
+15. In the **App Services** blade, click **AzureDiagnosticsExample-***yourinitials*.
+16. In the **AzureDiagnosticsExample-***yourinitials* blade, in the menu under **MONITORING**, click **Diagnostics logs**.
+17. In the **Diagnostics logs** blade, turn on **Application Logging (Filesystem)**.
+18. Set **Level** to **Verbose**.
+19. Click **Save**.
+20. In the blade menu, click **Overview**.
+21. To open a new tab and explore the application, click the value in **URL**.
+22. Go back to the portal and in the menu click **Log stream**.
+23. Go back to the tab with the open application.
+24. Write a message in the **Log Text** text box and click **Write to trace provider**.
+25. Go back to the tab with the open portal and you should now see **PID[number] Verbose [your message]**.
+26. Explain to the students that **Application Logging (Filesystem)** must be enabled for the log stream to work.
+27. In the blade menu, click **Diagnostics logs** and turn off **Application Logging (Filesystem)**.
+28. Turn on **Application Loggings (blob)** and change **Level** to **Verbose**.
+29. Click **Storage Settings**.
+30. In the **Storage accounts** blade, click **+ Storage account**.
+31. In the **Name** text box, type **azdiagnostics***yourinitials* (replace *yourinitials* with your initials, e.g. John Doe -> jd), and then click **OK** and wait for the storage account to finish deploying.
+32. In the **Storage accounts** blade, click the **azdiagnostics***yourinitials* account.
+33. In the **Containers** blade, click **+ Container**.
+34. In the **Name** text box, type **diagnostics-logs**.
+35. In **Public access level**, choose **Private**, and then click **OK**.
+36. Click the **diagnostics-logs** container and click **Select**.
+37. In the **Diagnostics logs** blade, click **Save**.
+38. In the menu bar, click **Log stream**, You should now get the following message: **Application logs are switched off. You can turn them on using the 'Diagnostic logs' settings.**
+39. Go back to the tab with the application open.
+40. Enter another message in the **Log Text** text box and click **Write to trace provider**.
+41. Go back to the tab with the portal open.
+42. On the portal menu on the left, click **Storage accounts**.
+43. Click **azdiagnostics***yourinitials*, and then click **Blobs**.
+44. In the **Blob service** blade, click the **diagnostics-logs** container.
+45. In the **diagnostics-logs** blade, click **AzureDiagnosticsExample-***yourinitials*.
+46. Click **[current year]**, click **[current month]** and then click **[current day]**.
+47. Click **[current hour]** and then click the most recently modified blob.
+48. In the **Blob properties** blade, click **Download**.
+49. Open the downloaded file in Excel or notepad.
+50. One of the rows with level **Verbose** should have your message listed in the **message** column.
 
 # Lesson 4: Collecting Windows Azure Metrics
 
