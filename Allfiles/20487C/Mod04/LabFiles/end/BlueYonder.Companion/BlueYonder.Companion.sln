@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Host",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueYonder.Companion.Entities.Mappers", "BlueYonder.Companion.Entities.Mappers\BlueYonder.Companion.Entities.Mappers.csproj", "{F583E8B5-47FE-4495-931D-F73F78C1207D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CB1945E3-70F6-4211-A31C-B333331F1DD0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +61,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4A889759-A6B4-42E9-8E18-345C7F9B04C5}
+		SolutionGuid = {72F7F317-ADFF-4E62-9A10-7FC49D2AA291}
 	EndGlobalSection
 EndGlobal

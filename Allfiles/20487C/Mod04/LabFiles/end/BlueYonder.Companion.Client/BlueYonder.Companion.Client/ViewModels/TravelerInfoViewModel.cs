@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BlueYonder.Companion.Shared;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BlueYonder.Companion.Client.ViewModels
 {
@@ -85,7 +87,7 @@ namespace BlueYonder.Companion.Client.ViewModels
             _settings = new Settings(SettingsType.Local);
             LoadFromLocalSettings();
 
-            SaveCommand = new DelegateCommand(Save);
+            SaveCommand = new DelegateCommand(async a => await Save(a));
             ResetCommand = new DelegateCommand(Reset);
         }
 
@@ -122,12 +124,34 @@ namespace BlueYonder.Companion.Client.ViewModels
             LoadFromLocalSettings();
         }
 
-        public void Save(object parameter)
+        public async Task<bool> Save(object parameter)
         {
             StoreInLocalSettings();
-            StoreOnServer();
+            var respone = await StoreOnServer();
+            if (respone.Success)
+            {
+                this.Message = ResourceHelper.ResourceLoader.GetString("TravelerInformationSaved");
+                return true;
 
-            this.Message = ResourceHelper.ResourceLoader.GetString("TravelerInformationSaved");
+            }
+            else
+            {
+                var responseAsObject = JsonConvert.DeserializeObject<JObject>(respone.Content);
+                var errorValues = responseAsObject["ModelState"].Values().Select(ss => ss);
+
+                StringBuilder stringBuilder = new StringBuilder();
+                foreach (var error in errorValues)
+                {
+                    var correctedString = string.Join("", error.ToString().Split(new char[] { '[', ']' }));
+                    stringBuilder.Append(correctedString);
+                }
+                this.Message = stringBuilder.ToString();
+
+                var msg = new Windows.UI.Popups.MessageDialog(this.Message);
+                await msg.ShowAsync();
+                return false;
+            }
+
         }
 
         private void StoreInLocalSettings()
@@ -141,7 +165,7 @@ namespace BlueYonder.Companion.Client.ViewModels
             _settings.Add(Constants.Email, this.Email);
         }
 
-        private async void StoreOnServer()
+        private async Task<Response> StoreOnServer()
         {
             var traveler = new Traveler()
             {
@@ -157,11 +181,12 @@ namespace BlueYonder.Companion.Client.ViewModels
             try
             {
                 var data = new DataManager();
-                await data.UpdateTravelerAsync(traveler);
+                return await data.UpdateTravelerAsync(traveler);
             }
             catch
             {
                 // The server could not be reached or the authentication failed
+                return null;
             }
         }
 

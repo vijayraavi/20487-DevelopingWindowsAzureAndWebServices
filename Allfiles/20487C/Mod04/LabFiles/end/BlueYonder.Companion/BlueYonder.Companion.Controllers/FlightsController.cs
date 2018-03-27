@@ -17,9 +17,8 @@ namespace BlueYonder.Companion.Controllers
     {
         private IFlightRepository Flights;
         private ILocationRepository Locations;
-
-        // TODO: Module 4: Exercise 1: Task 1.2: change the FlightsController Constructor
-		public FlightsController(IFlightRepository flights, ILocationRepository locations)
+        
+        public FlightsController(IFlightRepository flights, ILocationRepository locations)
         {
             Flights = flights;
             Locations = locations;

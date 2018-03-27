@@ -32,7 +32,7 @@ namespace BlueYonder.Entities
 
         [JsonIgnore]
         [XmlIgnore]
-        //[ForeignKey("FlightId")]
+        [ForeignKey("FlightId")]
         public virtual Flight Flight { get; set; }
     }
 }

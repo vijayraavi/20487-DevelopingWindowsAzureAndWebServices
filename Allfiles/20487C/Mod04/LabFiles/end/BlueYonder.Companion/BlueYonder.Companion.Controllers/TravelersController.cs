@@ -9,6 +9,7 @@ using BlueYonder.DataAccess.Interfaces;
 using BlueYonder.DataAccess.Repositories;
 using BlueYonder.Companion.Controllers.ActionFilters;
 
+
 namespace BlueYonder.Companion.Controllers
 {
     public class TravelersController : ApiController
@@ -31,7 +32,7 @@ namespace BlueYonder.Companion.Controllers
 
         public HttpResponseMessage Get(string id)
         {
-            var traveler = Travelers.FindBy(t=>t.TravelerUserIdentity == id).FirstOrDefault();
+            var traveler = Travelers.FindBy(t => t.TravelerUserIdentity == id).FirstOrDefault();
 
             // Handling the HTTP status codes
             if (traveler != null)
@@ -41,6 +42,7 @@ namespace BlueYonder.Companion.Controllers
         }
 
         [ModelValidation]
+
         public HttpResponseMessage Post(Traveler traveler)
         {
             // saving the new order to the database
@@ -57,7 +59,7 @@ namespace BlueYonder.Companion.Controllers
         }
 
         [ModelValidation]
-        public HttpResponseMessage Put(int id, Traveler traveler)
+        public HttpResponseMessage Put(int id, [FromBody]Traveler traveler)
         {
             // returning 404 if the entity doesn't exist 
             if (Travelers.GetSingle(id) == null)
