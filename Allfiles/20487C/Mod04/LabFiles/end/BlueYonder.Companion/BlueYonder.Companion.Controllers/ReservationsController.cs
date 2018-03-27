@@ -14,6 +14,7 @@ using BlueYonder.DataAccess.Repositories;
 
 namespace BlueYonder.Companion.Controllers
 {
+    [Route("Reservations")]
     public class ReservationsController : ApiController
     {
 
@@ -24,9 +25,9 @@ namespace BlueYonder.Companion.Controllers
             Reservations = reservations;
         }
 
-        
         public HttpResponseMessage Get(int id)
         {
+
             var reservation = Reservations.GetSingle(id);
 
             // Handling the HTTP status codes
@@ -37,8 +38,9 @@ namespace BlueYonder.Companion.Controllers
                 return Request.CreateResponse(HttpStatusCode.NotFound);
         }
 
-        [Route("api/travelers/{travelerId}/reservations")]
-        public HttpResponseMessage GetReservations(int travelerId)
+        [Route("travelers/{travelerId}/reservations")]
+        [HttpGet]
+        public HttpResponseMessage GetReservationsByTravelerId(int travelerId)
         {
             var reservations = Reservations.FindBy(r => r.TravelerId == travelerId);
 
