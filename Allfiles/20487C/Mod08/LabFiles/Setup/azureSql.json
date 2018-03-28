@@ -18,7 +18,7 @@
             "type": "string"
         },
         "edition": {
-            "defaultValue": "Premium",
+            "defaultValue": "Standard",
             "type": "string"
         },
         "requestedServiceObjectiveId": {
