@@ -25,8 +25,8 @@ Before you begin this demo, you must complete the following steps:
  5. In the **Web App create pane**:
    - In the **App Name** text box, type **ScalableAzureApp**.
   > **Note:** While editing the **App Name**, the text box may become red indicating that the name is unavailable. In this case, you can add your initials or some digits until you find an available name for the app you are creating.
-  - Select the **Subscription** you want to use.
-  - Create or select an existing **Resource Group** for the web app you are creating.
+  - Select the subscription you want to use, from the **Subscription** drop-down list.
+  - For the web app you are creating, under **Resource Group**, create a new resource group or select an existing one.
   - Select the operating system as **Windows**.
   - Select an App Service plan or location for the web app you are creating.
   - For **Application Insights**, select the **Off** option.
@@ -35,7 +35,7 @@ Before you begin this demo, you must complete the following steps:
  7. In the **ScalableAzureApp** options pane:
   - Select **Scale up** (App Service plan) and select the **B1 Basic** pricing tier. To set the selection, click the **Select** button.
   - To define the number of instances for the web app, select  **Scale out** (App Service plan), and in the **Configure** tab, set  **Instance count** to **2**. 
-  - To download the profile of the web app to your computer, select **Overview**, and then click the **Get publish profile** tab.
+  - To download the profile of the web app to your computer, click **Overview**, and then click the **Get publish profile** tab.
   > **Note:** You will need this profile later to publish the project to the web app.
 
 
@@ -48,7 +48,7 @@ Before you begin this demo, you must complete the following steps:
  1. To open a **New** pane, in the Azure portal, from the menu on the left side, select **+ New**.
  2. On the **New** pane, select **Databases**, and then from the **Databases** pane, select **Redis Cache**.
  3. In the **Redis Cache** pane:
-  - Set the DNS, you can use the same name you used for the web app or you can choose any other name you prefer.
+  - Enter the name for the DNS, you can use the same name you used for the web app or you can choose any other name you prefer.
   - Select the **Subscription** you want to use.
   - Select the **Resource Group** to be the same one you used for the web app.
  > **Note:** It is recommended to configure your services to work in the same region.
