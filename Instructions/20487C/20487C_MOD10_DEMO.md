@@ -62,7 +62,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 13. If the **Windows Azure Tour** dialog box appears, close it.
 14. On the navigation menu on the left, click **App Services**.
-15. In the **App Services** blade, click **AzureDiagnosticsExample-**yourinitials.
+15. In the **App Services** blade, click **AzureDiagnosticsExample**-yourinitials.
 16. In the **AzureDiagnosticsExample-***yourinitials* blade, in the menu under **MONITORING**, click **Diagnostics logs**.
 17. In the **Diagnostics logs** blade, turn on **Application Logging (Filesystem)**.
 18. Set **Level** to **Verbose**.
