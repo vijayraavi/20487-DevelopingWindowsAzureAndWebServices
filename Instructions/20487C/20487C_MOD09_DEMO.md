@@ -66,7 +66,7 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 18. Locate the **UploadFile** method. Review how the **GetBlockBlobRefrence** method is used for getting a reference to a block blob within the container. The method will create a new reference and return it because the blob is not currently in the container.
 19. In **Solution Explorer**, under the **BlobStorage.Web** project, under the **Controllers** folder, double-click **BlobsController.cs**, and locate the **Get** method.
 20. Review the use of the **GetBlockBlobRefrence** method. After uploading the file to the blob, the reference is used to download the file.  Note that the code that copies the stream to the response stream will stay the same even when working with other sources of data streams.  
-21. In **Solution Explorer**, right-click the **BlobStorageEmulator** project, and then click **Set as StartUp Project**.
+21. In **Solution Explorer**, right-click the **BlobStorage.Web** project, and then click **Set as StartUp Project**.
 22. To run the web application by using the Azure Compute and Storage Emulator, press Ctrl+F5.
 23. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets**, select the **EmpireStateBuilding.jpg** file, and then click **Open**.
 24. Click **Upload**.  
