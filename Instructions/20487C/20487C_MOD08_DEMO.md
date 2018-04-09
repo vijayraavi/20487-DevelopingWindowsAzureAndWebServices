@@ -84,6 +84,15 @@ First, you will have to replace the existing web deploy supplied by Visual Studi
 
 To verify that the installation worked, follow the first set of instructions above.
 
+If the installation still did not help, do the following:
+
+1. In the **Start** menu, search for **Web Platform Installer** and click on it.
+2. In the right search bar, type **Web Deployment tool** and press **Enter**.
+3. Locate the **Web Deployment Tool 2.1** , click **ADD** and then click **Install**.
+4. Follow the installer instructions.
+
+To verify that the installation worked, follow the first set of instructions above.
+
 #### Demonstration Steps
 
 1. In the **Start** menu, search for **Internet Information Services (IIS)** and click it.
