@@ -25,9 +25,8 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
    >**Note**: If you get a message that the storage account creation failed because you reached your storage account limit, delete an  existing storage account, and then retry the step.
 
 8. Click the storage account you just created, click **Properties**, and then review the different URLs for the blob, table, and queue resources.
-9. Review the options on the **Configurations** tab.
-10. Click **Access keys**.
-11. Review the two access keys and the option to regenerate them.
+9. Click **Access keys** in the left menu.
+10. Review the two access keys and the option to regenerate them.
 
     >**Note**: You need the access keys to access the storage account. The secondary key is required to renew the primary key; for example, if the primary key is compromised.
 
