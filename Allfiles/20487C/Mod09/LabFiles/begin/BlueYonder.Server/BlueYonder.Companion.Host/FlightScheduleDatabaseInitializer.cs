@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlueYonder.Companion.Host
 {
-    class FlightScheduleDatabaseInitializer : DropCreateDatabaseIfModelChanges<TravelCompanionContext>
+    class FlightScheduleDatabaseInitializer : DropCreateDatabaseAlways<TravelCompanionContext>
     {
         protected override void Seed(TravelCompanionContext context)
         {
