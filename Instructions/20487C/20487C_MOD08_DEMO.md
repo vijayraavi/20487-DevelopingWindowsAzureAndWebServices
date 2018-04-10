@@ -215,7 +215,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 43. Click **Build** and in the **Web application framework** drop-down list, select **ASP.NET**, and then click **OK**.
 44. Click **OK** and wait for the continuous delivery configuration to finish.
 45. A new build will automatically start and should take about two minutes. 
-46. After two minutes, click **Refresh logs**, you should see **Deployed successfully to Production**. If you don't wait another minute and refresh the logs again.
+46. After two minutes, click **Refresh logs**, you should see **Successfully setup Continuous Delivery and triggered build**. If you don't wait another minute and refresh the logs again.
 47. Open a browser tab and navigate to the web app at the url: **http://[yourwebapp].azurewebsites.net/api/values** and you should see two values in a form of XML or JSON.
 48. Return to Visual Studio 2017, and on the **View** menu, click **Solution Explorer**.
 49. In **Solution Explorer**, expand the **Controllers** folder, right-click the **ValuesController.cs** file, and then select **Check Out for Edit**.
