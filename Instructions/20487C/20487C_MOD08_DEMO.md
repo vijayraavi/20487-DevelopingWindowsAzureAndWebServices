@@ -190,7 +190,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 26. In **Team Explorer**, click **Check In**.
 27. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check in to complete.
 28. Open **Team Explorer** and click **Source Control Explorer**.
-29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, and then click **Convert to Branch**.
+29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, **Convert to Branch** and then click **Convert**.
 30. Return to the browser window and go to **https://portal.azure.com**.
 31. If a page appears, prompting for your email address, type your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
