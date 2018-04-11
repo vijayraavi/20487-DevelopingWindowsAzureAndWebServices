@@ -186,7 +186,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 22. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the  **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
 23. In the **Name** text box, type **MyTFSWebApp**, and then click **OK**.
 24. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
-25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and then click **Check In**.
+25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and then expend **Source Control** and click **Check In**.
 26. In **Team Explorer**, click **Check In**.
 27. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check in to complete.
 28. Open **Team Explorer** and click **Source Control Explorer**.
