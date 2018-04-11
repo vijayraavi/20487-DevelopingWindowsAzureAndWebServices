@@ -13,7 +13,7 @@ To activate IIS on Windows 10, perform the following steps:
 5. Check **Application Development Features**.
 6. Click **OK**.
 
-# Lesson 1: Web Deployment with Visual Studio 2012
+# Lesson 1: Web Deployment with Visual Studio 2017
 
 ### Demonstration: Deploying a Web Application by Using Visual Studio
 
