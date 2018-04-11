@@ -44,7 +44,7 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 5. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 6. Go to **[repository root]\Allfiles\20487C\Mod09\DemoFiles\BlobsStorageEmulator**.
 7. Select the **BlobsStorageEmulator.sln** file, and then click **Open**.
-8. In **Solution Explorer**, expand the **BlobStorageEmulator** project, expand the **Roles** folder, right-click **BlobStorage.Web**, and then click **Properties**.
+8. In **Solution Explorer**, right-click **BlobStorage.Web**, and then click **Properties**.
 9. Click on the **Web.cofig** file and locate the **appSettings** section.  
 
    Note that the **PhotosStorage** connection string points to the storage emulator, that runs on the local computer.
@@ -80,7 +80,7 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 29. Review the URL in the address bar. The Storage Emulator has its own port, and the URL is composed of the name of the storage account: **devstoreaccount1**, the name of the container: **files**, and the name of the blob: **EmpireStateBuilding.jpg**.
 30. Return to the previous tab, in the Statue of Liberty row, click **Download**, and then verify that the photo of the Statue of Liberty appears.
 31. Close the browser.
-32. Return to Visual Studio 2012. On the **View** menu, click **Server Explorer**.
+32. Return to Visual Studio 2017. On the **View** menu, click **Server Explorer**.
 33. In **Server Explorer**, expand **Windows Azure Storage**, right-click **Development**, and then click **Refresh**.
 34. In **Server Explorer**, expand **Development**, then expand **Blobs**, and then double-click the **files** node.
 35. Review the list of blobs in the **files [Container]** window. These are the same blobs that were displayed in the browser.
