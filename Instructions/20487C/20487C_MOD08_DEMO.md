@@ -13,7 +13,7 @@ To activate IIS on Windows 10, perform the following steps:
 5. Check **Application Development Features**.
 6. Click **OK**.
 
-# Lesson 1: Web Deployment with Visual Studio 2012
+# Lesson 1: Web Deployment with Visual Studio 2017
 
 ### Demonstration: Deploying a Web Application by Using Visual Studio
 
@@ -81,6 +81,15 @@ First, you will have to replace the existing web deploy supplied by Visual Studi
 6. Click **Next**, select the **I accept the terms...** check box, and then click **Next**.
 7. In  **Choose Setup Type**, click **Complete**, click **Next**, and then click **Next** again.
 8. After the setup completes, click **Finish**.
+
+To verify that the installation worked, follow the first set of instructions above.
+
+If the installation still did not help, do the following:
+
+1. In the **Start** menu, search for **Web Platform Installer** and click on it.
+2. In the right search bar, type **Web Deployment tool** and press **Enter**.
+3. Locate the **Web Deployment Tool 2.1** , click **ADD** and then click **Install**.
+4. Follow the installer instructions.
 
 To verify that the installation worked, follow the first set of instructions above.
 
@@ -177,11 +186,11 @@ To present this demonstration, you must have a Microsoft account. If you have no
 22. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the  **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
 23. In the **Name** text box, type **MyTFSWebApp**, and then click **OK**.
 24. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
-25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and then click **Check In**.
+25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and then expend **Source Control** and click **Check In**.
 26. In **Team Explorer**, click **Check In**.
 27. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check in to complete.
 28. Open **Team Explorer** and click **Source Control Explorer**.
-29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, and then click **Convert to Branch**.
+29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, **Convert to Branch** and then click **Convert**.
 30. Return to the browser window and go to **https://portal.azure.com**.
 31. If a page appears, prompting for your email address, type your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
@@ -206,7 +215,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 43. Click **Build** and in the **Web application framework** drop-down list, select **ASP.NET**, and then click **OK**.
 44. Click **OK** and wait for the continuous delivery configuration to finish.
 45. A new build will automatically start and should take about two minutes. 
-46. After two minutes, click **Refresh logs**, you should see **Deployed successfully to Production**. If you don't wait another minute and refresh the logs again.
+46. After two minutes, click **Refresh logs**, you should see **Successfully setup Continuous Delivery and triggered build**. If you don't wait another minute and refresh the logs again.
 47. Open a browser tab and navigate to the web app at the url: **http://[yourwebapp].azurewebsites.net/api/values** and you should see two values in a form of XML or JSON.
 48. Return to Visual Studio 2017, and on the **View** menu, click **Solution Explorer**.
 49. In **Solution Explorer**, expand the **Controllers** folder, right-click the **ValuesController.cs** file, and then select **Check Out for Edit**.

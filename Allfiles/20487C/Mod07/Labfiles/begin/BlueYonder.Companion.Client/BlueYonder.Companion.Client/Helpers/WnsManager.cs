@@ -32,7 +32,7 @@ namespace BlueYonder.Companion.Client.Helpers
 
             // Create a push notifications channel
             var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
-            var hub = new NotificationHub("BlueYonderLab07", "Endpoint=sb://blueyonderlab07.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=XaKpA3bqArhXoh+4PCz0yXAb2BuAA1jCuvp1NH+5zu0=");
+            var hub = new NotificationHub("blueyonder07Hub", "Endpoint=sb://blueyonderlab07.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=XaKpA3bqArhXoh+4PCz0yXAb2BuAA1jCuvp1NH+5zu0=");
             var result = await hub.RegisterNativeAsync(channel.Uri);
             return result.RegistrationId != null;
             // Encode the channel uri

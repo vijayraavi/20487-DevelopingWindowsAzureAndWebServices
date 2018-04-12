@@ -4,7 +4,7 @@
     {
         public static string BaseUri
         {
-            get { return "http://localhost:4392/"; }
+            get { return "[Web Api web app name]"; }
         }
 
         public static string GetLocationsUri

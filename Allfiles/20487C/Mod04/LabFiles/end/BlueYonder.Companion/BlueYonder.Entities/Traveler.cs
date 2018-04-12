@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
 
 namespace BlueYonder.Entities
 {
@@ -27,7 +27,6 @@ namespace BlueYonder.Entities
         public string HomeAddress { get; set; }
 
         public string Passport { get; set; }
-
         [EmailAddress]
         public string Email { get; set; }
     }

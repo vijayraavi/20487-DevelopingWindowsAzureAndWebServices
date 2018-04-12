@@ -18,37 +18,13 @@ namespace BlueYonder.Companion.Host
 
 			config.Formatters.Add(new AtomFormatter()); 
             config.MessageHandlers.Add(new AtomHandler());
-
+            config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
                 name: "atom",
                 routeTemplate: "atom/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            config.Routes.MapHttpRoute(
-                name: "TravelerReservationsApi",
-                routeTemplate: "travelers/{travelerId}/reservations",
-                defaults: new
-                {
-                    controller = "reservations",
-                    id = RouteParameter.Optional
-                }
-            );
-
-            config.Routes.MapHttpRoute(
-               name: "ReservationsApi",
-               routeTemplate: "Reservations/{id}",
-               defaults: new
-               {
-                   controller = "Reservations",
-                   action = "GetReservation"
-               },
-               constraints: new
-               {
-                   httpMethod = new HttpMethodConstraint(HttpMethod.Get)
-               }
-           );
-
+            
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "{controller}/{id}",

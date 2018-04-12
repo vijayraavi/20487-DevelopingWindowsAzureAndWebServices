@@ -69,12 +69,13 @@ Before you begin this demo, you must complete the following steps:
  4. Select the **ScalableAzureApp.sln** file and click **Open**.
  5. In Visual Studio 2017, in **Solution Explorer**, expand the **ScalableAzureApp** project, and then click **Web.config**.
  6. In **Web.config**, search for **key="RedisConnectionString"** and replace its value with the connection string you saved when you configured **Redis Cache**. It should look something like the following code: 
-``` 
-	xml
+
+```xml
        <appSettings>
-         <add key="ReidsConnectionString" value="*pace the connection string here*" />
+         <add key="ReidsConnectionString" value="*place the connection string here*" />
        </appSettings>
-  ```
+```
+
  7. In Visual Studio 2017, in **Solution Explorer**, right-click the **ScalableAzureApp** project, and then click **Publish**.
  8. In the **Publish**, from the listed targets, click the **Create new** profile, select the **Import** profile, and then click **Create Profile**. This will open **File Explorer**. Go to the folder where you saved the **Publish** profile and open it.
  9. Click the **Publish** option and wait for the web application to be deployed. When deployment is complete your web app should open in the browser.

@@ -130,7 +130,7 @@
 2. On the **File** menu, point to **Open**, and then click **Project\Solution**.
 3. Type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin\QueuesDemo.sln** in the **File name** text box, and then click **Open**.
 4. In **Solution Explorer**, right-click the root node of the solution, point to **Add**, and then click **New Project**.
-5. In the navigation pane of the **Add New Project** dialog box, expand the **Installed** node, expand the **Visual C#** node, click the **Windows** node, and then from the list of templates, select **Console Application**.
+5. In the navigation pane of the **Add New Project** dialog box, expand the **Installed** node, expand the **Visual C#** node, and then from the list of templates, select **Console App(.NET Framework)**.
 6. In the **Name** text box, type **ServiceBusMessageSender**.
 7. In the **Location** text box, type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin**.
 8. Click **OK**.

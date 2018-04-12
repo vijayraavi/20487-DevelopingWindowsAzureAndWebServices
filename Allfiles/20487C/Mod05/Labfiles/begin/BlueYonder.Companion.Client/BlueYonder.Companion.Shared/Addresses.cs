@@ -4,7 +4,7 @@
     {
         public static string BaseUri
         {
-            get { return "http://[Web Api web app name].azurewebsites.net/"; }
+            get { return "[Web Api web app name]"; }
         }
 
         public static string GetLocationsUri
