@@ -110,5 +110,6 @@ Get-Content -Path "../begin/BlueYonder.Server/BlueYonder.Server.Booking.WebHost/
 $serverConfig = Get-Content "ServerWeb.config";
 $serverConfig = $serverConfig.replace("{ServiceBusRelaySASKey}", $relayKeyInfo.PrimaryKey);
 $serverConfig = $serverConfig.replace("{relayNamespace}", $serviceBusRelayName);
+$serverConfig = $serverConfig.replace("{relayConnectionString}", $relayKeyInfo.PrimaryConnectionString);
 Set-Content -Path "../begin/BlueYonder.Server/BlueYonder.Server.Booking.WebHost/web.config" -Value $serverConfig
 Write-Host "Lab setup is done."
