@@ -217,19 +217,20 @@
         }
 ```
 44. To save the changes, press Ctrl+S.
-45. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
-46. To run the sender console application, press Ctrl+F5.
-47. Wait for the **Enter text to send to the queue and press Enter** console prompt.
-48. Type **Hello**, and then press Enter.
-49. Type **Goodbye**, and then press Enter.
-50. Press Enter, and then press any key to close the console window.
-51. In Visual Studio 2017, in **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **Program.cs**.
-52. Show that the code in the **Main** method also connects to the Service Bus queue, and after connecting to the queue, it pulls messages from the queue and prints them.
-53. Show how you use the **Receive** and **Complete** methods to implement Peek-Lock.
-54. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
-55. To run the receiver console application, press Ctrl+F5.
-56. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
-57. Close the console window.
+45. To Build the solution press **Ctrl+Shift+B**.
+46. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
+47. To run the sender console application, press Ctrl+F5.
+48. Wait for the **Enter text to send to the queue and press Enter** console prompt.
+49. Type **Hello**, and then press Enter.
+50. Type **Goodbye**, and then press Enter.
+51. Press Enter, and then press any key to close the console window.
+52. In Visual Studio 2017, in **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **Program.cs**.
+53. Show that the code in the **Main** method also connects to the Service Bus queue, and after connecting to the queue, it pulls messages from the queue and prints them.
+54. Show how you use the **Receive** and **Complete** methods to implement Peek-Lock.
+55. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
+56. To run the receiver console application, press Ctrl+F5.
+57. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
+58. Close the console window.
 
 # Lesson 3: Microsoft Azure Service Bus Topics
 
