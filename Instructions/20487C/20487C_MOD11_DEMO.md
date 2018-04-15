@@ -34,7 +34,7 @@
     - **Membership type**, select **Assigned**.
     - Click on **Members** and select the guest user, click **Select**.
     - Click **Create**.
-14. Go back to **Groups**, see that the was created.      
+14. Go back to **Groups**, see that the **Group** was created.      
 
 
 ### Demonstration: Using Azure AD to secure ASP.NET Web Applications.
