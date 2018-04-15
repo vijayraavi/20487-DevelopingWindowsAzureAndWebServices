@@ -27,7 +27,7 @@
    The app name you typed is going to be part of the URL that you will use when connecting to the web application.
    
 8. In the **Resource Group** text box, select **Create new**.
-9. Click **App Service Plan/Location**,  and then click **Create new**.
+9. Click **App Service Plan/Location**,  and then click **Create new**. 
 10. In **App Service Plan**, enter **BlueYonder**.
 11. In **Location**, select the location that is closest to you.
 12. Click **Ok.**
