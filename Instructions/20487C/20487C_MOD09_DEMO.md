@@ -39,51 +39,50 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 
 1. Download the **Microsoft Storage Emulator** from **https://go.microsoft.com/fwlink/?linkid=717179&amp;clcid=0x409** and follow the installer instructions.
 2. Start the **Azure Storage Emulator**. Search for **Storage Emulator** in the start menu and then click on **Microsoft Azure Storage Emulator -v5.3**.
-3. Type **AzureStorageEmulator.exe start** and press **Enter**. Then close the command-line window.
-4. Open **Visual Studio 2017**.
-5. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-6. Go to **[repository root]\Allfiles\20487C\Mod09\DemoFiles\BlobsStorageEmulator**.
-7. Select the **BlobsStorageEmulator.sln** file, and then click **Open**.
-8. In **Solution Explorer**, right-click **BlobStorage.Web**, and then click **Properties**.
-9. Click on the **Web.cofig** file and locate the **appSettings** section.  
+3. Open **Visual Studio 2017**.
+4. On the **File** menu, point to **Open**, and then click **Project/Solution**.
+5. Go to **[repository root]\Allfiles\20487C\Mod09\DemoFiles\BlobsStorageEmulator**.
+6. Select the **BlobsStorageEmulator.sln** file, and then click **Open**.
+7. In **Solution Explorer**, right-click **BlobStorage.Web**, and then click **Properties**.
+8. Click on the **Web.cofig** file and locate the **appSettings** section.  
 
    Note that the **PhotosStorage** connection string points to the storage emulator, that runs on the local computer.
    
-10. In **Solution Explorer**, expand the **BlobStorage.Web** project, and then double-click **ContainerHelper.cs**.
-11. Locate the **GetContainer** method. Notice how the **CloudStorageAccount.Parse** static method is used to create a **CloudStorageAccount** object from the connection string.
-12. Review the use of the **CreateCloudBlobClient** method, and how it is used to create a **CloudBlobClient** object that controls the blob resources in the storage account.
-13. Review the use of the **GetContainerReference** method and how it is used to return a **CloudBlobContainer** object that controls a specific blob container named **files**. Additionally, review how the **CreateIfNotExists** method verifies that the blob container exists and creates it if it does not exist.
+9. In **Solution Explorer**, expand the **BlobStorage.Web** project, and then double-click **ContainerHelper.cs**.
+10. Locate the **GetContainer** method. Notice how the **CloudStorageAccount.Parse** static method is used to create a **CloudStorageAccount** object from the connection string.
+11. Review the use of the **CreateCloudBlobClient** method, and how it is used to create a **CloudBlobClient** object that controls the blob resources in the storage account.
+12. Review the use of the **GetContainerReference** method and how it is used to return a **CloudBlobContainer** object that controls a specific blob container named **files**. Additionally, review how the **CreateIfNotExists** method verifies that the blob container exists and creates it if it does not exist.
 
     >**Note**: The name of the container that is passed into the **GetContainerReference** method must be in lowercase.
 
-14. Review how the **SetPermissions** method configures the access level of the blob container.
+13. Review how the **SetPermissions** method configures the access level of the blob container.
 
     >**Note**: The default permission for a container is private, which means the container is not publicly accessible from the Internet, and you can only access it by using the storage account access key.
 
-15. In **Solution Explorer**, under the **BlobStorage.Web** project, expand the **Controllers** folder, and then double-click  **HomeController.cs**.
-16. Locate the **Index** method, and note the call to the **ListBlobs** method. Blob containers can be hierarchical, but you can request the return list to be flattened.
-17. Review how the blob type is checked inside the **foreach** loop, because there is a difference among the blob types: Block, Page, and Directory.
-18. Locate the **UploadFile** method. Review how the **GetBlockBlobRefrence** method is used for getting a reference to a block blob within the container. The method will create a new reference and return it because the blob is not currently in the container.
-19. In **Solution Explorer**, under the **BlobStorage.Web** project, under the **Controllers** folder, double-click **BlobsController.cs**, and locate the **Get** method.
-20. Review the use of the **GetBlockBlobRefrence** method. After uploading the file to the blob, the reference is used to download the file.  Note that the code that copies the stream to the response stream will stay the same even when working with other sources of data streams.  
-21. In **Solution Explorer**, right-click the **BlobStorage.Web** project, and then click **Set as StartUp Project**.
-22. To run the web application by using the Azure Compute and Storage Emulator, press Ctrl+F5.
-23. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets**, select the **EmpireStateBuilding.jpg** file, and then click **Open**.
-24. Click **Upload**.  
-25.    Review the links shown on the page. The **Direct Download** link will try to download the file directly from the blob container by using its HTTP URL. The **Download** link will try to download the file from the blob container by using the storage API.
-26. Click **Browse**. Go to **D:\Allfiles\Mod09\LabFiles\Assets**, select the **StatueOfLiberty.jpg** file, and then click **Open**.
-27. Click **Upload**.
-28. In the Empire State building row, click **Direct Download**. Verify that the photo of the Empire State building appears.
+14. In **Solution Explorer**, under the **BlobStorage.Web** project, expand the **Controllers** folder, and then double-click  **HomeController.cs**.
+15. Locate the **Index** method, and note the call to the **ListBlobs** method. Blob containers can be hierarchical, but you can request the return list to be flattened.
+16. Review how the blob type is checked inside the **foreach** loop, because there is a difference among the blob types: Block, Page, and Directory.
+17. Locate the **UploadFile** method. Review how the **GetBlockBlobRefrence** method is used for getting a reference to a block blob within the container. The method will create a new reference and return it because the blob is not currently in the container.
+18. In **Solution Explorer**, under the **BlobStorage.Web** project, under the **Controllers** folder, double-click **BlobsController.cs**, and locate the **Get** method.
+19. Review the use of the **GetBlockBlobRefrence** method. After uploading the file to the blob, the reference is used to download the file.  Note that the code that copies the stream to the response stream will stay the same even when working with other sources of data streams.  
+20. In **Solution Explorer**, right-click the **BlobStorage.Web** project, and then click **Set as StartUp Project**.
+21. To run the web application by using the Azure Compute and Storage Emulator, press Ctrl+F5.
+22. Click **Browse**. Go to **[repository root]\Allfiles\20487C\Mod09\Labfiles\Assets**, select the **EmpireStateBuilding.jpg** file, and then click **Open**.
+23. Click **Upload**.  
+24.    Review the links shown on the page. The **Direct Download** link will try to download the file directly from the blob container by using its HTTP URL. The **Download** link will try to download the file from the blob container by using the storage API.
+25. Click **Browse**. Go to **[repository root]\Allfiles\20487C\Mod09\Labfiles\Assets**, select the **StatueOfLiberty.jpg** file, and then click **Open**.
+26. Click **Upload**.
+27. In the Empire State building row, click **Direct Download**. Verify that the photo of the Empire State building appears.
 
     >**Note**: If you are using Google Chrome to display the demo, clicking the **Direct Download** link or the **Download** link will result in the actual download of the file.
 
-29. Review the URL in the address bar. The Storage Emulator has its own port, and the URL is composed of the name of the storage account: **devstoreaccount1**, the name of the container: **files**, and the name of the blob: **EmpireStateBuilding.jpg**.
-30. Return to the previous tab, in the Statue of Liberty row, click **Download**, and then verify that the photo of the Statue of Liberty appears.
-31. Close the browser.
-32. Return to Visual Studio 2017. On the **View** menu, click **Server Explorer**.
-33. In **Server Explorer**, expand **Windows Azure Storage**, right-click **Development**, and then click **Refresh**.
-34. In **Server Explorer**, expand **Development**, then expand **Blobs**, and then double-click the **files** node.
-35. Review the list of blobs in the **files [Container]** window. These are the same blobs that were displayed in the browser.
+28. Review the URL in the address bar. The Storage Emulator has its own port, and the URL is composed of the name of the storage account: **devstoreaccount1**, the name of the container: **files**, and the name of the blob: **EmpireStateBuilding.jpg**.
+29. Return to the previous tab, in the Statue of Liberty row, click **Download**, and then verify that the photo of the Statue of Liberty appears.
+30. Close the browser and Check the **Always Close all tabs** and then click **Close all**.
+31. Return to Visual Stu\dio 2017. On the **View** menu, click **Server Explorer**.
+32. In **Server Explorer**, expand **Azure**, and then expand **Storage**, right-click **Development**, and then click **Refresh**.
+33. In **Server Explorer**, expand **Development**, then expand **Blobs**, and then double-click the **files** node.
+34. Review the list of blobs in the **files [Container]** window. These are the same blobs that were displayed in the browser.
 
 # Lesson 3: Microsoft Azure Table Storage
 
@@ -111,9 +110,9 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 10. On the **demostorageaccount***yourinitials* (_yourinitials_ is your initials in lower-case) blade, go to the **Access Keys** tab.
 11. On the **Access Keys** tab, click the copy icon to the right of the **key1** box.
 12. Close the open blades.
-13. On the **Start** screen, click the **Visual Studio 2017** tile.
+13. Open **Visual Studio 2017**.
 14. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-15. Go to **D:\Allfiles\Mod09\DemoFiles\TableStorage**.
+15. Go to **[repository root]\Allfiles\20487C\Mod09\DemoFiles\TableStorage**.
 16. Select the **TableStorage.sln** file, and then click **Open**.
 17. In **Solution Explorer**, expand the **TableStorage** project, and then double-click **Web.config**.
 18. In the **&lt;appSettings&gt;** element, locate the **StorageAccount** application setting.
@@ -248,7 +247,7 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 
 #### Demonstration Steps
 
-1. On the **Start** screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Go to **[repository root]\Allfiles\20487C\Mod09\DemoFiles\SharedAccessSignature**.
 4. Select the **SharedAccessSignature.sln** file, and then click **Open**.
