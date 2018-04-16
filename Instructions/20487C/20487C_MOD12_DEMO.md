@@ -10,7 +10,7 @@ For this demo, you will use your Microsoft Azure account to create and configure
 
 Before you begin this demo, you must complete the following steps:
  1. Go to **https://portal.azure.com**.
- 2. If a page appears, prompting you to provide your email address, enter your email address, and then click **Continue**. Wait for the **Sign In** page to appear, enter your password, and then click **Sign In**.
+ 2. If a page appears, prompting you to provide your email address, enter your email address, and then click **Next**. enter your password, and then click **Sign In**.
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to enter your credentials.
  
@@ -20,7 +20,7 @@ Before you begin this demo, you must complete the following steps:
 
  1. To open the **App Services** pane, in the Azure portal, from the menu on the left side, select **App Services**.
  2. To create a new App Service, in the **App Services** pane, click **+ Add** on the left of the top tab.
- 3. To open the **Web App** pane, in the **App Service** pane, click the **Web App** tile. 
+ 3. To open the **Web App** pane, in the **Web + Mobile** pane, click the **Web App** tile. 
  4. To create a new web app, click **Create**.  
  5. In the **Web App create pane**:
    - In the **App Name** text box, type **ScalableAzureApp**.
@@ -34,7 +34,7 @@ Before you begin this demo, you must complete the following steps:
  6. To open the **App Services** pane again, from the menu on the left side, select **App Services**, and then select **ScalableAzureApp**.
  7. In the **ScalableAzureApp** options pane:
   - Select **Scale up** (App Service plan) and select the **B1 Basic** pricing tier. To set the selection, click the **Select** button.
-  - To define the number of instances for the web app, select  **Scale out** (App Service plan), and in the **Configure** tab, set  **Instance count** to **2**. 
+  - To define the number of instances for the web app, select **Scale out** (App Service plan), and in the **Configure** tab, set  **Instance count** to **Click Save**. 
   - To download the profile of the web app to your computer, click **Overview**, and then click the **Get publish profile** tab.
   > **Note:** You will need this profile later to publish the project to the web app.
 
@@ -44,7 +44,7 @@ Before you begin this demo, you must complete the following steps:
 
 ### Setup  **Azure Redis Cache** by using **Azure Portal**
 
- 1. To open a new pane, in the Azure portal, from the menu on the left side, select **+ New**.
+ 1. To open a new pane, in the Azure portal, from the menu on the left side, select **+ Create a resource**.
  2. On the **New** pane, select **Databases**, and then from the **Databases** pane, select **Redis Cache**.
  3. In the **Redis Cache** pane:
   - Enter the name for the DNS, you can use the same name you used for the web app or you can choose another name.
@@ -65,7 +65,7 @@ Before you begin this demo, you must complete the following steps:
 
  1. Open Visual Studio 2017.
  2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
- 3. Go to **[repositoryroot]\Allfiles\20487C\Mod12\DemoFiles\ScalableAzureApp**.
+ 3. Go to **[repositoryroot]\Allfiles\20487C\Mod12\DemoFiles\ScallingAppServices**.
  4. Select the **ScalableAzureApp.sln** file and click **Open**.
  5. In Visual Studio 2017, in **Solution Explorer**, expand the **ScalableAzureApp** project, and then click **Web.config**.
  6. In **Web.config**, search for **key="RedisConnectionString"** and replace its value with the connection string you saved when you configured **Redis Cache**. It should look something like the following code: 
@@ -77,7 +77,7 @@ Before you begin this demo, you must complete the following steps:
 ```
 
  7. In Visual Studio 2017, in **Solution Explorer**, right-click the **ScalableAzureApp** project, and then click **Publish**.
- 8. In the **Publish**, from the listed targets, click the **Create new** profile, select the **Import** profile, and then click **Create Profile**. This will open **File Explorer**. Go to the folder where you saved the **Publish** profile and open it.
+ 8. In the **Publish**, from the listed targets, click the **Create new** profile, select the **Import** profile, and then click **Publish**. This will open **File Explorer**. Go to the folder where you saved the **Publish** profile and open it.
  9. Click the **Publish** option and wait for the web application to be deployed. When deployment is complete your web app should open in the browser.
  > **Note:** To enter the Azure portal, from the menu on the left side, select **App Services**, and then select **ScalableAzureApp**. To find the **URL** of the **ScalableAzureApp** web app, in the **ScalableAzureApp** pane, you can select **Overview**. To view or edit the scale of **ScalableAzureApp**, in the **ScalableAzureApp**pane, select the **Scale out** app service plan.   
  
