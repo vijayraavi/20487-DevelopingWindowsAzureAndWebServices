@@ -8,7 +8,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. Go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\TracingWCFServices\CalcService**.
 4. Select the **CalcService.sln** file, and then click **Open**.
@@ -23,13 +23,13 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 13. Return to Visual Studio 2017 and in **Solution Explorer**, under the **CalcService** project, right-click **SimpleCalculator.svc**, and then click **Set As Start Page**.
 14. Press Ctrl+F5. The WCF Test Client window will open.
 15. In the pane to the left, double-click the **Div** node.
-16. Set the **a** property to **4** and the **b** property to **2** , and click **Invoke**. If a **Security Warning** dialog box appears, click **OK**.
+16. Set the **a** value to **4** and the **b** value to **2** , and click **Invoke**. If a **Security Warning** dialog box appears, click **OK**.
 17. Change the **b** property to **0**, and click **Invoke**. If a **Security Warning** dialog box appears, click **OK**. A dialog box with an exception will be shown.
 18. Click **Close** and then close the WCF Test Client window.
 19. Open **File Explorer** and go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\TracingWCFServices\CalcService\CalcService**.
 20. Double-click **web_tracelog.svclog**. This will open the Microsoft Service Trace Viewer application.
 21. On the **File** menu, click **Add**.  
-22. In the **Open** dialog box, go to **D:\Allfiles\Mod10\DemoFiles\TracingWCFServices\CalcService\CalcService**, click **web_messages.svclog**, and then click **Open**.
+22. In the **Open** dialog box, go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\TracingWCFServices\CalcService\CalcService, click web_messages.svclog**, and then click **Open**.
 23. To view the trace logs, click the **Activity** tab.
 24. Click the line in red that reads **Process action http://tempuri.org/ICalc/Div**.
 25. On the pane to the right, click the red line that starts with **Handling an exception**.  
@@ -45,7 +45,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
 
 #### Demonstration Steps
 
-1. On the Start screen, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open** , and then click **Project/Solution**.
 3. Go to **[repository root]\Allfiles\20487C\Mod10\DemoFiles\AzureDiagnostics\Begin\AzureDiagnostics**.
 4. Select the **AzureDiagnostics.sln** file, and then click **Open**.
@@ -120,7 +120,7 @@ Wherever  you see a path to a file that starts with *[repository root]*, replace
     - App Service plan/Location: Click it, click **Create new**, and then provide the following details:
         - App Service plan: **metricsdemo***YourInitials*
         - Location: The closest place to your location
-        - Pricing tier: **S1 Standard**
+        - Pricing tier: **S1 Standard** select and click ok
     - Resource Group: Select **Create new** and then type **demo**.
 
 8. Click **Create**, and wait for the web app to be created.
