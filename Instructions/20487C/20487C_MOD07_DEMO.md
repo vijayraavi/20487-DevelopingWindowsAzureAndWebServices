@@ -188,7 +188,7 @@
 40. To create a namespace manager for the Service Bus queue, append the following code to the **Main** method.
 
   ```cs
-        string connectionString = CloudConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"];
+        string connectionString = ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"];
         var namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
 ```
 41. To verify that the queue exists, append the following code to the **Main** method.
@@ -216,21 +216,23 @@
             queueClient.Send(brokeredMessage);
         }
 ```
-44. To save the changes, press Ctrl+S.
-45. To Build the solution press **Ctrl+Shift+B**.
-46. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
-47. To run the sender console application, press Ctrl+F5.
-48. Wait for the **Enter text to send to the queue and press Enter** console prompt.
-49. Type **Hello**, and then press Enter.
-50. Type **Goodbye**, and then press Enter.
-51. Press Enter, and then press any key to close the console window.
-52. In Visual Studio 2017, in **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **Program.cs**.
-53. Show that the code in the **Main** method also connects to the Service Bus queue, and after connecting to the queue, it pulls messages from the queue and prints them.
-54. Show how you use the **Receive** and **Complete** methods to implement Peek-Lock.
-55. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
-56. To run the receiver console application, press Ctrl+F5.
-57. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
-58. Close the console window.
+44. In **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **App.config**.
+45. In the section, locate the **Microsoft.ServiceBus.ConnectionString** key.
+46. To save the changes, press Ctrl+S.
+47. To Build the solution press **Ctrl+Shift+B**.
+48. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
+49. To run the sender console application, press Ctrl+F5.
+50. Wait for the **Enter text to send to the queue and press Enter** console prompt.
+51. Type **Hello**, and then press Enter.
+52. Type **Goodbye**, and then press Enter.
+53. Press Enter, and then press any key to close the console window.
+54. In Visual Studio 2017, in **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **Program.cs**.
+55. Show that the code in the **Main** method also connects to the Service Bus queue, and after connecting to the queue, it pulls messages from the queue and prints them.
+56. Show how you use the **Receive** and **Complete** methods to implement Peek-Lock.
+57. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
+58. To run the receiver console application, press Ctrl+F5.
+59. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
+60. Close the console window.
 
 # Lesson 3: Microsoft Azure Service Bus Topics
 
