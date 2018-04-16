@@ -81,7 +81,7 @@ To verify that the installation worked, follow the first set of instructions abo
 
 If the installation still did not help, do the following:
 
-1. In the **Start** menu, search for **Web Platform Installer** and click on it. In **User Control** dialogue box click **Yes**.
+1. In the **Start** menu, search for **Microsoft Web Platform Installer** and click on it. In **User Control** dialogue box click **Yes**.
 2. In the right search bar, type **Web Deployment tool** and press **Enter**.
 3. Locate the **Web Deployment Tool 2.1** , click **ADD** and then click **Install**.
 4. Follow the installer instructions.
@@ -139,7 +139,7 @@ To verify that the installation worked, follow the first set of instructions abo
 6. Open a browser and navigate to **http://localhost/MyAppDeployedWithPowerShell/api/values**.
 7. Wait until the response is returned, you should see three values in the form of either XML or JSON, depending on your browser.
 
-# Lesson 5: Continuous Delivery with TFS and Git
+# Lesson 4: Continuous Delivery with TFS and Git
 
 ### Demonstration: Continuous Delivery with Visual Studio Team Services
 
@@ -151,7 +151,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 
 #### Demonstration Steps
 
-1. On the **Start** screen, click the **Internet Explorer** tile.
+1. On the **Start** screen, click the **Microsoft Edge** tile.
 2. Go to **https://www.visualstudio.com/team-services/** and click **Get started for free**.
 3. On the **Sign in** page, enter your **Microsoft account** email address,and then click **Next**.
    > If instead of a **Sign in** page, you see a **Pick an account** page, pick your account and click **Next**.
@@ -165,7 +165,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 8. Wait until the account creation is done and you are redirected to the **MyFirstProject** page.
 9. In the **MyFirstProject** page, point to the **settings** icon on the top menu bar, and then click **Account settings**.
 10. Under **Projects**, point to **MyFirstProject**, and then click the **three dots** next to it.
-11. Click **Delete**, in the text box enter **MyFirstProject**, and then click **Delete Project**.
+11. Click **Delete**, in the text box enter **MyFirstProject**, and then click **Delete Project**, and then click **Close**.
 12. Click the VSTS logo on the top left.
 13. If you already have projects in your account, click **New Project**, else skip to the next step.
 14. In the **Create new project** page, enter the following details:
