@@ -130,7 +130,7 @@
 2. On the **File** menu, point to **Open**, and then click **Project\Solution**.
 3. Type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin\QueuesDemo.sln** in the **File name** text box, and then click **Open**.
 4. In **Solution Explorer**, right-click the root node of the solution, point to **Add**, and then click **New Project**.
-5. In the navigation pane of the **Add New Project** dialog box, expand the **Installed** node, expand the **Visual C#** node, click the **Windows** node, and then from the list of templates, select **Console Application**.
+5. In the navigation pane of the **Add New Project** dialog box, expand the **Installed** node, expand the **Visual C#** node, and then from the list of templates, select **Console App(.NET Framework)**.
 6. In the **Name** text box, type **ServiceBusMessageSender**.
 7. In the **Location** text box, type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin**.
 8. Click **OK**.
@@ -188,7 +188,7 @@
 40. To create a namespace manager for the Service Bus queue, append the following code to the **Main** method.
 
   ```cs
-        string connectionString = CloudConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"];
+        string connectionString = ConfigurationManager.AppSettings["Microsoft.ServiceBus.ConnectionString"];
         var namespaceManager = NamespaceManager.CreateFromConnectionString(connectionString);
 ```
 41. To verify that the queue exists, append the following code to the **Main** method.
@@ -216,20 +216,23 @@
             queueClient.Send(brokeredMessage);
         }
 ```
-44. To save the changes, press Ctrl+S.
-45. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
-46. To run the sender console application, press Ctrl+F5.
-47. Wait for the **Enter text to send to the queue and press Enter** console prompt.
-48. Type **Hello**, and then press Enter.
-49. Type **Goodbye**, and then press Enter.
-50. Press Enter, and then press any key to close the console window.
-51. In Visual Studio 2017, in **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **Program.cs**.
-52. Show that the code in the **Main** method also connects to the Service Bus queue, and after connecting to the queue, it pulls messages from the queue and prints them.
-53. Show how you use the **Receive** and **Complete** methods to implement Peek-Lock.
-54. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
-55. To run the receiver console application, press Ctrl+F5.
-56. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
-57. Close the console window.
+44. In **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **App.config**.
+45. In the section, locate the **Microsoft.ServiceBus.ConnectionString** key.
+46. To save the changes, press Ctrl+S.
+47. To Build the solution press **Ctrl+Shift+B**.
+48. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
+49. To run the sender console application, press Ctrl+F5.
+50. Wait for the **Enter text to send to the queue and press Enter** console prompt.
+51. Type **Hello**, and then press Enter.
+52. Type **Goodbye**, and then press Enter.
+53. Press Enter, and then press any key to close the console window.
+54. In Visual Studio 2017, in **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **Program.cs**.
+55. Show that the code in the **Main** method also connects to the Service Bus queue, and after connecting to the queue, it pulls messages from the queue and prints them.
+56. Show how you use the **Receive** and **Complete** methods to implement Peek-Lock.
+57. In **Solution Explorer**, right-click the **ServiceBusMessageReceiver** project, and then click **Set as StartUp Project**.
+58. To run the receiver console application, press Ctrl+F5.
+59. Check that the **Receiver** console window prints the text **Hello**, and then **Goodbye**.
+60. Close the console window.
 
 # Lesson 3: Microsoft Azure Service Bus Topics
 

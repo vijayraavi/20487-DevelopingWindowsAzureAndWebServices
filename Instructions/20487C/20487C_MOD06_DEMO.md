@@ -11,23 +11,24 @@
 
 You need to activate Microsoft Internet Information Services (IIS) on your machine. The instructions below are for Windows 10 only.
 
-1. To open the **Search** window, next to the **Start** menu, click the magnifying glass.
+1. To open the **Search** window,click the magnifying glass next to the Start menu.
 2. Type **Turn windows features on or off**, and then press Enter.
-3. Select the **Internet Information Services** check box once. A black square should appear within the white check box.
+3. Select the **Internet Information Services** once, a black square should appear within the check box.
 4. Expand **Internet Information Services**, and then expand **World Wide Web Services**.
-5. Select the **Application Development Features** check box.
-6. You also need to activate Windows Communication Foundation (WCF) support before you can deploy WCF services to IIS. To do this:  
-	a) In the **Windows Features** window, expand **.NET Framework 4.7 Advances Services**.  
-	b) Expand **WCF Services**, and then select all the check boxes inside it (**HTTP Activation**, **Message Queuing (MSMQ) Activation**, and so on.) 
-7. Click **Ok**. Windows proceeds to install the required components. After this, IIS will is activated.
+5. Select the **Application Development Features** check boxes.
+6. Expand the **Common HTTP Features** and select all the check boxes. 
+7. You will also need to activate WCF support before you can deploy WCF services to IIS. To do this:
+8. In the **Windows Features window**, expand **.NET Framework 4.7 Advances Services**.
+Expand **WCF Services**, and then select all the check boxes inside it (HTTP Activation, Message Queuing (MSMQ) Activation, and so on).
+Click **Ok**, Windows proceeds to install the required components; when it is done, IIS will be running.
+
 8. Verify that IIS works:  
 	a) Open a browser.  
-	b) Navigate to **http://localhost/**.  
-	c) The **Internet Information Services** page should appear.
+	b) Navigate to **http://localhost/**, an Internet Information Services page should appear.
 
 #### Demonstration Steps
 
-1. Click **Start** and in the Search box type **Visual Studio**. In the list of search results, right-click **Visual Studio 2017**, and then click **Run as administrator**.
+1. Click **Start** and in the Search box type **Visual Studio**. In the list of search results, right-click **Visual Studio 2017**, and then click **Run as administrator**, in **User Control** dislog box click **Yes**.
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. In navigation pane of the **New Project** dialog box, expand the **Installed** node, expand the **Templates** node, and then expand the **Visual C#** node.
 4. Click the **WCF** node, and then from the list of templates, select **WCF Service Application**.
@@ -44,7 +45,7 @@ You need to activate Microsoft Internet Information Services (IIS) on your machi
 
 10. In Solution Explorer, click the **MyIISService** project node.
 11. To build and debug the application, press F5. After the application is built, a browser opens.
-12. In the Internet Explorer window, locate the address bar. To the base address of the service, add the absolute path: **Service1.svc?wsdl**, and then press Enter. Review the **Web Services Description Language (WSDL)** file.
+12. In opened browser window, locate the address bar. To the base address of the service, add the absolute path: **Service1.svc?wsdl**, and then press Enter. Review the **Web Services Description Language (WSDL)** file.
 
     >**Note**: Lesson 4, &quot;Consuming WCF Services&quot; in Module 5, "Creating WCF Services" of Course 20487 explains how to use WSDL to generate service proxies.
 
@@ -99,7 +100,7 @@ You need to activate Microsoft Internet Information Services (IIS) on your machi
         Now **Visual Studio 2017** can display the list of Web Apps and Cloud Services to which you can deploy applications.
 
 20.	In Visual Studio, in **Solution Explorer**, right-click **MyWebSite** project, and then click **Publish**.
-21.	In the **Publish Web** dialog box, choose **App Services**, in the **Azure App Service** view, select the **Select Existing** option, and then click **Publish**.
+21.	In the **Publish Web** dialog box, choose **App Services**, in the **Microsoft Azure App Service** view, select the **Select Existing** option, and then click **Publish**.
 22.	In the **App Service** dialog box, expand **BlueYonder.Demo.06** folder, select **wawsdemoYourInitial**, and then click **OK**.
 23. 	Click **Publish**. Visual Studio publishes the application according to the settings that are provided in the profile file. After deployment finishes, Visual Studio opens Internet Explorer and displays the web app. The deployment process is quick, because the process only copies the content of the application to an existing virtual machine and does not need to wait for a new virtual machine to be created.
 

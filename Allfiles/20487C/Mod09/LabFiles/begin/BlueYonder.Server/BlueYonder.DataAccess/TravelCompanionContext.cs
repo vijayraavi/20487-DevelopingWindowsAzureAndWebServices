@@ -12,10 +12,12 @@ namespace BlueYonder.DataAccess
     {
         public TravelCompanionContext(string connectionName) : base(connectionName)
         {
+            Database.CommandTimeout = 180;
         }
 
         public TravelCompanionContext() : this("TravelCompanion")
         {
+            Database.CommandTimeout = 180;
         }
 
         public DbSet<Location> Locations { get; set; }

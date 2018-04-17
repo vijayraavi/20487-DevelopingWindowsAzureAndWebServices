@@ -13,24 +13,19 @@ To activate IIS on Windows 10, perform the following steps:
 5. Check **Application Development Features**.
 6. Click **OK**.
 
-# Lesson 1: Web Deployment with Visual Studio 2012
+# Lesson 1: Web Deployment with Visual Studio 2017
 
 ### Demonstration: Deploying a Web Application by Using Visual Studio
 
 #### Demonstration Steps
 
-1. Open **Visual Studio 2017** as administrator:
-    a. Open the **Start** menu.
-    b. Look for **Visual Studio 2017**.
-    c. Right-click **Visual Studio 2017**.
-    d.Click **Run as Administrator**.
-    e. In the **User Account Control** dialog, click **Yes**.
+1. Click **Start** and in the **Search box** type Visual Studio. In the **list of search results**, right-click **Visual Studio 2017** and then click **Run as administrator**, In the **User Account Control** dialog box, click **Yes**.
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the **Installed** node, expand the **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
-4. In the **Name** text box, type **MyApp**.
-5. In the **Location** text box, type **[repository root]\Allfiles\Mod08\DemoFiles\DeployWebApp\begin**.
+4. In the **Name** text box, type **Visual Studio 2017**.
+5. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod08\DemoFiles\DeployWebApp\begin**.
 6. Clear the **Create directory for solution** check box, and then click **OK**.
-7. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
+7. In the **New ASP.NET Web Application - MyApp** dialog box, select **Web API**, and then click **OK**.
 8. In **Solution Explorer**, right-click the **MyApp** project, and then click **Publish**.
 9. On the **Publish** page, select **IIS, FTP, etc**, and then click **Publish**.
 10. In the **Publish** dialog box, verify that the selected publish method is **Web Deploy**, and set the rest of the fields by using the following values:
@@ -38,7 +33,7 @@ To activate IIS on Windows 10, perform the following steps:
     - Site Name: **Default Web Site/MyApp**
     - Destination URL: **http://localhost/MyApp/api/values**
 11. Click **Validate Connection**, and wait for the green check mark to appear.
-12. Click **Next**, click **Next** again, and then click **Save**.
+12. Click **Next**, and then click **Save**.
 13. Wait until the publishing completes and the browser opens. You will see either a XML or a JSON output depending on your browser.
 14. Return to Visual Studio 2017, and in **Solution Explorer**, under the **MyApp** project, expand the **Controllers**  folder, and then double-click **ValuesController.cs**.
 15. Locate the parameterless **Get** method, and change its code as follows:
@@ -79,8 +74,17 @@ First, you will have to replace the existing web deploy supplied by Visual Studi
 4. After installation of **Microsoft Web Deploy 3.6** is complete, open a browser and go to **https://www.microsoft.com/en-us/download/details.aspx?id=43717**, and then click **Download**.
 5. When the download finishes, open the downloaded file.
 6. Click **Next**, select the **I accept the terms...** check box, and then click **Next**.
-7. In  **Choose Setup Type**, click **Complete**, click **Next**, and then click **Next** again.
+7. In  **Choose Setup Type**, click **Complete**, click **Install**,If any **User Account control** dialog box appears, then click **Yes** to proceed.
 8. After the setup completes, click **Finish**.
+
+To verify that the installation worked, follow the first set of instructions above.
+
+If the installation still did not help, do the following:
+
+1. In the **Start** menu, search for **Microsoft Web Platform Installer** and click on it. In **User Control** dialogue box click **Yes**.
+2. In the right search bar, type **Web Deployment tool** and press **Enter**.
+3. Locate the **Web Deployment Tool 2.1** , click **ADD** and then click **Install**.
+4. Follow the installer instructions.
 
 To verify that the installation worked, follow the first set of instructions above.
 
@@ -89,17 +93,17 @@ To verify that the installation worked, follow the first set of instructions abo
 1. In the **Start** menu, search for **Internet Information Services (IIS)** and click it.
 2. In the **Connections** pane, expand the _**yourcomputername**_ node. (*yourcomputername* is your computer name, you will most likely have only one node under connections).
 3. If you receive a message that asks whether you want to get started with Microsoft Web Platform, click **No**. 
-4. While still on the **Connections** pane, expand the **Sites** node, expand the **Default Web Site** node, and then click the  **MyApp** web application node.
+4. While still on the **Connections** pane, expand the **Sites** node, expand the **Default Web Site** node, and then click the  **MyApp** web application node. 
 5. In the **Actions** pane, under **Deploy**, click **Export Application**.
 6. In the **Export Application Package** dialog box, click **Next**, and then click **Next** again.
-7. In the **Package path** text box, browse to the **Downloads** folder, in the **File name** text box, type **MyApp.zip**, click **Ok**, and then click **Next**.
+7. In the **Package path** text box, browse to the **Downloads** folder, in the **File name** text box, type **MyApp.zip**, click **Save**, and then click **Next**.
 8. Wait for the export to complete, and then click **Finish**.
 9. On the left-hand side of the window, right-click **MyApp**, and then click **Remove**.
 10. Click **Yes**.
 11. Open a browser and navigate to **http://localhost/MyApp/api/values**, you should get a 404 error.
 12. Click the **Default Web Site** node.
 13. In the **Actions** pane, under **Deploy**, click **Import Application**.
-14. In the **Package path** text box of the **Import Application Package** dialog box, browse to the **Downloads** folder, select **MyApp.zip**, and then click **Next**.
+14. In the **Package path** text box of the **Import Application Package** dialog box, browse to the **Downloads** folder, select **MyApp.zip**, and then click **Open**.
 15. Click **Next** again, verify that in the **Enter Application Package Information** step of the wizard, the **Application Path** text box is set to **MyApp**, and then click **Next**.
 16. In the **Overwrite Existing Files** step, select **Yes**, and then click **Next**.
 17. Wait for the import to complete, and then click **Finish**.
@@ -135,7 +139,7 @@ To verify that the installation worked, follow the first set of instructions abo
 6. Open a browser and navigate to **http://localhost/MyAppDeployedWithPowerShell/api/values**.
 7. Wait until the response is returned, you should see three values in the form of either XML or JSON, depending on your browser.
 
-# Lesson 5: Continuous Delivery with TFS and Git
+# Lesson 4: Continuous Delivery with TFS and Git
 
 ### Demonstration: Continuous Delivery with Visual Studio Team Services
 
@@ -147,7 +151,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 
 #### Demonstration Steps
 
-1. On the **Start** screen, click the **Internet Explorer** tile.
+1. On the **Start** screen, click the **Microsoft Edge** tile.
 2. Go to **https://www.visualstudio.com/team-services/** and click **Get started for free**.
 3. On the **Sign in** page, enter your **Microsoft account** email address,and then click **Next**.
    > If instead of a **Sign in** page, you see a **Pick an account** page, pick your account and click **Next**.
@@ -161,7 +165,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 8. Wait until the account creation is done and you are redirected to the **MyFirstProject** page.
 9. In the **MyFirstProject** page, point to the **settings** icon on the top menu bar, and then click **Account settings**.
 10. Under **Projects**, point to **MyFirstProject**, and then click the **three dots** next to it.
-11. Click **Delete**, in the text box enter **MyFirstProject**, and then click **Delete Project**.
+11. Click **Delete**, in the text box enter **MyFirstProject**, and then click **Delete Project**, and then click **Close**.
 12. Click the VSTS logo on the top left.
 13. If you already have projects in your account, click **New Project**, else skip to the next step.
 14. In the **Create new project** page, enter the following details:
@@ -177,11 +181,11 @@ To present this demonstration, you must have a Microsoft account. If you have no
 22. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the  **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
 23. In the **Name** text box, type **MyTFSWebApp**, and then click **OK**.
 24. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
-25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and then click **Check In**.
+25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and click **Check In**.
 26. In **Team Explorer**, click **Check In**.
 27. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check in to complete.
 28. Open **Team Explorer** and click **Source Control Explorer**.
-29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, and then click **Convert to Branch**.
+29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, **Convert to Branch** and then click **Convert**.
 30. Return to the browser window and go to **https://portal.azure.com**.
 31. If a page appears, prompting for your email address, type your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
@@ -206,7 +210,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 43. Click **Build** and in the **Web application framework** drop-down list, select **ASP.NET**, and then click **OK**.
 44. Click **OK** and wait for the continuous delivery configuration to finish.
 45. A new build will automatically start and should take about two minutes. 
-46. After two minutes, click **Refresh logs**, you should see **Deployed successfully to Production**. If you don't wait another minute and refresh the logs again.
+46. After two minutes, click **Refresh logs**, you should see **Successfully setup Continuous Delivery and triggered build**. If you don't wait another minute and refresh the logs again.
 47. Open a browser tab and navigate to the web app at the url: **http://[yourwebapp].azurewebsites.net/api/values** and you should see two values in a form of XML or JSON.
 48. Return to Visual Studio 2017, and on the **View** menu, click **Solution Explorer**.
 49. In **Solution Explorer**, expand the **Controllers** folder, right-click the **ValuesController.cs** file, and then select **Check Out for Edit**.

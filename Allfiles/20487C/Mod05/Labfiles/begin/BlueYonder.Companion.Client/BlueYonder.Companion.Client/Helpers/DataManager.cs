@@ -83,7 +83,7 @@ namespace BlueYonder.Companion.Client.Helpers
         public async Task<IEnumerable<Location>> GetLocationsAsync(string query)
         {
             string uri;
-            if (query == null)
+            if (string.IsNullOrEmpty(query))
             {
                 uri = Addresses.GetLocationsUri;
             }
