@@ -4,9 +4,9 @@
 
 ### Demonstration: Creating Service Bus Relays
 
-1. On the Start menu, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. In the **File name** text box, type **D:\AllFiles\Mod07\DemoFiles\ServiceBusRelay\begin\ServiceBusRelay\ServiceBusRelay.sln**, and then click **Open**.
+3. In the **File name** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
 4. In **Solution Explorer**, expand the **ServiceBusRelay.Server** project, and then double-click **Program.cs**.
 
    Explain that the service endpoint is configured to receive TCP messages directly on port 747.
@@ -23,14 +23,14 @@
 14. Close the browser and the console window.
 15. On the Start menu, click the **Microsoft Edge** tile.
 16. Go to the Microsoft Azure portal at **http://portal.azure.com**.
-17. If a page appears, asking for your email address and password, enter your email address and password, and then click **Sign in**.
+17. If a page appears, prompting you to provide your email address and password, enter your email address and password, and then click **Next**, and then click **Sign in**.
 
      >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 
 18. If the **Windows Azure Tour** dialog box appears, close it.
-19. On the top-left side of the portal, click the **+** button.
+19. On the top-left side of the portal, click the **+ Create a resource** button.
 20. Click **Enterprise Integration**, and then click **Service Bus**.
-21. In the **CREATE A NAMESPACE** dialog box, provide the following information:
+21. In the **Create Namespace** dialog box, provide the following information:
 
     a. Name: Type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials)    
     b. Pricing Tier: Select **Standard**    
@@ -49,10 +49,10 @@
 26. If you are prompted to allow access to your Clipboard, click **Allow access**.
 27. Close the dialog box, and then return to Visual Studio 2017.
 28. In **Solution Explorer**, right-click the **ServiceBusRelay.Server** project, and then click **Manage NuGet Packages**.
-29. In the navigation pane of the **Manage NuGet Packages** dialog box, expand the **Online** node, and then click the **NuGet official package source** node.
+29. In the navigation pane of the **NuGet Package Manager:ServiceBusRelay.Server** dialog box, click on **browser** node and then click search box , type **WindowsAzure.ServiceBus**.
 30. Press Ctrl+E, and then type **WindowsAzure.ServiceBus**.
-31. In the center pane, click the **Microsoft Azure Service Bus** package, and then click **Install**.
-32. If a **License Acceptance** dialog box appears, click **I Accept**.
+31. In the center pane, click the **Windows Azure ServiceBus package**, and then click **Install**.
+32. If a **Preview changes** dialog box appears, click **OK**, If a **License Acceptance** dialog box appears, click **I Accept**.
 33. Wait for the installation to complete, and then click **Close** to close the dialog box.
 34. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Manage NuGet Packages**.
 35. To install the **WindowsAzure.ServiceBus** NuGet package in the **ServiceBusRelay.WebClient** project, repeat steps 29-33.
@@ -95,8 +95,8 @@
 49. Select the *[access_key]* placeholder in the code you added, and press Ctrl+V to paste the key you copied from the Azure portal.
 50. To save the changes, press Ctrl+S.
 51. Go back to the Azure portal.
-52. On the top-left side of the portal, click the **+** button.
-53. Click **Web & Mobile**.
+52. On the top-left side of the portal, click the **+ Create a resource** button.
+53. Click **Web + Mobile**.
 54. Click **Web App**.
 55. In the **App name** text box, type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials).
 56. Click **App Service Plan/Location**, and then click **Create New**.
@@ -105,11 +105,11 @@
 59. Click **OK**.
 60. Click **Create**. Wait until the web app is created.
 61. In the **All Resources** dialog box, locate and select the web app you just created.
-62. Click **Overview**, and then click **Download the publish profile**.
+62. Click **Overview**, and then click **Get publish profile**.
 63. Save the file to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**.
 64. Return to Visual Studio 2017.
 65. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Publish**.
-66. In the **Publish Web** dialog box, click **Import**, and then go to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
+66. In the **Publish** dialog box, click **Import profile**, and then go to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
 67. In the **Import Publish Profile** dialog box, click **OK**.
 68. Click **Publish**. Visual Studio 2017 publishes the web application according to the settings that are provided in the profile file. After the deployment completes, the uploaded web application opens in a new browser window.
 69. Return to Visual Studio 2017.
@@ -135,23 +135,22 @@
 7. In the **Location** text box, type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin**.
 8. Click **OK**.
 9. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Manage NuGet Packages**.
-10. In the navigation pane of the **Manage NuGet Packages** dialog box, expand the **Online** node, and then click the **NuGet official package source** node.
-11. Press Ctrl+E, and then type **WindowsAzure.ServiceBus**.
-12. In the center pane, click the **Microsoft Azure Service Bus** package, and then click **Install**.
-13. If a **License Acceptance** dialog box appears, click **I Accept**.
-14. Wait for the installation to complete, and then click **Close** to close the window.
-15. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Add Reference**.
-16. In the **Reference Manager** dialog box, expand the **Assemblies** node, and then click **Framework**.
-17. Scroll down the assemblies list, point to the **System.Configuration** assembly, select the check box next to the assembly name, and then click **OK**.
-18. Go to the Azure portal at **http://portal.azure.com**.
-19. If a page appears asking for your email address and password, enter your email address and password, and then click **Sign in**.
+10. In the navigation pane of the **NuGet Package Manager: ServiceBusMessageSender** dialog box, click **Browse** node and then search box type **WindowsAzure.ServiceBus**.
+11. In the center pane, click the **Microsoft Azure Service Bus** package, and then click **Install**.
+12. If a **Preview changes** dialog box appears, click **ok**, If a **License Acceptance** dialog box appears, click **I Accept**.
+13. Wait for the installation to complete, and then click **Close** to close the window.
+14. In Solution Explorer, right-click the **ServiceBusMessageSender** project, and then point to Add and click **Reference**.
+15. In the **Reference Manager- ServiceBusMessageSender** dialog box, expand the **Assemblies** node, and then click **Framework**.
+16. Scroll down the assemblies list, point to the **System.Configuration** assembly, select the check box next to the assembly name, and then click **OK**.
+17. Go to the Azure portal at **http://portal.azure.com**.
+18. If a page appears asking for your email address and password, enter your email address and password, and then click **Sign in**.
 
     >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 
-20. If the **Windows Azure Tour** dialog box appears, close it.
-21. On the top-left side of the portal, click the **+** button.
-22. Click **Enterprise Integration**, and then click **Service Bus**.
-23. In the **CREATE A NAMESPACE** dialog box, provide the following information:
+19. If the **Windows Azure Tour** dialog box appears, close it.
+20. On the top-left side of the portal, click the **+ Create a resource** button.
+21. Click **Enterprise Integration**, and then click **Service Bus**.
+22. In the **Create Namespace** dialog box, provide the following information:
 
     a. Name: Type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials).   
     b. Pricing Tier: Select **Standard**.
@@ -162,12 +161,12 @@
     d. Resource Group: Select **Create New**, and then type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials).
     e. Region: Select the region closest to your location.
 
-24. To create the namespace, at the bottom of the dialog box, click **Create**, and then wait until the namespace is active.
-25. In the **Dashboard**, under the **All Resources** tile, you should see your newly created service bus. Click it.
+23. To create the namespace, at the bottom of the dialog box, click **Create**, and then wait until the namespace is active.
+24. In the **Dashboard**, under the **All Resources** tile, you should see your newly created service bus. Click it.
     >**Note:** If you cannot see the service bus, click **See more** to access the full list of resources. Alternatively, you can expand the tile by dragging its bottom-right corner. 
-26. In the **Service Bus** dialog box, on the menu on the left, click the **Shared access policies** tab, then click **RootManageSharedAccessKey**.
-27. In the box that opens to the right on the right side of the **Primary Key** text box, click the **Copy** icon. 
-28. If you are prompted to allow access to your clipboard, click **Allow access**.
+25. In the **Service Bus** dialog box, on the menu on the left, click the **Shared access policies** tab, then click **RootManageSharedAccessKey**.
+26. In the box that opens to the right on the right side of the **Primary Connection string** text box, click the **Copy** icon. 
+27. If you are prompted to allow access to your clipboard, click **Allow access**.
 29. Close the dialog box, and then return to Visual Studio 2017.
 30. In **Solution Explorer**, under the **ServiceBusMessageSender** project, double-click **App.config**.
 31. In the **<appSettings>** section, locate the **Microsoft.ServiceBus.ConnectionString** key.   
@@ -216,9 +215,6 @@
             queueClient.Send(brokeredMessage);
         }
 ```
-44. In **Solution Explorer**, under the **ServiceBusMessageReceiver** project, double-click **App.config**.
-45. In the section, locate the **Microsoft.ServiceBus.ConnectionString** key.
-46. To save the changes, press Ctrl+S.
 47. To Build the solution press **Ctrl+Shift+B**.
 48. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Set as StartUp Project**.
 49. To run the sender console application, press Ctrl+F5.
@@ -238,7 +234,7 @@
 
 ### Demonstration: Subscription-Based Messaging with Azure Service Bus Topics
 
-1. On the Start menu, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. In the **File name** text box, type **D:\Allfiles\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
    
@@ -268,9 +264,9 @@
      >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 
 16. If the **Windows Azure Tour** dialog box appears, close it.
-17. On the top-left side of the portal, click the **+** button.
+17. On the top-left side of the portal, click the **+ Create a resource** button.
 18. Click **Enterprise Integration**, and then click **Service Bus**.
-19. In the **CREATE A NAMESPACE** dialog box, provide the following information:
+19. In the **Create Namespace** dialog box, provide the following information:
 
     a. Name: Type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials)      
     b. Pricing Tier: Select **Standard**  
