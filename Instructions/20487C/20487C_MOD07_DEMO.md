@@ -51,8 +51,8 @@
 28. In **Solution Explorer**, right-click the **ServiceBusRelay.Server** project, and then click **Manage NuGet Packages**.
 29. In the navigation pane of the **Manage NuGet Packages** dialog box, expand the **Online** node, and then click the **NuGet official package source** node.
 30. Press Ctrl+E, and then type **WindowsAzure.ServiceBus**.
-31. In the center pane, click the **Microsoft Azure Service Bus** package, and then click **Install**.
-32. If a **License Acceptance** dialog box appears, click **I Accept**.
+31. In the center pane, click the **Windows Azure ServiceBus package**, and then click **Install**.
+32. If a **Preview changes** dialog box appears, click **OK**, If a **License Acceptance** dialog box appears, click **I Accept**.
 33. Wait for the installation to complete, and then click **Close** to close the dialog box.
 34. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Manage NuGet Packages**.
 35. To install the **WindowsAzure.ServiceBus** NuGet package in the **ServiceBusRelay.WebClient** project, repeat steps 29-33.
@@ -95,8 +95,8 @@
 49. Select the *[access_key]* placeholder in the code you added, and press Ctrl+V to paste the key you copied from the Azure portal.
 50. To save the changes, press Ctrl+S.
 51. Go back to the Azure portal.
-52. On the top-left side of the portal, click the **+** button.
-53. Click **Web & Mobile**.
+52. On the top-left side of the portal, click the **+ Create a resource** button.
+53. Click **Web + Mobile**.
 54. Click **Web App**.
 55. In the **App name** text box, type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials).
 56. Click **App Service Plan/Location**, and then click **Create New**.
@@ -105,11 +105,11 @@
 59. Click **OK**.
 60. Click **Create**. Wait until the web app is created.
 61. In the **All Resources** dialog box, locate and select the web app you just created.
-62. Click **Overview**, and then click **Download the publish profile**.
+62. Click **Overview**, and then click **Get publish profile**.
 63. Save the file to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**.
 64. Return to Visual Studio 2017.
 65. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Publish**.
-66. In the **Publish Web** dialog box, click **Import**, and then go to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
+66. In the **Publish** dialog box, click **Import profile**, and then go to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
 67. In the **Import Publish Profile** dialog box, click **OK**.
 68. Click **Publish**. Visual Studio 2017 publishes the web application according to the settings that are provided in the profile file. After the deployment completes, the uploaded web application opens in a new browser window.
 69. Return to Visual Studio 2017.
@@ -264,9 +264,9 @@
      >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 
 16. If the **Windows Azure Tour** dialog box appears, close it.
-17. On the top-left side of the portal, click the **+** button.
+17. On the top-left side of the portal, click the **+ Create a resource** button.
 18. Click **Enterprise Integration**, and then click **Service Bus**.
-19. In the **CREATE A NAMESPACE** dialog box, provide the following information:
+19. In the **Create Namespace** dialog box, provide the following information:
 
     a. Name: Type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials)      
     b. Pricing Tier: Select **Standard**  
