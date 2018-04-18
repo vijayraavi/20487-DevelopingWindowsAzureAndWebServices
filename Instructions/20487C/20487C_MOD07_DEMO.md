@@ -4,7 +4,7 @@
 
 ### Demonstration: Creating Service Bus Relays
 
-1. On the Start menu, click the **Visual Studio 2017** tile.
+1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
 3. In the **File name** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
 4. In **Solution Explorer**, expand the **ServiceBusRelay.Server** project, and then double-click **Program.cs**.
@@ -49,7 +49,7 @@
 26. If you are prompted to allow access to your Clipboard, click **Allow access**.
 27. Close the dialog box, and then return to Visual Studio 2017.
 28. In **Solution Explorer**, right-click the **ServiceBusRelay.Server** project, and then click **Manage NuGet Packages**.
-29. In the navigation pane of the **Manage NuGet Packages** dialog box, expand the **Online** node, and then click the **NuGet official package source** node.
+29. In the navigation pane of the **NuGet Package Manager:ServiceBusRelay.Server** dialog box, click on **browser** node and then click search box , type **WindowsAzure.ServiceBus**.
 30. Press Ctrl+E, and then type **WindowsAzure.ServiceBus**.
 31. In the center pane, click the **Windows Azure ServiceBus package**, and then click **Install**.
 32. If a **Preview changes** dialog box appears, click **OK**, If a **License Acceptance** dialog box appears, click **I Accept**.
