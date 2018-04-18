@@ -128,11 +128,11 @@
 
 1. On the Start menu, click the **Visual Studio 2017** tile.
 2. On the **File** menu, point to **Open**, and then click **Project\Solution**.
-3. Type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin\QueuesDemo.sln** in the **File name** text box, and then click **Open**.
+3. Type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\QueuesDemo\Begin\QueuesDemo.sln** in the **File name** text box, and then click **Open**.
 4. In **Solution Explorer**, right-click the root node of the solution, point to **Add**, and then click **New Project**.
 5. In the navigation pane of the **Add New Project** dialog box, expand the **Installed** node, expand the **Visual C#** node, and then from the list of templates, select **Console App(.NET Framework)**.
 6. In the **Name** text box, type **ServiceBusMessageSender**.
-7. In the **Location** text box, type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin**.
+7. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\QueuesDemo\Begin**.
 8. Click **OK**.
 9. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Manage NuGet Packages**.
 10. In the navigation pane of the **NuGet Package Manager: ServiceBusMessageSender** dialog box, click **Browse** node and then search box type **WindowsAzure.ServiceBus**.
@@ -236,7 +236,7 @@
 
 1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. In the **File name** text box, type **D:\Allfiles\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
+3. In the **File name** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
    
    Explain that the solution contains four console application projects. The **ServiceBusTopicPublisher** project creates topics, defines the available subscriptions, and sends four sales messages.
    
@@ -257,9 +257,9 @@
     Explain that the code continuously receives messages from the subscription and prints them to the console.
     
 12. Show the **CheapPurchasesSubscriber** and **AuditSubscriber** projects, and explain that the difference between these projects is just the name of the subscription that is being passed to the **Create** method in **SubscriptionClient**.
-13. On the Start screen, click the **Internet Explorer** tile.
+13. On the Start screen, click the **Microsoft Edge** tile.
 14. Go to the Azure portal at **http://manage.windowsazure.com**.
-15. If a page appears, asking for your email address, enter your email address, and then click **Continue**. Wait for the **Sign In** page to appear, enter your email address and password, and then click **Sign In**.
+15. If a page appears, prompting you to provide your email address, enter your email address, and then click **Next**. enter your password, and then click **Sign In**.
 
      >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 
