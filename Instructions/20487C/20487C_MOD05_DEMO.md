@@ -15,7 +15,7 @@
 6. In **Solution Explorer**, expand the **Service** project, and then double-click **IHotelBookingService.cs**. This interface is the service contract, but it still has to be configured with **[ServiceContract]** and **[ServiceOperation]** attributes.
 7. In **Solution Explorer**, double-click **HotelBookingService.cs**. This class is the implementation of the service contract.
 8. In **Solution Explorer**, double-click **BookingResponse.cs**. This class is a data contract that is returned by the service operation **BookHotel**. It still has to be configured with the **[DataContract]** and **[DataMember]** attributes.
-9. In **Solution Explorer**, right-click the project, and then click **Reference**.
+9. In **Solution Explorer**, right-click the project, point to **Add** and then click on **Reference**.
 10. In the **Reference Manager - Service** dialog box, expand the **Assemblies** node in the left pane, and then click **Framework**.
 11. Scroll down the assemblies list, point to the **System.Runtime.Serialization** assembly, and then select the check box next to the assembly name.
 12. Scroll down the assemblies list some more, point to the **System.ServiceModel** assembly, and then select the check box next to the assembly name. Click **OK** to close the dialog box.
