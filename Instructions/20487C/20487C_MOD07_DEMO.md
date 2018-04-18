@@ -6,7 +6,7 @@
 
 1. On the Start menu, click the **Visual Studio 2017** tile.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. In the **File name** text box, type **D:\AllFiles\Mod07\DemoFiles\ServiceBusRelay\begin\ServiceBusRelay\ServiceBusRelay.sln**, and then click **Open**.
+3. In the **File name** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
 4. In **Solution Explorer**, expand the **ServiceBusRelay.Server** project, and then double-click **Program.cs**.
 
    Explain that the service endpoint is configured to receive TCP messages directly on port 747.
@@ -23,14 +23,14 @@
 14. Close the browser and the console window.
 15. On the Start menu, click the **Microsoft Edge** tile.
 16. Go to the Microsoft Azure portal at **http://portal.azure.com**.
-17. If a page appears, asking for your email address and password, enter your email address and password, and then click **Sign in**.
+17. If a page appears, prompting you to provide your email address and password, enter your email address and password, and then click **Next**, and then click **Sign in**.
 
      >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 
 18. If the **Windows Azure Tour** dialog box appears, close it.
-19. On the top-left side of the portal, click the **+** button.
+19. On the top-left side of the portal, click the **+ Create a resource** button.
 20. Click **Enterprise Integration**, and then click **Service Bus**.
-21. In the **CREATE A NAMESPACE** dialog box, provide the following information:
+21. In the **Create Namespace** dialog box, provide the following information:
 
     a. Name: Type **ServiceBusDemo07***YourInitials* (Replace *YourInitials* with your initials)    
     b. Pricing Tier: Select **Standard**    
@@ -138,7 +138,7 @@
 10. In the navigation pane of the **Manage NuGet Packages** dialog box, expand the **Online** node, and then click the **NuGet official package source** node.
 11. Press Ctrl+E, and then type **WindowsAzure.ServiceBus**.
 12. In the center pane, click the **Microsoft Azure Service Bus** package, and then click **Install**.
-13. If a **License Acceptance** dialog box appears, click **I Accept**.
+13. If a **Preview changes** dialog box appears, click **ok**, If a **License Acceptance** dialog box appears, click **I Accept**.
 14. Wait for the installation to complete, and then click **Close** to close the window.
 15. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Add Reference**.
 16. In the **Reference Manager** dialog box, expand the **Assemblies** node, and then click **Framework**.
