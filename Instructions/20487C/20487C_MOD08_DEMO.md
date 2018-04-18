@@ -71,7 +71,7 @@ First, you will have to replace the existing web deploy supplied by Visual Studi
 1. In the **Start** menu, search for **Add or Remove Programs** and click it.
 2. In the **Apps & Features** pane, in the search box, enter **Microsoft Web Deploy 3.6**.
 3. Click the result with the name **Microsoft Web Deploy 3.6**, click **Uninstall**, and then follow the on-screen instructions.
-4. After installation of **Microsoft Web Deploy 3.6** is complete, open a browser and go to **https://www.microsoft.com/en-us/download/details.aspx?id=43717**, and then click **Download**.
+4. After installation of **Microsoft Web Deploy 3.6** is complete, open a browser and go to **https://www.microsoft.com/en-us/download/details.aspx?id=43717**, and then click **Download**, Download the Software accoridng to your system requirements.
 5. When the download finishes, open the downloaded file.
 6. Click **Next**, select the **I accept the terms...** check box, and then click **Next**.
 7. In  **Choose Setup Type**, click **Complete**, click **Install**,If any **User Account control** dialog box appears, then click **Yes** to proceed.
@@ -161,7 +161,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 
 5. In the **Host my projects at** page, enter a unique name. (We will relate to that unique name as _youraccount_ from now on.)
 6. Under **Manage code using**, select **Team Foundation Version Control**.
-7. Click **Create Account**.
+7. Click **Continue**.
 8. Wait until the account creation is done and you are redirected to the **MyFirstProject** page.
 9. In the **MyFirstProject** page, point to the **settings** icon on the top menu bar, and then click **Account settings**.
 10. Under **Projects**, point to **MyFirstProject**, and then click the **three dots** next to it.
@@ -175,18 +175,17 @@ To present this demonstration, you must have a Microsoft account. If you have no
 16. Wait for the project to be created.
 17. Open **Visual Studio 2017**.
 18. On the **View** menu, click **Team Explorer**.
-19. In the **Team Explorer** window, click the **Manage Connections** icon, click the **Manage Connections** link, and then click **Connect to a Project**.
+19. In the **Team Explorer** window, click the **Manage Connections** icon, click the **Manage Connections** link.
 20. In the **Connect to a Project** dialog box, expand the **https://**_**youraccount**_**.visualstudio.com** node, expand **MyApp**, click **$/MyApp**, and then click **Connect**.
 21. In the **Team Explorer** window, under **Solutions**, click **New**.
 22. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the  **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
 23. In the **Name** text box, type **MyTFSWebApp**, and then click **OK**.
-24. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
+24. In the **New ASP.NET Web Application - MyTFSWebApp** dialog box, select **Web API**, and then click **OK**.
 25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and click **Check In**.
 26. In **Team Explorer**, click **Check In**.
 27. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check in to complete.
-28. Open **Team Explorer** and click **Source Control Explorer**.
-29. Under **Folders**, right-click **MyTFSWebApp**, point to **Branching and Merging**, **Branch** and then click **OK**.
-30. Return to the browser window and go to **https://portal.azure.com**.
+28. Under **Folders**, Expand **MyApp** and right-click **MyTFSWebApp**, point to **Branching and Merging**, and then click **Convert**.
+29. Return to the browser window and go to **https://portal.azure.com**.
 31. If a page appears, prompting for your email address, type your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to provide your credentials.
@@ -198,14 +197,14 @@ To present this demonstration, you must have a Microsoft account. If you have no
 36. From the **Location** drop-down list, select the region that is closest to your location.
 37. In the **App Service plan** input, enter **MyAppService**, and then click **OK**.
 38. Click **Create**. Wait for the web app to be created. Click the newly created web app.
-39. In the newly created web app blade, in the **Deployment** section, click **Continuous Delivery**.
-40. In the **Continuous Delivery** blade, click **Configure**.
+39. In the newly created web app blade, in the **Deployment** section, click **Continuous Delivery(Preview)**.
+40. In the **Continuous Delivery(Preview)blade**, click **Configure**.
 41. Click **Source Code** and fill the following values:
     - Code repository: **Visual Studio Team Service**
     - Visual Studio Team Service Account: _**youraccount**_
     - Project: **MyApp**
     - Repository: **$/MyApp**
-    - Branch: **MyTFSWebApp**
+    - Branch: **$/MyApp/MyTFSWebApp**
 42. Click **OK**
 43. Click **Build** and in the **Web application framework** drop-down list, select **ASP.NET**, and then click **OK**.
 44. Click **OK** and wait for the continuous delivery configuration to finish.
