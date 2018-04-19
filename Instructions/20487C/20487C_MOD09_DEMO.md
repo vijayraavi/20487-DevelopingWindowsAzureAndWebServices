@@ -67,10 +67,10 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 19. Review the use of the **GetBlockBlobRefrence** method. After uploading the file to the blob, the reference is used to download the file.  Note that the code that copies the stream to the response stream will stay the same even when working with other sources of data streams.  
 20. In **Solution Explorer**, right-click the **BlobStorage.Web** project, and then click **Set as StartUp Project**.
 21. To run the web application by using the Azure Compute and Storage Emulator, press Ctrl+F5.
-22. Click **Browse**. Go to **[repository root]\Allfiles\20487C\Mod09\Labfiles\Assets**, select the **EmpireStateBuilding.jpg** file, and then click **Open**.
+22. Click **Choose File**. Go to **[repository root]\Allfiles\20487C\Mod09\Labfiles\Assets**, select the **EmpireStateBuilding.jpg** file, and then click **Open**.
 23. Click **Upload**.  
-24.    Review the links shown on the page. The **Direct Download** link will try to download the file directly from the blob container by using its HTTP URL. The **Download** link will try to download the file from the blob container by using the storage API.
-25. Click **Browse**. Go to **[repository root]\Allfiles\20487C\Mod09\Labfiles\Assets**, select the **StatueOfLiberty.jpg** file, and then click **Open**.
+24. Review the links shown on the page. The **Direct Download** link will try to download the file directly from the blob container by using its HTTP URL. The **Download** link will try to download the file from the blob container by using the storage API.
+25. Click **Choose File**. Go to **[repository root]\Allfiles\20487C\Mod09\Labfiles\Assets**, select the **StatueOfLiberty.jpg** file, and then click **Open**.
 26. Click **Upload**.
 27. In the Empire State building row, click **Direct Download**. Verify that the photo of the Empire State building appears.
 
@@ -162,7 +162,8 @@ Wherever  you see a path to a file starting with *[repository root]*, replace it
 ```
 46. To save the changes, press Ctrl+S.
 47. In **Solution Explorer**, under the **TableStorage** project, under **Controllers**, double-click **CountriesController.cs**.
-48. Locate the **Add** method, and then add the following code before calling the **GetTableContext** method:
+Locate the Add method, and then add the following code before calling the GetTable method:
+48. Locate the **Add** method, and then add the following code before calling the **GetTable** method:
 
   ```cs
 		country.Population = int.Parse(collection["Population"]);
