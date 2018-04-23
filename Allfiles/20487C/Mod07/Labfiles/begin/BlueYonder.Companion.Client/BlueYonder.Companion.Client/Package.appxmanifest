@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="d36028ee-eaeb-48da-8966-35e05ae5540b" Publisher="CN=roig" Version="1.0.0.0" />
+  <Identity Name="SELAGroup.BlueYonderWNS" Publisher="CN=346903D4-89C4-41A6-AC7D-84CC490B787D" Version="1.1.0.0" />
   <mp:PhoneIdentity PhoneProductId="d36028ee-eaeb-48da-8966-35e05ae5540b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>BlueYonder.Companion.Client</DisplayName>
