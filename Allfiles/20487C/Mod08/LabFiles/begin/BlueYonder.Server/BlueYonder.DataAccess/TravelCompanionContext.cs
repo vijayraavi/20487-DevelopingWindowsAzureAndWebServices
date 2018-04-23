@@ -17,6 +17,7 @@ namespace BlueYonder.DataAccess
 
         public TravelCompanionContext() : this("TravelCompanion")
         {
+            this.Database.CommandTimeout = 180;
         }
 
         public DbSet<Location> Locations { get; set; }
