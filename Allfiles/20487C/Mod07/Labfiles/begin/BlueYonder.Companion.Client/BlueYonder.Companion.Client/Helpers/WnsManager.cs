@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Networking.PushNotifications;
 using Windows.Security.Cryptography;
+using Windows.UI.Notifications;
+
 
 namespace BlueYonder.Companion.Client.Helpers
 {
@@ -32,7 +34,8 @@ namespace BlueYonder.Companion.Client.Helpers
 
             // Create a push notifications channel
             var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
-            var hub = new NotificationHub("blueyonder07Hub", "Endpoint=sb://blueyonderlab07.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=XaKpA3bqArhXoh+4PCz0yXAb2BuAA1jCuvp1NH+5zu0=");
+            channel.PushNotificationReceived += Channel_PushNotificationReceived;
+            var hub = new NotificationHub("blueyonder07Hub", "[NotificationHub connection string]");
             var result = await hub.RegisterNativeAsync(channel.Uri);
             return result.RegistrationId != null;
             // Encode the channel uri
@@ -41,6 +44,11 @@ namespace BlueYonder.Companion.Client.Helpers
             // Send the encoded channel uri to the server
             //var success = await SendChannelToServer(encodedChannelUri);
             //return success;
+        }
+
+        private void Channel_PushNotificationReceived(PushNotificationChannel sender, PushNotificationReceivedEventArgs args)
+        {
+            ToastNotificationManager.CreateToastNotifier().Show(args.ToastNotification);
         }
     }
 }

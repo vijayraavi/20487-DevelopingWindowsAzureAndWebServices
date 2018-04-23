@@ -27,7 +27,7 @@ namespace BlueYonder.Companion.WNS
         static WNSManager()
         {
             var connString = Environment.GetEnvironmentVariable("NotificationHubConnectionString", EnvironmentVariableTarget.Process);
-            client = NotificationHubClient.CreateClientFromConnectionString(connString, "BlueYonderHub");
+            client = NotificationHubClient.CreateClientFromConnectionString(connString, "blueyonder07Hub");
         }
 
         /// <summary>
