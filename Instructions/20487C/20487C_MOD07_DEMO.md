@@ -6,7 +6,7 @@
 
 1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. In the **File name** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
+3. In the **File name** text box, type **[repository root]\AllFiles\20487C\Mod07\DemoFiles\ServiceBusRelay\begin\ServiceBusRelay\ServiceBusRelay.sln**, and then click **Open**.
 4. In **Solution Explorer**, expand the **ServiceBusRelay.Server** project, and then double-click **Program.cs**.
 
    Explain that the service endpoint is configured to receive TCP messages directly on port 747.
@@ -50,9 +50,9 @@
 27. Close the dialog box, and then return to Visual Studio 2017.
 28. In **Solution Explorer**, right-click the **ServiceBusRelay.Server** project, and then click **Manage NuGet Packages**.
 29. In the navigation pane of the **NuGet Package Manager:ServiceBusRelay.Server** dialog box, click on **browser** node and then click search box , type **WindowsAzure.ServiceBus**.
-30. Press Ctrl+E, and then type **WindowsAzure.ServiceBus**.
-31. In the center pane, click the **Windows Azure ServiceBus package**, and then click **Install**.
-32. If a **Preview changes** dialog box appears, click **OK**, If a **License Acceptance** dialog box appears, click **I Accept**.
+30. In the center pane, click the **Windows Azure ServiceBus package**, and then click **Install**.
+31. If a **Preview changes** dialog box appears, click **OK**.
+32. If a **License Acceptance** dialog box appears, click **I Accept**.
 33. Wait for the installation to complete, and then click **Close** to close the dialog box.
 34. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Manage NuGet Packages**.
 35. To install the **WindowsAzure.ServiceBus** NuGet package in the **ServiceBusRelay.WebClient** project, repeat steps 29-33.
@@ -106,10 +106,10 @@
 60. Click **Create**. Wait until the web app is created.
 61. In the **All Resources** dialog box, locate and select the web app you just created.
 62. Click **Overview**, and then click **Get publish profile**.
-63. Save the file to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**.
+63. Save the file to **[repository root]\Allfiles\20487C\Mod07\DemoFiles\ServiceBusRelay**.
 64. Return to Visual Studio 2017.
 65. In **Solution Explorer**, right-click the **ServiceBusRelay.WebClient** project, and then click **Publish**.
-66. In the **Publish** dialog box, click **Import profile**, and then go to **D:\Allfiles\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
+66. In the **Publish** dialog box, click **Import profile** and click **Publish** and then go to **[repository root]\Allfiles\20487C\Mod07\DemoFiles\ServiceBusRelay**. Select the profile file that you downloaded earlier, and then click **Open**.
 67. In the **Import Publish Profile** dialog box, click **OK**.
 68. Click **Publish**. Visual Studio 2017 publishes the web application according to the settings that are provided in the profile file. After the deployment completes, the uploaded web application opens in a new browser window.
 69. Return to Visual Studio 2017.
@@ -128,11 +128,11 @@
 
 1. On the Start menu, click the **Visual Studio 2017** tile.
 2. On the **File** menu, point to **Open**, and then click **Project\Solution**.
-3. Type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin\QueuesDemo.sln** in the **File name** text box, and then click **Open**.
+3. Type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\QueuesDemo\Begin\QueuesDemo.sln** in the **File name** text box, and then click **Open**.
 4. In **Solution Explorer**, right-click the root node of the solution, point to **Add**, and then click **New Project**.
 5. In the navigation pane of the **Add New Project** dialog box, expand the **Installed** node, expand the **Visual C#** node, and then from the list of templates, select **Console App(.NET Framework)**.
 6. In the **Name** text box, type **ServiceBusMessageSender**.
-7. In the **Location** text box, type **D:\Allfiles\Mod07\DemoFiles\QueuesDemo\Begin**.
+7. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\QueuesDemo\Begin**.
 8. Click **OK**.
 9. In **Solution Explorer**, right-click the **ServiceBusMessageSender** project, and then click **Manage NuGet Packages**.
 10. In the navigation pane of the **NuGet Package Manager: ServiceBusMessageSender** dialog box, click **Browse** node and then search box type **WindowsAzure.ServiceBus**.
@@ -236,7 +236,7 @@
 
 1. Open **Visual Studio 2017**.
 2. On the **File** menu, point to **Open**, and then click **Project/Solution**.
-3. In the **File name** text box, type **D:\Allfiles\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
+3. In the **File name** text box, type **[repository root]\Allfiles\20487C\Mod07\DemoFiles\TopicsDemo\TopicsDemo.sln**, and then click **Open**.
    
    Explain that the solution contains four console application projects. The **ServiceBusTopicPublisher** project creates topics, defines the available subscriptions, and sends four sales messages.
    
@@ -257,9 +257,9 @@
     Explain that the code continuously receives messages from the subscription and prints them to the console.
     
 12. Show the **CheapPurchasesSubscriber** and **AuditSubscriber** projects, and explain that the difference between these projects is just the name of the subscription that is being passed to the **Create** method in **SubscriptionClient**.
-13. On the Start screen, click the **Internet Explorer** tile.
+13. On the Start screen, click the **Microsoft Edge** tile.
 14. Go to the Azure portal at **http://manage.windowsazure.com**.
-15. If a page appears, asking for your email address, enter your email address, and then click **Continue**. Wait for the **Sign In** page to appear, enter your email address and password, and then click **Sign In**.
+15. If a page appears, prompting you to provide your email address, enter your email address, and then click **Next**. enter your password, and then click **Sign In**.
 
      >**Note:** If during the sign-in process, a page appears asking you to choose from a list of previously used accounts, select the account you previously used, and then continue to enter your credentials.
 

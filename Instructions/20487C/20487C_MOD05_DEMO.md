@@ -174,7 +174,7 @@ The service cannot be tested unless the service behavior has the **serviceMetada
 5. Select the **UsingChannelFactory.sln** file, and then click **Open**.
 6. In **Solution Explorer**, expand the **ServiceHost** project, and then double-click **App.config**. The **App.config** file contains three service endpoints: one with **BasicHttpBinding**, one with **NetTcpBinding**, and one **MEX** endpoint.
 7. In **Solution Explorer**, right-click the **ServiceClient** project, point to **Add**, and then click **Reference**.
-8. In the left pane of the **Reference Manager - ServiceClient** dialog box, expand the **Solution** node, and then click **Projects**.
+8. In the left pane of the **Reference Manager - ServiceClient** dialog box, expand the **Projects** node, and then click **Solution**.
 9. In the projects list, point to **Common**, and then select the check box next to the project name.
 10. In the left pane, expand the **Assemblies** node, and then click **Framework**. Scroll down the assemblies list, point to the  **System.ServiceModel** assembly, select the check box next to the assembly name, and then click **OK**.  
 

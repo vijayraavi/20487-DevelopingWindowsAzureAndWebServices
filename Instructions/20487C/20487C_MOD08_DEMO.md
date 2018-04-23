@@ -21,8 +21,8 @@ To activate IIS on Windows 10, perform the following steps:
 
 1. Click **Start** and in the **Search box** type Visual Studio. In the **list of search results**, right-click **Visual Studio 2017** and then click **Run as administrator**, In the **User Account Control** dialog box, click **Yes**.
 2. On the **File** menu, point to **New**, and then click **Project**.
-3. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the **Installed** node, expand the **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
-4. In the **Name** text box, type **Visual Studio 2017**.
+3. In the **New Project** dialog box, in the left pane, expand the **Installed** node, expand the **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
+4. In the **Name** text box, type **MyApp**.
 5. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod08\DemoFiles\DeployWebApp\begin**.
 6. Clear the **Create directory for solution** check box, and then click **OK**.
 7. In the **New ASP.NET Web Application - MyApp** dialog box, select **Web API**, and then click **OK**.
@@ -33,7 +33,7 @@ To activate IIS on Windows 10, perform the following steps:
     - Site Name: **Default Web Site/MyApp**
     - Destination URL: **http://localhost/MyApp/api/values**
 11. Click **Validate Connection**, and wait for the green check mark to appear.
-12. Click **Next**, and then click **Save**.
+12. Click **Next** and then click **Save**.
 13. Wait until the publishing completes and the browser opens. You will see either a XML or a JSON output depending on your browser.
 14. Return to Visual Studio 2017, and in **Solution Explorer**, under the **MyApp** project, expand the **Controllers**  folder, and then double-click **ValuesController.cs**.
 15. Locate the parameterless **Get** method, and change its code as follows:
@@ -104,7 +104,7 @@ To verify that the installation worked, follow the first set of instructions abo
 12. Click the **Default Web Site** node.
 13. In the **Actions** pane, under **Deploy**, click **Import Application**.
 14. In the **Package path** text box of the **Import Application Package** dialog box, browse to the **Downloads** folder, select **MyApp.zip**, and then click **Open**.
-15. Click **Next** again, verify that in the **Enter Application Package Information** step of the wizard, the **Application Path** text box is set to **MyApp**, and then click **Next**.
+15. Click **Next** twice, verify that in the **Enter Application Package Information** step of the wizard, the **Application Path** text box is set to **MyApp**, and then click **Next**.
 16. In the **Overwrite Existing Files** step, select **Yes**, and then click **Next**.
 17. Wait for the import to complete, and then click **Finish**.
 18. Open a browser and navigate to **http://localhost/MyApp/api/values**, you should see either XML or JSON output, depending on your browser.
@@ -220,8 +220,8 @@ To present this demonstration, you must have a Microsoft account. If you have no
 		return new string[] { "value1", "value2", "value3" };
 ```
 52. To save the file, press Ctrl+S.
-53. In **Solution Explorer**, right-click **ValuesController.cs**, and then click **Check In**.
-54. In **Team Explorer**, click **Check In**.
+53. In **Solution Explorer**, right-click **ValuesController.cs**, and then click **Check In Pending Changes**.
+54. In **Team Explorer - Pending Changes**, click **Check In**.
 55. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check-in to complete.
 56. In **Team Explorer**, click the **Pending Changes | MyApp** title, and then from the drop-down list, click **Builds**.
 57. Double-click the build definition that appears under the **My Builds** group.
@@ -240,7 +240,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 2. On the **File** menu, point to **New**, and then click **Project**.
 3. In the **New Project** dialog box, in the navigation pane, expand the **Installed** node, expand the **Visual C#** node, click the **Web** node, and then select **ASP.NET Web Application (.NET Framework)** from the list of templates.
 4. In the **Name** text box, type **WebConfigTransformations**.
-5. In the **Location** text box, type **[repository root]\Mod08\DemoFiles\WebConfigTransformations\begin**.
+5. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod08\DemoFiles\WebConfigTransformations\begin**.
 6. Clear the **Create directory for solution** check box, and then click **OK**.
 7. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
 8. Right-click the **WebConfigTransformations** project and click **Manage NuGet Packages**.
@@ -278,7 +278,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
     - Site Name: **Default Web Site/MyProductionApp**
     - Destination URL: **http://localhost/MyProductionApp**
 25. Click **Validate Connection**, and wait for the green check mark to appear.
-26. Click **Next**, from the **Configuration** drop-down list, select **Release**, click **Next**, and then click **Publish**.  Wait until the publishing completes and the browser opens.
+26. Click **Next**, from the **Configuration** drop-down list, select **Release**, click **Next**, and then click **Save**, after that it automatically publish and the browser opens. If not click on **Publish**.
 27. Close the browser and return to Visual Studio 2017.
 28. On the **File** menu, point to **Open**, and then click **Web Site**.
 29. In the navigation pane, click **Local IIS**.
