@@ -25,7 +25,7 @@ namespace BlueYonder.Companion.Client.Helpers
             return CryptographicBuffer.EncodeToBase64String(channelBuffer);
         }
 
-        public async Task<bool> Register()
+        public async Task<bool> Register(UserAuth userAuth)
         {
             if (!NetworkManager.IsNetworkAvailable)
             {
@@ -36,7 +36,9 @@ namespace BlueYonder.Companion.Client.Helpers
             var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
             channel.PushNotificationReceived += Channel_PushNotificationReceived;
             var hub = new NotificationHub("blueyonder07Hub", "[NotificationHub connection string]");
-            var result = await hub.RegisterNativeAsync(channel.Uri);
+            var result = await hub.RegisterNativeAsync(channel.Uri, new string[] {
+                $"user-{userAuth.Traveler.TravelerId}"
+            });
             return result.RegistrationId != null;
             // Encode the channel uri
             //var encodedChannelUri = EncodeChannelUri(channel.Uri);
