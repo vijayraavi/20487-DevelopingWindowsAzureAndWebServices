@@ -228,13 +228,14 @@ namespace BlueYonder.Companion.Client.ViewModels
 
         private static IEnumerable<Schedule> GetPotentialSchedules(Flight flight, DateTime after)
         {
-            return
-                flight
-                    .Schedules
-                    .OrderBy(f => f.Departure.Value)
-                    .Where(f => f.Departure.Value > after)
-                    .Take(3)
-                    .ToArray();
+           var flights = 
+                 flight
+                     .Schedules
+                     .OrderBy(f => f.Departure.Value)
+                     .Where(f => f.Departure.Value.Date >= after.Date)
+                     .Take(3)
+                     .ToArray();
+            return flights;
         }
     }
 }

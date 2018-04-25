@@ -54,17 +54,16 @@ if($resourceProviders.length) {
 
 #Create or check for existing resource group
 $resourceGroup = Get-AzureRmResourceGroup -Name $resourceGroupName -ErrorAction SilentlyContinue
-$resourceGroupLocation;
 if(!$resourceGroup)
-{
-    Write-Host "Resource group '$resourceGroupName' does not exist. To create a new resource group, please enter a location.";
-    $resourceGroupLocation = Read-Host "resourceGroupLocation";
+{   
+     Write-Host "Resource group '$resourceGroupName' does not exist.";
+    $resourceGroupLocation = "eastus"
     Write-Host "Creating resource group '$resourceGroupName' in location '$resourceGroupLocation'";
     New-AzureRmResourceGroup -Name $resourceGroupName -Location $resourceGroupLocation
 }
 else{
     Write-Host "Using existing resource group '$resourceGroupName'";
-	$resourceGroupLocation = $resourceGroup.Location;
+    $resourceGroupLocation = $resourceGroup[0].Location;
 }
 
 # Get user's initials

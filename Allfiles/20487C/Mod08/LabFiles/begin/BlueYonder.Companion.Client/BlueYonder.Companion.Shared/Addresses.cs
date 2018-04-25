@@ -4,7 +4,8 @@
     {
         public static string BaseUri
         {
-            get { return "http://[Web Api web app name].azurewebsites.net/"; }
+            get { return "http://[Web Api web app name].azurewebsites.net/"; } //production
+			//get { return "{StagingAddress}"; } // staging
         }
 
         public static string GetLocationsUri

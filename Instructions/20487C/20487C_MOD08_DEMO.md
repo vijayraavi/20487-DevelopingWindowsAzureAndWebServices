@@ -184,8 +184,9 @@ To present this demonstration, you must have a Microsoft account. If you have no
 25. In **Solution Explorer**, right-click the **Solution &#39;MyTFSWebApp&#39;** node, and click **Check In**.
 26. In **Team Explorer**, click **Check In**.
 27. If you are prompted by a **Check-in Confirmation** dialog box, click **Yes**. Wait for the check in to complete.
-28. Under **Folders**, Expand **MyApp** and right-click **MyTFSWebApp**, point to **Branching and Merging**, and then click **Convert**.
-29. Return to the browser window and go to **https://portal.azure.com**.
+28. Under **Folders**, Expand **MyApp** and right-click **MyTFSWebApp**, point to **Branching and Merging**, and then click **Convert to Branch**.
+29. In the **Convert Folder to Branch -MyTFSWebApp** page click **Convert**.
+30. Return to the browser window and go to **https://portal.azure.com**.
 31. If a page appears, prompting for your email address, type your email address, and then click **Continue**. Wait for the sign-in page to appear, enter your email address and password, and then click **Sign In.**
 
    >**Note:** During the sign-in process, if a page appears prompting you to choose from a list of previously used accounts, select the account that you previously used, and then continue to provide your credentials.
@@ -242,7 +243,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
 4. In the **Name** text box, type **WebConfigTransformations**.
 5. In the **Location** text box, type **[repository root]\Allfiles\20487C\Mod08\DemoFiles\WebConfigTransformations\begin**.
 6. Clear the **Create directory for solution** check box, and then click **OK**.
-7. In the **New ASP.NET Web Application** dialog box, select **Web API**, and then click **OK**.
+7. In the **New ASP.NET Web Application - WebConfigTransformations** dialog box, select **Web API**, and then click **OK**.
 8. Right-click the **WebConfigTransformations** project and click **Manage NuGet Packages**.
 9. In the **NuGet: WebConfigTransformations** tab, click **Browse**.
 10. In the **Search** text box, enter **EntityFramework**.
@@ -278,7 +279,7 @@ To present this demonstration, you must have a Microsoft account. If you have no
     - Site Name: **Default Web Site/MyProductionApp**
     - Destination URL: **http://localhost/MyProductionApp**
 25. Click **Validate Connection**, and wait for the green check mark to appear.
-26. Click **Next**, from the **Configuration** drop-down list, select **Release**, click **Next**, and then click **Save**, after that it automatically publish and the browser opens. If not click on **Publish**.
+26. Click **Next**, from the **Configuration** drop-down list, select **Release** and then click **Save**, after that it automatically publish and the browser opens.If not, click **Publish**
 27. Close the browser and return to Visual Studio 2017.
 28. On the **File** menu, point to **Open**, and then click **Web Site**.
 29. In the navigation pane, click **Local IIS**.
