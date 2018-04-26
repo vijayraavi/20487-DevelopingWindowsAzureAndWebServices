@@ -232,7 +232,7 @@ namespace BlueYonder.Companion.Client.ViewModels
                 flight
                     .Schedules
                     .OrderBy(f => f.Departure.Value)
-                    .Where(f => f.Departure.Value > after)
+                    .Where(f => f.Departure.Value.Date > after.Date)
                     .Take(3)
                     .ToArray();
         }

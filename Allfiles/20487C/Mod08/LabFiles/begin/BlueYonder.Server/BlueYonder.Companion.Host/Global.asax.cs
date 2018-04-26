@@ -1,6 +1,7 @@
 ﻿using BlueYonder.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -16,13 +17,18 @@ namespace BlueYonder.Companion.Host
     {
         protected void Application_Start()
         {
-            (new FlightScheduleDatabaseInitializer()).InitializeDatabase(new TravelCompanionContext());
+            using (var db = new TravelCompanionContext())
+            {
+                Database.SetInitializer(new FlightScheduleDatabaseInitializer());
+                db.Database.Initialize(true);
+            }
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            
+
         }
     }
 }
